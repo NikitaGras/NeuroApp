@@ -8,4 +8,5 @@
 
 protocol LoginViewOutput {
     func viewIsReady()
+    func save(_ user: User)
 }

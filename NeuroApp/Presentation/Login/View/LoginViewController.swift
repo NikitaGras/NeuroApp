@@ -9,7 +9,10 @@
 import UIKit
 
 class LoginViewController: UIViewController, LoginViewInput {
-
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    
     var output: LoginViewOutput!
 
     // MARK: Life cycle
@@ -21,5 +24,14 @@ class LoginViewController: UIViewController, LoginViewInput {
 
     // MARK: LoginViewInput
     func setupInitialState() {
+    }
+    
+    @IBAction func save(_ sender: Any) {
+        let name = nameTextField.text ?? ""
+        let ageString = ageTextField.text ?? ""
+        let age: Int = Int(ageString) ?? -1
+        let email = emailTextField.text ?? ""
+        let user = User(name: name, age: age, email: email)
+        output.save(user)
     }
 }

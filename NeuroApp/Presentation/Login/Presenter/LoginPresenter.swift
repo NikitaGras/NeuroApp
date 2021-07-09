@@ -13,6 +13,10 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
     var router: LoginRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
+    }
+    
+    func save(_ user: User) {
+        try! user.validate()
     }
 }

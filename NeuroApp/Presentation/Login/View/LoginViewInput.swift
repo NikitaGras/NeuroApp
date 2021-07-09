@@ -8,4 +8,5 @@
 
 protocol LoginViewInput: AnyObject {
     func setupInitialState()
+    func show(_ error: Error)
 }

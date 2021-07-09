@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E9FBA19EF92A573CABB802 /* LoginRouter.swift */; };
 		35E0800B4950274D0E7D4706 /* LoginInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A32D1AB985482BA4609513 /* LoginInitializer.swift */; };
+		5A1E8BB226983D62001179F7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1E8BB126983D62001179F7 /* Login.storyboard */; };
+		5A1E8BB6269840B9001179F7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E8BB5269840B9001179F7 /* User.swift */; };
+		5A1E8BB826984454001179F7 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E8BB726984454001179F7 /* ValidationError.swift */; };
 		5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3801AE2695D93100883225 /* AppDelegate.swift */; };
 		5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3801B02695D93100883225 /* SceneDelegate.swift */; };
 		5A3801B32695D93100883225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3801B22695D93100883225 /* ViewController.swift */; };
@@ -34,6 +37,9 @@
 		36D87C7304176BA9AC667ECD /* LoginViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewOutput.swift; sourceTree = "<group>"; };
 		3CF92E3AF3D915B2C760514E /* Pods-NeuroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeuroApp.release.xcconfig"; path = "Target Support Files/Pods-NeuroApp/Pods-NeuroApp.release.xcconfig"; sourceTree = "<group>"; };
 		40202D76FE8F86631EECED60 /* LoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5A1E8BB126983D62001179F7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		5A1E8BB5269840B9001179F7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5A1E8BB726984454001179F7 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		5A3801AB2695D93100883225 /* NeuroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeuroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3801AE2695D93100883225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A3801B02695D93100883225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,33 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		5A1E8BB026983D3E001179F7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5A3801B42695D93100883225 /* Main.storyboard */,
+				5A3801B92695D93200883225 /* LaunchScreen.storyboard */,
+				5A1E8BB126983D62001179F7 /* Login.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		5A1E8BB326984097001179F7 /* BussinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				5A1E8BB4269840A5001179F7 /* Entity */,
+			);
+			path = BussinessLogic;
+			sourceTree = "<group>";
+		};
+		5A1E8BB4269840A5001179F7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A1E8BB5269840B9001179F7 /* User.swift */,
+				5A1E8BB726984454001179F7 /* ValidationError.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		5A3801A22695D93100883225 = {
 			isa = PBXGroup;
 			children = (
@@ -104,13 +137,13 @@
 		5A3801AD2695D93100883225 /* NeuroApp */ = {
 			isa = PBXGroup;
 			children = (
+				5A1E8BB326984097001179F7 /* BussinessLogic */,
+				5A1E8BB026983D3E001179F7 /* Storyboard */,
 				81436725E27502BEDDF99F19 /* Presentation */,
 				5A3801AE2695D93100883225 /* AppDelegate.swift */,
 				5A3801B02695D93100883225 /* SceneDelegate.swift */,
 				5A3801B22695D93100883225 /* ViewController.swift */,
-				5A3801B42695D93100883225 /* Main.storyboard */,
 				5A3801B72695D93200883225 /* Assets.xcassets */,
-				5A3801B92695D93200883225 /* LaunchScreen.storyboard */,
 				5A3801BC2695D93200883225 /* Info.plist */,
 			);
 			path = NeuroApp;
@@ -122,7 +155,6 @@
 				BEB5D7C3CD95221617F4863F /* Pods-NeuroApp.debug.xcconfig */,
 				3CF92E3AF3D915B2C760514E /* Pods-NeuroApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -242,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1E8BB226983D62001179F7 /* Login.storyboard in Resources */,
 				5A3801BB2695D93200883225 /* LaunchScreen.storyboard in Resources */,
 				5A3801B82695D93200883225 /* Assets.xcassets in Resources */,
 				5A3801B62695D93100883225 /* Main.storyboard in Resources */,
@@ -281,9 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A3801B32695D93100883225 /* ViewController.swift in Sources */,
+				5A1E8BB6269840B9001179F7 /* User.swift in Sources */,
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,
 				5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */,
 				F1326626EA12D7448B95F0C6 /* LoginViewInput.swift in Sources */,
+				5A1E8BB826984454001179F7 /* ValidationError.swift in Sources */,
 				9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */,
 				9B9B2EE8B558B52CB9602C40 /* LoginViewController.swift in Sources */,
 				7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */,
