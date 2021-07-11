@@ -6,5 +6,6 @@ target 'NeuroApp' do
   use_frameworks!
 
   # Pods for NeuroApp
+  pod 'IQKeyboardManagerSwift'
 
 end
