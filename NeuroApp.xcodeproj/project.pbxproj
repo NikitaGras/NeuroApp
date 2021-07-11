@@ -21,6 +21,8 @@
 		5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */; };
 		5A6F2C58269AD8BA006B065D /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C57269AD8BA006B065D /* DatabaseService.swift */; };
 		5A6F2C5A269ADD24006B065D /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */; };
+		5A6F2C5D269B5879006B065D /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C5C269B5879006B065D /* ValidationType.swift */; };
+		5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C5E269B58A9006B065D /* String+isValid.swift */; };
 		5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */; };
 		61BF5B7CEAE781CE40CDC899 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072AD93DCEAFD5C9BF4BA60 /* LoginConfigurator.swift */; };
 		7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B3F436F6510CF6946D596 /* LoginModuleInput.swift */; };
@@ -54,6 +56,8 @@
 		5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setBackgroundColor.swift"; sourceTree = "<group>"; };
 		5A6F2C57269AD8BA006B065D /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
+		5A6F2C5C269B5879006B065D /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
+		5A6F2C5E269B58A9006B065D /* String+isValid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValid.swift"; sourceTree = "<group>"; };
 		7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		7EF8B148594B4B0EB22EB8B3 /* LoginRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterInput.swift; sourceTree = "<group>"; };
 		8BE92981166A6B978CB561F9 /* LoginViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			children = (
 				5A1E8BB5269840B9001179F7 /* User.swift */,
 				5A1E8BB726984454001179F7 /* ValidationError.swift */,
+				5A6F2C5C269B5879006B065D /* ValidationType.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			children = (
 				5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */,
 				5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */,
+				5A6F2C5E269B58A9006B065D /* String+isValid.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6F2C5D269B5879006B065D /* ValidationType.swift in Sources */,
 				5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */,
 				5A1E8BB6269840B9001179F7 /* User.swift in Sources */,
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,
@@ -373,6 +380,7 @@
 				5A6F2C5A269ADD24006B065D /* UserDefaults+Key.swift in Sources */,
 				5A1E8BB826984454001179F7 /* ValidationError.swift in Sources */,
 				9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */,
+				5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */,
 				9B9B2EE8B558B52CB9602C40 /* LoginViewController.swift in Sources */,
 				7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */,
 				DC40A00B20A3786F8C53AE08 /* LoginPresenter.swift in Sources */,

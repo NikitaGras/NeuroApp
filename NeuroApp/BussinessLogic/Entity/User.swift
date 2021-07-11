@@ -13,20 +13,15 @@ struct User: Codable {
     let email: String
     
     func validate() throws {
-        let symbols: [Character] = [".", ",", "!", "?"]
-        let isCorrectName: Bool = !self.name.contains(where: { char in
-            return symbols.contains(char)
-        })
-        if !isCorrectName {
+        if !name.isVaild(.name) {
             throw ValidationError.wrongName
         }
         
-        if self.age < 0 {
+        if self.age <= 0 || self.age > 120 {
             throw ValidationError.wrongAge
         }
         
-        let isCorrectEmail: Bool = self.email.contains("@")
-        if !isCorrectEmail {
+        if !email.isVaild(.email) {
             throw ValidationError.wrongEmail
         }
     }
