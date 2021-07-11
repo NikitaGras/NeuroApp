@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
     let name: String
     let age: Int
     let email: String
@@ -17,19 +17,17 @@ struct User {
         let isCorrectName: Bool = !self.name.contains(where: { char in
             return symbols.contains(char)
         })
-        let isCorrectEmail: Bool = self.email.contains("@")
-        
         if !isCorrectName {
-            let message = "Неправильно указано имя"
-            throw ValidationError.custom(message)
+            throw ValidationError.wrongName
         }
+        
         if self.age < 0 {
-            let message = "Неправильно указан возраст"
-            throw ValidationError.custom(message)
+            throw ValidationError.wrongAge
         }
+        
+        let isCorrectEmail: Bool = self.email.contains("@")
         if !isCorrectEmail {
-            let message = "Неправильно указан email"
-            throw ValidationError.custom(message)
+            throw ValidationError.wrongEmail
         }
     }
 }

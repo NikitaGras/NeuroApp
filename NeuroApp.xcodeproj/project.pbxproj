@@ -20,6 +20,8 @@
 		5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C50269AAB32006B065D /* ViewInput.swift */; };
 		5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C52269AB779006B065D /* RoundButton.swift */; };
 		5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */; };
+		5A6F2C58269AD8BA006B065D /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C57269AD8BA006B065D /* DatabaseService.swift */; };
+		5A6F2C5A269ADD24006B065D /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */; };
 		5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */; };
 		61BF5B7CEAE781CE40CDC899 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072AD93DCEAFD5C9BF4BA60 /* LoginConfigurator.swift */; };
 		7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B3F436F6510CF6946D596 /* LoginModuleInput.swift */; };
@@ -52,6 +54,8 @@
 		5A6F2C50269AAB32006B065D /* ViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInput.swift; sourceTree = "<group>"; };
 		5A6F2C52269AB779006B065D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setBackgroundColor.swift"; sourceTree = "<group>"; };
+		5A6F2C57269AD8BA006B065D /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
 		7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		7EF8B148594B4B0EB22EB8B3 /* LoginRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterInput.swift; sourceTree = "<group>"; };
 		8BE92981166A6B978CB561F9 /* LoginViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 			children = (
 				5A6F2C54269ABB10006B065D /* Extensions */,
 				5A1E8BB4269840A5001179F7 /* Entity */,
+				5A6F2C57269AD8BA006B065D /* DatabaseService.swift */,
 			);
 			path = BussinessLogic;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */,
+				5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 				5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */,
 				5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */,
 				F1326626EA12D7448B95F0C6 /* LoginViewInput.swift in Sources */,
+				5A6F2C5A269ADD24006B065D /* UserDefaults+Key.swift in Sources */,
 				5A1E8BB826984454001179F7 /* ValidationError.swift in Sources */,
 				9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */,
 				9B9B2EE8B558B52CB9602C40 /* LoginViewController.swift in Sources */,
@@ -349,6 +356,7 @@
 				DC40A00B20A3786F8C53AE08 /* LoginPresenter.swift in Sources */,
 				A6B9C09DA15838EF4C1C6A7D /* LoginInteractorInput.swift in Sources */,
 				5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */,
+				5A6F2C58269AD8BA006B065D /* DatabaseService.swift in Sources */,
 				FBAA2CFEA779E79C9486E8C2 /* LoginInteractor.swift in Sources */,
 				B0388DAFB78645FC4999865C /* LoginRouterInput.swift in Sources */,
 				1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */,

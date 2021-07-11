@@ -9,5 +9,5 @@
 import Foundation
 
 protocol LoginInteractorInput {
-
+    func save(_ user: User) throws
 }

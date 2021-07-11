@@ -7,7 +7,6 @@
 //
 
 class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
-
     weak var view: LoginViewInput!
     var interactor: LoginInteractorInput!
     var router: LoginRouterInput!
@@ -17,7 +16,12 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
     }
     
     func save(_ user: User) {
-        try! user.validate()
+        do {
+            try user.validate()
+            try interactor.save(user)
+        } catch {
+            view.show(error)
+        }
     }
 }
 

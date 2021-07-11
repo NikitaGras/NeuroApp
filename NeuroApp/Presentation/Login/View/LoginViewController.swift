@@ -30,11 +30,15 @@ class LoginViewController: UIViewController, LoginViewInput {
     }
     
     @IBAction func save(_ sender: Any) {
+        let user = createUser()
+        output.save(user)
+    }
+    
+    func createUser() -> User {
         let name = nameTextField.text ?? ""
         let ageString = ageTextField.text ?? ""
-        let age: Int = Int(ageString) ?? -1
+        let age: Int = Int(ageString) ?? 0
         let email = emailTextField.text ?? ""
-        let user = User(name: name, age: age, email: email)
-        output.save(user)
+        return User(name: name, age: age, email: email)
     }
 }
