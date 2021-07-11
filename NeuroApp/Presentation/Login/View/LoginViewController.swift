@@ -12,6 +12,7 @@ class LoginViewController: UIViewController, LoginViewInput {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var saveButton: RoundButton!
     
     var output: LoginViewOutput!
 
@@ -24,6 +25,8 @@ class LoginViewController: UIViewController, LoginViewInput {
 
     // MARK: LoginViewInput
     func setupInitialState() {
+        let greenColor = UIColor(named: "NAGreen") ?? UIColor.systemGreen
+        saveButton.setBackgroundColor(greenColor, for: .normal)
     }
     
     @IBAction func save(_ sender: Any) {

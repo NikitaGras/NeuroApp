@@ -18,6 +18,8 @@
 		5A3801B82695D93200883225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3801B72695D93200883225 /* Assets.xcassets */; };
 		5A3801BB2695D93200883225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3801B92695D93200883225 /* LaunchScreen.storyboard */; };
 		5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C50269AAB32006B065D /* ViewInput.swift */; };
+		5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C52269AB779006B065D /* RoundButton.swift */; };
+		5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */; };
 		5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */; };
 		61BF5B7CEAE781CE40CDC899 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072AD93DCEAFD5C9BF4BA60 /* LoginConfigurator.swift */; };
 		7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B3F436F6510CF6946D596 /* LoginModuleInput.swift */; };
@@ -48,6 +50,8 @@
 		5A3801BA2695D93200883225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3801BC2695D93200883225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6F2C50269AAB32006B065D /* ViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInput.swift; sourceTree = "<group>"; };
+		5A6F2C52269AB779006B065D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setBackgroundColor.swift"; sourceTree = "<group>"; };
 		7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		7EF8B148594B4B0EB22EB8B3 /* LoginRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterInput.swift; sourceTree = "<group>"; };
 		8BE92981166A6B978CB561F9 /* LoginViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		5A1E8BB326984097001179F7 /* BussinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				5A6F2C54269ABB10006B065D /* Extensions */,
 				5A1E8BB4269840A5001179F7 /* Entity */,
 			);
 			path = BussinessLogic;
@@ -152,8 +157,17 @@
 			isa = PBXGroup;
 			children = (
 				5A6F2C50269AAB32006B065D /* ViewInput.swift */,
+				5A6F2C52269AB779006B065D /* RoundButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5A6F2C54269ABB10006B065D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		62453CF0FC5E7EADDAAEFDF9 /* Pods */ = {
@@ -320,10 +334,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */,
 				5A3801B32695D93100883225 /* ViewController.swift in Sources */,
 				5A1E8BB6269840B9001179F7 /* User.swift in Sources */,
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,
 				5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */,
+				5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */,
 				5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */,
 				F1326626EA12D7448B95F0C6 /* LoginViewInput.swift in Sources */,
 				5A1E8BB826984454001179F7 /* ValidationError.swift in Sources */,
@@ -487,7 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Nikita-Gras.NeuroApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -507,7 +523,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Nikita-Gras.NeuroApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
