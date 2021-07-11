@@ -20,3 +20,4 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
         try! user.validate()
     }
 }
+

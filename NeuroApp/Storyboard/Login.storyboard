@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,26 +13,26 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Wellcome to the Neuro Degenerative Cognitive Assessment App!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="90V-Cf-gk0">
-                                <rect key="frame" x="20" y="63.999999999999986" width="350" height="176.66666666666663"/>
+                                <rect key="frame" x="20" y="64" width="374" height="132.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To get started, we need of your basic details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZrG-U7-vW8">
-                                <rect key="frame" x="20" y="260.66666666666669" width="350" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To get started, we need of your basic details" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZrG-U7-vW8">
+                                <rect key="frame" x="20" y="216.5" width="374" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ON0-oL-8j0">
-                                <rect key="frame" x="20" y="340.66666666666669" width="350" height="210.00000000000006"/>
+                                <rect key="frame" x="20" y="306.5" width="374" height="210"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your full name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoA-tp-e9A">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QSP-qM-Nu5"/>
                                         </constraints>
@@ -40,7 +40,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your age:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acW-6T-pqs">
-                                        <rect key="frame" x="0.0" y="80" width="350" height="50"/>
+                                        <rect key="frame" x="0.0" y="80" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="As9-ch-bmH"/>
                                         </constraints>
@@ -48,7 +48,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2qR-r3-asp">
-                                        <rect key="frame" x="0.0" y="160" width="350" height="50"/>
+                                        <rect key="frame" x="0.0" y="160" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="s1d-Zc-jtr"/>
                                         </constraints>
@@ -58,10 +58,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sA-IC-LMp">
-                                <rect key="frame" x="20" y="750" width="350" height="40"/>
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="hIE-Vb-LGJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="hIE-Vb-LGJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Continue">
@@ -84,7 +84,7 @@
                             <constraint firstItem="ON0-oL-8j0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Tv0-vo-LdX"/>
                             <constraint firstItem="ZrG-U7-vW8" firstAttribute="top" secondItem="90V-Cf-gk0" secondAttribute="bottom" constant="20" id="Xqi-Vh-wJc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZrG-U7-vW8" secondAttribute="trailing" constant="20" id="g6O-j2-3Sh"/>
-                            <constraint firstItem="ON0-oL-8j0" firstAttribute="top" secondItem="ZrG-U7-vW8" secondAttribute="bottom" constant="20" id="gnp-BN-rJa"/>
+                            <constraint firstItem="ON0-oL-8j0" firstAttribute="top" secondItem="ZrG-U7-vW8" secondAttribute="bottom" constant="30" id="gnp-BN-rJa"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ON0-oL-8j0" secondAttribute="trailing" constant="20" id="tGt-NV-z0h"/>
                             <constraint firstItem="ZrG-U7-vW8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="v4x-Ly-VQH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="90V-Cf-gk0" secondAttribute="trailing" constant="20" id="xZX-lh-uhT"/>
@@ -103,7 +103,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="355" y="78"/>
+            <point key="canvasLocation" x="317" y="8"/>
         </scene>
     </scenes>
     <resources>

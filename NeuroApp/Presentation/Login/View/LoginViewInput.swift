@@ -6,7 +6,6 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-protocol LoginViewInput: AnyObject {
+protocol LoginViewInput: AnyObject, ViewInput {
     func setupInitialState()
-    func show(_ error: Error)
 }
