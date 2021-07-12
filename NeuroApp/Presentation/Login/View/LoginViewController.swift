@@ -21,12 +21,15 @@ class LoginViewController: UIViewController, LoginViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
+    deinit {
+        print("LoginViewController deinit")
+    }
 
 
     // MARK: LoginViewInput
     func setupInitialState() {
-        let greenColor = UIColor(named: "NAGreen") ?? UIColor.systemGreen
-        saveButton.setBackgroundColor(greenColor, for: .normal)
+        saveButton.setBackgroundColor(.NAGreen, for: .normal)
     }
     
     @IBAction func save(_ sender: Any) {

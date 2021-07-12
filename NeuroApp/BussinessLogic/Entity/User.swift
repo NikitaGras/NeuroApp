@@ -16,8 +16,8 @@ struct User: Codable {
         if !name.isVaild(.name) {
             throw ValidationError.wrongName
         }
-        
-        if self.age <= 0 || self.age > 120 {
+        let maxAge = 120
+        if self.age <= 0 || self.age > maxAge {
             throw ValidationError.wrongAge
         }
         

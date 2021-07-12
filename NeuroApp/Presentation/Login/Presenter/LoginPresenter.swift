@@ -19,6 +19,7 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
         do {
             try user.validate()
             try interactor.save(user)
+            router.openHomeModule()
         } catch {
             view.show(error)
         }

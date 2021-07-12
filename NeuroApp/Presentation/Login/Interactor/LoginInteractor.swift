@@ -9,7 +9,7 @@
 class LoginInteractor: LoginInteractorInput {
 
     weak var output: LoginInteractorOutput!
-    let service = DatabaseService.shared
+    var service: ProfileServiceProtocol!
 
     func save(_ user: User) throws {
         try service.save(user)

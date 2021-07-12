@@ -7,11 +7,15 @@
 
 import Foundation
 
-class DatabaseService {
-    static let shared = DatabaseService()
+class ProfileService: ProfileServiceProtocol {
+    static let shared = ProfileService()
     private(set) var user: User?
     
     let userKey: String = UserDefaults.key.user
+    
+    var isLoggedIn: Bool {
+        return user != nil
+    }
     
     private init() {
         let user = fetchUser()
