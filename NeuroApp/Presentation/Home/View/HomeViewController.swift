@@ -29,12 +29,14 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
     
     func setupQuestionnaireButton() {
+        questionnaireButton.layer.masksToBounds = true
         questionnaireButton.layer.cornerRadius = questionnaireButton.frame.height / 4
         questionnaireButton.setTitleColor(.white, for: .normal)
     }
     
     func setupStatus() {
         statusView.layer.borderWidth = 4
+        statusView.layer.cornerRadius = 20
     }
     
     func updateQuestionnaireButton(with state: QuestionnaireState) {

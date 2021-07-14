@@ -10,11 +10,11 @@ class HomeInteractor: HomeInteractorInput {
     weak var output: HomeInteractorOutput!
 
     //TODO: service
-    func getStatus() -> UserStatus {
+    func getUserStatus() -> UserStatus {
         return .none
     }
     
-    func getState() -> QuestionnaireState {
+    func getQuestionnaireState() -> QuestionnaireState {
         return .begin
     }
 }

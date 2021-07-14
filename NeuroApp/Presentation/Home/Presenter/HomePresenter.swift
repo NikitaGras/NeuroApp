@@ -25,8 +25,8 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
 
     func viewIsReady() {
         view.setupInitialState()
-        state = interactor.getState()
-        status = interactor.getStatus()
+        state = interactor.getQuestionnaireState()
+        status = interactor.getUserStatus()
     }
     
     func openQuestionanaire() {

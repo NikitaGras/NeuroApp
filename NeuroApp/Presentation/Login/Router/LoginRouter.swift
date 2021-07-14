@@ -10,7 +10,7 @@ import UIKit
 class LoginRouter: LoginRouterInput {
 
     func openHomeModule() {
-        let scene = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
-        scene?.open(module: .home)
+        let router = AppRouter.shared
+        router.open(module: .home)
     }
 }

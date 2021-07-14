@@ -34,6 +34,9 @@
 		5A6F2C5A269ADD24006B065D /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */; };
 		5A6F2C5D269B5879006B065D /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C5C269B5879006B065D /* ValidationType.swift */; };
 		5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C5E269B58A9006B065D /* String+isValid.swift */; };
+		5A71B2F0269EB688001A6259 /* UserStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2EF269EB688001A6259 /* UserStatusService.swift */; };
+		5A71B2F2269EB6A6001A6259 /* UserStatusServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */; };
+		5A71B2F4269EB6BC001A6259 /* UserStatusServiceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2F3269EB6BC001A6259 /* UserStatusServiceObserver.swift */; };
 		5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */; };
 		61BF5B7CEAE781CE40CDC899 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072AD93DCEAFD5C9BF4BA60 /* LoginConfigurator.swift */; };
 		62C499E38C23A315356603BA /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BE893CAC0953665FDE976 /* HomeRouterInput.swift */; };
@@ -92,6 +95,9 @@
 		5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
 		5A6F2C5C269B5879006B065D /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
 		5A6F2C5E269B58A9006B065D /* String+isValid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValid.swift"; sourceTree = "<group>"; };
+		5A71B2EF269EB688001A6259 /* UserStatusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusService.swift; sourceTree = "<group>"; };
+		5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusServiceProtocol.swift; sourceTree = "<group>"; };
+		5A71B2F3269EB6BC001A6259 /* UserStatusServiceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusServiceObserver.swift; sourceTree = "<group>"; };
 		796822C594D58E6E7A7FE43D /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
 		7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		7EF8B148594B4B0EB22EB8B3 /* LoginRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterInput.swift; sourceTree = "<group>"; };
@@ -160,8 +166,8 @@
 		5A166C0E269C313700E590C7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				5A6F2C57269AD8BA006B065D /* ProfileService.swift */,
-				5A166C0F269C319000E590C7 /* ProfileServiceProtocol.swift */,
+				5A71B2EE269EB668001A6259 /* UserStatusService */,
+				5A71B2ED269EB650001A6259 /* ProfileService */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -258,6 +264,25 @@
 				5A166C13269C3E6D00E590C7 /* AppRouter.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		5A71B2ED269EB650001A6259 /* ProfileService */ = {
+			isa = PBXGroup;
+			children = (
+				5A6F2C57269AD8BA006B065D /* ProfileService.swift */,
+				5A166C0F269C319000E590C7 /* ProfileServiceProtocol.swift */,
+			);
+			path = ProfileService;
+			sourceTree = "<group>";
+		};
+		5A71B2EE269EB668001A6259 /* UserStatusService */ = {
+			isa = PBXGroup;
+			children = (
+				5A71B2EF269EB688001A6259 /* UserStatusService.swift */,
+				5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */,
+				5A71B2F3269EB6BC001A6259 /* UserStatusServiceObserver.swift */,
+			);
+			path = UserStatusService;
 			sourceTree = "<group>";
 		};
 		62453CF0FC5E7EADDAAEFDF9 /* Pods */ = {
@@ -501,6 +526,7 @@
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,
 				5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */,
 				5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */,
+				5A71B2F0269EB688001A6259 /* UserStatusService.swift in Sources */,
 				5A166C10269C319000E590C7 /* ProfileServiceProtocol.swift in Sources */,
 				5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */,
 				F1326626EA12D7448B95F0C6 /* LoginViewInput.swift in Sources */,
@@ -508,7 +534,9 @@
 				5A1E8BB826984454001179F7 /* ValidationError.swift in Sources */,
 				9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */,
 				5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */,
+				5A71B2F4269EB6BC001A6259 /* UserStatusServiceObserver.swift in Sources */,
 				9B9B2EE8B558B52CB9602C40 /* LoginViewController.swift in Sources */,
+				5A71B2F2269EB6A6001A6259 /* UserStatusServiceProtocol.swift in Sources */,
 				7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */,
 				5A166C0C269C2F7400E590C7 /* String.swift in Sources */,
 				DC40A00B20A3786F8C53AE08 /* LoginPresenter.swift in Sources */,
