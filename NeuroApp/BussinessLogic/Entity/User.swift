@@ -12,6 +12,12 @@ struct User: Codable {
     let age: Int
     let email: String
     
+    init(with name: String, _ age: Int, and email: String) {
+        self.name = name
+        self.age = age
+        self.email = email
+    }
+    
     func validate() throws {
         if !name.isVaild(.name) {
             throw ValidationError.wrongName

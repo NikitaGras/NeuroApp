@@ -8,6 +8,8 @@
 import Foundation
 
 extension String {
+    static let error = "Ошибка"
+    
     struct Error {
         static let wrongName = "Неправильно набрано имя"
         static let wrongAge = "Неправильно указан возраст"

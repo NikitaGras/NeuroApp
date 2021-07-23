@@ -21,10 +21,6 @@ class LoginViewController: UIViewController, LoginViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
-    
-    deinit {
-        print("LoginViewController deinit")
-    }
 
 
     // MARK: LoginViewInput
@@ -42,6 +38,6 @@ class LoginViewController: UIViewController, LoginViewInput {
         let ageString = ageTextField.text ?? ""
         let age: Int = Int(ageString) ?? 0
         let email = emailTextField.text ?? ""
-        return User(name: name, age: age, email: email)
+        return User(with: name, age, and: email)
     }
 }

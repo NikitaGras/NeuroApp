@@ -16,7 +16,7 @@ extension ViewInput {
         guard let vc = self as? UIViewController else {
             return
         }
-        let alert = UIAlertController(title: "Ошибка", message: error.localizedDescription, preferredStyle: .alert)
+        let alert = UIAlertController(title: String.error, message: error.localizedDescription, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         vc.present(alert, animated: true, completion: nil)

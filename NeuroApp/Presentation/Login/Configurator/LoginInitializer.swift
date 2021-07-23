@@ -14,7 +14,6 @@ class LoginModuleInitializer: NSObject {
     @IBOutlet weak var loginViewController: LoginViewController!
 
     override func awakeFromNib() {
-
         let configurator = LoginModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: loginViewController)
     }

@@ -16,7 +16,7 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
     }
     
     func getUser() -> User {
-        return User(name: "", age: 0, email: "")
+        return User(with: "", 0, and: "")
     }
     
     func erase() {

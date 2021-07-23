@@ -12,6 +12,6 @@ class ProfileInteractor: ProfileInteractorInput {
 
     func getUser() -> User {
         // TODO:
-        return User(name: "", age: 0, email: "")
+        return User(with: "", 0, and: "")
     }
 }

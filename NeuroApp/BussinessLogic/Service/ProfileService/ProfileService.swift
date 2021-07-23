@@ -7,11 +7,11 @@
 
 import Foundation
 
+private let userKey: String = UserDefaults.key.user
+
 class ProfileService: ProfileServiceProtocol {
     static let shared = ProfileService()
     private(set) var user: User?
-    
-    let userKey: String = UserDefaults.key.user
     
     var isLoggedIn: Bool {
         return user != nil
