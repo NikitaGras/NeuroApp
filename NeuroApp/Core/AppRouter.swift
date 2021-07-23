@@ -26,9 +26,15 @@ class AppRouter {
         let storyboard = UIStoryboard(name: module.name, bundle: nil)
         let vc = storyboard.instantiateInitialViewController()
         window?.rootViewController = vc
-//        UIView.transition(with: window!, duration: 0.3, options: [.transitionCrossDissolve]) {
-//            window?.rootViewController = vc
-//        }
+        animateTransition(to: vc)
+    }
+    
+    private func animateTransition(to vc: UIViewController?) {
+        if let window = window {
+            UIView.transition(with: window, duration: 0.5, options: [.transitionFlipFromRight]) {
+                window.rootViewController = vc
+            }
+        }
     }
 
 }
