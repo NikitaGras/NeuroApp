@@ -7,7 +7,11 @@
 //
 
 class ProfileInteractor: ProfileInteractorInput {
-
+    var service: ProfileService!
     weak var output: ProfileInteractorOutput!
 
+    func getUser() -> User {
+        // TODO:
+        return User(name: "", age: 0, email: "")
+    }
 }

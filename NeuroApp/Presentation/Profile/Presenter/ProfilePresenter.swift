@@ -7,12 +7,23 @@
 //
 
 class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractorOutput {
-
     weak var view: ProfileViewInput!
     var interactor: ProfileInteractorInput!
     var router: ProfileRouterInput!
 
     func viewIsReady() {
 
+    }
+    
+    func getUser() -> User {
+        return User(name: "", age: 0, email: "")
+    }
+    
+    func erase() {
+        
+    }
+    
+    func edit() {
+        
     }
 }

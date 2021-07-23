@@ -64,11 +64,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="edit:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="H2F-DX-fAD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="350-PJ-dyy">
                                         <rect key="frame" x="0.0" y="65" width="335" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="erase:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fWd-ic-LSW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -86,7 +92,9 @@
                     </view>
                     <connections>
                         <outlet property="ageLabel" destination="9tj-Ce-9Dm" id="Qg6-kT-wE8"/>
+                        <outlet property="editButton" destination="Xxy-AC-hx9" id="Jjb-k1-b7p"/>
                         <outlet property="emailLabel" destination="lse-LA-AUi" id="rNq-0a-B6o"/>
+                        <outlet property="eraseButton" destination="350-PJ-dyy" id="vQQ-pL-ptQ"/>
                         <outlet property="nameLabel" destination="bhh-Hv-EqL" id="OO9-GP-hHQ"/>
                     </connections>
                 </viewController>

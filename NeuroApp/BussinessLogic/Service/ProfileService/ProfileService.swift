@@ -22,7 +22,7 @@ class ProfileService: ProfileServiceProtocol {
         self.user = user
     }
     
-    func fetchUser() -> User? {
+    private func fetchUser() -> User? {
         guard let data = UserDefaults.standard.data(forKey: userKey) else {
             return nil
         }
