@@ -7,5 +7,15 @@
 //
 
 class ProfileRouter: ProfileRouterInput {
-
+    
+    
+    func openLogin() {
+        let router = AppRouter.shared
+        router.open(module: .login)
+    }
+    
+    func openEdit() {
+        // TODO: переход на экран Edit
+        print("переход на экран Edit")
+    }
 }

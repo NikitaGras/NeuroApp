@@ -14,5 +14,8 @@ extension String {
         static let wrongName = "Неправильно набрано имя"
         static let wrongAge = "Неправильно указан возраст"
         static let wrongEmail = "Неправильно указан email"
+        
+        static let noUser = "Простите, ваши данные утеряны."
+        static let `default` = "Простите, что-то пошло не так. Попробуйте позже."
     }
 }

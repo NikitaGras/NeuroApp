@@ -7,11 +7,14 @@
 //
 
 class ProfileInteractor: ProfileInteractorInput {
+    
     var service: ProfileService!
     weak var output: ProfileInteractorOutput!
-
-    func getUser() -> User {
-        // TODO:
-        return User(with: "", 0, and: "")
+    
+    func getUser() throws -> User {
+        guard let user = service.user else {
+            throw SystemError.noName
+        }
+        return user
     }
 }

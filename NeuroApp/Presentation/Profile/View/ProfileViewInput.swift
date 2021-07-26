@@ -6,7 +6,7 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-protocol ProfileViewInput: AnyObject {
+protocol ProfileViewInput: AnyObject, ViewInput {
     func setupInitialState()
     func update(_ user: User)
 }

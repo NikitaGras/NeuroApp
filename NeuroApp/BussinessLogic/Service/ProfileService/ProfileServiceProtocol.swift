@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ProfileServiceProtocol {
+    var user: User? { get }
     var isLoggedIn: Bool { get }
     func save(_ user: User) throws
 }

@@ -43,6 +43,7 @@
 		5A71B2F2269EB6A6001A6259 /* UserStatusServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */; };
 		5A71B2F4269EB6BC001A6259 /* UserStatusServiceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2F3269EB6BC001A6259 /* UserStatusServiceObserver.swift */; };
 		5A71B2F6269EFE46001A6259 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A71B2F5269EFE46001A6259 /* Profile.storyboard */; };
+		5AFFFCEA26AEC03400E9F3F1 /* SystemError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */; };
 		5B176EBE641D291752067AA8 /* ProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A076939854C22E1C60212 /* ProfileViewOutput.swift */; };
 		5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */; };
 		61BF5B7CEAE781CE40CDC899 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072AD93DCEAFD5C9BF4BA60 /* LoginConfigurator.swift */; };
@@ -118,6 +119,7 @@
 		5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusServiceProtocol.swift; sourceTree = "<group>"; };
 		5A71B2F3269EB6BC001A6259 /* UserStatusServiceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusServiceObserver.swift; sourceTree = "<group>"; };
 		5A71B2F5269EFE46001A6259 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemError.swift; sourceTree = "<group>"; };
 		5F872E576D287CE17D07E27D /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
 		796822C594D58E6E7A7FE43D /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
@@ -171,7 +173,6 @@
 				3958E35821616C6E1F37F1F5 /* Router */,
 				D4C0D033C0A9E640EDCE78BF /* Configurator */,
 			);
-			name = Profile;
 			path = Profile;
 			sourceTree = "<group>";
 		};
@@ -191,7 +192,6 @@
 				549A076939854C22E1C60212 /* ProfileViewOutput.swift */,
 				BD3593C045FE6D5C5ABC78CE /* ProfileViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -210,7 +210,6 @@
 				25FFAB5641B63D2D0BE280F6 /* ProfileRouterInput.swift */,
 				10AF999ACCFCEDDA5A94E6E7 /* ProfileRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -257,10 +256,9 @@
 		5A1E8BB4269840A5001179F7 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				5AFFFCE826AEC00400E9F3F1 /* Error */,
 				5A166C0D269C30A500E590C7 /* Constants */,
 				5A1E8BB5269840B9001179F7 /* User.swift */,
-				5A1E8BB726984454001179F7 /* ValidationError.swift */,
-				5A6F2C5C269B5879006B065D /* ValidationType.swift */,
 				5A166C05269C046000E590C7 /* UserStatus.swift */,
 				5A166C07269C054B00E590C7 /* QusetionnaireState.swift */,
 			);
@@ -346,6 +344,16 @@
 			path = UserStatusService;
 			sourceTree = "<group>";
 		};
+		5AFFFCE826AEC00400E9F3F1 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				5A1E8BB726984454001179F7 /* ValidationError.swift */,
+				5A6F2C5C269B5879006B065D /* ValidationType.swift */,
+				5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		62453CF0FC5E7EADDAAEFDF9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,7 +379,6 @@
 				1BBECF3885BB89903358CA2D /* ProfileModuleInput.swift */,
 				D5E9654D168ABD17C9D1BAEE /* ProfilePresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -441,7 +448,6 @@
 				19332506BB8A17E0B2F8A8FB /* ProfileInteractorOutput.swift */,
 				5F872E576D287CE17D07E27D /* ProfileInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -461,7 +467,6 @@
 				64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */,
 				A1CFF49D994BD2777EF36511 /* ProfileInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -649,6 +654,7 @@
 				FD05C95E98B90F25AEE63C18 /* HomeViewOutput.swift in Sources */,
 				5A166C0A269C2EC500E590C7 /* UIColor.swift in Sources */,
 				7CB0BE1BF83FB1F714E5437F /* HomeViewController.swift in Sources */,
+				5AFFFCEA26AEC03400E9F3F1 /* SystemError.swift in Sources */,
 				2E12C249EE024C6F04C4550E /* HomeModuleInput.swift in Sources */,
 				8442C56DA9E51614B65C96E2 /* HomePresenter.swift in Sources */,
 				1D6C762DF0CE88CB3A6B94DE /* HomeInteractorInput.swift in Sources */,

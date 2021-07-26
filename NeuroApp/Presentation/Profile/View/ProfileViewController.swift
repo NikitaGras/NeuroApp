@@ -26,15 +26,20 @@ class ProfileViewController: UIViewController, ProfileViewInput {
 
     // MARK: ProfileViewInput
     func setupInitialState() {
+        // TODO: цвета кнопок
     }
     
     func update(_ user: User) {
-        
+        nameLabel.text = user.name
+        ageLabel.text = user.age.description
+        emailLabel.text = user.email
     }
     
     @IBAction func edit(_ sender: UIButton) {
+        output.edit()
     }
     
     @IBAction func erase(_ sender: Any) {
+        output.erase()
     }
 }

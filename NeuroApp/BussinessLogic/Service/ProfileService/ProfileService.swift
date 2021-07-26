@@ -11,7 +11,7 @@ private let userKey: String = UserDefaults.key.user
 
 class ProfileService: ProfileServiceProtocol {
     static let shared = ProfileService()
-    private(set) var user: User?
+    var user: User?
     
     var isLoggedIn: Bool {
         return user != nil

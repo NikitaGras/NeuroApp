@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ProfileInteractorInput {
-    func getUser() -> User
+    func getUser() throws -> User
 }

@@ -11,6 +11,6 @@ class LoginRouter: LoginRouterInput {
 
     func openHomeModule() {
         let router = AppRouter.shared
-        router.open(module: .home)
+        router.open(module: .tabbar)
     }
 }

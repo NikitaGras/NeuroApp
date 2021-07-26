@@ -12,18 +12,23 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
     var router: ProfileRouterInput!
 
     func viewIsReady() {
-
-    }
-    
-    func getUser() -> User {
-        return User(with: "", 0, and: "")
+        view.setupInitialState()
+        do {
+            let user = try interactor.getUser()
+            view.update(user)
+        } catch {
+            view.show(error) { _ in
+                self.router.openLogin()
+            }
+            
+        }
     }
     
     func erase() {
-        
+        router.openLogin()
     }
     
     func edit() {
-        
+        router.openEdit()
     }
 }
