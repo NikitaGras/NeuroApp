@@ -7,5 +7,6 @@ target 'NeuroApp' do
 
   # Pods for NeuroApp
   pod 'IQKeyboardManagerSwift'
+  pod "ViperMcFlurry"
 
 end

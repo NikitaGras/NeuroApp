@@ -20,6 +20,7 @@ class ProfileModuleConfigurator {
     private func configure(viewController: ProfileViewController) {
 
         let router = ProfileRouter()
+        router.transitionHandler = viewController
 
         let presenter = ProfilePresenter()
         presenter.view = viewController
