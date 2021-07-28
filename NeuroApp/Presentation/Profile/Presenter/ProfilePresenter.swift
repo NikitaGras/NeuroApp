@@ -10,11 +10,13 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
     weak var view: ProfileViewInput!
     var interactor: ProfileInteractorInput!
     var router: ProfileRouterInput!
+    
+    var user: User!
 
     func viewIsReady() {
         view.setupInitialState()
         do {
-            let user = try interactor.getUser()
+            user = try interactor.getUser()
             view.update(user)
         } catch {
             view.show(error) { _ in
@@ -29,6 +31,6 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
     }
     
     func edit() {
-        router.openEdit()
+        router.openEdit(with: user)
     }
 }
