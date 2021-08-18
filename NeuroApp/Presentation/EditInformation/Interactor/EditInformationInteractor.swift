@@ -11,8 +11,7 @@ class EditInformationInteractor: EditInformationInteractorInput {
     weak var output: EditInformationInteractorOutput!
     var service: ProfileServiceProtocol!
     
-    func getUser() throws -> User {
-        
-        
-    }
+//    func getUser() throws -> User {
+//        // TODO:
+//    }
 }

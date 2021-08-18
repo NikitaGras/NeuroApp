@@ -21,8 +21,8 @@ class EditInformationPresenter: NSObject, EditInformationModuleInput, EditInform
     //TODO: naming
     func loadUser() {
         do {
-            let user = try interactor.getUser()
-            view.fill(with: user)
+            //let user = try interactor.getUser()
+            //view.fill(with: user)
         } catch {
             view.show(error) { _ in
                 self.router.openLogin()

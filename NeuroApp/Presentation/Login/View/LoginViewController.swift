@@ -38,6 +38,6 @@ class LoginViewController: UIViewController, LoginViewInput {
         let ageString = ageTextField.text ?? ""
         let age: Int = Int(ageString) ?? 0
         let email = emailTextField.text ?? ""
-        return User(with: name, age, and: email)
+        return User(with: name, age, email)
     }
 }

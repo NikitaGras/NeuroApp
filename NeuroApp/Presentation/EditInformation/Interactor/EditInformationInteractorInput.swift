@@ -9,5 +9,5 @@
 import Foundation
 
 protocol EditInformationInteractorInput {
-    func getUser() throws -> User
+    //func getUser() throws -> User
 }

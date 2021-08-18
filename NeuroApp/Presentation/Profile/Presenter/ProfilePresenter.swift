@@ -16,13 +16,14 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
         getUser()
     }
     
-    func gu() {
-        guard let user = service.user else {
-            view.show(<#T##error: Error##Error#>, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
-            return
-        }
-        view.update(user)
-    }
+    //TODO: 
+//    func gu() {
+//        guard let user = service.user else {
+//            view.show(<#T##error: Error##Error#>, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
+//            return
+//        }
+//        view.update(user)
+//    }
     
     func getUser() {
         do {
