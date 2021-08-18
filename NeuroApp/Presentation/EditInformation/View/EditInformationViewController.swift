@@ -26,6 +26,12 @@ class EditInformationViewController: UIViewController, EditInformationViewInput 
     func setupInitialState() {
     }
     
+    func fill(with user: User) {
+        nameTextField.text = user.name
+        ageTextField.text = user.age.description
+        emailTextField.text = user.email
+    }
+    
     @IBAction func save(_ sender: Any) {
     }
 }

@@ -7,6 +7,6 @@
 //
 import ViperMcFlurry
 
-protocol EditInformationModuleInput: NSObject, RamblerViperModuleInput {
-    var user: User! { get set }
+protocol EditInformationModuleInput: RamblerViperModuleInput {
+    
 }

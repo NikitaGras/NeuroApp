@@ -7,5 +7,9 @@
 //
 
 class EditInformationRouter: EditInformationRouterInput {
-
+    
+    func openLogin() {
+        let router = AppRouter.shared
+        router.open(module: .login)
+    }
 }

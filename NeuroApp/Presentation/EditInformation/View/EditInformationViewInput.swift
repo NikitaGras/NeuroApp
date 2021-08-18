@@ -6,6 +6,7 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-protocol EditInformationViewInput: AnyObject {
+protocol EditInformationViewInput: AnyObject, ViewInput {
     func setupInitialState()
+    func fill(with user: User)
 }

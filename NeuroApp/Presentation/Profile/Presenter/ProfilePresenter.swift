@@ -10,19 +10,28 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
     weak var view: ProfileViewInput!
     var interactor: ProfileInteractorInput!
     var router: ProfileRouterInput!
-    
-    var user: User!
 
     func viewIsReady() {
         view.setupInitialState()
+        getUser()
+    }
+    
+    func gu() {
+        guard let user = service.user else {
+            view.show(<#T##error: Error##Error#>, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
+            return
+        }
+        view.update(user)
+    }
+    
+    func getUser() {
         do {
-            user = try interactor.getUser()
+            let user = try interactor.getUser()
             view.update(user)
         } catch {
             view.show(error) { _ in
                 self.router.openLogin()
             }
-            
         }
     }
     
@@ -31,6 +40,6 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
     }
     
     func edit() {
-        router.openEdit(with: user)
+        router.openEdit()
     }
 }

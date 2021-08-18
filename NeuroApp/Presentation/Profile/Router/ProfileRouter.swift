@@ -16,12 +16,7 @@ class ProfileRouter: ProfileRouterInput {
         router.open(module: .login)
     }
     
-    func openEdit(with user: User) {
-        let promise = transitionHandler.openModule?(usingSegue: "editInformation")
-        promise?.thenChain({ moduleInput in
-            let input = moduleInput as? EditInformationModuleInput
-            input?.user = user
-            return nil
-        })
+    func openEdit() {
+        _ = transitionHandler.openModule?(usingSegue: "editInformation")
     }
 }

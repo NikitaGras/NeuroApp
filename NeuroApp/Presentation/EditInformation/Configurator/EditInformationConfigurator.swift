@@ -30,6 +30,7 @@ class EditInformationModuleConfigurator {
 
         presenter.interactor = interactor
         viewController.output = presenter
+        viewController.moduleInput = presenter
     }
 
 }
