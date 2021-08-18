@@ -41,7 +41,6 @@
 		5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */; };
 		5A6F2C58269AD8BA006B065D /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C57269AD8BA006B065D /* ProfileService.swift */; };
 		5A6F2C5A269ADD24006B065D /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */; };
-		5A6F2C5D269B5879006B065D /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C5C269B5879006B065D /* ValidationType.swift */; };
 		5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C5E269B58A9006B065D /* String+isValid.swift */; };
 		5A71B2F0269EB688001A6259 /* UserStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2EF269EB688001A6259 /* UserStatusService.swift */; };
 		5A71B2F2269EB6A6001A6259 /* UserStatusServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */; };
@@ -129,7 +128,6 @@
 		5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setBackgroundColor.swift"; sourceTree = "<group>"; };
 		5A6F2C57269AD8BA006B065D /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
-		5A6F2C5C269B5879006B065D /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
 		5A6F2C5E269B58A9006B065D /* String+isValid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValid.swift"; sourceTree = "<group>"; };
 		5A71B2EF269EB688001A6259 /* UserStatusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusService.swift; sourceTree = "<group>"; };
 		5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusServiceProtocol.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				60C9959B355F415BFAC9490E /* EditInformationModuleInput.swift */,
 				36B9B58C3A65CF663034C347 /* EditInformationPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -256,7 +253,6 @@
 				A5DBFB403431FAF309503FD7 /* Router */,
 				B5EB363C5877107E1232252C /* Configurator */,
 			);
-			name = EditInformation;
 			path = EditInformation;
 			sourceTree = "<group>";
 		};
@@ -395,7 +391,6 @@
 			isa = PBXGroup;
 			children = (
 				5A1E8BB726984454001179F7 /* ValidationError.swift */,
-				5A6F2C5C269B5879006B065D /* ValidationType.swift */,
 				5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */,
 			);
 			path = Error;
@@ -436,7 +431,6 @@
 				86BD030DE819C7C9EA024A8B /* EditInformationInteractorOutput.swift */,
 				EEC048A1E0E203965C17CA61 /* EditInformationInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -516,7 +510,6 @@
 				4758DB157F183D1E96EA715E /* EditInformationRouterInput.swift */,
 				A0D17835045787ABEB1D8ADA /* EditInformationRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -526,7 +519,6 @@
 				34B079B954C2CF4F346CAFB3 /* EditInformationConfigurator.swift */,
 				5A635CDC65637FC2A99FBB87 /* EditInformationInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -588,7 +580,6 @@
 				C2A85F777BBBA6EC2FD06443 /* EditInformationViewOutput.swift */,
 				601732125D831F12018DD966 /* EditInformationViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -709,7 +700,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A6F2C5D269B5879006B065D /* ValidationType.swift in Sources */,
 				5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */,
 				5A1E8BB6269840B9001179F7 /* User.swift in Sources */,
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,

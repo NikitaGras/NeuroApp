@@ -16,11 +16,11 @@ enum ValidationError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .wrongName:
-            return String.Error.wrongName
+            return String.ValidationError.wrongName
         case .wrongAge:
-            return String.Error.wrongAge
+            return String.ValidationError.wrongAge
         case .wrongEmail:
-            return String.Error.wrongEmail
+            return String.ValidationError.wrongEmail
         case .custom(let message):
             return message
         }

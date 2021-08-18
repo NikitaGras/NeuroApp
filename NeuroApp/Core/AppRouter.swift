@@ -15,14 +15,15 @@ class AppRouter {
     
     func openInitialModule() {
         let isLoggedIn = ProfileService.shared.isLoggedIn
-        if isLoggedIn {
-            open(module: .tabbar)
-        } else {
-            open(module: .login)
-        }
+        isLoggedIn ? open(module: .tabbar) : open(module: .login)
+//        if isLoggedIn {
+//            open(module: .tabbar)
+//        } else {
+//            open(module: .login)
+//        }
     }
     
-    func open(module: ModuleType) {
+    func open(module: Module) {
         let storyboard = UIStoryboard(name: module.name, bundle: nil)
         let vc = storyboard.instantiateInitialViewController()
         window?.rootViewController = vc
@@ -40,19 +41,19 @@ class AppRouter {
 }
 
 extension AppRouter {
-    enum ModuleType {
+    enum Module {
         case tabbar
         case login
         case home
         
         var name: String {
             switch self {
+            case .tabbar:
+                return "Tabbar"
             case .login:
                 return "Login"
             case .home:
                 return "Home"
-            case .tabbar:
-                return "Tabbar"
             }
         }
     }

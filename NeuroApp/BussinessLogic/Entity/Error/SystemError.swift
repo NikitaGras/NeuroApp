@@ -16,10 +16,10 @@ enum SystemError: LocalizedError {
         switch self {
         case .noName:
             return String.Error.noUser
-        case .custom(let message):
-            return message
         case .default:
             return String.Error.default
+        case .custom(let message):
+            return message
         }
     }
 }

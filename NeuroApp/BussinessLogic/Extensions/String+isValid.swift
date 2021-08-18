@@ -8,8 +8,7 @@
 import Foundation
 
 extension String {
-    func isVaild(_ type: ValidationType) -> Bool {
-        let regex = type.regex
+    func isVaild(_ regex: String) -> Bool {
         let result = self.range(of: regex, options: .regularExpression, range: nil, locale: nil)
         return (result != nil)
     }

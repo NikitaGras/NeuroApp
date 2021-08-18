@@ -26,11 +26,11 @@ enum UserStatus {
     var text: String {
         switch self {
         case .none:
-            return "None"
+            return .UserStatus.none
         case .negative:
-            return "Negative"
+            return .UserStatus.negative
         case .positive:
-            return "Positive"
+            return .UserStatus.positive
         }
     }
 }

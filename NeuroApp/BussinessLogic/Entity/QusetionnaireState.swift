@@ -10,7 +10,7 @@ import UIKit
 enum QuestionnaireState {
     case begin
     case proceed
-    case dayCounter
+    case notAvailable
     
     var backgroundColor: UIColor {
         switch self {
@@ -18,7 +18,7 @@ enum QuestionnaireState {
             return .systemGreen
         case .proceed:
             return .systemBlue
-        case .dayCounter:
+        case .notAvailable:
             return .systemGray
         }
     }
@@ -26,11 +26,11 @@ enum QuestionnaireState {
     var title: String {
         switch self {
         case .begin:
-            return "BEGIN QUESTIONNAIRE"
+            return .QustionaireState.begin
         case .proceed:
-            return "RESUME QUESTIONNAIRE"
-        case .dayCounter:
-            return "DAYS UNTIL NEXT SESSION"
+            return .QustionaireState.proceed
+        case .notAvailable:
+            return .QustionaireState.notAvailable
         }
     }
 }
