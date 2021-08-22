@@ -13,26 +13,15 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
 
     func viewIsReady() {
         view.setupInitialState()
-        getUser()
+        fill()
     }
     
-    //TODO: 
-//    func gu() {
-//        guard let user = service.user else {
-//            view.show(<#T##error: Error##Error#>, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
-//            return
-//        }
-//        view.update(user)
-//    }
-    
-    func getUser() {
+    func fill() {
         do {
             let user = try interactor.getUser()
-            view.update(user)
+            view.fill(with: user)
         } catch {
-            view.show(error) { _ in
-                self.router.openLogin()
-            }
+            erase()
         }
     }
     

@@ -22,7 +22,6 @@ class LoginViewController: UIViewController, LoginViewInput {
         output.viewIsReady()
     }
 
-
     // MARK: LoginViewInput
     func setupInitialState() {
         saveButton.setBackgroundColor(.NAGreen, for: .normal)

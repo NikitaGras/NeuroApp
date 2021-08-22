@@ -11,16 +11,8 @@ class ProfileInteractor: ProfileInteractorInput {
     var service: ProfileService!
     weak var output: ProfileInteractorOutput!
     
-    var user: User? {
-        return service.user
-    }
-    
-    // TODO: перенести в сервис
-    // Error: naming
     func getUser() throws -> User {
-        guard let user = service.user else {
-            throw SystemError.noName
-        }
+        let user = try service.getUser()
         return user
     }
 }

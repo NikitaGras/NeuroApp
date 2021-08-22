@@ -26,10 +26,10 @@ class ProfileViewController: UIViewController, ProfileViewInput {
 
     // MARK: ProfileViewInput
     func setupInitialState() {
-        // TODO: цвета кнопок
+        
     }
     
-    func update(_ user: User) {
+    func fill(with user: User) {
         nameLabel.text = user.name
         ageLabel.text = user.age.description
         emailLabel.text = user.email

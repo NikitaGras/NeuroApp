@@ -7,7 +7,7 @@
 
 import Foundation
 
-private let userKey: String = UserDefaults.key.user
+private let key: String = UserDefaults.key.user
 
 class ProfileService: ProfileServiceProtocol {
     static let shared = ProfileService()
@@ -23,7 +23,7 @@ class ProfileService: ProfileServiceProtocol {
     }
     
     private func fetchUser() -> User? {
-        guard let data = UserDefaults.standard.data(forKey: userKey) else {
+        guard let data = UserDefaults.standard.data(forKey: key) else {
             return nil
         }
         let user = try? JSONDecoder().decode(User?.self, from: data)
@@ -32,7 +32,14 @@ class ProfileService: ProfileServiceProtocol {
     
     func save(_ user: User) throws {
         let data = try JSONEncoder().encode(user)
-        UserDefaults.standard.setValue(data, forKey: userKey)
+        UserDefaults.standard.setValue(data, forKey: key)
         self.user = user
+    }
+    
+    func getUser() throws -> User {
+        guard let user = user else {
+            throw SystemError.noName
+        }
+        return user
     }
 }

@@ -8,5 +8,5 @@
 
 protocol ProfileViewInput: AnyObject, ViewInput {
     func setupInitialState()
-    func update(_ user: User)
+    func fill(with user: User)
 }
