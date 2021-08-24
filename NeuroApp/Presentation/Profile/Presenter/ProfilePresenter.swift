@@ -7,22 +7,22 @@
 //
 
 class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractorOutput {
+    
     weak var view: ProfileViewInput!
     var interactor: ProfileInteractorInput!
     var router: ProfileRouterInput!
 
     func viewIsReady() {
         view.setupInitialState()
-        fill()
+        interactor.attach()
     }
     
-    func fill() {
-        do {
-            let user = try interactor.getUser()
-            view.fill(with: user)
-        } catch {
-            erase()
-        }
+    func fill(with user: User) {
+        view.fill(with: user)
+    }
+    
+    func denied() {
+        erase()
     }
     
     func erase() {

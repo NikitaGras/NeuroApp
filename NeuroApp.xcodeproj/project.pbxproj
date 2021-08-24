@@ -42,6 +42,8 @@
 		5A6F2C58269AD8BA006B065D /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C57269AD8BA006B065D /* ProfileService.swift */; };
 		5A6F2C5A269ADD24006B065D /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */; };
 		5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C5E269B58A9006B065D /* String+isValid.swift */; };
+		5A70C45326D3A2F80046675D /* ProfileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C45226D3A2F80046675D /* ProfileObserver.swift */; };
+		5A70C45526D3A3D50046675D /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C45426D3A3D50046675D /* WeakBox.swift */; };
 		5A71B2F0269EB688001A6259 /* UserStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2EF269EB688001A6259 /* UserStatusService.swift */; };
 		5A71B2F2269EB6A6001A6259 /* UserStatusServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */; };
 		5A71B2F4269EB6BC001A6259 /* UserStatusServiceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2F3269EB6BC001A6259 /* UserStatusServiceObserver.swift */; };
@@ -129,6 +131,8 @@
 		5A6F2C57269AD8BA006B065D /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
 		5A6F2C5E269B58A9006B065D /* String+isValid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValid.swift"; sourceTree = "<group>"; };
+		5A70C45226D3A2F80046675D /* ProfileObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileObserver.swift; sourceTree = "<group>"; };
+		5A70C45426D3A3D50046675D /* WeakBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
 		5A71B2EF269EB688001A6259 /* UserStatusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusService.swift; sourceTree = "<group>"; };
 		5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusServiceProtocol.swift; sourceTree = "<group>"; };
 		5A71B2F3269EB6BC001A6259 /* UserStatusServiceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusServiceObserver.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 				5A1E8BB5269840B9001179F7 /* User.swift */,
 				5A166C05269C046000E590C7 /* UserStatus.swift */,
 				5A166C07269C054B00E590C7 /* QusetionnaireState.swift */,
+				5A70C45426D3A3D50046675D /* WeakBox.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			children = (
 				5A6F2C57269AD8BA006B065D /* ProfileService.swift */,
 				5A166C0F269C319000E590C7 /* ProfileServiceProtocol.swift */,
+				5A70C45226D3A2F80046675D /* ProfileObserver.swift */,
 			);
 			path = ProfileService;
 			sourceTree = "<group>";
@@ -710,6 +716,7 @@
 				5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */,
 				F1326626EA12D7448B95F0C6 /* LoginViewInput.swift in Sources */,
 				5A6F2C5A269ADD24006B065D /* UserDefaults+Key.swift in Sources */,
+				5A70C45326D3A2F80046675D /* ProfileObserver.swift in Sources */,
 				5A1E8BB826984454001179F7 /* ValidationError.swift in Sources */,
 				9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */,
 				5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */,
@@ -754,6 +761,7 @@
 				2D934A296C744ED7E285E9C0 /* ProfileInteractor.swift in Sources */,
 				F9509ED53CBB70AE2ACCEABE /* ProfileRouterInput.swift in Sources */,
 				BEA3CCD1030E3AFEFD03EF36 /* ProfileRouter.swift in Sources */,
+				5A70C45526D3A3D50046675D /* WeakBox.swift in Sources */,
 				568CF19A7F36CF7859D1E3A3 /* ProfileConfigurator.swift in Sources */,
 				3863AFB06EF7BA2D2C85BF44 /* ProfileInitializer.swift in Sources */,
 				E82616554F277E1DF872E609 /* EditInformationViewInput.swift in Sources */,

@@ -9,6 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController, ProfileViewInput {
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -26,7 +27,7 @@ class ProfileViewController: UIViewController, ProfileViewInput {
 
     // MARK: ProfileViewInput
     func setupInitialState() {
-        
+        // TODO:
     }
     
     func fill(with user: User) {

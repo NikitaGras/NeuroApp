@@ -7,6 +7,7 @@
 //
 
 protocol ProfileViewInput: AnyObject, ViewInput {
+    
     func setupInitialState()
     func fill(with user: User)
 }

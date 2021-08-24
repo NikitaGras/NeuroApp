@@ -8,13 +8,13 @@
 import Foundation
 
 enum SystemError: LocalizedError {
-    case noName
+    case noUser
     case `default`
     case custom(String)
     
     var errorDescription: String? {
         switch self {
-        case .noName:
+        case .noUser:
             return String.Error.noUser
         case .default:
             return String.Error.default

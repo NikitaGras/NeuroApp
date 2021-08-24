@@ -6,13 +6,20 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-class ProfileInteractor: ProfileInteractorInput {
+class ProfileInteractor: ProfileInteractorInput, ProfileObserver {
     
     var service: ProfileService!
     weak var output: ProfileInteractorOutput!
     
-    func getUser() throws -> User {
-        let user = try service.getUser()
-        return user
+    // MARK: - ProfileObserver
+    func attach() {
+        service.attach(self)
+    }
+
+    func didSet(_ user: User?) {
+        guard let user = user else {
+            return output.denied()
+        }
+        output.fill(with: user)
     }
 }
