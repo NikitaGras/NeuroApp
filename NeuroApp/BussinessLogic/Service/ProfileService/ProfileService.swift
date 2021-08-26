@@ -44,6 +44,8 @@ class ProfileService: ProfileServiceProtocol {
         self.user = user
     }
     
+    //TODO: delete
+    
     //MARK: - ProfileObserver
     func attach(_ observer: ProfileObserver) {
         let weakBox = WeakBox(observer)

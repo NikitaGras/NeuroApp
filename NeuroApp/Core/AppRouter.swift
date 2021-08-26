@@ -16,11 +16,6 @@ class AppRouter {
     func openInitialModule() {
         let isLoggedIn = ProfileService.shared.isLoggedIn
         isLoggedIn ? open(module: .tabbar) : open(module: .login)
-//        if isLoggedIn {
-//            open(module: .tabbar)
-//        } else {
-//            open(module: .login)
-//        }
     }
     
     func open(module: Module) {

@@ -6,12 +6,23 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-class EditInformationInteractor: EditInformationInteractorInput {
-
+class EditInformationInteractor: EditInformationInteractorInput, ProfileObserver {
     weak var output: EditInformationInteractorOutput!
     var service: ProfileServiceProtocol!
     
-//    func getUser() throws -> User {
-//        // TODO:
-//    }
+    func save(user: User) throws {
+        try service.save(user)
+    }
+    
+    func attach() {
+        service.attach(self)
+    }
+    
+    func didSet(_ user: User?) {
+        guard let user = user else {
+            output.denied()
+            return
+        }
+        output.fill(with: user)
+    }
 }

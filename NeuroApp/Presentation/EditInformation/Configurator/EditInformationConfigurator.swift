@@ -20,6 +20,7 @@ class EditInformationModuleConfigurator {
     private func configure(viewController: EditInformationViewController) {
 
         let router = EditInformationRouter()
+        router.transitionHandler = viewController
 
         let presenter = EditInformationPresenter()
         presenter.view = viewController
@@ -27,6 +28,7 @@ class EditInformationModuleConfigurator {
 
         let interactor = EditInformationInteractor()
         interactor.output = presenter
+        interactor.service = ProfileService.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

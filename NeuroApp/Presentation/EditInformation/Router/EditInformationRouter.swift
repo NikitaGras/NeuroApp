@@ -6,10 +6,18 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
+import ViperMcFlurry
+
 class EditInformationRouter: EditInformationRouterInput {
+    var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func openLogin() {
         let router = AppRouter.shared
         router.open(module: .login)
+    }
+    
+    func goBack() {
+        // TODO: popViewController
+        
     }
 }

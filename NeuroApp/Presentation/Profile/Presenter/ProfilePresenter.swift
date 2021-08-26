@@ -22,7 +22,7 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
     }
     
     func denied() {
-        erase()
+        router.openLogin()
     }
     
     func erase() {

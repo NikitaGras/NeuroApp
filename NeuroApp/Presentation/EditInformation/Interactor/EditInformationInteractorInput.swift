@@ -9,5 +9,6 @@
 import Foundation
 
 protocol EditInformationInteractorInput {
-    //func getUser() throws -> User
+    func attach()
+    func save(user: User) throws
 }

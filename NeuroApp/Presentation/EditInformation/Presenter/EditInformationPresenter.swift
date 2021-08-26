@@ -8,25 +8,29 @@
 import Foundation
 
 class EditInformationPresenter: NSObject, EditInformationModuleInput, EditInformationViewOutput, EditInformationInteractorOutput {
-
     weak var view: EditInformationViewInput!
     var interactor: EditInformationInteractorInput!
     var router: EditInformationRouterInput!
 
     func viewIsReady() {
         view.setupInitialState()
-        loadUser()
+        interactor.attach()
     }
     
-    //TODO: naming
-    func loadUser() {
+    func safe(_ user: User) {
         do {
-            //let user = try interactor.getUser()
-            //view.fill(with: user)
+            try user.validate()
+            try interactor.save(user: user)
         } catch {
-            view.show(error) { _ in
-                self.router.openLogin()
-            }
+            view.show(error)
         }
+    }
+    
+    func fill(with user: User) {
+        view.fill(with: user)
+    }
+    
+    func denied() {
+        router.openLogin()
     }
 }
