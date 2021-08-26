@@ -13,4 +13,5 @@ class LoginRouter: LoginRouterInput {
         let router = AppRouter.shared
         router.open(module: .tabbar)
     }
+    
 }

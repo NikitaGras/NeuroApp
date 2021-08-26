@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ProfileObserver: AnyObject {
-    func didSet(_ user: User?)
+    func update(_ user: User?)
 }

@@ -18,7 +18,7 @@ class EditInformationInteractor: EditInformationInteractorInput, ProfileObserver
         service.attach(self)
     }
     
-    func didSet(_ user: User?) {
+    func update(_ user: User?) {
         guard let user = user else {
             output.denied()
             return

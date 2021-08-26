@@ -9,6 +9,5 @@
 import Foundation
 
 protocol ProfileInteractorInput {
-
     func attach()
 }

@@ -9,7 +9,6 @@
 import Foundation
 
 protocol ProfileInteractorOutput: AnyObject {
-    
     func fill(with user: User)
     func denied()
 }

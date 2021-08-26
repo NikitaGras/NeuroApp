@@ -16,13 +16,16 @@ class LoginViewController: UIViewController, LoginViewInput {
     
     var output: LoginViewOutput!
 
-    // MARK: Life cycle
+    // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
 
-    // MARK: LoginViewInput
+    // MARK: - LoginViewInput
+    
     func setupInitialState() {
         saveButton.setBackgroundColor(.NAGreen, for: .normal)
     }
@@ -39,4 +42,5 @@ class LoginViewController: UIViewController, LoginViewInput {
         let email = emailTextField.text ?? ""
         return User(with: name, age, email)
     }
+    
 }

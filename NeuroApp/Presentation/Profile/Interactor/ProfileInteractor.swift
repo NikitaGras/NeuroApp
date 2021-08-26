@@ -7,8 +7,7 @@
 //
 
 class ProfileInteractor: ProfileInteractorInput, ProfileObserver {
-    
-    var service: ProfileService!
+    var service: ProfileServiceProtocol!
     weak var output: ProfileInteractorOutput!
     
     // MARK: - ProfileObserver
@@ -16,7 +15,7 @@ class ProfileInteractor: ProfileInteractorInput, ProfileObserver {
         service.attach(self)
     }
 
-    func didSet(_ user: User?) {
+    func update(_ user: User?) {
         guard let user = user else {
             return output.denied()
         }

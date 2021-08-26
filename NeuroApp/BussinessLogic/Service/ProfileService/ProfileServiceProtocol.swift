@@ -8,11 +8,14 @@
 import Foundation
 
 protocol ProfileServiceProtocol {
-    
     var isLoggedIn: Bool { get }
-    func save(_ user: User) throws
     
-    //MARK: - ProfileObserver
+    func save(_ user: User) throws
+    func deleteUser()
+    
+    
+    //MARK: - Observer
+    
     func attach(_ observer: ProfileObserver)
     func detach(_ observer: ProfileObserver)
 }

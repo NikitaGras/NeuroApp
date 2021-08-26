@@ -8,7 +8,6 @@
 import ViperMcFlurry
 
 class ProfileRouter: ProfileRouterInput {
-    
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func openLogin() {
