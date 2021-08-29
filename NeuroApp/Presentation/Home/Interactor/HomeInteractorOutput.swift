@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HomeInteractorOutput: AnyObject {
-
+    func update(with quiz: Quiz)
 }

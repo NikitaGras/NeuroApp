@@ -8,6 +8,5 @@
 
 protocol HomeViewInput: AnyObject {
     func setupInitialState()
-    func updateStatus(with status: UserStatus)
-    func updateQuestionnaireButton(with state: QuestionnaireState)
+    func update(with quiz: Quiz)
 }

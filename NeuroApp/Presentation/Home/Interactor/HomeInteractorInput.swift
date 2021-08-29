@@ -9,6 +9,5 @@
 import Foundation
 
 protocol HomeInteractorInput {
-    func getUserStatus() -> UserStatus
-    func getQuestionnaireState() -> QuestionnaireState
+    
 }

@@ -10,26 +10,16 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     weak var view: HomeViewInput!
     var interactor: HomeInteractorInput!
     var router: HomeRouterInput!
-    
-    var state: QuestionnaireState = .begin {
-        didSet {
-            view.updateQuestionnaireButton(with: state)
-        }
-    }
-    
-    var status: UserStatus = .none {
-        didSet {
-            view.updateStatus(with: status)
-        }
-    }
 
     func viewIsReady() {
         view.setupInitialState()
-        state = interactor.getQuestionnaireState()
-        status = interactor.getUserStatus()
     }
     
-    func openQuestionanaire() {
+    func update(with quiz: Quiz) {
+        view.update(with: quiz)
+    }
+    
+    func openQuiz() {
         router.openQuestionnaire()
     }
 }

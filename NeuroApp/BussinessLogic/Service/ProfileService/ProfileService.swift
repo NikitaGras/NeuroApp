@@ -63,5 +63,4 @@ class ProfileService: ProfileServiceProtocol {
             observer.object?.update(user)
         }
     }
-    
 }

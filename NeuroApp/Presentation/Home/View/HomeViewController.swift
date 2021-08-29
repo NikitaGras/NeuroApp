@@ -39,6 +39,11 @@ class HomeViewController: UIViewController, HomeViewInput {
         statusView.layer.cornerRadius = 20
     }
     
+    func update(with quiz: Quiz) {
+        updateQuestionnaireButton(with: quiz.state)
+        updateStatus(with: quiz.userStatus)
+    }
+    
     func updateQuestionnaireButton(with state: QuestionnaireState) {
         let title = state.title
         questionnaireButton.setTitle(title, for: .normal)
@@ -52,6 +57,6 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
     
     @IBAction func examine(_ sender: UIButton) {
-        output.openQuestionanaire()
+        output.openQuiz()
     }
 }

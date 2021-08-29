@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Quiz {
+    //TODO: 
+    var state: QuestionnaireState = .begin
+    var userStatus: UserStatus = .none
+}

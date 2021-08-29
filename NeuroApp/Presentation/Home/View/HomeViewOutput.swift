@@ -8,5 +8,5 @@
 
 protocol HomeViewOutput {
     func viewIsReady()
-    func openQuestionanaire()
+    func openQuiz()
 }

@@ -44,10 +44,8 @@
 		5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C5E269B58A9006B065D /* String+isValid.swift */; };
 		5A70C45326D3A2F80046675D /* ProfileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C45226D3A2F80046675D /* ProfileObserver.swift */; };
 		5A70C45526D3A3D50046675D /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C45426D3A3D50046675D /* WeakBox.swift */; };
-		5A71B2F0269EB688001A6259 /* UserStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2EF269EB688001A6259 /* UserStatusService.swift */; };
-		5A71B2F2269EB6A6001A6259 /* UserStatusServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */; };
-		5A71B2F4269EB6BC001A6259 /* UserStatusServiceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71B2F3269EB6BC001A6259 /* UserStatusServiceObserver.swift */; };
 		5A71B2F6269EFE46001A6259 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A71B2F5269EFE46001A6259 /* Profile.storyboard */; };
+		5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500326DB98DA00A834D2 /* Quiz.swift */; };
 		5AFFFCEA26AEC03400E9F3F1 /* SystemError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */; };
 		5B176EBE641D291752067AA8 /* ProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A076939854C22E1C60212 /* ProfileViewOutput.swift */; };
 		5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */; };
@@ -133,10 +131,8 @@
 		5A6F2C5E269B58A9006B065D /* String+isValid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValid.swift"; sourceTree = "<group>"; };
 		5A70C45226D3A2F80046675D /* ProfileObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileObserver.swift; sourceTree = "<group>"; };
 		5A70C45426D3A3D50046675D /* WeakBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
-		5A71B2EF269EB688001A6259 /* UserStatusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusService.swift; sourceTree = "<group>"; };
-		5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusServiceProtocol.swift; sourceTree = "<group>"; };
-		5A71B2F3269EB6BC001A6259 /* UserStatusServiceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusServiceObserver.swift; sourceTree = "<group>"; };
 		5A71B2F5269EFE46001A6259 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		5AE8500326DB98DA00A834D2 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemError.swift; sourceTree = "<group>"; };
 		5F872E576D287CE17D07E27D /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		601732125D831F12018DD966 /* EditInformationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationViewController.swift; sourceTree = "<group>"; };
@@ -272,7 +268,6 @@
 		5A166C0E269C313700E590C7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				5A71B2EE269EB668001A6259 /* UserStatusService */,
 				5A71B2ED269EB650001A6259 /* ProfileService */,
 			);
 			path = Service;
@@ -309,6 +304,7 @@
 				5A166C05269C046000E590C7 /* UserStatus.swift */,
 				5A166C07269C054B00E590C7 /* QusetionnaireState.swift */,
 				5A70C45426D3A3D50046675D /* WeakBox.swift */,
+				5AE8500326DB98DA00A834D2 /* Quiz.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -381,16 +377,6 @@
 				5A70C45226D3A2F80046675D /* ProfileObserver.swift */,
 			);
 			path = ProfileService;
-			sourceTree = "<group>";
-		};
-		5A71B2EE269EB668001A6259 /* UserStatusService */ = {
-			isa = PBXGroup;
-			children = (
-				5A71B2EF269EB688001A6259 /* UserStatusService.swift */,
-				5A71B2F1269EB6A6001A6259 /* UserStatusServiceProtocol.swift */,
-				5A71B2F3269EB6BC001A6259 /* UserStatusServiceObserver.swift */,
-			);
-			path = UserStatusService;
 			sourceTree = "<group>";
 		};
 		5AFFFCE826AEC00400E9F3F1 /* Error */ = {
@@ -708,10 +694,10 @@
 			files = (
 				5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */,
 				5A1E8BB6269840B9001179F7 /* User.swift in Sources */,
+				5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */,
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,
 				5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */,
 				5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */,
-				5A71B2F0269EB688001A6259 /* UserStatusService.swift in Sources */,
 				5A166C10269C319000E590C7 /* ProfileServiceProtocol.swift in Sources */,
 				5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */,
 				F1326626EA12D7448B95F0C6 /* LoginViewInput.swift in Sources */,
@@ -720,9 +706,7 @@
 				5A1E8BB826984454001179F7 /* ValidationError.swift in Sources */,
 				9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */,
 				5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */,
-				5A71B2F4269EB6BC001A6259 /* UserStatusServiceObserver.swift in Sources */,
 				9B9B2EE8B558B52CB9602C40 /* LoginViewController.swift in Sources */,
-				5A71B2F2269EB6A6001A6259 /* UserStatusServiceProtocol.swift in Sources */,
 				7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */,
 				5A166C0C269C2F7400E590C7 /* String.swift in Sources */,
 				DC40A00B20A3786F8C53AE08 /* LoginPresenter.swift in Sources */,
