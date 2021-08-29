@@ -21,6 +21,7 @@ class EditInformationPresenter: NSObject, EditInformationModuleInput, EditInform
         do {
             try user.validate()
             try interactor.save(user: user)
+            router.goBack()
         } catch {
             view.show(error)
         }

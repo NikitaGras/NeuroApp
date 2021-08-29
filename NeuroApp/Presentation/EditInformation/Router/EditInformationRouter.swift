@@ -18,6 +18,6 @@ class EditInformationRouter: EditInformationRouterInput {
     
     func goBack() {
         // TODO: popViewController
-        
+        transitionHandler.closeCurrentModule?(true)
     }
 }
