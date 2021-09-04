@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,13 +26,16 @@
                                             <constraint firstAttribute="width" secondItem="hDw-4C-OJn" secondAttribute="height" id="gIx-5G-KZT"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0q-Hj-I6j">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0q-Hj-I6j" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="196" width="374" height="60"/>
+                                        <color key="backgroundColor" name="NAGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="vEZ-2k-fou"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Questionnaire button"/>
+                                        <state key="normal" title="Questionnaire button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="examine:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ImK-4H-U6u"/>
                                         </connections>
@@ -128,6 +132,9 @@
     <resources>
         <image name="Image" width="512" height="512"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <namedColor name="NAGreen">
+            <color red="0.37999999523162842" green="0.80000001192092896" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
