@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum UserStatus {
+enum UserStatus: Int, Codable {
     case none
     case positive
     case negative

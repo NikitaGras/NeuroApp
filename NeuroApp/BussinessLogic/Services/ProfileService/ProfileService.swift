@@ -7,11 +7,12 @@
 
 import Foundation
 
-private let key: String = UserDefaults.key.user
 
 class ProfileService: ProfileServiceProtocol {
     static let shared = ProfileService()
-    var observers = [WeakBox]()
+    private let key: String = UserDefaults.key.user
+    //TODO: использовать WeakBox который работает с Any?
+    var observers = [ProfileWeakBox]()
     var user: User? {
         didSet {
             notify()
@@ -30,7 +31,7 @@ class ProfileService: ProfileServiceProtocol {
         guard let data = UserDefaults.standard.data(forKey: key) else {
             return nil
         }
-        let user = try? JSONDecoder().decode(User?.self, from: data)
+        let user = try? JSONDecoder().decode(User.self, from: data)
         return user
     }
     
@@ -47,9 +48,10 @@ class ProfileService: ProfileServiceProtocol {
     
     
     //MARK: - Observer
-    
+    // TODO: naming - register / delete
+    // TODO: проверять есть ли в массиве observer
     func attach(_ observer: ProfileObserver) {
-        let weakBox = WeakBox(observer)
+        let weakBox = ProfileWeakBox(observer)
         observers.append(weakBox)
         observer.update(user)
     }

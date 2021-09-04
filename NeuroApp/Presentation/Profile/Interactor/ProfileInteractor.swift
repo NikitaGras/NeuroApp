@@ -15,6 +15,7 @@ class ProfileInteractor: ProfileInteractorInput, ProfileObserver {
         service.attach(self)
     }
 
+    // TODO: naming - denied - должно быть понятно что конкретно отклонено или denide(with error:)
     func update(_ user: User?) {
         guard let user = user else {
             return output.denied()

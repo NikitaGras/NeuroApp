@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum QuestionnaireState {
+enum QuestionnaireState: Int, Codable {
     case begin
     case proceed
     case notAvailable

@@ -10,6 +10,6 @@ import Foundation
 extension UserDefaults {
     struct key {
         static let user = "user"
-        static let userStatus = "userStatus"
+        static let quiz = "quiz"
     }
 }

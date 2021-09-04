@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Quiz {
-    //TODO: 
+struct Quiz: Codable {
+    
     var state: QuestionnaireState = .begin
     var userStatus: UserStatus = .none
 }
