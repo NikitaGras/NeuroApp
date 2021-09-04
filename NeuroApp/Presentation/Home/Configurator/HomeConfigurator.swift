@@ -27,6 +27,7 @@ class HomeModuleConfigurator {
 
         let interactor = HomeInteractor()
         interactor.output = presenter
+        interactor.service = QuizService.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

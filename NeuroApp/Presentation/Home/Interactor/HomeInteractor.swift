@@ -6,15 +6,15 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-class HomeInteractor: HomeInteractorInput {
+class HomeInteractor: HomeInteractorInput, QuizObserver {
     weak var output: HomeInteractorOutput!
-
-    //TODO: service
-    func getUserStatus() -> UserStatus {
-        return .none
+    var service: QuizService!
+    
+    func update(with quiz: Quiz) {
+        output.update(with: quiz)
     }
     
-    func getQuestionnaireState() -> QuestionnaireState {
-        return .begin
+    func registerObserver() {
+        service.register(self)
     }
 }

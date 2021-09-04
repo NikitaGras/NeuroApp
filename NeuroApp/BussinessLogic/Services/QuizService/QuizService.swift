@@ -47,6 +47,7 @@ class QuizService: QuizServiceProtocol {
     func register(_ observer: QuizObserver) {
         let weakBox = QuizWeakBox(observer)
         observers.append(weakBox)
+        observer.update(with: quiz)
     }
     
     func remove(_ observer: QuizObserver) {
