@@ -8,7 +8,11 @@
 
 class HomeRouter: HomeRouterInput {
     
-    func openQuestionnaire() {
+    func beginQuestionnaire() {
         // TODO: transition to Quuestionaire module
+    }
+    
+    func progressQuestionaire() {
+        // TODO:
     }
 }

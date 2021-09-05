@@ -9,5 +9,6 @@
 import Foundation
 
 protocol HomeRouterInput {
-    func openQuestionnaire()
+    func beginQuestionnaire()
+    func progressQuestionaire()
 }

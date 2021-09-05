@@ -10,6 +10,10 @@ class HomeInteractor: HomeInteractorInput, QuizObserver {
     weak var output: HomeInteractorOutput!
     var service: QuizService!
     
+    var quizState: QuestionnaireState {
+        return service.quiz.state
+    }
+    
     func update(with quiz: Quiz) {
         output.update(with: quiz)
     }
