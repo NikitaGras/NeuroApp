@@ -9,28 +9,58 @@ import UIKit
 
 enum QuestionnaireState: Int, Codable {
     case begin
-    case proceed
+    case partOneProceed
+    case partTwoProceed
+    case partThreeProceed
     case notAvailable
     
     var backgroundColor: UIColor {
         switch self {
         case .begin:
             return .systemGreen
-        case .proceed:
-            return .systemBlue
         case .notAvailable:
             return .systemGray
+        default:
+            return .systemBlue
         }
     }
     
-    var title: String {
+    var buttonTitle: String {
         switch self {
         case .begin:
             return .QustionaireState.begin
-        case .proceed:
-            return .QustionaireState.proceed
         case .notAvailable:
             return .QustionaireState.notAvailable
+        default:
+            return .QustionaireState.proceed
+        }
+    }
+    
+    var previewTitle: String {
+        switch self {
+        case .partOneProceed:
+            return String.Preview.partOneTitle
+        case .partTwoProceed:
+            return String.Preview.partTwoTitle
+        case .partThreeProceed:
+            return String.Preview.partThreeTitle
+        default:
+            return ""
+        }
+    }
+    
+    var previewInfo: String {
+        switch self {
+        case .begin:
+            return String.Preview.begin
+        case .partOneProceed:
+            return String.Preview.partOneInfo
+        case .partTwoProceed:
+            return String.Preview.partTwoInfo
+        case .partThreeProceed:
+            return String.Preview.partThreeInfo
+        default:
+            return ""
         }
     }
 }

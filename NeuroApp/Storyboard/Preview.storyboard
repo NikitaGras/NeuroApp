@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preview View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="PreviewViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-2M-RPz" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="800" width="374" height="42"/>
+                                <color key="backgroundColor" name="NAGreen"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="begin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3EU-hV-voh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4z-nK-MJe">
+                                <rect key="frame" x="20" y="84" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYg-cm-dTx">
+                                <rect key="frame" x="20" y="154" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BYg-cm-dTx" secondAttribute="trailing" constant="20" id="6eH-aD-ciC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eJf-2M-RPz" secondAttribute="trailing" constant="20" id="FFQ-mD-Hjk"/>
+                            <constraint firstItem="eJf-2M-RPz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BYg-cm-dTx" secondAttribute="bottom" constant="20" id="Mjz-LB-qqI"/>
+                            <constraint firstItem="BYg-cm-dTx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Vc6-Wt-S7j"/>
+                            <constraint firstItem="s4z-nK-MJe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ZdA-Cg-rEC"/>
+                            <constraint firstItem="s4z-nK-MJe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="cnh-dP-Hpm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="eJf-2M-RPz" secondAttribute="bottom" constant="20" id="hM0-ab-SnH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="s4z-nK-MJe" secondAttribute="trailing" constant="20" id="kzx-rw-gsZ"/>
+                            <constraint firstItem="eJf-2M-RPz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="nZ1-Sz-bKX"/>
+                            <constraint firstItem="BYg-cm-dTx" firstAttribute="top" secondItem="s4z-nK-MJe" secondAttribute="bottom" constant="40" id="wpp-Dh-Fip"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="BYg-cm-dTx" id="Nch-h4-gsh"/>
+                        <outlet property="titleLabel" destination="s4z-nK-MJe" id="YOB-r6-QRH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="OyH-RS-fmH" customClass="PreviewModuleInitializer" customModule="NeuroApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="previewViewController" destination="Y6W-OH-hqX" id="xHc-81-YXA"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="NAGreen">
+            <color red="0.37999999523162842" green="0.80000001192092896" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -34,7 +34,7 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
     
     func updateQuestionnaireButton(with state: QuestionnaireState) {
-        let title = state.title
+        let title = state.buttonTitle
         questionnaireButton.setTitle(title, for: .normal)
         let color = state.backgroundColor
         questionnaireButton.setBackgroundColor(color, for: .normal)
