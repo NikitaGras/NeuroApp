@@ -16,6 +16,6 @@ protocol ProfileServiceProtocol {
     
     //MARK: - Observer
     
-    func attach(_ observer: ProfileObserver)
-    func detach(_ observer: ProfileObserver)
+    func register(_ observer: ProfileObserver)
+    func remove(_ observer: ProfileObserver)
 }

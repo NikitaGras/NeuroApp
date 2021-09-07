@@ -15,7 +15,7 @@ class EditInformationInteractor: EditInformationInteractorInput, ProfileObserver
     }
     
     func attach() {
-        service.attach(self)
+        service.register(self)
     }
     
     func update(_ user: User?) {

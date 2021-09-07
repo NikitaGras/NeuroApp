@@ -48,15 +48,14 @@ class ProfileService: ProfileServiceProtocol {
     
     
     //MARK: - Observer
-    // TODO: naming - register / delete
     // TODO: проверять есть ли в массиве observer
-    func attach(_ observer: ProfileObserver) {
+    func register(_ observer: ProfileObserver) {
         let weakBox = ProfileWeakBox(observer)
         observers.append(weakBox)
         observer.update(user)
     }
     
-    func detach(_ observer: ProfileObserver) {
+    func remove(_ observer: ProfileObserver) {
         // TODO:
     }
     

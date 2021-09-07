@@ -12,7 +12,7 @@ class ProfileInteractor: ProfileInteractorInput, ProfileObserver {
     
     // MARK: - ProfileObserver
     func attach() {
-        service.attach(self)
+        service.register(self)
     }
 
     // TODO: naming - denied - должно быть понятно что конкретно отклонено или denide(with error:)
