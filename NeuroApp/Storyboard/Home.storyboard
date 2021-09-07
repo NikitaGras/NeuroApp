@@ -99,6 +99,7 @@
                         <outlet property="questionnaireButton" destination="C0q-Hj-I6j" id="4D0-5L-NOe"/>
                         <outlet property="statusLabel" destination="cc6-zh-nTf" id="zzU-p7-ymk"/>
                         <outlet property="statusView" destination="mG5-g7-eFA" id="7KA-Ip-Mcq"/>
+                        <segue destination="KZR-jP-9ra" kind="show" identifier="beginQuiz" id="Pdx-Fi-I0P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -109,6 +110,16 @@
                 </customObject>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="105.80357142857143"/>
+        </scene>
+        <!--Preview-->
+        <scene sceneID="ThE-Fr-NLx">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PreviewViewController" storyboardName="Preview" id="KZR-jP-9ra" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ree-hA-PN7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaO-fM-iyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695" y="106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TlR-zl-1KC">

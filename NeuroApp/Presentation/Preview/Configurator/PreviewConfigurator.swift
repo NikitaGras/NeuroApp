@@ -27,6 +27,7 @@ class PreviewModuleConfigurator {
 
         let interactor = PreviewInteractor()
         interactor.output = presenter
+        interactor.service = QuizService.shared
 
         presenter.interactor = interactor
         viewController.output = presenter
