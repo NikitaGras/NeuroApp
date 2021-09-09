@@ -11,7 +11,7 @@ class QuizService: QuizServiceProtocol {
     static let shared = QuizService()
     private let key: String = UserDefaults.key.quiz
     
-    var observers = [QuizWeakBox]()
+    var observers = [WeakBox<QuizObserver>]()
     var quiz: Quiz! {
         didSet {
             notify()
@@ -45,7 +45,7 @@ class QuizService: QuizServiceProtocol {
     //MARK: - Observer
     
     func register(_ observer: QuizObserver) {
-        let weakBox = QuizWeakBox(observer)
+        let weakBox = WeakBox(observer)
         observers.append(weakBox)
         observer.update(with: quiz)
     }

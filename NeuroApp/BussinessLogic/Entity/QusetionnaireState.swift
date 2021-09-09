@@ -7,6 +7,7 @@
 
 import UIKit
 
+//TODO: naming
 enum QuestionnaireState: Int, Codable {
     case begin
     case partOneProceed
@@ -14,6 +15,7 @@ enum QuestionnaireState: Int, Codable {
     case partThreeProceed
     case notAvailable
     
+    // TODO: переместить в контроллер
     var backgroundColor: UIColor {
         switch self {
         case .begin:

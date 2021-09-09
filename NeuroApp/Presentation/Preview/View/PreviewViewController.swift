@@ -8,6 +8,8 @@
 
 import UIKit
 
+//TODO: ScrollView, Отступы если title скрыт
+
 class PreviewViewController: UIViewController, PreviewViewInput {
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -28,6 +30,7 @@ class PreviewViewController: UIViewController, PreviewViewInput {
     
     func showStartScreen() {
         titleLabel.isHidden = true
+        // TODO:
     }
     
     func showPart(_ quiz: Quiz) {

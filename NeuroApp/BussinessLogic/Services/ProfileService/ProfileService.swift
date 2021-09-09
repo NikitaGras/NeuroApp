@@ -12,7 +12,7 @@ class ProfileService: ProfileServiceProtocol {
     static let shared = ProfileService()
     private let key: String = UserDefaults.key.user
     //TODO: использовать WeakBox который работает с Any?
-    var observers = [ProfileWeakBox]()
+    var observers = [WeakBox<ProfileObserver>]()
     var user: User? {
         didSet {
             notify()
@@ -50,7 +50,7 @@ class ProfileService: ProfileServiceProtocol {
     //MARK: - Observer
     // TODO: проверять есть ли в массиве observer
     func register(_ observer: ProfileObserver) {
-        let weakBox = ProfileWeakBox(observer)
+        let weakBox = WeakBox(observer)
         observers.append(weakBox)
         observer.update(user)
     }
