@@ -52,9 +52,7 @@ class QuizService: QuizServiceProtocol {
     }
     
     func remove(_ observer: QuizObserver) {
-        observers.removeAll { weakBox in
-            weakBox.object === observer
-        }
+        observers.removeAll { $0.object === observer }
     }
     
     func notifyObservers() {

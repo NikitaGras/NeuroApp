@@ -11,11 +11,11 @@ import Foundation
 class ProfileService: ProfileServiceProtocol {
     static let shared = ProfileService()
     private let key: String = UserDefaults.key.user
-    //TODO: использовать WeakBox который работает с Any?
+    
     var observers = [WeakBox<ProfileObserver>]()
     var user: User? {
         didSet {
-            notify()
+            notifyObservers()
         }
     }
     var isLoggedIn: Bool {
@@ -23,8 +23,7 @@ class ProfileService: ProfileServiceProtocol {
     }
     
     private init() {
-        let user = fetchUser()
-        self.user = user
+        self.user = fetchUser()
     }
     
     private func fetchUser() -> User? {
@@ -48,20 +47,25 @@ class ProfileService: ProfileServiceProtocol {
     
     
     //MARK: - Observer
-    // TODO: проверять есть ли в массиве observer
     func register(_ observer: ProfileObserver) {
-        let weakBox = WeakBox(observer)
-        observers.append(weakBox)
-        observer.update(user)
+        if !isRegistred(observer) {
+            let weakBox = WeakBox(observer)
+            observers.append(weakBox)
+            observer.update(user)
+        }
     }
     
     func remove(_ observer: ProfileObserver) {
-        // TODO:
+        observers.removeAll { $0.object === observer }
     }
     
-    func notify() {
+    func notifyObservers() {
         observers.forEach { observer in
             observer.object?.update(user)
         }
+    }
+    
+    func isRegistred(_ observer: ProfileObserver) -> Bool {
+        return observers.contains { $0.object === observer }
     }
 }

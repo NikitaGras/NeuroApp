@@ -13,7 +13,6 @@ protocol ProfileServiceProtocol {
     func save(_ user: User) throws
     func deleteUser()
     
-    
     //MARK: - Observer
     
     func register(_ observer: ProfileObserver)
