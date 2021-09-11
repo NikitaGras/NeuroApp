@@ -9,7 +9,6 @@
 import UIKit
 
 class LoginModuleInitializer: NSObject {
-
     //Connect with object on storyboard
     @IBOutlet weak var loginViewController: LoginViewController!
 
@@ -17,5 +16,4 @@ class LoginModuleInitializer: NSObject {
         let configurator = LoginModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: loginViewController)
     }
-
 }

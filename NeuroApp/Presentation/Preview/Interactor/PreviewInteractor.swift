@@ -7,7 +7,6 @@
 //
 
 class PreviewInteractor: PreviewInteractorInput, QuizObserver {
-
     weak var output: PreviewInteractorOutput!
     var service: QuizService!
     var quizState: QuestionnaireState {
@@ -21,5 +20,4 @@ class PreviewInteractor: PreviewInteractorInput, QuizObserver {
     func registerObserver() {
         service.register(self)
     }
-    
 }

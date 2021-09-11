@@ -12,17 +12,15 @@ class HomeViewController: UIViewController, HomeViewInput {
     @IBOutlet weak var questionnaireButton: UIButton!
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var statusLabel: UILabel!
-    
     var output: HomeViewOutput!
 
-    // MARK: Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-
-    // MARK: HomeViewInput
+    // MARK: - HomeViewInput
     func setupInitialState() {
         statusView.layer.borderWidth = 4
         statusView.layer.cornerRadius = 20

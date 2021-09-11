@@ -9,12 +9,10 @@
 import UIKit
 
 class ProfileModuleInitializer: NSObject {
-
     @IBOutlet weak var profileViewController: ProfileViewController!
 
     override func awakeFromNib() {
         let configurator = ProfileModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: profileViewController)
     }
-
 }

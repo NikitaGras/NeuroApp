@@ -7,7 +7,6 @@
 //
 
 class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractorOutput {
-    
     weak var view: ProfileViewInput!
     var interactor: ProfileInteractorInput!
     var router: ProfileRouterInput!

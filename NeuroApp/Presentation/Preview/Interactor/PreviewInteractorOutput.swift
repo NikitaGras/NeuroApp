@@ -9,6 +9,5 @@
 import Foundation
 
 protocol PreviewInteractorOutput: AnyObject {
-    
     func update(with quiz: Quiz)
 }

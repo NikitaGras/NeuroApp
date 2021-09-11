@@ -8,7 +8,6 @@
 import UIKit
 
 class LoginRouter: LoginRouterInput {
-
     func openHomeModule() {
         let router = AppRouter.shared
         router.open(module: .tabbar)

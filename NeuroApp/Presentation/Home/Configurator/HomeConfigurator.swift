@@ -9,9 +9,7 @@
 import UIKit
 
 class HomeModuleConfigurator {
-
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
         if let viewController = viewInput as? HomeViewController {
             configure(viewController: viewController)
         }

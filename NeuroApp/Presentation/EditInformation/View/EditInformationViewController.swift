@@ -12,15 +12,13 @@ class EditInformationViewController: UIViewController, EditInformationViewInput 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    
     var output: EditInformationViewOutput!
 
-    // MARK: Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
-
 
     // MARK: EditInformationViewInput
     func setupInitialState() {
@@ -43,7 +41,6 @@ class EditInformationViewController: UIViewController, EditInformationViewInput 
         let age = Int(ageString) ?? 0
         let email = emailTextField.text ?? ""
         let user = User(with: name, age, email)
-        
         return user
     }
 }

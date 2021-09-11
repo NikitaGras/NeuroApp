@@ -7,7 +7,6 @@
 //
 
 class PreviewPresenter: PreviewModuleInput, PreviewViewOutput, PreviewInteractorOutput {
-
     weak var view: PreviewViewInput!
     var interactor: PreviewInteractorInput!
     var router: PreviewRouterInput!

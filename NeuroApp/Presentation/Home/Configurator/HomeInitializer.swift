@@ -9,7 +9,6 @@
 import UIKit
 
 class HomeModuleInitializer: NSObject {
-
     //Connect with object on storyboard
     @IBOutlet weak var homeViewController: HomeViewController!
 
@@ -18,5 +17,4 @@ class HomeModuleInitializer: NSObject {
         let configurator = HomeModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: homeViewController)
     }
-
 }

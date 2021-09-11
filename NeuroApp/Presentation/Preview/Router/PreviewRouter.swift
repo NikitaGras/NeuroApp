@@ -7,8 +7,6 @@
 //
 
 class PreviewRouter: PreviewRouterInput {
-    
-    
     func openPartPreview() {
         
     }

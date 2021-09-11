@@ -9,7 +9,6 @@
 import UIKit
 
 class ProfileModuleConfigurator {
-
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
         if let viewController = viewInput as? ProfileViewController {
@@ -33,5 +32,4 @@ class ProfileModuleConfigurator {
         presenter.interactor = interactor
         viewController.output = presenter
     }
-
 }

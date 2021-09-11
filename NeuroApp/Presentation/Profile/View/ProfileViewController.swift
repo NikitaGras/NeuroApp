@@ -9,23 +9,20 @@
 import UIKit
 
 class ProfileViewController: UIViewController, ProfileViewInput {
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var eraseButton: UIButton!
-    
     var output: ProfileViewOutput!
 
-    // MARK: Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-
-    // MARK: ProfileViewInput
+    // MARK: - ProfileViewInput
     func setupInitialState() {
         // TODO:
     }

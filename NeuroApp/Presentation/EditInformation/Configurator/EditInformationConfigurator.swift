@@ -9,7 +9,6 @@
 import UIKit
 
 class EditInformationModuleConfigurator {
-
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
         if let viewController = viewInput as? EditInformationViewController {
@@ -18,7 +17,6 @@ class EditInformationModuleConfigurator {
     }
 
     private func configure(viewController: EditInformationViewController) {
-
         let router = EditInformationRouter()
         router.transitionHandler = viewController
 
@@ -34,5 +32,4 @@ class EditInformationModuleConfigurator {
         viewController.output = presenter
         viewController.moduleInput = presenter
     }
-
 }

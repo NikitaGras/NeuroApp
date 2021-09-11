@@ -13,7 +13,6 @@ class LoginViewController: UIViewController, LoginViewInput {
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var saveButton: RoundButton!
-    
     var output: LoginViewOutput!
 
     // MARK: - Life cycle
@@ -23,7 +22,6 @@ class LoginViewController: UIViewController, LoginViewInput {
         output.viewIsReady()
     }
     
-
     // MARK: - LoginViewInput
     
     func setupInitialState() {

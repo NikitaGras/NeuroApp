@@ -9,7 +9,6 @@
 import UIKit
 
 class PreviewModuleInitializer: NSObject {
-
     //Connect with object on storyboard
     @IBOutlet weak var previewViewController: PreviewViewController!
 
@@ -18,5 +17,4 @@ class PreviewModuleInitializer: NSObject {
         let configurator = PreviewModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: previewViewController)
     }
-
 }

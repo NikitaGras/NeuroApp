@@ -9,16 +9,13 @@
 import UIKit
 
 class PreviewModuleConfigurator {
-
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
         if let viewController = viewInput as? PreviewViewController {
             configure(viewController: viewController)
         }
     }
 
     private func configure(viewController: PreviewViewController) {
-
         let router = PreviewRouter()
 
         let presenter = PreviewPresenter()
@@ -32,5 +29,4 @@ class PreviewModuleConfigurator {
         presenter.interactor = interactor
         viewController.output = presenter
     }
-
 }

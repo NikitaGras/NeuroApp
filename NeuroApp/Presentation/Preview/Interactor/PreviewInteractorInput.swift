@@ -10,5 +10,4 @@ import Foundation
 
 protocol PreviewInteractorInput {
     var quizState: QuestionnaireState { get }
-    
 }

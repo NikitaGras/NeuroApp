@@ -9,7 +9,6 @@
 import UIKit
 
 class EditInformationModuleInitializer: NSObject {
-
     //Connect with object on storyboard
     @IBOutlet weak var editinformationViewController: EditInformationViewController!
 
@@ -18,5 +17,4 @@ class EditInformationModuleInitializer: NSObject {
         let configurator = EditInformationModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: editinformationViewController)
     }
-
 }

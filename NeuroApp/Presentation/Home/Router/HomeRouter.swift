@@ -8,7 +8,6 @@
 import ViperMcFlurry
 
 class HomeRouter: HomeRouterInput {
-    
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func beginQuestionnaire() {

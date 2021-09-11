@@ -12,6 +12,7 @@ enum UserStatus: Int, Codable {
     case positive
     case negative
     
+    //TODO: стоит ли перенести в контроллер?
     var borderColor: UIColor {
         switch self {
         case .none:
