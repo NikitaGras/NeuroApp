@@ -14,5 +14,5 @@ protocol QuizServiceProtocol {
     //MARK: - Observer
     func register(_ observer: QuizObserver)
     func remove(_ observer: QuizObserver)
-    func notify()
+    func notifyObservers()
 }

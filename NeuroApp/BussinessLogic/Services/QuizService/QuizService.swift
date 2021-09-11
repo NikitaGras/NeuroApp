@@ -14,7 +14,7 @@ class QuizService: QuizServiceProtocol {
     var observers = [WeakBox<QuizObserver>]()
     var quiz: Quiz! {
         didSet {
-            notify()
+            notifyObservers()
         }
     }
     
@@ -41,24 +41,29 @@ class QuizService: QuizServiceProtocol {
         quiz = Quiz()
     }
     
-    
     //MARK: - Observer
     
     func register(_ observer: QuizObserver) {
-        let weakBox = WeakBox(observer)
-        observers.append(weakBox)
-        observer.update(with: quiz)
+        if !isRegistred(observer) {
+            let weakBox = WeakBox(observer)
+            observers.append(weakBox)
+            observer.update(with: quiz)
+        }
     }
     
     func remove(_ observer: QuizObserver) {
-        // TODO:
+        observers.removeAll { weakBox in
+            weakBox.object === observer
+        }
     }
     
-    func notify() {
+    func notifyObservers() {
         observers.forEach { weakBox in
             weakBox.object?.update(with: quiz)
         }
     }
     
-    
+    func isRegistred(_ observer: QuizObserver) -> Bool {
+        observers.contains { $0.object === observer }
+    }
 }

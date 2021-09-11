@@ -8,7 +8,6 @@
 import Foundation
 
 struct Quiz: Codable {
-    
     var state: QuestionnaireState = .begin
     var userStatus: UserStatus = .none
 }

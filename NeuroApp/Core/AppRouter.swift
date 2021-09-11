@@ -32,7 +32,6 @@ class AppRouter {
             }
         }
     }
-
 }
 
 extension AppRouter {
