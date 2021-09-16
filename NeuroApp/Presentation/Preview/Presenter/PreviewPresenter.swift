@@ -13,23 +13,33 @@ class PreviewPresenter: PreviewModuleInput, PreviewViewOutput, PreviewInteractor
 
     func viewIsReady() {
         view.setupInitialState()
+        interactor.registerObserver()
     }
     
     func update(with quiz: Quiz) {
-        switch quiz.state {
-        case .begin:
-            view.showStartScreen()
-        default:
+        if quiz.state == .begin {
+            view.showStartScreen(quiz)
+        } else if isPartProcced(quiz: quiz) {
             view.showPart(quiz)
         }
     }
     
     func begin() {
-        switch interactor.quizState {
-        case .begin:
+        let quiz = interactor.quiz
+        if quiz.state == .begin {
             router.openPartPreview()
-        default:
+        } else if isPartProcced(quiz: quiz) {
             router.openQuiz()
+        }
+        
+    }
+    
+    func isPartProcced(quiz: Quiz) -> Bool {
+        let state = quiz.state
+        if state == .partOneProceed || state == .partTwoProceed || state == .partThreeProceed {
+            return true
+        } else {
+            return false
         }
     }
 }

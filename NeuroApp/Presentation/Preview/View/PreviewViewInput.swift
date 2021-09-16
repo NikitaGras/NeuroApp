@@ -8,6 +8,6 @@
 
 protocol PreviewViewInput: AnyObject {
     func setupInitialState()
-    func showStartScreen()
+    func showStartScreen(_ quiz: Quiz)
     func showPart(_ quiz: Quiz)
 }

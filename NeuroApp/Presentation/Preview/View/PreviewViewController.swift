@@ -25,15 +25,26 @@ class PreviewViewController: UIViewController, PreviewViewInput {
     func setupInitialState() {
     }
     
-    func showStartScreen() {
+    func showStartScreen(_ quiz: Quiz) {
         titleLabel.isHidden = true
-        // TODO:
+        if quiz.state == .begin {
+            infoLabel.text = .Preview.beginInfo
+        }
     }
     
     func showPart(_ quiz: Quiz) {
         titleLabel.isHidden = false
-        titleLabel.text = quiz.state.previewTitle
-        infoLabel.text = quiz.state.previewInfo
+        if quiz.state == .partOneProceed {
+            titleLabel.text = .Preview.partOneTitle
+            infoLabel.text = .Preview.partOneInfo
+        } else if quiz.state == .partTwoProceed {
+            titleLabel.text = .Preview.partTwoTitle
+            infoLabel.text = .Preview.partTwoInfo
+        } else if quiz.state == .partThreeProceed {
+            titleLabel.text = .Preview.partThreeTitle
+            infoLabel.text = .Preview.partThreeInfo
+        }
+        
     }
     
     @IBAction func begin(_ sender: UIButton) {

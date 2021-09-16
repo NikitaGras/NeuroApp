@@ -34,7 +34,7 @@ extension String {
     }
     
     struct Preview {
-        static let begin = "Please answer the next few questions as quiqly as you can and to the best of your ability. The questionaire will consist of 3 parts: Self-Efficacy, Short-Answer and Long-Answer questions"
+        static let beginInfo = "Please answer the next few questions as quiqly as you can and to the best of your ability. The questionaire will consist of 3 parts: Self-Efficacy, Short-Answer and Long-Answer questions"
         static let partOneTitle = "Part 1: Self Efficacy"
         static let partOneInfo = "The following questions are designed to help us get a better understanding of any symptoms you might be experiencing in the areas of attention, memmory, organization and thinking. Please try to be objective in your answers."
         static let partTwoTitle = "Part 2: Short Answer"

@@ -9,6 +9,6 @@
 import Foundation
 
 protocol HomeInteractorInput {
-    var quizState: QuestionnaireState { get }
+    var quiz: Quiz { get }
     func registerObserver()
 }

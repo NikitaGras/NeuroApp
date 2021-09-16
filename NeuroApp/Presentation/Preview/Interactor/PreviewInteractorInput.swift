@@ -9,5 +9,6 @@
 import Foundation
 
 protocol PreviewInteractorInput {
-    var quizState: QuestionnaireState { get }
+    func registerObserver()
+    var quiz: Quiz { get }
 }

@@ -9,8 +9,9 @@
 class PreviewInteractor: PreviewInteractorInput, QuizObserver {
     weak var output: PreviewInteractorOutput!
     var service: QuizService!
-    var quizState: QuestionnaireState {
-        return service.quiz.state
+    
+    var quiz: Quiz {
+        return service.quiz
     }
     
     func update(with quiz: Quiz) {

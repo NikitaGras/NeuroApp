@@ -28,8 +28,6 @@
 		568CF19A7F36CF7859D1E3A3 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */; };
 		56AD86C9CCE66F26F4BFE943 /* PreviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9081166A9ED30548FBA4D9 /* PreviewPresenter.swift */; };
 		5A166C04269BF43200E590C7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A166C03269BF43200E590C7 /* Home.storyboard */; };
-		5A166C06269C046000E590C7 /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A166C05269C046000E590C7 /* UserStatus.swift */; };
-		5A166C08269C054B00E590C7 /* QusetionnaireState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A166C07269C054B00E590C7 /* QusetionnaireState.swift */; };
 		5A166C0A269C2EC500E590C7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A166C09269C2EC500E590C7 /* UIColor.swift */; };
 		5A166C0C269C2F7400E590C7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A166C0B269C2F7400E590C7 /* String.swift */; };
 		5A166C10269C319000E590C7 /* ProfileServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A166C0F269C319000E590C7 /* ProfileServiceProtocol.swift */; };
@@ -124,8 +122,6 @@
 		4C642DB194C16080141E1F13 /* ProfileInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractorInput.swift; sourceTree = "<group>"; };
 		549A076939854C22E1C60212 /* ProfileViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewOutput.swift; sourceTree = "<group>"; };
 		5A166C03269BF43200E590C7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		5A166C05269C046000E590C7 /* UserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
-		5A166C07269C054B00E590C7 /* QusetionnaireState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QusetionnaireState.swift; sourceTree = "<group>"; };
 		5A166C09269C2EC500E590C7 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		5A166C0B269C2F7400E590C7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5A166C0F269C319000E590C7 /* ProfileServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceProtocol.swift; sourceTree = "<group>"; };
@@ -282,7 +278,6 @@
 				4A368DC00AF4377240AC8EB3 /* PreviewRouterInput.swift */,
 				E089C96F92DA4B9938680EDE /* PreviewRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -293,7 +288,6 @@
 				A9C227DEAEEBC83A6C40F7BE /* PreviewViewOutput.swift */,
 				68D7D9B821A5D56F65BEEC02 /* PreviewViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -355,10 +349,8 @@
 			children = (
 				5AFFFCE826AEC00400E9F3F1 /* Error */,
 				5A166C0D269C30A500E590C7 /* Constants */,
-				5A1E8BB5269840B9001179F7 /* User.swift */,
-				5A166C05269C046000E590C7 /* UserStatus.swift */,
-				5A166C07269C054B00E590C7 /* QusetionnaireState.swift */,
 				5A70C45426D3A3D50046675D /* WeakBox.swift */,
+				5A1E8BB5269840B9001179F7 /* User.swift */,
 				5AE8500326DB98DA00A834D2 /* Quiz.swift */,
 			);
 			path = Entity;
@@ -478,7 +470,6 @@
 				FB047CD13D1144074596B737 /* PreviewConfigurator.swift */,
 				7A447CB263B29E489CD7A1BA /* PreviewInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -508,7 +499,6 @@
 				6ADE9583A9986F32860A2F0A /* PreviewInteractorOutput.swift */,
 				E3BA7F9882FD4810D75E1D28 /* PreviewInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -534,7 +524,6 @@
 				3D01DF44AB2CEB5BAD9EBAF8 /* Router */,
 				6CDC4817E6494C15E6EE0F39 /* Configurator */,
 			);
-			name = Preview;
 			path = Preview;
 			sourceTree = "<group>";
 		};
@@ -583,7 +572,6 @@
 				FEE45C5E72938F300448BFC4 /* PreviewModuleInput.swift */,
 				9F9081166A9ED30548FBA4D9 /* PreviewPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -829,8 +817,6 @@
 				B0388DAFB78645FC4999865C /* LoginRouterInput.swift in Sources */,
 				1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */,
 				61BF5B7CEAE781CE40CDC899 /* LoginConfigurator.swift in Sources */,
-				5A166C06269C046000E590C7 /* UserStatus.swift in Sources */,
-				5A166C08269C054B00E590C7 /* QusetionnaireState.swift in Sources */,
 				35E0800B4950274D0E7D4706 /* LoginInitializer.swift in Sources */,
 				7AA7E08EA584ECAFD5692688 /* HomeViewInput.swift in Sources */,
 				5AE8500B26DB9C3400A834D2 /* QuizObserver.swift in Sources */,

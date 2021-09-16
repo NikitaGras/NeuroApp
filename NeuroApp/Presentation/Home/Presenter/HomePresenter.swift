@@ -21,6 +21,6 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     }
     
     func openQuiz() {
-        interactor.quizState == .begin ? router.beginQuestionnaire() : router.progressQuestionaire()
+        interactor.quiz.state == .begin ? router.beginQuestionnaire() : router.progressQuestionaire()
     }
 }

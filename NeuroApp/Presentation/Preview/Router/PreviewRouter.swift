@@ -14,6 +14,4 @@ class PreviewRouter: PreviewRouterInput {
     func openQuiz() {
         
     }
-    
-
 }

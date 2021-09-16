@@ -27,11 +27,14 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
     
     func update(with quiz: Quiz) {
-        updateQuestionnaireButton(with: quiz.state)
+        updateQuestionnaireButton(with: quiz)
         updateStatus(with: quiz.userStatus)
     }
     
-    func updateQuestionnaireButton(with state: QuestionnaireState) {
+    func updateQuestionnaireButton(with quiz: Quiz) {
+        let state = quiz.state
+        
+        
         let title = state.buttonTitle
         questionnaireButton.setTitle(title, for: .normal)
         let color = state.backgroundColor
