@@ -8,5 +8,5 @@
 
 protocol LoginViewOutput {
     func viewIsReady()
-    func save(_ user: User)
+    func saveUser(with name: String, _ age: Int, _ email: String)
 }

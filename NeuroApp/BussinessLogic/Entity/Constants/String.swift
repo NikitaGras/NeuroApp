@@ -27,7 +27,7 @@ extension String {
         static let positive = "Positive"
     }
     
-    struct QustionaireState {
+    struct QuizState {
         static let begin = "BEGIN QUESTIONNAIRE"
         static let proceed = "RESUME QUESTIONNAIRE"
         static let notAvailable = "DAYS UNTIL NEXT SESSION"

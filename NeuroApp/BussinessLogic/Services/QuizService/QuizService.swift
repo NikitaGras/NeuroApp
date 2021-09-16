@@ -42,7 +42,6 @@ class QuizService: QuizServiceProtocol {
     }
     
     //MARK: - Observer
-    
     func register(_ observer: QuizObserver) {
         if !isRegistred(observer) {
             let weakBox = WeakBox(observer)

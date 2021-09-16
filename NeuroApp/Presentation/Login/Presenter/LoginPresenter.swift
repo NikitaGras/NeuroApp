@@ -15,9 +15,9 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
         view.setupInitialState()
     }
     
-    func save(_ user: User) {
+    func saveUser(with name: String, _ age: Int, _ email: String) {
         do {
-            try user.validate()
+            let user = try User(with: name, age, email)
             try interactor.save(user)
             router.openHomeModule()
         } catch {

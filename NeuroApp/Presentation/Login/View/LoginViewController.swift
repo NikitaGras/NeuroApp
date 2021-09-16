@@ -16,29 +16,22 @@ class LoginViewController: UIViewController, LoginViewInput {
     var output: LoginViewOutput!
 
     // MARK: - Life cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
     
     // MARK: - LoginViewInput
-    
     func setupInitialState() {
         saveButton.setBackgroundColor(.NAGreen, for: .normal)
     }
     
     @IBAction func save(_ sender: Any) {
-        let user = createUser()
-        output.save(user)
-    }
-    
-    func createUser() -> User {
         let name = nameTextField.text ?? ""
         let ageString = ageTextField.text ?? ""
         let age: Int = Int(ageString) ?? 0
         let email = emailTextField.text ?? ""
-        return User(with: name, age, email)
+        
+        output.saveUser(with: name, age, email)
     }
-    
 }
