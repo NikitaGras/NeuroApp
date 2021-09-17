@@ -9,4 +9,5 @@
 protocol HomeViewInput: AnyObject {
     func setupInitialState()
     func update(with quiz: Quiz)
+    func update(with user: User)
 }

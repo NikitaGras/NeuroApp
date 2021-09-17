@@ -6,19 +6,27 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-class HomeInteractor: HomeInteractorInput, QuizObserver {
+class HomeInteractor: HomeInteractorInput, QuizObserver, ProfileObserver {
     weak var output: HomeInteractorOutput!
-    var service: QuizService!
+    var QuizService: QuizService!
+    var ProfileService: ProfileService!
     
     var quiz: Quiz {
-        return service.quiz
+        return QuizService.quiz
     }
     
     func update(with quiz: Quiz) {
         output.update(with: quiz)
     }
     
+    func update(_ user: User?) {
+        guard let user = user else {
+            return output.openlogin()
+        }
+        output.update(with: user)
+    }
+    
     func registerObserver() {
-        service.register(self)
+        QuizService.register(self)
     }
 }

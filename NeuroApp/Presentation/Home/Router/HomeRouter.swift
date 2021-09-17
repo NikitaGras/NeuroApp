@@ -10,11 +10,16 @@ import ViperMcFlurry
 class HomeRouter: HomeRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
-    func beginQuestionnaire() {
+    func beginQuiz() {
         let _ = transitionHandler.openModule?(usingSegue: "beginQuiz")
     }
     
-    func progressQuestionaire() {
+    func progressQuiz() {
         // TODO:
+    }
+    
+    func openLogin() {
+        let router = AppRouter.shared
+        router.open(module: .login)
     }
 }

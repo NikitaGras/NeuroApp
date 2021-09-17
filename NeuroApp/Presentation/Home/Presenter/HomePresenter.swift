@@ -20,7 +20,15 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
         view.update(with: quiz)
     }
     
+    func update(with user: User) {
+        view.update(with: user)
+    }
+    
     func openQuiz() {
-        interactor.quiz.state == .begin ? router.beginQuestionnaire() : router.progressQuestionaire()
+        interactor.quiz.state == .begin ? router.beginQuiz() : router.progressQuiz()
+    }
+    
+    func openlogin() {
+        router.openLogin()
     }
 }

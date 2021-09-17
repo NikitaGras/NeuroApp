@@ -9,6 +9,7 @@
 import Foundation
 
 protocol HomeRouterInput {
-    func beginQuestionnaire()
-    func progressQuestionaire()
+    func beginQuiz()
+    func progressQuiz()
+    func openLogin()
 }
