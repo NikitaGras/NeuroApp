@@ -38,6 +38,6 @@ class ProfileViewController: UIViewController, ProfileViewInput {
     }
     
     @IBAction func erase(_ sender: Any) {
-        output.erase()
+        output.eraseUser()
     }
 }

@@ -8,6 +8,6 @@
 
 protocol ProfileViewOutput {
     func viewIsReady()
-    func erase()
+    func eraseUser()
     func edit()
 }

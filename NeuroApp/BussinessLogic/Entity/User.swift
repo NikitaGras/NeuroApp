@@ -32,6 +32,17 @@ extension User {
         case none
         case positive
         case negative
+        
+        var description: String {
+            switch self {
+            case .none:
+                return .UserStatus.none
+            case .positive:
+                return .UserStatus.positive
+            case .negative:
+                return .UserStatus.negative
+            }
+        }
     }
     
     // MARK: - Validation functions
@@ -49,7 +60,7 @@ extension User {
     
     private func validate(_ age: Int) throws {
         let maxAge = 120
-        if age <= 0 || self.age > maxAge {
+        if age <= 0 || age > maxAge {
             throw ValidationError.wrongAge
         }
     }

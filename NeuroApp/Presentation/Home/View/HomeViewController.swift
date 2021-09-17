@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController, HomeViewInput {
-    @IBOutlet weak var questionnaireButton: UIButton!
+    @IBOutlet weak var quizButton: UIButton!
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var statusLabel: UILabel!
     var output: HomeViewOutput!
@@ -35,11 +35,23 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
     
     func updateQuizButton(with quiz: Quiz) {
-        // TODO:
+        if quiz.state == .begin {
+            let title = String.QuizState.begin
+            quizButton.isEnabled = true
+            quizButton.setTitle(title, for: .normal)
+        } else if quiz.state == .notAvailable {
+            let title = String.QuizState.proceed
+            quizButton.isEnabled = false
+            quizButton.setTitle(title, for: .disabled)
+        } else if quiz.isProceed {
+            let title = String.QuizState.proceed
+            quizButton.isEnabled = true
+            quizButton.setTitle(title, for: .normal)
+        }
     }
     
     func updateStatus(with user: User) {
-        // TODO: 
+        statusLabel.text = user.status.description
     }
     
     @IBAction func examine(_ sender: UIButton) {

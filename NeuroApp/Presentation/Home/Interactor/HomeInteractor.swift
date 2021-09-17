@@ -8,11 +8,11 @@
 
 class HomeInteractor: HomeInteractorInput, QuizObserver, ProfileObserver {
     weak var output: HomeInteractorOutput!
-    var QuizService: QuizService!
-    var ProfileService: ProfileService!
+    var quizService: QuizService!
+    var profileService: ProfileService!
     
     var quiz: Quiz {
-        return QuizService.quiz
+        return quizService.quiz
     }
     
     func update(with quiz: Quiz) {
@@ -27,6 +27,7 @@ class HomeInteractor: HomeInteractorInput, QuizObserver, ProfileObserver {
     }
     
     func registerObserver() {
-        QuizService.register(self)
+        quizService.register(self)
+        profileService.register(self)
     }
 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UfL-Q3-SVn">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,20 +13,20 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogf-JK-f3T">
-                                <rect key="frame" x="20" y="237" width="374" height="422"/>
+                                <rect key="frame" x="20" y="69" width="560" height="462"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="hDw-4C-OJn">
-                                        <rect key="frame" x="104" y="0.0" width="166" height="166"/>
+                                        <rect key="frame" x="160" y="0.0" width="240" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="hDw-4C-OJn" secondAttribute="height" id="gIx-5G-KZT"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0q-Hj-I6j" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="196" width="374" height="60"/>
+                                        <rect key="frame" x="0.0" y="270" width="560" height="60"/>
                                         <color key="backgroundColor" name="NAGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="vEZ-2k-fou"/>
@@ -40,17 +39,17 @@
                                             <action selector="examine:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ImK-4H-U6u"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your status:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="peg-x4-Apu">
-                                        <rect key="frame" x="0.0" y="286" width="374" height="36"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your status:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="peg-x4-Apu">
+                                        <rect key="frame" x="0.0" y="286" width="560" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-g7-eFA">
-                                        <rect key="frame" x="0.0" y="352" width="374" height="70"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-g7-eFA">
+                                        <rect key="frame" x="0.0" y="352" width="560" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your status" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc6-zh-nTf">
-                                                <rect key="frame" x="20" y="20" width="334" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your status" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc6-zh-nTf">
+                                                <rect key="frame" x="20" y="20" width="520" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -96,7 +95,7 @@
                     <navigationItem key="navigationItem" id="jXY-lD-j3I"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="questionnaireButton" destination="C0q-Hj-I6j" id="4D0-5L-NOe"/>
+                        <outlet property="quizButton" destination="C0q-Hj-I6j" id="4D0-5L-NOe"/>
                         <outlet property="statusLabel" destination="cc6-zh-nTf" id="zzU-p7-ymk"/>
                         <outlet property="statusView" destination="mG5-g7-eFA" id="7KA-Ip-Mcq"/>
                         <segue destination="KZR-jP-9ra" kind="show" identifier="beginQuiz" id="Pdx-Fi-I0P"/>
