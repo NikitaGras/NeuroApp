@@ -11,14 +11,13 @@ class ProfileInteractor: ProfileInteractorInput, ProfileObserver {
     weak var output: ProfileInteractorOutput!
     
     // MARK: - ProfileObserver
-    func attach() {
+    func registerObserver() {
         service.register(self)
     }
 
-    // TODO: naming - denied - должно быть понятно что конкретно отклонено или denide(with error:)
     func update(_ user: User?) {
         guard let user = user else {
-            return output.denied()
+            return output.eraseUser()
         }
         output.fill(with: user)
     }

@@ -13,18 +13,14 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
 
     func viewIsReady() {
         view.setupInitialState()
-        interactor.attach()
+        interactor.registerObserver()
     }
     
     func fill(with user: User) {
         view.fill(with: user)
     }
     
-    func denied() {
-        router.openLogin()
-    }
-    
-    func erase() {
+    func eraseUser() {
         router.openLogin()
     }
     

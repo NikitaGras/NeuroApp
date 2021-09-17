@@ -10,7 +10,6 @@ import UIKit
 
 class EditInformationModuleConfigurator {
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
         if let viewController = viewInput as? EditInformationViewController {
             configure(viewController: viewController)
         }

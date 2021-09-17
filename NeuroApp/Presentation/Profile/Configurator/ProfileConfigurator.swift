@@ -10,7 +10,6 @@ import UIKit
 
 class ProfileModuleConfigurator {
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
         if let viewController = viewInput as? ProfileViewController {
             configure(viewController: viewController)
         }

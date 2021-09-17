@@ -10,5 +10,5 @@ import Foundation
 
 protocol EditInformationInteractorOutput: AnyObject {
     func fill(with user: User)
-    func denied()
+    func openLogin()
 }

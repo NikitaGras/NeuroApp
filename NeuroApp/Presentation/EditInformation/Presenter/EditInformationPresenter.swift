@@ -14,12 +14,12 @@ class EditInformationPresenter: NSObject, EditInformationModuleInput, EditInform
 
     func viewIsReady() {
         view.setupInitialState()
-        interactor.attach()
+        interactor.registerObserver()
     }
     
-    func safe(_ user: User) {
+    func safeUser() {
         do {
-            try user.validate()
+            let user = try view.createUser()
             try interactor.save(user: user)
             router.goBack()
         } catch {
@@ -31,7 +31,7 @@ class EditInformationPresenter: NSObject, EditInformationModuleInput, EditInform
         view.fill(with: user)
     }
     
-    func denied() {
+    func openLogin() {
         router.openLogin()
     }
 }

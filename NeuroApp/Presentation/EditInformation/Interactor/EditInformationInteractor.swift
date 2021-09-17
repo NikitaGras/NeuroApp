@@ -14,14 +14,13 @@ class EditInformationInteractor: EditInformationInteractorInput, ProfileObserver
         try service.save(user)
     }
     
-    func attach() {
+    func registerObserver() {
         service.register(self)
     }
     
     func update(_ user: User?) {
         guard let user = user else {
-            output.denied()
-            return
+            return output.openLogin()
         }
         output.fill(with: user)
     }
