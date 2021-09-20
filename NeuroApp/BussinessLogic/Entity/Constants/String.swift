@@ -42,4 +42,9 @@ extension String {
         static let partThreeTitle = "Part 3: Long Answer"
         static let partThreeInfo = "The following questions are designed to test you using a few long-answer question. Please try to provide detailed medium-sized answers. You might find the dictating feature in your keyboard helpful."
     }
+    
+    struct Warning {
+        static let title = "Warning"
+        static let message = "Are you sure you want to erase your data in this app?"
+    }
 }

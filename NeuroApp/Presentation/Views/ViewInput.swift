@@ -9,6 +9,7 @@ import UIKit
 
 protocol ViewInput {
     func show(_ error: Error, handler: ((UIAlertAction) -> Void)?)
+    func showWarning(handler: ((UIAlertAction) -> Void)?)
 }
 
 extension ViewInput {
@@ -20,5 +21,19 @@ extension ViewInput {
         let action = UIAlertAction(title: "OK", style: .default, handler: handler)
         alert.addAction(action)
         vc.present(alert, animated: true)
+    }
+    
+    func showWarning(handler: ((UIAlertAction) -> Void)?) {
+        guard let vc = self as? UIViewController else {
+            return
+        }
+        let alertVC = UIAlertController(title: .Warning.title, message: .Warning.message, preferredStyle: .alert)
+        let eraseAction = UIAlertAction(title: "Erase", style: .destructive, handler: handler)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        //TODO: как поменять кнопки местами
+        alertVC.addAction(eraseAction)
+        alertVC.addAction(cancelAction)
+//        alertVC.preferredAction = eraseAction
+        vc.present(alertVC, animated: true, completion: nil)
     }
 }

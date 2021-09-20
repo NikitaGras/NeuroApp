@@ -21,7 +21,10 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
     }
     
     func eraseUser() {
-        router.openLogin()
+        view.showWarning { _ in
+            self.router.openLogin()
+        }
+//        router.openLogin()
     }
     
     func edit() {
