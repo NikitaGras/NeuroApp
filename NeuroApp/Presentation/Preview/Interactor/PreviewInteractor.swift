@@ -21,4 +21,8 @@ class PreviewInteractor: PreviewInteractorInput, QuizObserver {
     func registerObserver() {
         service.register(self)
     }
+    
+    func changeQuiz(with state: Quiz.State) {
+        service.changeQuiz(with: state)
+    }
 }

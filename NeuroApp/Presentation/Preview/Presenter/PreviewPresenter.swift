@@ -27,6 +27,7 @@ class PreviewPresenter: PreviewModuleInput, PreviewViewOutput, PreviewInteractor
     func begin() {
         let quiz = interactor.quiz
         if quiz.state == .begin {
+            interactor.changeQuiz(with: .partOneProceed)
             router.openPartPreview()
         } else if isPartProcced(quiz: quiz) {
             router.openQuiz()

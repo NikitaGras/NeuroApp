@@ -17,6 +17,7 @@ class PreviewModuleConfigurator {
 
     private func configure(viewController: PreviewViewController) {
         let router = PreviewRouter()
+        router.selfViewController = viewController
 
         let presenter = PreviewPresenter()
         presenter.view = viewController

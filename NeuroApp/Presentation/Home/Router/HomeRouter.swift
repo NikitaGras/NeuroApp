@@ -14,10 +14,6 @@ class HomeRouter: HomeRouterInput {
         let _ = transitionHandler.openModule?(usingSegue: "beginQuiz")
     }
     
-    func progressQuiz() {
-        // TODO:
-    }
-    
     func openLogin() {
         let router = AppRouter.shared
         router.open(module: .login)

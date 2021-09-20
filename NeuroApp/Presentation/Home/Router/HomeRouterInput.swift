@@ -10,6 +10,5 @@ import Foundation
 
 protocol HomeRouterInput {
     func beginQuiz()
-    func progressQuiz()
     func openLogin()
 }

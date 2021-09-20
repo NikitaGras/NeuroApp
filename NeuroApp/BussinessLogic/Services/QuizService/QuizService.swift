@@ -41,6 +41,10 @@ class QuizService: QuizServiceProtocol {
         quiz = Quiz()
     }
     
+    func changeQuiz(with state: Quiz.State) {
+        self.quiz.state = state
+    }
+    
     //MARK: - Observer
     func register(_ observer: QuizObserver) {
         if !isRegistred(observer) {
