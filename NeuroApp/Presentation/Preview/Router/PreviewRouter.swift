@@ -12,8 +12,8 @@ class PreviewRouter: PreviewRouterInput {
     
     func openPartPreview() {
         //TODO:
-//        let vc = PreviewViewController()
-//        selfViewController.present(vc, animated: true, completion: nil)
+        let vc = PreviewViewController()
+        selfViewController.present(vc, animated: true, completion: nil)
     }
     
     func openQuiz() {

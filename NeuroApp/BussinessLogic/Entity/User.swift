@@ -8,17 +8,16 @@
 import Foundation
 
 struct User: Codable {
-    // ASK: поставил восклицантельные знаки, чтобы спрятать ошибку -- так можно?
-    var name: String!
-    var age: Int!
-    var email: String!
+    var name: String
+    var age: Int
+    var email: String
     var status: Status = .none
     
     init(with name: String, _ age: Int, _ email: String) throws {
-        try validate(name, age, email)
         self.name = name
         self.age = age
         self.email = email
+        try validate(name, age, email)
     }
 }
 

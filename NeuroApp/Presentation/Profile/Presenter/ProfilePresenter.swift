@@ -24,7 +24,6 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
         view.showWarning { _ in
             self.router.openLogin()
         }
-//        router.openLogin()
     }
     
     func edit() {

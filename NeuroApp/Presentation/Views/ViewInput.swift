@@ -29,7 +29,7 @@ extension ViewInput {
         }
         let alertVC = UIAlertController(title: .Warning.title, message: .Warning.message, preferredStyle: .alert)
         let eraseAction = UIAlertAction(title: "Erase", style: .destructive, handler: handler)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         //TODO: как поменять кнопки местами
         alertVC.addAction(eraseAction)
         alertVC.addAction(cancelAction)

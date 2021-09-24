@@ -8,7 +8,7 @@
 
 import UIKit
 
-//TODO: ScrollView, Отступы если title скрыт
+//TODO: Отступы если title скрыт
 
 class PreviewViewController: UIViewController, PreviewViewInput {
     @IBOutlet weak var titleLabel: UILabel!
@@ -44,7 +44,6 @@ class PreviewViewController: UIViewController, PreviewViewInput {
             titleLabel.text = .Preview.partThreeTitle
             infoLabel.text = .Preview.partThreeInfo
         }
-        
     }
     
     @IBAction func begin(_ sender: UIButton) {

@@ -15,6 +15,11 @@ class HomeInteractor: HomeInteractorInput, QuizObserver, ProfileObserver {
         return quizService.quiz
     }
     
+    deinit {
+        quizService.remove(self)
+        profileService.remove(self)
+    }
+    
     func update(with quiz: Quiz) {
         output.update(with: quiz)
     }
