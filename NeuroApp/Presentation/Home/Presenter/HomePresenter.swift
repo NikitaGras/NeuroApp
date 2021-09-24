@@ -26,7 +26,7 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     
     func openQuiz() {
         if interactor.quiz.state == .begin || interactor.quiz.isProceed {
-            router.beginQuiz()
+            router.openPreviewBaseInfo()
         }
     }
     

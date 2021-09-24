@@ -99,7 +99,7 @@
                         <outlet property="quizButton" destination="C0q-Hj-I6j" id="4D0-5L-NOe"/>
                         <outlet property="statusLabel" destination="cc6-zh-nTf" id="zzU-p7-ymk"/>
                         <outlet property="statusView" destination="mG5-g7-eFA" id="7KA-Ip-Mcq"/>
-                        <segue destination="KZR-jP-9ra" kind="show" identifier="beginQuiz" id="Pdx-Fi-I0P"/>
+                        <segue destination="KZR-jP-9ra" kind="show" identifier="openPreviewBaseInfo" id="Pdx-Fi-I0P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

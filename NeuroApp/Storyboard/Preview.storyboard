@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K80-14-Tdl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -9,10 +9,89 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Preview View Controller-->
+        <!--Preview Base Info View Controller-->
+        <scene sceneID="5yf-b0-r5e">
+            <objects>
+                <viewController id="K80-14-Tdl" customClass="PreviewBaseInfoViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oG9-80-213">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2af-8x-KUY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqp-wW-qid">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-VC-zsx" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="748" width="374" height="50"/>
+                                                <color key="backgroundColor" name="NAGreen"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kUo-tZ-ziX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="next:" destination="K80-14-Tdl" eventType="touchUpInside" id="dTI-Oo-tZv"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A15-Le-435">
+                                                <rect key="frame" x="20" y="20" width="374" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="5t4-VC-zsx" firstAttribute="leading" secondItem="Dqp-wW-qid" secondAttribute="leading" constant="20" id="E48-50-pCe"/>
+                                            <constraint firstItem="A15-Le-435" firstAttribute="centerX" secondItem="Dqp-wW-qid" secondAttribute="centerX" id="PC2-zL-LJC"/>
+                                            <constraint firstAttribute="bottom" secondItem="5t4-VC-zsx" secondAttribute="bottom" constant="20" id="iP3-lM-aFb"/>
+                                            <constraint firstItem="A15-Le-435" firstAttribute="leading" secondItem="Dqp-wW-qid" secondAttribute="leading" constant="20" symbolic="YES" id="mf0-JT-xYg"/>
+                                            <constraint firstItem="5t4-VC-zsx" firstAttribute="centerX" secondItem="Dqp-wW-qid" secondAttribute="centerX" id="vSj-Yc-roz"/>
+                                            <constraint firstItem="A15-Le-435" firstAttribute="top" secondItem="Dqp-wW-qid" secondAttribute="top" constant="20" id="yZz-vB-KsT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dqp-wW-qid" firstAttribute="top" secondItem="2af-8x-KUY" secondAttribute="top" id="9uZ-Ga-jlh"/>
+                                    <constraint firstItem="Dqp-wW-qid" firstAttribute="width" secondItem="2af-8x-KUY" secondAttribute="width" id="Cpt-Tf-AQa"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dqp-wW-qid" secondAttribute="bottom" id="EuM-bb-Gcy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dqp-wW-qid" secondAttribute="trailing" id="G0a-uT-1Nq"/>
+                                    <constraint firstItem="Dqp-wW-qid" firstAttribute="leading" secondItem="2af-8x-KUY" secondAttribute="leading" id="MUY-8Z-glF"/>
+                                    <constraint firstItem="Dqp-wW-qid" firstAttribute="height" secondItem="2af-8x-KUY" secondAttribute="height" priority="250" id="bEG-wQ-UmT"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mvb-oY-cnG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2af-8x-KUY" firstAttribute="bottom" secondItem="mvb-oY-cnG" secondAttribute="bottom" id="P1c-Rz-Wca"/>
+                            <constraint firstItem="2af-8x-KUY" firstAttribute="trailing" secondItem="mvb-oY-cnG" secondAttribute="trailing" id="VsA-7g-CZe"/>
+                            <constraint firstItem="2af-8x-KUY" firstAttribute="top" secondItem="mvb-oY-cnG" secondAttribute="top" id="sSJ-u9-ETk"/>
+                            <constraint firstItem="2af-8x-KUY" firstAttribute="leading" secondItem="mvb-oY-cnG" secondAttribute="leading" id="wr1-Fr-mwh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="A15-Le-435" id="Pn5-1c-Xq2"/>
+                        <segue destination="Y6W-OH-hqX" kind="presentation" identifier="showPreviewPartInfo" modalPresentationStyle="fullScreen" id="biH-uP-xmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i1O-rX-lfD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="UgJ-vP-Nfk" customClass="PreviewBaseInfoModuleInitializer" customModule="NeuroApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="previewbaseinfoViewController" destination="K80-14-Tdl" id="gcR-Ed-bzw"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-736.23188405797111" y="172.76785714285714"/>
+        </scene>
+        <!--Preview Part Info View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="PreviewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PreviewViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PreviewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PreviewPartInfoViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,19 +163,21 @@
                             <constraint firstItem="xrI-rY-nFK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rv8-zC-u0m"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="V2B-p4-CHr"/>
                     <connections>
                         <outlet property="infoLabel" destination="6XB-39-ulb" id="oew-aA-jc0"/>
                         <outlet property="titleLabel" destination="3PV-ij-DsV" id="PGE-8r-bVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="OyH-RS-fmH" customClass="PreviewModuleInitializer" customModule="NeuroApp" customModuleProvider="target">
+                <customObject id="OyH-RS-fmH" customClass="PreviewPartInfoModuleInitializer" customModule="NeuroApp" customModuleProvider="target">
                     <connections>
                         <outlet property="previewViewController" destination="Y6W-OH-hqX" id="xHc-81-YXA"/>
+                        <outlet property="previewpartinfoViewController" destination="Y6W-OH-hqX" id="1qy-Fh-qHh"/>
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+            <point key="canvasLocation" x="93" y="173"/>
         </scene>
     </scenes>
     <resources>

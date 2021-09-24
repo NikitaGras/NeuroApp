@@ -8,9 +8,9 @@
 import Foundation
 
 protocol QuizServiceProtocol {
+    var quiz: Quiz! { get }
     func save(_ quiz: Quiz) throws
     func deleteQuiz()
-    
     func changeQuiz(with state: Quiz.State)
     
     //MARK: - Observer
