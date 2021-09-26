@@ -126,6 +126,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="begin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vSD-Es-g3n"/>
+                                                    <action selector="next:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lgm-sN-3JF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -165,8 +166,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="V2B-p4-CHr"/>
                     <connections>
-                        <outlet property="infoLabel" destination="6XB-39-ulb" id="oew-aA-jc0"/>
-                        <outlet property="titleLabel" destination="3PV-ij-DsV" id="PGE-8r-bVw"/>
+                        <outlet property="infoLabel" destination="6XB-39-ulb" id="vqq-bZ-Lzu"/>
+                        <outlet property="titleLabel" destination="3PV-ij-DsV" id="7fb-8T-iba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

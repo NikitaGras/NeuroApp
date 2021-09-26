@@ -9,5 +9,7 @@
 import Foundation
 
 protocol PreviewPartInfoRouterInput {
-
+    func openPartOneQuiz()
+    func openPartTwoQuiz()
+    func openPartThreeQuiz()
 }

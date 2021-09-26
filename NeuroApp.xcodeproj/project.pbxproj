@@ -359,6 +359,15 @@
 			path = EditInformation;
 			sourceTree = "<group>";
 		};
+		5A127FF82700752F00832AD2 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				45DB51499A8FABE6C79F9B6E /* PreviewBaseInfo */,
+				EB10FA302155D7BA0E94E4C4 /* PreviewPartInfo */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
 		5A166C0D269C30A500E590C7 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,10 +572,9 @@
 				5A6F2C4F269AAB20006B065D /* Views */,
 				DB23E1C2A8445B2E475B23CC /* Login */,
 				8BAED2B17F10964A8D060F01 /* Home */,
+				5A127FF82700752F00832AD2 /* Preview */,
 				170BADCF84321486C8BEB759 /* Profile */,
 				563F547600A4AD2684816266 /* EditInformation */,
-				45DB51499A8FABE6C79F9B6E /* PreviewBaseInfo */,
-				EB10FA302155D7BA0E94E4C4 /* PreviewPartInfo */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";

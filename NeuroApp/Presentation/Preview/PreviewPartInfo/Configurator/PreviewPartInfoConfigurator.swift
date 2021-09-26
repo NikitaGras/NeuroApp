@@ -11,15 +11,14 @@ import UIKit
 class PreviewPartInfoModuleConfigurator {
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
         if let viewController = viewInput as? PreviewPartInfoViewController {
             configure(viewController: viewController)
         }
     }
 
     private func configure(viewController: PreviewPartInfoViewController) {
-
         let router = PreviewPartInfoRouter()
+        router.transitionHandler = viewController
 
         let presenter = PreviewPartInfoPresenter()
         presenter.view = viewController
@@ -27,6 +26,7 @@ class PreviewPartInfoModuleConfigurator {
 
         let interactor = PreviewPartInfoInteractor()
         interactor.output = presenter
+        interactor.service = QuizService.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

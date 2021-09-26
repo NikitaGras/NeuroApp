@@ -8,4 +8,5 @@
 
 protocol PreviewPartInfoViewInput: AnyObject {
     func setupInitialState()
+    func update(with state: Quiz.State)
 }

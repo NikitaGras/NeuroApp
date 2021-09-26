@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PreviewPartInfoInteractorInput {
-
+    func getQuizState() -> Quiz.State
 }

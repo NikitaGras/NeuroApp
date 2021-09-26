@@ -7,7 +7,10 @@
 //
 
 class PreviewPartInfoInteractor: PreviewPartInfoInteractorInput {
-
     weak var output: PreviewPartInfoInteractorOutput!
-
+    var service: QuizServiceProtocol!
+    
+    func getQuizState() -> Quiz.State {
+        return service.quiz.state
+    }
 }

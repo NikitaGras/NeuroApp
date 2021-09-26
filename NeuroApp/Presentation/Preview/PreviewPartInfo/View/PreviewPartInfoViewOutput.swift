@@ -8,4 +8,5 @@
 
 protocol PreviewPartInfoViewOutput {
     func viewIsReady()
+    func next()
 }
