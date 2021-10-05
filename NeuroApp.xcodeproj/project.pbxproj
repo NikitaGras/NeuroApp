@@ -14,10 +14,14 @@
 		1340A306828C795A080C0FC7 /* EditInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601732125D831F12018DD966 /* EditInformationViewController.swift */; };
 		13EDF50C0DEC9793B217B50C /* PreviewBaseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075EABC646777AFA395C1CDE /* PreviewBaseInfoViewController.swift */; };
 		1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E9FBA19EF92A573CABB802 /* LoginRouter.swift */; };
+		14CA5A389553B4DB66AF2C65 /* QuizPartOneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA65B27DB6F300C403ED9F5 /* QuizPartOneConfigurator.swift */; };
+		170AA0A5DDF36109EBBEEC73 /* QuizPartOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EDC329C61457D79167CA4 /* QuizPartOneViewController.swift */; };
 		1D6C762DF0CE88CB3A6B94DE /* HomeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E089A54B68C75B990FB0BE /* HomeInteractorInput.swift */; };
 		1E9E5931750F06171AB67E8B /* PreviewBaseInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BDE582C1AF26CF4A15741 /* PreviewBaseInfoInteractor.swift */; };
+		202EEC6BA12FB36640986E66 /* QuizPartOneInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037AE0E345ED3304C484E501 /* QuizPartOneInteractorInput.swift */; };
 		234F0F3C5BAADEB25BBE8584 /* EditInformationViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A85F777BBBA6EC2FD06443 /* EditInformationViewOutput.swift */; };
 		2514A535205FD214A00FD41F /* PreviewBaseInfoInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B491D586CFF261E708DF50F /* PreviewBaseInfoInitializer.swift */; };
+		2584DCD63B862AF6E55D8AD1 /* QuizPartOneViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9455D74290E8F93D71A69 /* QuizPartOneViewOutput.swift */; };
 		287BE47BB9D393609581989C /* EditInformationInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A635CDC65637FC2A99FBB87 /* EditInformationInitializer.swift */; };
 		2D934A296C744ED7E285E9C0 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F872E576D287CE17D07E27D /* ProfileInteractor.swift */; };
 		2E12C249EE024C6F04C4550E /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F452300545C439222B443 /* HomeModuleInput.swift */; };
@@ -44,6 +48,7 @@
 		5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3801B02695D93100883225 /* SceneDelegate.swift */; };
 		5A3801B82695D93200883225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3801B72695D93200883225 /* Assets.xcassets */; };
 		5A3801BB2695D93200883225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3801B92695D93200883225 /* LaunchScreen.storyboard */; };
+		5A51128A270BF1E9008020AB /* QuizPartOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A511289270BF1E9008020AB /* QuizPartOne.storyboard */; };
 		5A5C373D0BE9E526F03B1298 /* PreviewPartInfoInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D941F60EA44BE783C634B3 /* PreviewPartInfoInitializer.swift */; };
 		5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C50269AAB32006B065D /* ViewInput.swift */; };
 		5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C52269AB779006B065D /* RoundButton.swift */; };
@@ -77,6 +82,7 @@
 		7D1EBBB2F404B950434F134C /* PreviewBaseInfoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC376FB5F49982C0005B02 /* PreviewBaseInfoConfigurator.swift */; };
 		7DED072E5EC31A88F94113F7 /* EditInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B9B58C3A65CF663034C347 /* EditInformationPresenter.swift */; };
 		7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B3F436F6510CF6946D596 /* LoginModuleInput.swift */; };
+		83BFFBA563C37C176ACA47FD /* QuizPartOneViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702376DC3C35307A2EBF5ED /* QuizPartOneViewInput.swift */; };
 		8442C56DA9E51614B65C96E2 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C2ADF3575B2F4AF3C6F46 /* HomePresenter.swift */; };
 		86B2746274732B392ACAA9AF /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962886E9107AEA9C60246EAD /* HomeInitializer.swift */; };
 		8738DA5F04B33A3B23D2E540 /* PreviewBaseInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C14C16E34C22AF0DD76060D /* PreviewBaseInfoPresenter.swift */; };
@@ -89,18 +95,25 @@
 		9E0E88237F92C68D8522838A /* PreviewBaseInfoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04051379896106512F87DE7B /* PreviewBaseInfoInteractorOutput.swift */; };
 		9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D87C7304176BA9AC667ECD /* LoginViewOutput.swift */; };
 		A1EC3F4AAC61F9C0FE25B491 /* PreviewPartInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFB378F487F62ABDA723E90 /* PreviewPartInfoViewController.swift */; };
+		A224D3AD1B8D1D947E327F4A /* QuizPartOneInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5AA6B80105F6428B86A1E /* QuizPartOneInteractorOutput.swift */; };
+		A345F8C3B02C26E745A147D2 /* QuizPartOneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7977A52F4CF991FBF2F7872 /* QuizPartOneRouter.swift */; };
 		A6B9C09DA15838EF4C1C6A7D /* LoginInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C07331B69F3FDFE224B9B1 /* LoginInteractorInput.swift */; };
 		A9E0B1E37CDF82DC10CDBC14 /* PreviewPartInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864F1689B49C91D1178C92FA /* PreviewPartInfoInteractor.swift */; };
 		B0388DAFB78645FC4999865C /* LoginRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8B148594B4B0EB22EB8B3 /* LoginRouterInput.swift */; };
 		B2548BC03A552198447AFD45 /* PreviewBaseInfoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616945C04BEA3216A99AFC72 /* PreviewBaseInfoModuleInput.swift */; };
+		B5DD76BE58A0599B47FDB58C /* QuizPartOneInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCA617EDC2C643932EEBCB /* QuizPartOneInitializer.swift */; };
+		B968B3FFC2686DE6E06636AC /* QuizPartOnePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728932528407A3FAE6CD2862 /* QuizPartOnePresenter.swift */; };
 		BEA3CCD1030E3AFEFD03EF36 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF999ACCFCEDDA5A94E6E7 /* ProfileRouter.swift */; };
 		C10F448C496F867013E649C5 /* EditInformationRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758DB157F183D1E96EA715E /* EditInformationRouterInput.swift */; };
 		C5EF1488C0836FE095CDD259 /* Pods_NeuroApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA0EA2B4FCF93DB77BBF460 /* Pods_NeuroApp.framework */; };
+		C9A4233FC287672D17CFFF1D /* QuizPartOneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C2BC7D016D2D778CEBD88 /* QuizPartOneInteractor.swift */; };
+		CACD5CC8D70C94070EB2B7A1 /* QuizPartOneRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BC27D92D45532C60DC5BF /* QuizPartOneRouterInput.swift */; };
 		CAF230FEF6D976BCCB47B55A /* PreviewBaseInfoInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C611BBCDA1AAA639E9FE7B6 /* PreviewBaseInfoInteractorInput.swift */; };
 		CB4A5B3489D0395473C8AB96 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3005244E99B30E6EDE9DC5 /* HomeConfigurator.swift */; };
 		CDBB2D374B7E0CD950A6A2B5 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9654D168ABD17C9D1BAEE /* ProfilePresenter.swift */; };
 		D67932EF786BD43578E9EEFE /* PreviewPartInfoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDD7B2E442D0C63166489EF /* PreviewPartInfoRouterInput.swift */; };
 		D8E75D43246BF0C78E6A0B1A /* EditInformationModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C9959B355F415BFAC9490E /* EditInformationModuleInput.swift */; };
+		DA0B3781A7564A7610428B51 /* QuizPartOneModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA271BB062056B67681AD120 /* QuizPartOneModuleInput.swift */; };
 		DA4B114206270A679A55F579 /* PreviewPartInfoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0880BC912EE4C23379C739 /* PreviewPartInfoInteractorOutput.swift */; };
 		DC40A00B20A3786F8C53AE08 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEFB1E4E929268C0496E42F /* LoginPresenter.swift */; };
 		DD071CB98B5F5861BD9F8A8B /* EditInformationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D17835045787ABEB1D8ADA /* EditInformationRouter.swift */; };
@@ -112,6 +125,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		037AE0E345ED3304C484E501 /* QuizPartOneInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneInteractorInput.swift; sourceTree = "<group>"; };
 		04051379896106512F87DE7B /* PreviewBaseInfoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInteractorOutput.swift; sourceTree = "<group>"; };
 		075EABC646777AFA395C1CDE /* PreviewBaseInfoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoViewController.swift; sourceTree = "<group>"; };
 		07A32D1AB985482BA4609513 /* LoginInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInitializer.swift; sourceTree = "<group>"; };
@@ -127,10 +141,12 @@
 		1C14C16E34C22AF0DD76060D /* PreviewBaseInfoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoPresenter.swift; sourceTree = "<group>"; };
 		25FFAB5641B63D2D0BE280F6 /* ProfileRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileRouterInput.swift; sourceTree = "<group>"; };
 		28E089A54B68C75B990FB0BE /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
+		33FCA617EDC2C643932EEBCB /* QuizPartOneInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneInitializer.swift; sourceTree = "<group>"; };
 		34B079B954C2CF4F346CAFB3 /* EditInformationConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationConfigurator.swift; sourceTree = "<group>"; };
 		36B9B58C3A65CF663034C347 /* EditInformationPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationPresenter.swift; sourceTree = "<group>"; };
 		36D87C7304176BA9AC667ECD /* LoginViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewOutput.swift; sourceTree = "<group>"; };
 		3884B6BBFCFC05A5337FDC95 /* HomeInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorOutput.swift; sourceTree = "<group>"; };
+		38C5AA6B80105F6428B86A1E /* QuizPartOneInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneInteractorOutput.swift; sourceTree = "<group>"; };
 		3CF92E3AF3D915B2C760514E /* Pods-NeuroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeuroApp.release.xcconfig"; path = "Target Support Files/Pods-NeuroApp/Pods-NeuroApp.release.xcconfig"; sourceTree = "<group>"; };
 		40202D76FE8F86631EECED60 /* LoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4758DB157F183D1E96EA715E /* EditInformationRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationRouterInput.swift; sourceTree = "<group>"; };
@@ -155,6 +171,7 @@
 		5A3801B72695D93200883225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A3801BA2695D93200883225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3801BC2695D93200883225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A511289270BF1E9008020AB /* QuizPartOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizPartOne.storyboard; sourceTree = "<group>"; };
 		5A635CDC65637FC2A99FBB87 /* EditInformationInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInitializer.swift; sourceTree = "<group>"; };
 		5A6F2C50269AAB32006B065D /* ViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInput.swift; sourceTree = "<group>"; };
 		5A6F2C52269AB779006B065D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -171,20 +188,25 @@
 		5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizServiceProtocol.swift; sourceTree = "<group>"; };
 		5AE8500A26DB9C3400A834D2 /* QuizObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizObserver.swift; sourceTree = "<group>"; };
 		5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemError.swift; sourceTree = "<group>"; };
+		5EA65B27DB6F300C403ED9F5 /* QuizPartOneConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneConfigurator.swift; sourceTree = "<group>"; };
 		5F872E576D287CE17D07E27D /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		601732125D831F12018DD966 /* EditInformationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationViewController.swift; sourceTree = "<group>"; };
 		60C9959B355F415BFAC9490E /* EditInformationModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationModuleInput.swift; sourceTree = "<group>"; };
 		616945C04BEA3216A99AFC72 /* PreviewBaseInfoModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoModuleInput.swift; sourceTree = "<group>"; };
 		64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
 		679D96F989CFDF511D796794 /* PreviewPartInfoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoViewInput.swift; sourceTree = "<group>"; };
+		6B4EDC329C61457D79167CA4 /* QuizPartOneViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneViewController.swift; sourceTree = "<group>"; };
 		6DDD7B2E442D0C63166489EF /* PreviewPartInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoRouterInput.swift; sourceTree = "<group>"; };
 		6F0880BC912EE4C23379C739 /* PreviewPartInfoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoInteractorOutput.swift; sourceTree = "<group>"; };
+		728932528407A3FAE6CD2862 /* QuizPartOnePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOnePresenter.swift; sourceTree = "<group>"; };
 		75D941F60EA44BE783C634B3 /* PreviewPartInfoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoInitializer.swift; sourceTree = "<group>"; };
+		7702376DC3C35307A2EBF5ED /* QuizPartOneViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneViewInput.swift; sourceTree = "<group>"; };
 		796822C594D58E6E7A7FE43D /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
 		7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		7EF8B148594B4B0EB22EB8B3 /* LoginRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterInput.swift; sourceTree = "<group>"; };
 		864F1689B49C91D1178C92FA /* PreviewPartInfoInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoInteractor.swift; sourceTree = "<group>"; };
 		86BD030DE819C7C9EA024A8B /* EditInformationInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInteractorOutput.swift; sourceTree = "<group>"; };
+		889C2BC7D016D2D778CEBD88 /* QuizPartOneInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneInteractor.swift; sourceTree = "<group>"; };
 		8BE92981166A6B978CB561F9 /* LoginViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
 		8C611BBCDA1AAA639E9FE7B6 /* PreviewBaseInfoInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInteractorInput.swift; sourceTree = "<group>"; };
 		8FAC376FB5F49982C0005B02 /* PreviewBaseInfoConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoConfigurator.swift; sourceTree = "<group>"; };
@@ -194,6 +216,7 @@
 		9B491D586CFF261E708DF50F /* PreviewBaseInfoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInitializer.swift; sourceTree = "<group>"; };
 		A0D17835045787ABEB1D8ADA /* EditInformationRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationRouter.swift; sourceTree = "<group>"; };
 		A13C4F5A64000B97F8FDA19E /* PreviewBaseInfoViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoViewOutput.swift; sourceTree = "<group>"; };
+		A1A9455D74290E8F93D71A69 /* QuizPartOneViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneViewOutput.swift; sourceTree = "<group>"; };
 		A1CFF49D994BD2777EF36511 /* ProfileInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInitializer.swift; sourceTree = "<group>"; };
 		A7E9FBA19EF92A573CABB802 /* LoginRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		A9315268719AF54B2F1656A1 /* EditInformationInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInteractorInput.swift; sourceTree = "<group>"; };
@@ -214,10 +237,13 @@
 		D5E9654D168ABD17C9D1BAEE /* ProfilePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		DBEFB1E4E929268C0496E42F /* LoginPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		E42BE893CAC0953665FDE976 /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
+		E7977A52F4CF991FBF2F7872 /* QuizPartOneRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneRouter.swift; sourceTree = "<group>"; };
+		E99BC27D92D45532C60DC5BF /* QuizPartOneRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneRouterInput.swift; sourceTree = "<group>"; };
 		E9BA5EB1A2C4E47B600AF12E /* PreviewPartInfoViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoViewOutput.swift; sourceTree = "<group>"; };
 		ED3005244E99B30E6EDE9DC5 /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		EE2B3F436F6510CF6946D596 /* LoginModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleInput.swift; sourceTree = "<group>"; };
 		EEC048A1E0E203965C17CA61 /* EditInformationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInteractor.swift; sourceTree = "<group>"; };
+		FA271BB062056B67681AD120 /* QuizPartOneModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneModuleInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +258,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03C584857A4EE1CB2FABD843 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				5EA65B27DB6F300C403ED9F5 /* QuizPartOneConfigurator.swift */,
+				33FCA617EDC2C643932EEBCB /* QuizPartOneInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		0895FBCA603EF6293BEE1070 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +283,15 @@
 				0EA0EA2B4FCF93DB77BBF460 /* Pods_NeuroApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A3181464D3296B399CD53E1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E99BC27D92D45532C60DC5BF /* QuizPartOneRouterInput.swift */,
+				E7977A52F4CF991FBF2F7872 /* QuizPartOneRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		0E3597E27AB08CC78E35C7B0 /* Interactor */ = {
@@ -279,6 +323,18 @@
 				962886E9107AEA9C60246EAD /* HomeInitializer.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		1E5712CB8A5FB0A514B61C2D /* QuizPartOne */ = {
+			isa = PBXGroup;
+			children = (
+				8BD99968DE7B675B68BF5E79 /* View */,
+				7126A561A93E8F71EC07530A /* Presenter */,
+				95135089D561E18338B40BD6 /* Interactor */,
+				0A3181464D3296B399CD53E1 /* Router */,
+				03C584857A4EE1CB2FABD843 /* Configurator */,
+			);
+			path = QuizPartOne;
 			sourceTree = "<group>";
 		};
 		1E6F1D55840509EA7680C494 /* View */ = {
@@ -391,6 +447,7 @@
 		5A1E8BB026983D3E001179F7 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				5A511288270BF1D6008020AB /* Quiz */,
 				5A1E8BB126983D62001179F7 /* Login.storyboard */,
 				5A3801B92695D93200883225 /* LaunchScreen.storyboard */,
 				5A166C03269BF43200E590C7 /* Home.storyboard */,
@@ -452,6 +509,22 @@
 				5A3801BC2695D93200883225 /* Info.plist */,
 			);
 			path = NeuroApp;
+			sourceTree = "<group>";
+		};
+		5A511288270BF1D6008020AB /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				5A511289270BF1E9008020AB /* QuizPartOne.storyboard */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		5A51128B270C0DF3008020AB /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				1E5712CB8A5FB0A514B61C2D /* QuizPartOne */,
+			);
+			path = Quiz;
 			sourceTree = "<group>";
 		};
 		5A6F2C4F269AAB20006B065D /* Views */ = {
@@ -541,6 +614,15 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		7126A561A93E8F71EC07530A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA271BB062056B67681AD120 /* QuizPartOneModuleInput.swift */,
+				728932528407A3FAE6CD2862 /* QuizPartOnePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		7160017F93663C241A5A7A44 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +654,7 @@
 		81436725E27502BEDDF99F19 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5A51128B270C0DF3008020AB /* Quiz */,
 				5A6F2C4F269AAB20006B065D /* Views */,
 				DB23E1C2A8445B2E475B23CC /* Login */,
 				8BAED2B17F10964A8D060F01 /* Home */,
@@ -612,6 +695,16 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		8BD99968DE7B675B68BF5E79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7702376DC3C35307A2EBF5ED /* QuizPartOneViewInput.swift */,
+				A1A9455D74290E8F93D71A69 /* QuizPartOneViewOutput.swift */,
+				6B4EDC329C61457D79167CA4 /* QuizPartOneViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8E878EE91109970CBDC1BF5C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,6 +712,16 @@
 				497C2ADF3575B2F4AF3C6F46 /* HomePresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		95135089D561E18338B40BD6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				037AE0E345ED3304C484E501 /* QuizPartOneInteractorInput.swift */,
+				38C5AA6B80105F6428B86A1E /* QuizPartOneInteractorOutput.swift */,
+				889C2BC7D016D2D778CEBD88 /* QuizPartOneInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		9D2A295A8BF0846A1D220594 /* Router */ = {
@@ -834,6 +937,7 @@
 				5A3801B82695D93200883225 /* Assets.xcassets in Resources */,
 				5AE1A50326E61722009FCD4A /* Preview.storyboard in Resources */,
 				5A166C04269BF43200E590C7 /* Home.storyboard in Resources */,
+				5A51128A270BF1E9008020AB /* QuizPartOne.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,6 +1084,18 @@
 				505014C02EB507DCA4B96406 /* PreviewPartInfoRouter.swift in Sources */,
 				710455902FBCF885CF95A846 /* PreviewPartInfoConfigurator.swift in Sources */,
 				5A5C373D0BE9E526F03B1298 /* PreviewPartInfoInitializer.swift in Sources */,
+				83BFFBA563C37C176ACA47FD /* QuizPartOneViewInput.swift in Sources */,
+				2584DCD63B862AF6E55D8AD1 /* QuizPartOneViewOutput.swift in Sources */,
+				170AA0A5DDF36109EBBEEC73 /* QuizPartOneViewController.swift in Sources */,
+				DA0B3781A7564A7610428B51 /* QuizPartOneModuleInput.swift in Sources */,
+				B968B3FFC2686DE6E06636AC /* QuizPartOnePresenter.swift in Sources */,
+				202EEC6BA12FB36640986E66 /* QuizPartOneInteractorInput.swift in Sources */,
+				A224D3AD1B8D1D947E327F4A /* QuizPartOneInteractorOutput.swift in Sources */,
+				C9A4233FC287672D17CFFF1D /* QuizPartOneInteractor.swift in Sources */,
+				CACD5CC8D70C94070EB2B7A1 /* QuizPartOneRouterInput.swift in Sources */,
+				A345F8C3B02C26E745A147D2 /* QuizPartOneRouter.swift in Sources */,
+				14CA5A389553B4DB66AF2C65 /* QuizPartOneConfigurator.swift in Sources */,
+				B5DD76BE58A0599B47FDB58C /* QuizPartOneInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

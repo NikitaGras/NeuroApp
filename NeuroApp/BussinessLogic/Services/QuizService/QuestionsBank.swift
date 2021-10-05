@@ -5,11 +5,11 @@
 //  Created by Nikita Gras on 26.09.2021.
 //
 
-import Foundation
+import UIKit
 
 class QuestionsBank {
-    let partOneQuestions: [PartOneQuestions]
-    let partTwoQuestions: [PartTwoQuestions]
+    let partOneQuestions: [PartOneQuestion]
+    let partTwoQuestions: [PartTwoQuestion]
     
     init() {
         partOneQuestions = []
@@ -17,23 +17,17 @@ class QuestionsBank {
     }
 }
 
-extension QuestionsBank {
-    struct PartOneQuestions {
-        let text: String
-        var isDone: Bool = false
-        var userAnswer: Int? = nil
-    }
-    
-    struct PartTwoQuestions {
-        let text: String
-        var isDone: Bool = false
-        var answerOptions: [partTwoAnswer]
-        var userAnswer: partTwoAnswer? = nil
-        
-    }
-    
-    struct partTwoAnswer {
-        let text: String
-        var isRight: Bool
-    }
+
+struct PartOneQuestion {
+    let text: String
+}
+
+struct PartTwoQuestion {
+    let text: String
+    var answerOptions: [partTwoAnswer]
+}
+
+struct partTwoAnswer {
+    let sample: Any
+    var isRight: Bool
 }

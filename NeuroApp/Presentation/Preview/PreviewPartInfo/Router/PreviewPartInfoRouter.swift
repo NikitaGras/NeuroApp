@@ -11,7 +11,7 @@ class PreviewPartInfoRouter: PreviewPartInfoRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func openPartOneQuiz() {
-        // TODO: 
+        _ = transitionHandler.openModule?(usingSegue: "showPartOneQuiz")
     }
     
     func openPartTwoQuiz() {

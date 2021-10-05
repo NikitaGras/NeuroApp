@@ -125,7 +125,6 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="begin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vSD-Es-g3n"/>
                                                     <action selector="next:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lgm-sN-3JF"/>
                                                 </connections>
                                             </button>
@@ -168,17 +167,25 @@
                     <connections>
                         <outlet property="infoLabel" destination="6XB-39-ulb" id="vqq-bZ-Lzu"/>
                         <outlet property="titleLabel" destination="3PV-ij-DsV" id="7fb-8T-iba"/>
+                        <segue destination="TbF-CC-e94" kind="presentation" identifier="showPartOneQuiz" modalPresentationStyle="fullScreen" id="rOq-T4-Zpe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="OyH-RS-fmH" customClass="PreviewPartInfoModuleInitializer" customModule="NeuroApp" customModuleProvider="target">
                     <connections>
-                        <outlet property="previewViewController" destination="Y6W-OH-hqX" id="xHc-81-YXA"/>
                         <outlet property="previewpartinfoViewController" destination="Y6W-OH-hqX" id="1qy-Fh-qHh"/>
                     </connections>
                 </customObject>
             </objects>
             <point key="canvasLocation" x="93" y="173"/>
+        </scene>
+        <!--QuizPartOne-->
+        <scene sceneID="eWw-C1-QUk">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="QuizPartOne" storyboardName="QuizPartOne" id="TbF-CC-e94" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQN-1L-f75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691" y="173"/>
         </scene>
     </scenes>
     <resources>
