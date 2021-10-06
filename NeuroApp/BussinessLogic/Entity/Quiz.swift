@@ -10,12 +10,10 @@ import UIKit
 struct Quiz: Codable {
     var state: State = .begin
     var isProceed: Bool {
-        if state == .partOneProceed || state == .partTwoProceed || state == .partThreeProceed {
-            return true
-        } else {
-            return false
-        }
+        return state == .partOneProceed || state == .partTwoProceed || state == .partThreeProceed
     }
+    
+    var questions = QuestionsBank().partOneQuestions
 }
 
 extension Quiz {

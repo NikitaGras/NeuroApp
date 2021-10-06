@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuestionsBank {
+class QuestionsBank: Codable {
     let partOneQuestions: [PartOneQuestion]
     let partTwoQuestions: [PartTwoQuestion]
     
@@ -18,16 +18,16 @@ class QuestionsBank {
 }
 
 
-struct PartOneQuestion {
+struct PartOneQuestion: Codable {
     let text: String
 }
 
-struct PartTwoQuestion {
+struct PartTwoQuestion: Codable {
     let text: String
-    var answerOptions: [partTwoAnswer]
+    var answerOptions: [PartTwoAnswer]
 }
 
-struct partTwoAnswer {
+struct PartTwoAnswer: Codable {
     let sample: Any
     var isRight: Bool
 }

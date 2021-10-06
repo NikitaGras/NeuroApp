@@ -476,6 +476,7 @@
 				5A70C45426D3A3D50046675D /* WeakBox.swift */,
 				5A1E8BB5269840B9001179F7 /* User.swift */,
 				5AE8500326DB98DA00A834D2 /* Quiz.swift */,
+				5A127FF927007D7100832AD2 /* QuestionsBank.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -504,6 +505,7 @@
 				5A6F2C5B269B2397006B065D /* Core */,
 				5A1E8BB326984097001179F7 /* BussinessLogic */,
 				5A1E8BB026983D3E001179F7 /* Storyboard */,
+				5A6F2C4F269AAB20006B065D /* Views */,
 				81436725E27502BEDDF99F19 /* Presentation */,
 				5A3801B72695D93200883225 /* Assets.xcassets */,
 				5A3801BC2695D93200883225 /* Info.plist */,
@@ -572,7 +574,6 @@
 				5AE8500626DB9C1600A834D2 /* QuizService.swift */,
 				5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */,
 				5AE8500A26DB9C3400A834D2 /* QuizObserver.swift */,
-				5A127FF927007D7100832AD2 /* QuestionsBank.swift */,
 			);
 			path = QuizService;
 			sourceTree = "<group>";
@@ -655,7 +656,6 @@
 			isa = PBXGroup;
 			children = (
 				5A51128B270C0DF3008020AB /* Quiz */,
-				5A6F2C4F269AAB20006B065D /* Views */,
 				DB23E1C2A8445B2E475B23CC /* Login */,
 				8BAED2B17F10964A8D060F01 /* Home */,
 				5A127FF82700752F00832AD2 /* Preview */,

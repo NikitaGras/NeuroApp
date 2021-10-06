@@ -10,7 +10,7 @@ import Foundation
 
 class ProfileService: ProfileServiceProtocol {
     static let shared = ProfileService()
-    private let key: String = UserDefaults.key.user
+    private let key: String = UserDefaults.Key.user
     
     var observers = [WeakBox<ProfileObserver>]()
     var user: User? {
@@ -18,6 +18,7 @@ class ProfileService: ProfileServiceProtocol {
             notifyObservers()
         }
     }
+    
     var isLoggedIn: Bool {
         return user != nil
     }
@@ -30,6 +31,7 @@ class ProfileService: ProfileServiceProtocol {
         guard let data = UserDefaults.standard.data(forKey: key) else {
             return nil
         }
+        // TODO: try?
         let user = try? JSONDecoder().decode(User.self, from: data)
         return user
     }

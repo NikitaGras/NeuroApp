@@ -9,20 +9,21 @@ import Foundation
 
 class QuizService: QuizServiceProtocol {
     static let shared = QuizService()
-    private let key: String = UserDefaults.key.quiz
+    private let key: String = UserDefaults.Key.quiz
     
     var observers = [WeakBox<QuizObserver>]()
-    var quiz: Quiz! {
+    var quiz: Quiz {
         didSet {
             notifyObservers()
         }
     }
     
     private init() {
-        self.quiz = fetchQuiz()
+        self.quiz = QuizService.fetchQuiz()
     }
     
-    func fetchQuiz() -> Quiz {
+    static private func fetchQuiz() -> Quiz {
+        let key = UserDefaults.Key.quiz
         guard let data = UserDefaults.standard.data(forKey: key),
               let quiz = try? JSONDecoder().decode(Quiz.self, from: data) else {
             return Quiz()
@@ -30,17 +31,20 @@ class QuizService: QuizServiceProtocol {
         return quiz
     }
     
+    // TODO: history?
     func save(_ quiz: Quiz) throws {
         let data = try JSONEncoder().encode(quiz)
         UserDefaults.standard.setValue(data, forKey: key)
         self.quiz = quiz
     }
     
+    // TODO: delete?
     func deleteQuiz() {
         UserDefaults().removeObject(forKey: key)
         quiz = Quiz()
     }
     
+    // TODO: rename. with = to
     func changeQuiz(with state: Quiz.State) {
         self.quiz.state = state
     }

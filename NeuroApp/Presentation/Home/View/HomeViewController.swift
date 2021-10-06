@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController, HomeViewInput {
     @IBOutlet weak var quizButton: UIButton!
+    // TODO: написать StatusView
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var statusLabel: UILabel!
     var output: HomeViewOutput!

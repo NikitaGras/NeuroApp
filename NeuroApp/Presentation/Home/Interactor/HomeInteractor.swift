@@ -15,6 +15,10 @@ class HomeInteractor: HomeInteractorInput, QuizObserver, ProfileObserver {
         return quizService.quiz
     }
     
+    func initialized() {
+        registerObserver()
+    }
+    
     deinit {
         quizService.remove(self)
         profileService.remove(self)
@@ -26,7 +30,7 @@ class HomeInteractor: HomeInteractorInput, QuizObserver, ProfileObserver {
     
     func update(_ user: User?) {
         guard let user = user else {
-            return output.openlogin()
+            return output.openLogin()
         }
         output.update(with: user)
     }

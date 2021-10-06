@@ -8,7 +8,7 @@
 import Foundation
 
 extension UserDefaults {
-    struct key {
+    struct Key {
         static let user = "user"
         static let quiz = "quiz"
     }

@@ -34,6 +34,7 @@ class EditInformationViewController: UIViewController, EditInformationViewInput 
         output.safeUser()
     }
     
+    // TODO: remake
     func createUser() throws -> User {
         let name = nameTextField.text ?? ""
         let ageString = ageTextField.text ?? ""

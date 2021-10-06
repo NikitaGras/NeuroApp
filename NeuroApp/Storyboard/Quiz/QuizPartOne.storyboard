@@ -24,21 +24,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bx0-mj-DCg">
-                                <rect key="frame" x="20" y="134" width="374" height="25.5"/>
+                                <rect key="frame" x="20" y="134" width="374" height="30"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpF-1S-qax">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-3a-2S5">
-                                                <rect key="frame" x="8" y="0.0" width="358" height="25.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-3a-2S5">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="gJd-3a-2S5" firstAttribute="leading" secondItem="GpF-1S-qax" secondAttribute="leading" constant="8" id="QrO-Db-FSr"/>
+                                            <constraint firstItem="gJd-3a-2S5" firstAttribute="leading" secondItem="GpF-1S-qax" secondAttribute="leading" id="QrO-Db-FSr"/>
                                             <constraint firstItem="gJd-3a-2S5" firstAttribute="centerX" secondItem="GpF-1S-qax" secondAttribute="centerX" id="VV2-a6-Ahl"/>
                                             <constraint firstAttribute="bottom" secondItem="gJd-3a-2S5" secondAttribute="bottom" id="bIU-tE-Mu2"/>
                                             <constraint firstItem="gJd-3a-2S5" firstAttribute="top" secondItem="GpF-1S-qax" secondAttribute="top" id="ueq-e8-DIC"/>
@@ -55,7 +55,7 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGR-cF-CB4">
-                                <rect key="frame" x="20" y="199.5" width="374" height="54"/>
+                                <rect key="frame" x="20" y="204" width="374" height="54"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="78R-an-4bs">
                                         <rect key="frame" x="-2" y="24" width="378" height="31"/>
@@ -144,7 +144,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgL-tj-cQ7" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
-                                <rect key="frame" x="40" y="293.5" width="334" height="50"/>
+                                <rect key="frame" x="40" y="298" width="334" height="50"/>
                                 <color key="backgroundColor" name="NAGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ref-j6-0oC"/>
