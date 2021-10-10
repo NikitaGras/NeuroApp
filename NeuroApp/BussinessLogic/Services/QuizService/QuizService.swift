@@ -9,7 +9,7 @@ import Foundation
 
 class QuizService: QuizServiceProtocol {
     static let shared = QuizService()
-    private let key: String = UserDefaults.Key.quiz
+    private let userDefaultsKey: String = UserDefaults.Key.quiz
     
     var observers = [WeakBox<QuizObserver>]()
     var quiz: Quiz {
@@ -34,18 +34,17 @@ class QuizService: QuizServiceProtocol {
     // TODO: history?
     func save(_ quiz: Quiz) throws {
         let data = try JSONEncoder().encode(quiz)
-        UserDefaults.standard.setValue(data, forKey: key)
+        UserDefaults.standard.setValue(data, forKey: userDefaultsKey)
         self.quiz = quiz
     }
     
     // TODO: delete?
     func deleteQuiz() {
-        UserDefaults().removeObject(forKey: key)
+        UserDefaults().removeObject(forKey: userDefaultsKey)
         quiz = Quiz()
     }
     
-    // TODO: rename. with = to
-    func changeQuiz(with state: Quiz.State) {
+    func changeQuiz(to state: Quiz.State) {
         self.quiz.state = state
     }
     
