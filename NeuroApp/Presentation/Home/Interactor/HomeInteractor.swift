@@ -6,7 +6,7 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-class HomeInteractor: HomeInteractorInput, QuizObserver, ProfileObserver {
+class HomeInteractor: HomeInteractorInput, Observer {
     weak var output: HomeInteractorOutput!
     var quizService: QuizService!
     var profileService: ProfileService!

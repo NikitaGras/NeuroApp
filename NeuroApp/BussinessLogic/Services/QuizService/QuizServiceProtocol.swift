@@ -15,6 +15,6 @@ protocol QuizServiceProtocol {
     func changeQuiz(to state: Quiz.State)
     
     //MARK: - Observer
-    func register(_ observer: QuizObserver)
-    func remove(_ observer: QuizObserver)
+    func register(_ observer: Observer)
+    func remove(_ observer: Observer)
 }

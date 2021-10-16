@@ -6,7 +6,7 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-class ProfileInteractor: ProfileInteractorInput, ProfileObserver {
+class ProfileInteractor: ProfileInteractorInput, Observer {
     var service: ProfileServiceProtocol!
     weak var output: ProfileInteractorOutput!
     

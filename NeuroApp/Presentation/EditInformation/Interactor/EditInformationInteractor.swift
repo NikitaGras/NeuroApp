@@ -6,7 +6,7 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-class EditInformationInteractor: EditInformationInteractorInput, ProfileObserver {
+class EditInformationInteractor: EditInformationInteractorInput, Observer {
     weak var output: EditInformationInteractorOutput!
     var service: ProfileServiceProtocol!
     

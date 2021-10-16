@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol QuizObserver: AnyObject {
-    func update(with quiz: Quiz)
-}
+//protocol QuizObserver: AnyObject {
+//    func update(with quiz: Quiz)
+//}

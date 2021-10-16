@@ -14,6 +14,6 @@ protocol ProfileServiceProtocol {
     func deleteUser()
     
     //MARK: - Observer
-    func register(_ observer: ProfileObserver)
-    func remove(_ observer: ProfileObserver)
+    func register(_ observer: Observer)
+    func remove(_ observer: Observer)
 }

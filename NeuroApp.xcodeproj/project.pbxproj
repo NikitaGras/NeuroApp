@@ -59,6 +59,7 @@
 		5A70C45326D3A2F80046675D /* ProfileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C45226D3A2F80046675D /* ProfileObserver.swift */; };
 		5A70C45526D3A3D50046675D /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C45426D3A3D50046675D /* WeakBox.swift */; };
 		5A71B2F6269EFE46001A6259 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A71B2F5269EFE46001A6259 /* Profile.storyboard */; };
+		5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F03271AB68400B5C3AD /* Observer.swift */; };
 		5AE1A50326E61722009FCD4A /* Preview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE1A50226E61722009FCD4A /* Preview.storyboard */; };
 		5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500326DB98DA00A834D2 /* Quiz.swift */; };
 		5AE8500726DB9C1600A834D2 /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500626DB9C1600A834D2 /* QuizService.swift */; };
@@ -182,6 +183,7 @@
 		5A70C45226D3A2F80046675D /* ProfileObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileObserver.swift; sourceTree = "<group>"; };
 		5A70C45426D3A3D50046675D /* WeakBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
 		5A71B2F5269EFE46001A6259 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		5ABF2F03271AB68400B5C3AD /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5AE1A50226E61722009FCD4A /* Preview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
 		5AE8500326DB98DA00A834D2 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		5AE8500626DB9C1600A834D2 /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 		5A166C0E269C313700E590C7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5ABF2F02271AB66900B5C3AD /* Observer */,
 				5AE8500526DB9BAC00A834D2 /* QuizService */,
 				5A71B2ED269EB650001A6259 /* ProfileService */,
 			);
@@ -566,6 +569,14 @@
 				5A70C45226D3A2F80046675D /* ProfileObserver.swift */,
 			);
 			path = ProfileService;
+			sourceTree = "<group>";
+		};
+		5ABF2F02271AB66900B5C3AD /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				5ABF2F03271AB68400B5C3AD /* Observer.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 		5AE8500526DB9BAC00A834D2 /* QuizService */ = {
@@ -1017,6 +1028,7 @@
 				1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */,
 				61BF5B7CEAE781CE40CDC899 /* LoginConfigurator.swift in Sources */,
 				35E0800B4950274D0E7D4706 /* LoginInitializer.swift in Sources */,
+				5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */,
 				7AA7E08EA584ECAFD5692688 /* HomeViewInput.swift in Sources */,
 				5AE8500B26DB9C3400A834D2 /* QuizObserver.swift in Sources */,
 				FD05C95E98B90F25AEE63C18 /* HomeViewOutput.swift in Sources */,

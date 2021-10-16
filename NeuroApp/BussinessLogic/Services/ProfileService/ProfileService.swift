@@ -12,7 +12,7 @@ class ProfileService: ProfileServiceProtocol {
     static let shared = ProfileService()
     private let key: String = UserDefaults.Key.user
     
-    var observers = [WeakBox<ProfileObserver>]()
+    var observers = [WeakBox<Observer>]()
     var user: User? {
         didSet {
             notifyObservers()
@@ -49,7 +49,7 @@ class ProfileService: ProfileServiceProtocol {
     
     
     //MARK: - Observer
-    func register(_ observer: ProfileObserver) {
+    func register(_ observer: Observer) {
         if !isRegistred(observer) {
             let weakBox = WeakBox(observer)
             observers.append(weakBox)
@@ -57,7 +57,7 @@ class ProfileService: ProfileServiceProtocol {
         }
     }
     
-    func remove(_ observer: ProfileObserver) {
+    func remove(_ observer: Observer) {
         observers.removeAll { $0.object === observer }
     }
     
@@ -67,7 +67,7 @@ class ProfileService: ProfileServiceProtocol {
         }
     }
     
-    func isRegistred(_ observer: ProfileObserver) -> Bool {
+    func isRegistred(_ observer: Observer) -> Bool {
         return observers.contains { $0.object === observer }
     }
 }

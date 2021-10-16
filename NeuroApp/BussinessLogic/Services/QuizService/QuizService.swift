@@ -10,7 +10,7 @@ import Foundation
 class QuizService: QuizServiceProtocol {
     static let shared = QuizService()
     
-    var observers = [WeakBox<QuizObserver>]()
+    var observers = [WeakBox<Observer>]()
     var quiz: Quiz
     
     private init() {
@@ -39,7 +39,7 @@ class QuizService: QuizServiceProtocol {
     
     //MARK: - Observer
     // TODO: - подумать как вынести функционал
-    func register(_ observer: QuizObserver) {
+    func register(_ observer: Observer) {
         if !isRegistred(observer) {
             let weakBox = WeakBox(observer)
             observers.append(weakBox)
@@ -47,7 +47,7 @@ class QuizService: QuizServiceProtocol {
         }
     }
     
-    func remove(_ observer: QuizObserver) {
+    func remove(_ observer: Observer) {
         observers.removeAll { $0.object === observer }
     }
     
@@ -57,7 +57,7 @@ class QuizService: QuizServiceProtocol {
         }
     }
     
-    func isRegistred(_ observer: QuizObserver) -> Bool {
+    func isRegistred(_ observer: Observer) -> Bool {
         observers.contains { $0.object === observer }
     }
 }
