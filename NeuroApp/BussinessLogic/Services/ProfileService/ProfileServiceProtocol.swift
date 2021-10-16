@@ -7,13 +7,9 @@
 
 import Foundation
 
-protocol ProfileServiceProtocol {
+protocol ProfileServiceProtocol: Observable {
     var isLoggedIn: Bool { get }
     
     func save(_ user: User) throws
     func deleteUser()
-    
-    //MARK: - Observer
-    func register(_ observer: Observer)
-    func remove(_ observer: Observer)
 }

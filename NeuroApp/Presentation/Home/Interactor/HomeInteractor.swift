@@ -8,8 +8,8 @@
 
 class HomeInteractor: HomeInteractorInput, Observer {
     weak var output: HomeInteractorOutput!
-    var quizService: QuizService!
-    var profileService: ProfileService!
+    var quizService: QuizServiceProtocol!
+    var profileService: ProfileServiceProtocol!
     
     var quiz: Quiz {
         return quizService.quiz

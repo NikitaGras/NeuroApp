@@ -7,14 +7,10 @@
 
 import Foundation
 
-protocol QuizServiceProtocol {
+protocol QuizServiceProtocol: Observable {
     var quiz: Quiz { get }
     
     func save(_ quiz: Quiz) throws
     func deleteQuiz()
     func changeQuiz(to state: Quiz.State)
-    
-    //MARK: - Observer
-    func register(_ observer: Observer)
-    func remove(_ observer: Observer)
 }
