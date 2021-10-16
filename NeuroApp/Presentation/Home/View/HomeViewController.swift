@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController, HomeViewInput {
-    @IBOutlet weak var quizButton: UIButton!
+    @IBOutlet weak var quizButton: RoundButton!
     // TODO: написать StatusView
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var statusLabel: UILabel!
@@ -55,7 +55,7 @@ class HomeViewController: UIViewController, HomeViewInput {
         statusLabel.text = user.status.description
     }
     
-    @IBAction func examine(_ sender: UIButton) {
+    @IBAction func examine(_ sender: RoundButton) {
         output.openQuiz()
     }
 }

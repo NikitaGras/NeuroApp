@@ -10,4 +10,5 @@ import Foundation
 
 protocol HomeInteractorInput {
     var quiz: Quiz { get }
+    func initialized()
 }

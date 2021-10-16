@@ -28,7 +28,7 @@ class HomeModuleConfigurator {
         interactor.output = presenter
         interactor.quizService = QuizService.shared
         interactor.profileService = ProfileService.shared
-        interactor.initialized()
+//        interactor.initialized()
 
         presenter.interactor = interactor
         viewController.output = presenter

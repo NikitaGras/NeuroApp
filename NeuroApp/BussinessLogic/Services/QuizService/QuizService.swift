@@ -9,46 +9,36 @@ import Foundation
 
 class QuizService: QuizServiceProtocol {
     static let shared = QuizService()
-    private let userDefaultsKey: String = UserDefaults.Key.quiz
     
     var observers = [WeakBox<QuizObserver>]()
-    var quiz: Quiz {
-        didSet {
-            notifyObservers()
-        }
-    }
+    var quiz: Quiz
     
     private init() {
         self.quiz = QuizService.fetchQuiz()
     }
     
     static private func fetchQuiz() -> Quiz {
-        let key = UserDefaults.Key.quiz
-        guard let data = UserDefaults.standard.data(forKey: key),
-              let quiz = try? JSONDecoder().decode(Quiz.self, from: data) else {
-            return Quiz()
-        }
-        return quiz
+    //TODO: реализовать после подключения CoreData
+        return Quiz()
     }
     
     // TODO: history?
     func save(_ quiz: Quiz) throws {
-        let data = try JSONEncoder().encode(quiz)
-        UserDefaults.standard.setValue(data, forKey: userDefaultsKey)
         self.quiz = quiz
     }
     
     // TODO: delete?
     func deleteQuiz() {
-        UserDefaults().removeObject(forKey: userDefaultsKey)
         quiz = Quiz()
     }
     
     func changeQuiz(to state: Quiz.State) {
         self.quiz.state = state
+        notifyObservers()
     }
     
     //MARK: - Observer
+    // TODO: - подумать как вынести функционал
     func register(_ observer: QuizObserver) {
         if !isRegistred(observer) {
             let weakBox = WeakBox(observer)

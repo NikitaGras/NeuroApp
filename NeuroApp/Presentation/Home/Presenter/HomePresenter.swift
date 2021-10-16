@@ -13,6 +13,7 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
 
     func viewIsReady() {
         view.setupInitialState()
+        interactor.initialized()
     }
     
     func update(with quiz: Quiz) {

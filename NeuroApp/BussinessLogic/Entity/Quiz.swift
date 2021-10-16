@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Quiz: Codable {
+struct Quiz {
     var state: State = .begin
     var isProceed: Bool {
         return state == .partOneProceed || state == .partTwoProceed || state == .partThreeProceed

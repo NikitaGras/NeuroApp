@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuestionsBank: Codable {
+class QuestionsBank {
     let partOneQuestions: [PartOneQuestion]
     let partTwoQuestions: [PartTwoQuestion]
     
@@ -17,17 +17,37 @@ class QuestionsBank: Codable {
     }
 }
 
-
-struct PartOneQuestion: Codable {
+struct PartOneQuestion {
     let text: String
 }
 
-struct PartTwoQuestion: Codable {
+typealias PartOneAnswer = Int
+
+struct PartTwoQuestion {
     let text: String
-    var answerOptions: [PartTwoAnswer]
+    let options: Array<Option>
 }
 
-struct PartTwoAnswer: Codable {
-    let sample: Any
+protocol Option {
+    var value: String { get }
+    var isRight: Bool { get }
+}
+
+struct StringOption: Option {
+    var value: String
     var isRight: Bool
+}
+
+struct ImageOption: Option {
+    var value: String
+    var isRight: Bool
+    
+    func asImage() -> UIImage? {
+        return UIImage(named: value)
+    }
+}
+
+struct PartTwoAnswer {
+    var questionText: String
+    var option: Option
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UfL-Q3-SVn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UfL-Q3-SVn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,7 +38,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="examine:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ImK-4H-U6u"/>
+                                            <action selector="examine:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zte-zs-Fmx"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your status:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="peg-x4-Apu">
@@ -96,7 +97,7 @@
                     <navigationItem key="navigationItem" id="jXY-lD-j3I"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="quizButton" destination="C0q-Hj-I6j" id="4D0-5L-NOe"/>
+                        <outlet property="quizButton" destination="C0q-Hj-I6j" id="IuL-et-O8G"/>
                         <outlet property="statusLabel" destination="cc6-zh-nTf" id="zzU-p7-ymk"/>
                         <outlet property="statusView" destination="mG5-g7-eFA" id="7KA-Ip-Mcq"/>
                         <segue destination="KZR-jP-9ra" kind="show" identifier="openPreviewBaseInfo" id="Pdx-Fi-I0P"/>
