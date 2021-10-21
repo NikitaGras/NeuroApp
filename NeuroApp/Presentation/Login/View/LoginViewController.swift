@@ -23,6 +23,7 @@ class LoginViewController: UIViewController, LoginViewInput {
     
     // MARK: - LoginViewInput
     func setupInitialState() {
+        hideKeyboardWhenTapped()
         saveButton.setBackgroundColor(.NAGreen, for: .normal)
     }
     

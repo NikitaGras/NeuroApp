@@ -17,9 +17,9 @@ class EditInformationPresenter: NSObject, EditInformationModuleInput, EditInform
         interactor.registerObserver()
     }
     
-    func safeUser() {
+    func safeUser(with name: String, _ age: Int, _ email: String) {
         do {
-            let user = try view.createUser()
+            let user = try User(with: name, age, email)
             try interactor.save(user: user)
             router.goBack()
         } catch {

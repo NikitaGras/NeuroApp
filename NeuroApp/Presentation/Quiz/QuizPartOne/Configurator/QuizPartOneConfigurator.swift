@@ -27,6 +27,7 @@ class QuizPartOneModuleConfigurator {
 
         let interactor = QuizPartOneInteractor()
         interactor.output = presenter
+        interactor.service = QuizService.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

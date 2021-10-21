@@ -8,5 +8,5 @@
 
 protocol EditInformationViewOutput {
     func viewIsReady()
-    func safeUser()
+    func safeUser(with name: String, _ Age: Int, _ email: String)
 }

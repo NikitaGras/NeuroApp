@@ -15,8 +15,8 @@ class ProfileInteractor: ProfileInteractorInput, Observer {
         service.register(self)
     }
 
-    func update(_ user: User?) {
-        guard let user = user else {
+    func update(with data: Any) {
+        guard let user = data as? User else {
             return output.eraseUser()
         }
         output.fill(with: user)

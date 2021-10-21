@@ -12,7 +12,11 @@ class QuestionsBank {
     let partTwoQuestions: [PartTwoQuestion]
     
     init() {
-        partOneQuestions = []
+        partOneQuestions = [
+        PartOneQuestion(text: "Вопрос 1"),
+        PartOneQuestion(text: "Вопрос 2"),
+        PartOneQuestion(text: "Вопрос 3"),
+        PartOneQuestion(text: "Вопрос 4"),]
         partTwoQuestions = []
     }
 }
@@ -21,7 +25,10 @@ struct PartOneQuestion {
     let text: String
 }
 
-typealias PartOneAnswer = Int
+struct PartOneAnswer{
+    let questionText: String
+    let value: Int
+}
 
 struct PartTwoQuestion {
     let text: String
@@ -50,4 +57,10 @@ struct ImageOption: Option {
 struct PartTwoAnswer {
     var questionText: String
     var option: Option
+    var responseTime: TimeInterval
+}
+
+struct PartThreeAnswer {
+    let userText: String
+    let value: Int
 }

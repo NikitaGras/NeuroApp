@@ -56,7 +56,7 @@ class ProfileService: ProfileServiceProtocol {
 
     func notifyObservers() {
         observers.forEach { observer in
-            observer.object?.update(user)
+            observer.object?.update(with: user as Any)
         }
     }
 }

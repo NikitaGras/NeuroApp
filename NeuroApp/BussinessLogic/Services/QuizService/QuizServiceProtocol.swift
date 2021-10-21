@@ -13,4 +13,8 @@ protocol QuizServiceProtocol: Observable {
     func save(_ quiz: Quiz) throws
     func deleteQuiz()
     func changeQuiz(to state: Quiz.State)
+    
+    func save(_ answer: PartOneAnswer) throws
+    func getPartOneQuestions() -> [PartOneQuestion]
+    func getPartOneAnswers() -> [PartOneAnswer]
 }

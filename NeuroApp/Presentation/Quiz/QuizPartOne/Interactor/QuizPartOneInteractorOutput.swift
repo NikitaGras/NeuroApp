@@ -9,5 +9,7 @@
 import Foundation
 
 protocol QuizPartOneInteractorOutput: AnyObject {
-
+    func show(question: PartOneQuestion)
+    func show(error: Error)
+    func openNextPart()
 }

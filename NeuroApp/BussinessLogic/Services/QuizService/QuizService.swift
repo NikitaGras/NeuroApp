@@ -14,10 +14,23 @@ class QuizService: QuizServiceProtocol {
             notifyObservers()
         }
     }
+    var history = [Result]()
     var quiz: Quiz
     
     private init() {
         self.quiz = QuizService.fetchQuiz()
+    }
+    
+    func save(_ answer: PartOneAnswer) throws {
+        quiz.partOneAnswers.append(answer)
+    }
+    
+    func getPartOneQuestions() -> [PartOneQuestion] {
+        return  quiz.partOneQuestions
+    }
+    
+    func getPartOneAnswers() -> [PartOneAnswer] {
+        return quiz.partOneAnswers
     }
     
     static private func fetchQuiz() -> Quiz {
@@ -25,7 +38,6 @@ class QuizService: QuizServiceProtocol {
         return Quiz()
     }
     
-    // TODO: history?
     func save(_ quiz: Quiz) throws {
         self.quiz = quiz
     }

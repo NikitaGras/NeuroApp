@@ -34,6 +34,7 @@
 		505014C02EB507DCA4B96406 /* PreviewPartInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC23566E7924311A79135A /* PreviewPartInfoRouter.swift */; };
 		56615C62A114E681AE72A01B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFFD28B57959F5B32F0FD98 /* HomeRouter.swift */; };
 		568CF19A7F36CF7859D1E3A3 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */; };
+		5A126539271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */; };
 		5A127FFA27007D7100832AD2 /* QuestionsBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A127FF927007D7100832AD2 /* QuestionsBank.swift */; };
 		5A166C04269BF43200E590C7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A166C03269BF43200E590C7 /* Home.storyboard */; };
 		5A166C0A269C2EC500E590C7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A166C09269C2EC500E590C7 /* UIColor.swift */; };
@@ -60,6 +61,7 @@
 		5A71B2F6269EFE46001A6259 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A71B2F5269EFE46001A6259 /* Profile.storyboard */; };
 		5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F03271AB68400B5C3AD /* Observer.swift */; };
 		5ABF2F06271AB9CC00B5C3AD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F05271AB9CC00B5C3AD /* Observable.swift */; };
+		5ABF2F08271D914A00B5C3AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F07271D914A00B5C3AD /* Result.swift */; };
 		5AE1A50326E61722009FCD4A /* Preview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE1A50226E61722009FCD4A /* Preview.storyboard */; };
 		5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500326DB98DA00A834D2 /* Quiz.swift */; };
 		5AE8500726DB9C1600A834D2 /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500626DB9C1600A834D2 /* QuizService.swift */; };
@@ -155,6 +157,7 @@
 		4C642DB194C16080141E1F13 /* ProfileInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractorInput.swift; sourceTree = "<group>"; };
 		4D2864988193F828DED9F8E6 /* PreviewPartInfoConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoConfigurator.swift; sourceTree = "<group>"; };
 		549A076939854C22E1C60212 /* ProfileViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewOutput.swift; sourceTree = "<group>"; };
+		5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboardWhenTapped.swift"; sourceTree = "<group>"; };
 		5A127FF927007D7100832AD2 /* QuestionsBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsBank.swift; sourceTree = "<group>"; };
 		5A166C03269BF43200E590C7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		5A166C09269C2EC500E590C7 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -183,6 +186,7 @@
 		5A71B2F5269EFE46001A6259 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		5ABF2F03271AB68400B5C3AD /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5ABF2F05271AB9CC00B5C3AD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		5ABF2F07271D914A00B5C3AD /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		5AE1A50226E61722009FCD4A /* Preview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
 		5AE8500326DB98DA00A834D2 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		5AE8500626DB9C1600A834D2 /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
@@ -438,7 +442,6 @@
 		5A166C0E269C313700E590C7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5ABF2F02271AB66900B5C3AD /* Observer */,
 				5AE8500526DB9BAC00A834D2 /* QuizService */,
 				5A71B2ED269EB650001A6259 /* ProfileService */,
 			);
@@ -474,10 +477,12 @@
 			children = (
 				5AFFFCE826AEC00400E9F3F1 /* Error */,
 				5A166C0D269C30A500E590C7 /* Constants */,
+				5ABF2F02271AB66900B5C3AD /* Observer */,
 				5A70C45426D3A3D50046675D /* WeakBox.swift */,
 				5A1E8BB5269840B9001179F7 /* User.swift */,
 				5AE8500326DB98DA00A834D2 /* Quiz.swift */,
 				5A127FF927007D7100832AD2 /* QuestionsBank.swift */,
+				5ABF2F07271D914A00B5C3AD /* Result.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -545,6 +550,7 @@
 				5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */,
 				5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */,
 				5A6F2C5E269B58A9006B065D /* String+isValid.swift */,
+				5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1037,6 +1043,7 @@
 				8B66E60129903C989F98FEC4 /* HomeInteractorOutput.swift in Sources */,
 				7527CAD75382A2FA6E456768 /* HomeInteractor.swift in Sources */,
 				5ABF2F06271AB9CC00B5C3AD /* Observable.swift in Sources */,
+				5A126539271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift in Sources */,
 				62C499E38C23A315356603BA /* HomeRouterInput.swift in Sources */,
 				56615C62A114E681AE72A01B /* HomeRouter.swift in Sources */,
 				CB4A5B3489D0395473C8AB96 /* HomeConfigurator.swift in Sources */,
@@ -1070,6 +1077,7 @@
 				287BE47BB9D393609581989C /* EditInformationInitializer.swift in Sources */,
 				055AD0AEA86CC2FE0331F04B /* PreviewBaseInfoViewInput.swift in Sources */,
 				7A97706392CC30BB97940C40 /* PreviewBaseInfoViewOutput.swift in Sources */,
+				5ABF2F08271D914A00B5C3AD /* Result.swift in Sources */,
 				13EDF50C0DEC9793B217B50C /* PreviewBaseInfoViewController.swift in Sources */,
 				B2548BC03A552198447AFD45 /* PreviewBaseInfoModuleInput.swift in Sources */,
 				8738DA5F04B33A3B23D2E540 /* PreviewBaseInfoPresenter.swift in Sources */,

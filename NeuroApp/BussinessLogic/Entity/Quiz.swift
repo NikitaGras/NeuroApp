@@ -13,7 +13,8 @@ struct Quiz {
         return state == .partOneProceed || state == .partTwoProceed || state == .partThreeProceed
     }
     
-    var questions = QuestionsBank().partOneQuestions
+    var partOneQuestions = QuestionsBank().partOneQuestions
+    var partOneAnswers = [PartOneAnswer]()
 }
 
 extension Quiz {

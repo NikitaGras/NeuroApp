@@ -24,15 +24,13 @@ class HomeInteractor: HomeInteractorInput, Observer {
         profileService.remove(self)
     }
     
-    func update(with quiz: Quiz) {
-        output.update(with: quiz)
-    }
-    
-    func update(_ user: User?) {
-        guard let user = user else {
-            return output.openLogin()
+    func update(with data: Any) {
+        if let quiz = data as? Quiz {
+            output.update(with: quiz)
         }
-        output.update(with: user)
+        if let user = data as? User {
+            output.update(with: user)
+        }
     }
     
     func registerObserver() {

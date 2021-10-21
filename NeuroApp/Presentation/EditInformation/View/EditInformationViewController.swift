@@ -31,16 +31,11 @@ class EditInformationViewController: UIViewController, EditInformationViewInput 
     }
     
     @IBAction func save(_ sender: Any) {
-        output.safeUser()
-    }
-    
-    // TODO: remake
-    func createUser() throws -> User {
         let name = nameTextField.text ?? ""
         let ageString = ageTextField.text ?? ""
         let age = Int(ageString) ?? 0
         let email = emailTextField.text ?? ""
-        let user = try User(with: name, age, email)
-        return user
+        
+        output.safeUser(with: name, age, email)
     }
 }

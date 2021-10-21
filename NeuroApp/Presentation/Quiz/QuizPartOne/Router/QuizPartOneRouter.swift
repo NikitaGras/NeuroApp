@@ -7,5 +7,8 @@
 //
 
 class QuizPartOneRouter: QuizPartOneRouterInput {
-
+    
+    func openNextPart() {
+        // TODO:
+    }
 }

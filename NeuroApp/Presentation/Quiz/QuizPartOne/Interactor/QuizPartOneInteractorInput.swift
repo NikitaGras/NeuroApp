@@ -9,5 +9,6 @@
 import Foundation
 
 protocol QuizPartOneInteractorInput {
-
+    func save(_ answer: PartOneAnswer)
+    func initialized()
 }

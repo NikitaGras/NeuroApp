@@ -8,4 +8,5 @@
 
 protocol QuizPartOneViewOutput {
     func viewIsReady()
+    func save(_ answer: PartOneAnswer)
 }

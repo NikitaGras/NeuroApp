@@ -6,6 +6,7 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-protocol QuizPartOneViewInput: AnyObject {
+protocol QuizPartOneViewInput: AnyObject, ViewInput {
     func setupInitialState()
+    func show(_ question: PartOneQuestion)
 }

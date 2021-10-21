@@ -9,5 +9,4 @@
 protocol EditInformationViewInput: AnyObject, ViewInput {
     func setupInitialState()
     func fill(with user: User)
-    func createUser() throws -> User
 }
