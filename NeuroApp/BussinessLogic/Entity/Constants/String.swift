@@ -47,4 +47,15 @@ extension String {
         static let title = "Warning"
         static let message = "Are you sure you want to erase your data in this app?"
     }
+    
+    struct PartOneQuiz {
+        static let taskText = "Using the scale provided, please rate how certain you are can do the folloving actions:"
+        static let leftScaleDescription = "Cannot do at all"
+        static let centerScaleDescription = "Modarately can do"
+        static let rightScaleDescription = "Highly certain can do"
+    }
+    
+    struct Button {
+        static let next = "NEXT"
+    }
 }

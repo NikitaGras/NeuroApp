@@ -20,6 +20,7 @@ class QuizPartOneModuleConfigurator {
     private func configure(viewController: QuizPartOneViewController) {
 
         let router = QuizPartOneRouter()
+        router.transionHandler = viewController
 
         let presenter = QuizPartOnePresenter()
         presenter.view = viewController

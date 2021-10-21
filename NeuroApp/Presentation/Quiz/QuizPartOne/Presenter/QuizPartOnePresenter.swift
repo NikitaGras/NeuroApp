@@ -11,25 +11,27 @@ class QuizPartOnePresenter: QuizPartOneModuleInput, QuizPartOneViewOutput, QuizP
     var interactor: QuizPartOneInteractorInput!
     var router: QuizPartOneRouterInput!
     
+    var questions: [PartOneQuestion] = []
+    var index: Int = 0
+    
     func viewIsReady() {
         view.setupInitialState()
-        interactor.initialized()
+        questions = interactor.getQuestions()
+        index = interactor.getAnswers().count
+        view.show(questions[index])
     }
     
     func save(_ answer: PartOneAnswer) {
-        interactor.save(answer)
-    }
-    
-    func show(error: Error) {
-        view.show(error)
-    }
-    
-    func show(question: PartOneQuestion) {
-        view.show(question)
+        do {
+            try interactor.save(answer)
+            index += 1
+            index >= questions.count ? router.openNextPart() : view.show(questions[index])
+        } catch {
+            view.show(error)
+        }
     }
     
     func openNextPart() {
         router.openNextPart()
     }
-    
 }
