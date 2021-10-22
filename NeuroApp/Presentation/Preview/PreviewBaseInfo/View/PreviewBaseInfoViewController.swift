@@ -10,6 +10,8 @@ import UIKit
 
 class PreviewBaseInfoViewController: UIViewController, PreviewBaseInfoViewInput {
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var nextButton: RoundButton!
+    
     var output: PreviewBaseInfoViewOutput!
 
     // MARK: - Life cycle
@@ -20,6 +22,7 @@ class PreviewBaseInfoViewController: UIViewController, PreviewBaseInfoViewInput 
 
     // MARK: - PreviewBaseInfoViewInput
     func setupInitialState() {
+        nextButton.setTitle(.Button.begin, for: .normal)
     }
     
     func update(with state: Quiz.State) {

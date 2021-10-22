@@ -11,6 +11,8 @@ import UIKit
 class PreviewPartInfoViewController: UIViewController, PreviewPartInfoViewInput {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var nextButton: RoundButton!
+    
     var output: PreviewPartInfoViewOutput!
 
     // MARK: - Life cycle
@@ -21,6 +23,7 @@ class PreviewPartInfoViewController: UIViewController, PreviewPartInfoViewInput 
 
     // MARK: - PreviewPartInfoViewInput
     func setupInitialState() {
+        nextButton.setTitle(.Button.ok, for: .normal)
     }
     
     func update(with state: Quiz.State) {

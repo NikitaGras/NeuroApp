@@ -7,7 +7,6 @@
 //
 
 class PreviewBaseInfoPresenter: PreviewBaseInfoModuleInput, PreviewBaseInfoViewOutput, PreviewBaseInfoInteractorOutput {
-
     weak var view: PreviewBaseInfoViewInput!
     var interactor: PreviewBaseInfoInteractorInput!
     var router: PreviewBaseInfoRouterInput!

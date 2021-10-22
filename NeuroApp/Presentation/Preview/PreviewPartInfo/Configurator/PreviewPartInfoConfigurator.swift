@@ -9,7 +9,6 @@
 import UIKit
 
 class PreviewPartInfoModuleConfigurator {
-
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
         if let viewController = viewInput as? PreviewPartInfoViewController {
             configure(viewController: viewController)

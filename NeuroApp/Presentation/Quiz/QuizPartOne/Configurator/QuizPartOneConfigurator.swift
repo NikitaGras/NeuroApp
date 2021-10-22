@@ -9,16 +9,13 @@
 import UIKit
 
 class QuizPartOneModuleConfigurator {
-
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
         if let viewController = viewInput as? QuizPartOneViewController {
             configure(viewController: viewController)
         }
     }
 
     private func configure(viewController: QuizPartOneViewController) {
-
         let router = QuizPartOneRouter()
         router.transionHandler = viewController
 

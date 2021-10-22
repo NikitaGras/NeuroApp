@@ -9,8 +9,6 @@
 import UIKit
 
 class QuizPartOneModuleInitializer: NSObject {
-
-    //Connect with object on storyboard
     @IBOutlet weak var quizpartoneViewController: QuizPartOneViewController!
 
     override func awakeFromNib() {

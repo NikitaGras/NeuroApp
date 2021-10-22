@@ -7,7 +7,6 @@
 //
 
 class PreviewPartInfoPresenter: PreviewPartInfoModuleInput, PreviewPartInfoViewOutput, PreviewPartInfoInteractorOutput {
-
     weak var view: PreviewPartInfoViewInput!
     var interactor: PreviewPartInfoInteractorInput!
     var router: PreviewPartInfoRouterInput!

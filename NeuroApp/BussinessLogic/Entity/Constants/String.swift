@@ -22,7 +22,7 @@ extension String {
     }
     
     struct UserStatus {
-        static let none = "None"
+        static let none = "Your cognitive behavior status will appear here after you complete at least 3 questionnaires"
         static let negative = "Negative"
         static let positive = "Positive"
     }
@@ -57,5 +57,7 @@ extension String {
     
     struct Button {
         static let next = "NEXT"
+        static let begin = "BEGIN"
+        static let ok = "OK"
     }
 }

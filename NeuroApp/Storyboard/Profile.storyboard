@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="os4-Io-N2d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="os4-Io-N2d">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -59,12 +60,12 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-Xb-Rru">
-                                <rect key="frame" x="20" y="686" width="374" height="107"/>
+                                <rect key="frame" x="20" y="692" width="374" height="101"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxy-AC-hx9" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="39"/>
+                                        <color key="backgroundColor" name="NAGray"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="EDIT INFORMATION">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -73,9 +74,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="350-PJ-dyy" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="65" width="374" height="42"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="62" width="374" height="39"/>
+                                        <color key="backgroundColor" name="NARed"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="ERASE APP DATA">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -127,9 +128,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dK4-aY-ZGO" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
-                                <rect key="frame" x="40" y="751" width="334" height="42"/>
+                                <rect key="frame" x="40" y="754" width="334" height="39"/>
                                 <color key="backgroundColor" name="NAGreen"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="DONE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -138,13 +139,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkf-P0-gay">
-                                <rect key="frame" x="40" y="233" width="334" height="30"/>
+                                <rect key="frame" x="40" y="223" width="334" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="756-eC-Tuk">
-                                <rect key="frame" x="40" y="358" width="334" height="30"/>
+                                <rect key="frame" x="40" y="338" width="334" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -155,12 +156,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXr-TB-haD">
-                                <rect key="frame" x="40" y="288" width="334" height="40"/>
+                                <rect key="frame" x="40" y="278" width="334" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oe-Cb-nJh">
-                                <rect key="frame" x="40" y="413" width="334" height="40"/>
+                                <rect key="frame" x="40" y="393" width="334" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -176,7 +177,7 @@
                         <constraints>
                             <constraint firstItem="HXr-TB-haD" firstAttribute="leading" secondItem="wVZ-nv-y2J" secondAttribute="leading" constant="40" id="1xc-Wk-ygz"/>
                             <constraint firstItem="dK4-aY-ZGO" firstAttribute="leading" secondItem="wVZ-nv-y2J" secondAttribute="leading" constant="40" id="4VB-gV-Pil"/>
-                            <constraint firstItem="756-eC-Tuk" firstAttribute="top" secondItem="HXr-TB-haD" secondAttribute="bottom" constant="30" id="8T8-VW-7JX"/>
+                            <constraint firstItem="756-eC-Tuk" firstAttribute="top" secondItem="HXr-TB-haD" secondAttribute="bottom" constant="20" id="8T8-VW-7JX"/>
                             <constraint firstItem="wVZ-nv-y2J" firstAttribute="trailing" secondItem="dK4-aY-ZGO" secondAttribute="trailing" constant="40" id="FJe-mc-ab6"/>
                             <constraint firstItem="eLg-D9-bAm" firstAttribute="leading" secondItem="wVZ-nv-y2J" secondAttribute="leading" constant="40" id="Ngt-T3-69f"/>
                             <constraint firstItem="HXr-TB-haD" firstAttribute="top" secondItem="zkf-P0-gay" secondAttribute="bottom" constant="25" id="PCd-HO-1ze"/>
@@ -190,7 +191,7 @@
                             <constraint firstItem="PUi-EA-bJi" firstAttribute="leading" secondItem="wVZ-nv-y2J" secondAttribute="leading" constant="40" id="lfZ-JN-RGZ"/>
                             <constraint firstItem="wVZ-nv-y2J" firstAttribute="trailing" secondItem="zkf-P0-gay" secondAttribute="trailing" constant="40" id="lpm-0m-cHm"/>
                             <constraint firstItem="wVZ-nv-y2J" firstAttribute="trailing" secondItem="6oe-Cb-nJh" secondAttribute="trailing" constant="40" id="n9W-lh-LsN"/>
-                            <constraint firstItem="zkf-P0-gay" firstAttribute="top" secondItem="PUi-EA-bJi" secondAttribute="bottom" constant="30" id="pmH-2m-QyJ"/>
+                            <constraint firstItem="zkf-P0-gay" firstAttribute="top" secondItem="PUi-EA-bJi" secondAttribute="bottom" constant="20" id="pmH-2m-QyJ"/>
                             <constraint firstItem="eLg-D9-bAm" firstAttribute="top" secondItem="wVZ-nv-y2J" secondAttribute="top" constant="20" id="qoz-eF-U3B"/>
                             <constraint firstItem="wVZ-nv-y2J" firstAttribute="trailing" secondItem="HXr-TB-haD" secondAttribute="trailing" constant="40" id="u4w-ct-qNO"/>
                             <constraint firstItem="wVZ-nv-y2J" firstAttribute="trailing" secondItem="PUi-EA-bJi" secondAttribute="trailing" constant="40" id="vU3-8n-MKs"/>
@@ -229,22 +230,22 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdK-Hx-U96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.78504672897196" y="105.61555075593954"/>
+            <point key="canvasLocation" x="136" y="104"/>
         </scene>
     </scenes>
     <resources>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="NAGray">
+            <color red="0.792156862745098" green="0.79607843137254897" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="NAGreen">
             <color red="0.37999999523162842" green="0.80000001192092896" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="NARed">
+            <color red="0.92941176470588238" green="0.3843137254901961" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

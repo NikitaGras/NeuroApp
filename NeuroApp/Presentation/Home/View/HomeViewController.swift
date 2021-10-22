@@ -10,9 +10,9 @@ import UIKit
 
 class HomeViewController: UIViewController, HomeViewInput {
     @IBOutlet weak var quizButton: RoundButton!
-    // TODO: написать StatusView
-    @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var statusView: UserStatusView!
     @IBOutlet weak var statusLabel: UILabel!
+    
     var output: HomeViewOutput!
 
     // MARK: - Life cycle
@@ -23,8 +23,7 @@ class HomeViewController: UIViewController, HomeViewInput {
 
     // MARK: - HomeViewInput
     func setupInitialState() {
-        statusView.layer.borderWidth = 4
-        statusView.layer.cornerRadius = 20
+        quizButton.setBackgroundColor(.NAGray, for: .disabled)
     }
     
     func update(with quiz: Quiz) {
@@ -40,19 +39,22 @@ class HomeViewController: UIViewController, HomeViewInput {
             let title = String.QuizState.begin
             quizButton.isEnabled = true
             quizButton.setTitle(title, for: .normal)
+            quizButton.setBackgroundColor(.NABlue, for: .normal)
         } else if quiz.state == .notAvailable {
-            let title = String.QuizState.proceed
+            let title = String.QuizState.notAvailable
             quizButton.isEnabled = false
             quizButton.setTitle(title, for: .disabled)
         } else if quiz.isProceed {
             let title = String.QuizState.proceed
             quizButton.isEnabled = true
             quizButton.setTitle(title, for: .normal)
+            quizButton.setBackgroundColor(.NAGreen, for: .normal)
         }
     }
     
     func updateStatus(with user: User) {
         statusLabel.text = user.status.description
+        statusView.setBorderColor(for: user.status)
     }
     
     @IBAction func examine(_ sender: RoundButton) {

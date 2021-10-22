@@ -9,8 +9,6 @@
 import UIKit
 
 class PreviewBaseInfoModuleInitializer: NSObject {
-
-    //Connect with object on storyboard
     @IBOutlet weak var previewbaseinfoViewController: PreviewBaseInfoViewController!
 
     override func awakeFromNib() {
