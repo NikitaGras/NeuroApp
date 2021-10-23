@@ -12,7 +12,6 @@ class QuizPartOneRouter: QuizPartOneRouterInput {
     var transionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func openNextPart() {
-        // TODO:
-        print("Complete. Start Next part")
+        _ = transionHandler.openModule?(usingSegue: "showPreviewPartInfo")
     }
 }

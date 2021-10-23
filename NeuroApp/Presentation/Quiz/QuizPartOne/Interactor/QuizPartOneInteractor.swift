@@ -21,4 +21,8 @@ class QuizPartOneInteractor: QuizPartOneInteractorInput {
     func save(_ answer: PartOneAnswer) throws {
         try service.save(answer)
     }
+    
+    func changeQuiz(to state: Quiz.State) {
+        service.changeQuiz(to: state)
+    }
 }

@@ -17,7 +17,9 @@ class QuestionsBank {
         PartOneQuestion(text: "Вопрос 2"),
         PartOneQuestion(text: "Вопрос 3"),
         PartOneQuestion(text: "Вопрос 4"),]
-        partTwoQuestions = []
+        
+        partTwoQuestions = [
+            PartTwoQuestion(text: "Выбери Крысу", options: [ImageOption(value: "rat", isRight: true), ImageOption(value: "dog", isRight: false), ImageOption(value: "elethant", isRight: false), ImageOption(value: "raccoon", isRight: false)])]
     }
 }
 

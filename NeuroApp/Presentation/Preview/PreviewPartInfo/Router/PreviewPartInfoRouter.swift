@@ -15,7 +15,7 @@ class PreviewPartInfoRouter: PreviewPartInfoRouterInput {
     }
     
     func openPartTwoQuiz() {
-        
+        _ = transitionHandler.openModule?(usingSegue: "showPartTwoQuiz")
     }
     
     func openPartThreeQuiz() {

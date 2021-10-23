@@ -21,8 +21,8 @@ class QuizService: QuizServiceProtocol {
         self.quiz = QuizService.fetchQuiz()
     }
     
-    func save(_ answer: PartOneAnswer) throws {
-        quiz.partOneAnswers.append(answer)
+    func save(_ partOneAnswer: PartOneAnswer) throws {
+        quiz.partOneAnswers.append(partOneAnswer)
     }
     
     func getPartOneQuestions() -> [PartOneQuestion] {
@@ -31,6 +31,18 @@ class QuizService: QuizServiceProtocol {
     
     func getPartOneAnswers() -> [PartOneAnswer] {
         return quiz.partOneAnswers
+    }
+    
+    func save(_ partTwoAnswer: PartTwoAnswer) throws {
+        quiz.partTwoAnswers.append(partTwoAnswer)
+    }
+    
+    func getPartTwoQuestions() -> [PartTwoQuestion] {
+        return quiz.partTwoQuestions
+    }
+    
+    func getPartTwoAnswers() -> [PartTwoAnswer] {
+        return quiz.partTwoAnswers
     }
     
     static private func fetchQuiz() -> Quiz {

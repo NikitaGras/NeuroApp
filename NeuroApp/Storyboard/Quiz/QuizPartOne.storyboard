@@ -199,6 +199,7 @@
                         <outletCollection property="scaleDescriptionLabels" destination="uoo-4r-CFi" collectionClass="NSMutableArray" id="AGr-EE-VAY"/>
                         <outletCollection property="scaleDescriptionLabels" destination="BoS-zb-TpZ" collectionClass="NSMutableArray" id="wfi-R2-D46"/>
                         <outletCollection property="scaleDescriptionLabels" destination="gp5-7V-2K9" collectionClass="NSMutableArray" id="w4X-XJ-si2"/>
+                        <segue destination="2HC-QN-cgG" kind="presentation" identifier="showPreviewPartInfo" modalPresentationStyle="fullScreen" id="fuL-16-EFH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -209,6 +210,16 @@
                 </customObject>
             </objects>
             <point key="canvasLocation" x="-52.173913043478265" y="112.5"/>
+        </scene>
+        <!--PreviewViewController-->
+        <scene sceneID="BS7-Wk-otd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Preview" referencedIdentifier="PreviewViewController" id="2HC-QN-cgG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sDl-rf-QZO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAo-1k-B6u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="627" y="113"/>
         </scene>
     </scenes>
     <resources>

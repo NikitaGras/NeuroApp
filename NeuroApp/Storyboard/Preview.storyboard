@@ -170,6 +170,7 @@
                         <outlet property="nextButton" destination="1Wo-pw-vwY" id="jJL-eg-YHF"/>
                         <outlet property="titleLabel" destination="3PV-ij-DsV" id="7fb-8T-iba"/>
                         <segue destination="TbF-CC-e94" kind="presentation" identifier="showPartOneQuiz" modalPresentationStyle="fullScreen" id="rOq-T4-Zpe"/>
+                        <segue destination="Bvd-54-I6U" kind="presentation" identifier="showPartTwoQuiz" modalPresentationStyle="fullScreen" id="b9Q-h1-Fqq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,7 +188,17 @@
                 <viewControllerPlaceholder storyboardIdentifier="QuizPartOne" storyboardName="QuizPartOne" id="TbF-CC-e94" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQN-1L-f75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="691" y="173"/>
+            <point key="canvasLocation" x="792" y="95"/>
+        </scene>
+        <!--QuizPartTwo-->
+        <scene sceneID="1i2-Z3-jId">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="QuizPartTwo" storyboardName="QuizPartTwo" id="Bvd-54-I6U" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sQ2-b9-5B1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gw-rw-AnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="173"/>
         </scene>
     </scenes>
     <resources>

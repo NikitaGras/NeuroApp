@@ -25,13 +25,14 @@ class QuizPartOnePresenter: QuizPartOneModuleInput, QuizPartOneViewOutput, QuizP
         do {
             try interactor.save(answer)
             index += 1
-            index >= questions.count ? router.openNextPart() : view.show(questions[index])
+            index >= questions.count ? openNextPart() : view.show(questions[index])
         } catch {
             view.show(error)
         }
     }
     
     func openNextPart() {
+        interactor.changeQuiz(to: .partTwoProceed)
         router.openNextPart()
     }
 }
