@@ -10,7 +10,7 @@ import Foundation
 
 protocol QuizPartTwoInteractorInput {
     func save(_ answer: PartTwoAnswer) throws
-    func getQuestion() -> [PartTwoQuestion]
+    func getQuestions() -> [PartTwoQuestion]
     func getAnswers() -> [PartTwoAnswer]
     func changeQuiz(to state: Quiz.State)
 }

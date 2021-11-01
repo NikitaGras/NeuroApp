@@ -14,7 +14,7 @@ class QuizPartTwoInteractor: QuizPartTwoInteractorInput {
         try service.save(answer)
     }
     
-    func getQuestion() -> [PartTwoQuestion] {
+    func getQuestions() -> [PartTwoQuestion] {
         return service.getPartTwoQuestions()
     }
     

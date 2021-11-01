@@ -11,11 +11,46 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
     var interactor: QuizPartTwoInteractorInput!
     var router: QuizPartTwoRouterInput!
 
+    var questions: [PartTwoQuestion] = []
+    var answers: [PartTwoAnswer] = []
+    var index = 0
+    
+    var selectedOptionIndex: Int?
+    
     func viewIsReady() {
-
+        view.setupInitialState()
+        questions = interactor.getQuestions()
+        answers = interactor.getAnswers()
+        index = answers.count
+        show(qusetion: questions[index])
     }
     
-    func save(_ answer: PartTwoAnswer) {
-        
+    func save() {
+        do {
+            guard let selectedOptionIndex = selectedOptionIndex else {
+                return
+            }
+            let answer = PartTwoAnswer(questionText: questions[index].text, option: questions[index].options[selectedOptionIndex], responseTime: 0)
+            try interactor.save(answer)
+            index += 1
+            index >= questions.count ? openNextPart() : view.show(question: questions[index])
+        } catch {
+            view.show(error)
+        }
+    }
+    
+    func show(qusetion: PartTwoQuestion) {
+        view.show(question: qusetion)
+        if let options = qusetion.options as? [ImageOption] {
+            view.show(imageOptions: options)
+        }
+        if let options = qusetion.options as? [StringOption] {
+            view.show(stringOptions: options)
+        }
+    }
+    
+    func openNextPart() {
+        interactor.changeQuiz(to: .partThreeProceed)
+        router.openNextPart()
     }
 }

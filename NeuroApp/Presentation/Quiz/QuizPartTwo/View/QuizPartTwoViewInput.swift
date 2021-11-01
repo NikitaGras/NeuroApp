@@ -6,8 +6,9 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
-protocol QuizPartTwoViewInput: AnyObject {
+protocol QuizPartTwoViewInput: AnyObject, ViewInput {
     func setupInitialState()
     func show(imageOptions: [ImageOption])
     func show(stringOptions: [StringOption])
+    func show(question: PartTwoQuestion)
 }
