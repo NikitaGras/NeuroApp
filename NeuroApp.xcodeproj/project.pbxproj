@@ -65,6 +65,10 @@
 		5A71B2F6269EFE46001A6259 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A71B2F5269EFE46001A6259 /* Profile.storyboard */; };
 		5A8805182722CDE100BA12B3 /* UserStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8805172722CDE100BA12B3 /* UserStatusView.swift */; };
 		5A88051A2723CEFF00BA12B3 /* QuizPartTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8805192723CEFF00BA12B3 /* QuizPartTwo.storyboard */; };
+		5AA6E28D272FE62E00E64ABA /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E28C272FE62E00E64ABA /* OptionView.swift */; };
+		5AA6E28F272FE67E00E64ABA /* OptionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */; };
+		5AA6E2912730001B00E64ABA /* OptionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */; };
+		5AA6E2932730DF8800E64ABA /* OptionStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2922730DF8800E64ABA /* OptionStringView.swift */; };
 		5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F03271AB68400B5C3AD /* Observer.swift */; };
 		5ABF2F06271AB9CC00B5C3AD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F05271AB9CC00B5C3AD /* Observable.swift */; };
 		5ABF2F08271D914A00B5C3AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F07271D914A00B5C3AD /* Result.swift */; };
@@ -205,6 +209,10 @@
 		5A71B2F5269EFE46001A6259 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		5A8805172722CDE100BA12B3 /* UserStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusView.swift; sourceTree = "<group>"; };
 		5A8805192723CEFF00BA12B3 /* QuizPartTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizPartTwo.storyboard; sourceTree = "<group>"; };
+		5AA6E28C272FE62E00E64ABA /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
+		5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionImageView.swift; sourceTree = "<group>"; };
+		5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewDelegate.swift; sourceTree = "<group>"; };
+		5AA6E2922730DF8800E64ABA /* OptionStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionStringView.swift; sourceTree = "<group>"; };
 		5ABF2F03271AB68400B5C3AD /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5ABF2F05271AB9CC00B5C3AD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		5ABF2F07271D914A00B5C3AD /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -587,6 +595,7 @@
 		5A6F2C4F269AAB20006B065D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5AA6E2942730DFA800E64ABA /* PartTwoOption */,
 				5A6F2C50269AAB32006B065D /* ViewInput.swift */,
 				5A6F2C52269AB779006B065D /* RoundButton.swift */,
 				5A8805172722CDE100BA12B3 /* UserStatusView.swift */,
@@ -622,6 +631,17 @@
 				5A166C0F269C319000E590C7 /* ProfileServiceProtocol.swift */,
 			);
 			path = ProfileService;
+			sourceTree = "<group>";
+		};
+		5AA6E2942730DFA800E64ABA /* PartTwoOption */ = {
+			isa = PBXGroup;
+			children = (
+				5AA6E28C272FE62E00E64ABA /* OptionView.swift */,
+				5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */,
+				5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */,
+				5AA6E2922730DF8800E64ABA /* OptionStringView.swift */,
+			);
+			path = PartTwoOption;
 			sourceTree = "<group>";
 		};
 		5ABF2F02271AB66900B5C3AD /* Observer */ = {
@@ -1117,6 +1137,7 @@
 				5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */,
 				5A6F2C58269AD8BA006B065D /* ProfileService.swift in Sources */,
 				FBAA2CFEA779E79C9486E8C2 /* LoginInteractor.swift in Sources */,
+				5AA6E2912730001B00E64ABA /* OptionViewDelegate.swift in Sources */,
 				B0388DAFB78645FC4999865C /* LoginRouterInput.swift in Sources */,
 				1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */,
 				61BF5B7CEAE781CE40CDC899 /* LoginConfigurator.swift in Sources */,
@@ -1180,13 +1201,16 @@
 				7D1EBBB2F404B950434F134C /* PreviewBaseInfoConfigurator.swift in Sources */,
 				2514A535205FD214A00FD41F /* PreviewBaseInfoInitializer.swift in Sources */,
 				7B7961C4C67AF094EEAA999D /* PreviewPartInfoViewInput.swift in Sources */,
+				5AA6E2932730DF8800E64ABA /* OptionStringView.swift in Sources */,
 				62A6E81090071380E7518D40 /* PreviewPartInfoViewOutput.swift in Sources */,
 				A1EC3F4AAC61F9C0FE25B491 /* PreviewPartInfoViewController.swift in Sources */,
 				2F809E1A96097F29CCF044DB /* PreviewPartInfoModuleInput.swift in Sources */,
 				96051E01400C77D7B3CCFE49 /* PreviewPartInfoPresenter.swift in Sources */,
 				0CADEB544403BE1B6120ED6C /* PreviewPartInfoInteractorInput.swift in Sources */,
 				DA4B114206270A679A55F579 /* PreviewPartInfoInteractorOutput.swift in Sources */,
+				5AA6E28D272FE62E00E64ABA /* OptionView.swift in Sources */,
 				A9E0B1E37CDF82DC10CDBC14 /* PreviewPartInfoInteractor.swift in Sources */,
+				5AA6E28F272FE67E00E64ABA /* OptionImageView.swift in Sources */,
 				D67932EF786BD43578E9EEFE /* PreviewPartInfoRouterInput.swift in Sources */,
 				505014C02EB507DCA4B96406 /* PreviewPartInfoRouter.swift in Sources */,
 				710455902FBCF885CF95A846 /* PreviewPartInfoConfigurator.swift in Sources */,

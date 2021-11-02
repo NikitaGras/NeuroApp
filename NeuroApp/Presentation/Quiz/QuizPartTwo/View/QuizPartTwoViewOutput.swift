@@ -7,7 +7,7 @@
 //
 
 protocol QuizPartTwoViewOutput {
-    var selectedOptionIndex: Int? { get set }
+    var selectedOption: Option? { get set }
     func viewIsReady()
     func save()
 }

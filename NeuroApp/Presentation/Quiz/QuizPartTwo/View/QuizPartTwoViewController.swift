@@ -11,12 +11,7 @@ import UIKit
 class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var nextButton: RoundButton!
-    
-    @IBOutlet var imageAnswers: [UIImageView]!
-    @IBOutlet var stringAnswers: [UILabel]!
-    
-    @IBOutlet weak var stringOptionsView: UIView!
-    @IBOutlet weak var imageOptionsView: UIView!
+    @IBOutlet weak var optionView: OptionView!
     
     var output: QuizPartTwoViewOutput!
     
@@ -26,15 +21,9 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
         output.viewIsReady()
     }
 
-
     // MARK: - QuizPartTwoViewInput
     func setupInitialState() {
         nextButton.setTitle(.Button.next, for: .normal)
-        
-        imageAnswers.forEach { imageAnswer in
-            let gesture = UITapGestureRecognizer(target: self, action: #selector(selectOption(_:)))
-            imageAnswer.addGestureRecognizer(gesture)
-        }
     }
     
     func show(question: PartTwoQuestion) {
@@ -42,29 +31,20 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
     }
     
     func show(imageOptions: [ImageOption]) {
-        stringOptionsView.isHidden = true
-        imageOptionsView.isHidden = false
-        
-        imageAnswers.forEach { imageView in
-            imageView.image = imageOptions[imageView.tag].asImage()
-        }
+        optionView.show(options: imageOptions)
     }
     
     func show(stringOptions: [StringOption]) {
-        stringOptionsView.isHidden = false
-        imageOptionsView.isHidden = true
-        
-        stringAnswers.enumerated().forEach { index,label in
-            label.text = stringOptions[index].value
-        }
+
     }
     
     @IBAction func next(_ sender: RoundButton) {
         output.save()
     }
-    
-    @objc func selectOption(_ sender: UITapGestureRecognizer) {
-        guard let index = sender.view?.tag else { return }
-        output.selectedOptionIndex = index
+}
+
+extension QuizPartTwoViewController: OptionViewDelegate {
+    func optionView(_ optionView: OptionView, selectedOption: Option) {
+        output.selectedOption = selectedOption
     }
 }
