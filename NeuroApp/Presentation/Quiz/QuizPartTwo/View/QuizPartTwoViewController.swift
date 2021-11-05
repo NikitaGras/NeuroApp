@@ -24,6 +24,7 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
     // MARK: - QuizPartTwoViewInput
     func setupInitialState() {
         nextButton.setTitle(.Button.next, for: .normal)
+        optionView.delegate = self
     }
     
     func show(question: PartTwoQuestion) {
@@ -35,7 +36,7 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
     }
     
     func show(stringOptions: [StringOption]) {
-
+        optionView.show(options: stringOptions)
     }
     
     @IBAction func next(_ sender: RoundButton) {
@@ -44,7 +45,7 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
 }
 
 extension QuizPartTwoViewController: OptionViewDelegate {
-    func optionView(_ optionView: OptionView, selectedOption: Option) {
+    func optionView(_ view: UIView, selectedOption: Option) {
         output.selectedOption = selectedOption
     }
 }

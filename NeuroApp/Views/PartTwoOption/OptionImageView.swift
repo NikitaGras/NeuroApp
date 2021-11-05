@@ -22,22 +22,45 @@ class OptionImageView: UIImageView {
             case .none:
                 return
             case .notSelected:
-                turnNotSelectedState()
+                switchNotSelectedState()
             case .selected:
-                turnSelectedState()
+                switchSelectedState()
             }
         }
     }
+    var delegate: OptionViewDelegate?
     
-    private func turnSelectedState() {
-        self.layer.borderColor = UIColor.green.cgColor
-        self.layer.borderWidth = 5
-        self.layer.opacity = 0.7
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupInitialState()
     }
     
-    private func turnNotSelectedState() {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupInitialState()
+    }
+    
+    private func setupInitialState() {
+        isUserInteractionEnabled = true
+        contentMode = .scaleAspectFit
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tap))
+        addGestureRecognizer(gesture)
+    }
+    
+    @objc private func tap() {
+        if let option = option {
+            self.state = .selected
+            delegate?.optionView(self, selectedOption: option)
+        }
+    }
+    
+    private func switchSelectedState() {
+        self.layer.borderColor = UIColor.NAGreen.cgColor
+        self.layer.borderWidth = 10
+    }
+    
+    private func switchNotSelectedState() {
         self.layer.borderWidth = 0
-        self.layer.opacity = 1
     }
     
     enum State {

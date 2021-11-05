@@ -16,6 +16,7 @@ class OptionStringView: UIView {
             label.text = option.value
         }
     }
+    
     private var label: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20)
@@ -25,25 +26,27 @@ class OptionStringView: UIView {
         label.textColor = .black
         return label
     }()
+    var delegate: OptionViewDelegate?
+    
     var state: State = .notSelected {
         didSet {
             switch state {
             case .selected:
-                turnSelectedState()
+                switchSelectedState()
             case .notSelected:
-                turnNotSelectedState()
+                switchNotSelectedState()
             }
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layout()
+        setupInitialState()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        layout()
+        setupInitialState()
     }
     
     override func layoutSubviews() {
@@ -51,22 +54,38 @@ class OptionStringView: UIView {
         layout()
     }
     
-    func layout() {
+    private func setupInitialState() {
         self.addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 10),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 20)])
+        label.isUserInteractionEnabled = true
+        switchNotSelectedState()
+        layer.cornerRadius = 20
+//        layer.masksToBounds = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tap))
+        label.addGestureRecognizer(gesture)
     }
     
-    func turnSelectedState() {
+    private func layout() {
+        label.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            label.topAnchor.constraint(equalTo: topAnchor, constant: 0),
+            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0)])
+    }
+    
+    @objc private func tap() {
+        if let option = option {
+            self.state = .selected
+            delegate?.optionView(self, selectedOption: option)
+        }
+    }
+    
+    private func switchSelectedState() {
         label.textColor = .white
         self.backgroundColor = .NAGreen
     }
     
-    func turnNotSelectedState() {
+    private func switchNotSelectedState() {
         label.textColor = .black
         self.backgroundColor = .NAGray
     }

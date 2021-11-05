@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
-protocol OptionViewDelegate {
-    func optionView(_ optionView: OptionView, selectedOption: Option)
+protocol OptionViewDelegate: AnyObject {
+    func optionView(_ view: UIView, selectedOption: Option)
 }

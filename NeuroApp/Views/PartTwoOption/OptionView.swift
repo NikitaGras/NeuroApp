@@ -7,17 +7,20 @@
 
 import UIKit
 
-class OptionView: UIView {
+class OptionView: UIView, OptionViewDelegate {
     private var optionStringViews = [OptionStringView]()
     private var optionImageViews = [OptionImageView]()
     
     private var imageContainerView = UIView()
     private var stringContainerView = UIView()
     
-    var delegate: OptionViewDelegate?
+    weak var delegate: OptionViewDelegate?
     
+    // MARK: Appearance
     private let margin: CGFloat = 10
     private var optionWidth: CGFloat = 0
+    private var optionHeight: CGFloat = 0
+    private var maxColumn: Int = 2
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,70 +38,64 @@ class OptionView: UIView {
     }
     
     private func setupInitialState() {
-        optionWidth = (self.frame.width - margin) / 2
         setupImageContainer()
         setupStringContainer()
     }
     
     private func setupImageContainer() {
         for _ in 0...3 {
-            let option = OptionImageView()
-            option.contentMode = .scaleAspectFit
-            option.isUserInteractionEnabled = true
-
-            optionImageViews.append(option)
-            imageContainerView.addSubview(option)
-
-            let gesture = UITapGestureRecognizer(target: self, action: #selector(tap(_:)))
-            option.addGestureRecognizer(gesture)
+            let optionImageView = OptionImageView(frame: CGRect.init())
+            optionImageView.delegate = self
+            optionImageViews.append(optionImageView)
+            imageContainerView.addSubview(optionImageView)
         }
-        self.addSubview(imageContainerView)
+        addSubview(imageContainerView)
     }
     
     private func setupStringContainer() {
         for _ in 0...3 {
-            let option = OptionStringView()
-            option.isUserInteractionEnabled = true
-
-            optionStringViews.append(option)
-            stringContainerView.addSubview(option)
-
-            let gesture = UITapGestureRecognizer(target: self, action: #selector(touch(_:)))
-            option.addGestureRecognizer(gesture)
+            let optionStringView = OptionStringView()
+            optionStringView.delegate = self
+            optionStringViews.append(optionStringView)
+            stringContainerView.addSubview(optionStringView)
         }
-        self.addSubview(stringContainerView)
+        addSubview(stringContainerView)
     }
     
     private func layoutImageContainer() {
+        optionWidth = (self.frame.width - margin) / 2
+        optionHeight = optionWidth
+        
         imageContainerView.frame.origin = .zero
         imageContainerView.frame.size = .init(width: self.frame.width, height: self.frame.width)
         
-        optionImageViews.forEach { optionImageView in
+        optionImageViews.enumerated().forEach { index,optionImageView in
             optionImageView.frame.size = .init(width: optionWidth, height: optionWidth)
+            optionImageView.frame.origin = getPoint(from: index)
         }
-        optionImageViews[0].frame.origin = .zero
-        optionImageViews[1].frame.origin = .init(x: 0, y: optionWidth + margin)
-        optionImageViews[2].frame.origin = .init(x: optionWidth + margin, y: 0)
-        optionImageViews[3].frame.origin = .init(x: optionWidth + margin, y: optionWidth + margin)
-        
         self.frame.size = .init(width: self.frame.width, height: self.frame.width)
     }
     
     private func layoutStringContainer() {
+        optionWidth = (self.frame.width - margin) / 2
+        optionHeight = optionWidth / 2
+        
         stringContainerView.frame.origin = .zero
-        stringContainerView.frame.size = .init(width: self.frame.width, height: self.frame.width / 2)
+        stringContainerView.frame.size = .init(width: self.frame.width, height: optionHeight * 2 + margin)
         
-        let optionHeight = stringContainerView.frame.height / 2 - margin
-        
-        optionStringViews.forEach { optionStringView in
+        optionStringViews.enumerated().forEach { index,optionStringView in
             optionStringView.frame.size = .init(width: optionWidth, height: optionHeight)
+            optionStringView.frame.origin = getPoint(from: index)
         }
-        optionStringViews[0].frame.origin = .zero
-        optionStringViews[1].frame.origin = .init(x: 0, y: optionHeight + margin)
-        optionStringViews[2].frame.origin = .init(x: optionWidth, y: 0)
-        optionStringViews[3].frame.origin = .init(x: optionWidth, y: optionHeight)
-        
-        self.frame.size = .init(width: self.frame.width, height: stringContainerView.frame.height)
+        self.frame.size = .init(width: self.frame.width,
+                                height: optionHeight * 2 + margin)
+    }
+    
+    private func getPoint(from index: Int) -> CGPoint {
+        let index = index + 1
+        let col = CGFloat((maxColumn - index % maxColumn) - 1)
+        let row = CGFloat((index % maxColumn + index / maxColumn) - 1)
+        return CGPoint(x: (optionWidth + margin) * col, y: (optionHeight + margin) * row)
     }
     
     func show(options: [Option]) {
@@ -120,23 +117,17 @@ class OptionView: UIView {
         }
     }
     
-    @objc func tap(_ optionImageView: OptionImageView) {
-        guard let option = optionImageView.option else {
-            return
+    func optionView(_ view: UIView, selectedOption: Option) {
+        optionImageViews.forEach { optionView in
+            if optionView.option?.value != selectedOption.value {
+                optionView.state = .notSelected
+            }
         }
-        for view in optionImageViews {
-            view.state = view.option?.value == option.value ? .selected : .notSelected
+        optionStringViews.forEach { optionView in
+            if optionView.option?.value != selectedOption.value {
+                optionView.state = .notSelected
+            }
         }
-        delegate?.optionView(self, selectedOption: option)
-    }
-    
-    @objc func touch(_ optionStringView: OptionStringView) {
-        guard let option = optionStringView.option else {
-            return
-        }
-        for view in optionStringViews {
-            view.state = view.option?.value == option.value ? .selected : .notSelected
-        }
-        delegate?.optionView(self, selectedOption: option)
+        delegate?.optionView(self, selectedOption: selectedOption)
     }
 }
