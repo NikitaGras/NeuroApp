@@ -70,6 +70,8 @@
 		5AA6E2912730001B00E64ABA /* OptionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */; };
 		5AA6E2932730DF8800E64ABA /* OptionStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2922730DF8800E64ABA /* OptionStringView.swift */; };
 		5AA6E2962734E96C00E64ABA /* QuizPartThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA6E2952734E96C00E64ABA /* QuizPartThree.storyboard */; };
+		5AA6E2992735654600E64ABA /* GunningFogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2982735654600E64ABA /* GunningFogService.swift */; };
+		5AA6E29B2735655B00E64ABA /* GunningFogServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E29A2735655B00E64ABA /* GunningFogServiceProtocol.swift */; };
 		5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F03271AB68400B5C3AD /* Observer.swift */; };
 		5ABF2F06271AB9CC00B5C3AD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F05271AB9CC00B5C3AD /* Observable.swift */; };
 		5ABF2F08271D914A00B5C3AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F07271D914A00B5C3AD /* Result.swift */; };
@@ -231,6 +233,8 @@
 		5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewDelegate.swift; sourceTree = "<group>"; };
 		5AA6E2922730DF8800E64ABA /* OptionStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionStringView.swift; sourceTree = "<group>"; };
 		5AA6E2952734E96C00E64ABA /* QuizPartThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizPartThree.storyboard; sourceTree = "<group>"; };
+		5AA6E2982735654600E64ABA /* GunningFogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunningFogService.swift; sourceTree = "<group>"; };
+		5AA6E29A2735655B00E64ABA /* GunningFogServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunningFogServiceProtocol.swift; sourceTree = "<group>"; };
 		5ABF2F03271AB68400B5C3AD /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5ABF2F05271AB9CC00B5C3AD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		5ABF2F07271D914A00B5C3AD /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -532,6 +536,7 @@
 		5A166C0E269C313700E590C7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5AA6E2972735651700E64ABA /* GunningFoqService */,
 				5AE8500526DB9BAC00A834D2 /* QuizService */,
 				5A71B2ED269EB650001A6259 /* ProfileService */,
 			);
@@ -679,6 +684,15 @@
 				5AA6E2922730DF8800E64ABA /* OptionStringView.swift */,
 			);
 			path = PartTwoOption;
+			sourceTree = "<group>";
+		};
+		5AA6E2972735651700E64ABA /* GunningFoqService */ = {
+			isa = PBXGroup;
+			children = (
+				5AA6E2982735654600E64ABA /* GunningFogService.swift */,
+				5AA6E29A2735655B00E64ABA /* GunningFogServiceProtocol.swift */,
+			);
+			path = GunningFoqService;
 			sourceTree = "<group>";
 		};
 		5ABF2F02271AB66900B5C3AD /* Observer */ = {
@@ -1206,6 +1220,7 @@
 				5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */,
 				5A1E8BB6269840B9001179F7 /* User.swift in Sources */,
 				5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */,
+				5AA6E2992735654600E64ABA /* GunningFogService.swift in Sources */,
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,
 				5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */,
 				5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */,
@@ -1215,6 +1230,7 @@
 				5A6F2C5A269ADD24006B065D /* UserDefaults+Key.swift in Sources */,
 				5A1E8BB826984454001179F7 /* ValidationError.swift in Sources */,
 				9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */,
+				5AA6E29B2735655B00E64ABA /* GunningFogServiceProtocol.swift in Sources */,
 				5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */,
 				9B9B2EE8B558B52CB9602C40 /* LoginViewController.swift in Sources */,
 				7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */,

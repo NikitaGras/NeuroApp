@@ -21,4 +21,7 @@ protocol QuizServiceProtocol: Observable {
     func save(_ partTwoAnswer: PartTwoAnswer) throws
     func getPartTwoQuestions() -> [PartTwoQuestion]
     func getPartTwoAnswers() -> [PartTwoAnswer]
+    
+    func save(_ partThreeAnswer: PartThreeAnswer) throws
+    func getPartThreeQuestion() -> PartThreeQuestion
 }

@@ -17,6 +17,7 @@ class QuizPartThreeModuleConfigurator {
 
     private func configure(viewController: QuizPartThreeViewController) {
         let router = QuizPartThreeRouter()
+        router.transitionHandler = viewController
 
         let presenter = QuizPartThreePresenter()
         presenter.view = viewController
@@ -24,6 +25,8 @@ class QuizPartThreeModuleConfigurator {
 
         let interactor = QuizPartThreeInteractor()
         interactor.output = presenter
+        interactor.quizService = QuizService.shared
+        interactor.ganningFogService = GanningFogService()
 
         presenter.interactor = interactor
         viewController.output = presenter

@@ -8,17 +8,17 @@
 import Foundation
 
 extension String {
-    static let error = "Ошибка"
+    static let error = "Error"
     
     struct Error {
-        static let `default` = "Простите, что-то пошло не так. Попробуйте позже."
-        static let noUser = "Простите, ваши данные утеряны."
+        static let `default` = "Something going wrong. Try again later"
+        static let noUser = "Sorry, your data was lost"
     }
     
     struct ValidationError {
-        static let wrongName = "Неправильно набрано имя"
-        static let wrongAge = "Неправильно указан возраст"
-        static let wrongEmail = "Неправильно указан email"
+        static let wrongName = "Wrong name"
+        static let wrongAge = "Wrong age"
+        static let wrongEmail = "Wrong email"
     }
     
     struct UserStatus {
@@ -53,6 +53,10 @@ extension String {
         static let leftScaleDescription = "Cannot do at all"
         static let centerScaleDescription = "Modarately can do"
         static let rightScaleDescription = "Highly certain can do"
+    }
+    
+    struct PartThreeQuiz {
+        static let placeholder = "Input your answer here"
     }
     
     struct Button {

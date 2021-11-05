@@ -18,6 +18,9 @@ struct Quiz {
     
     var partTwoQuestions = QuestionsBank().partTwoQuestions
     var partTwoAnswers = [PartTwoAnswer]()
+    
+    var partThreeQuestion = QuestionsBank().partThreeQuestion
+    var partThreeAnswer: PartThreeAnswer?
 }
 
 extension Quiz {

@@ -52,6 +52,7 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
         if let options = question.options as? [StringOption] {
             view.show(stringOptions: options)
         }
+        //TODO: писать подробнее
         startTime = .init()
     }
     

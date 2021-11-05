@@ -9,5 +9,7 @@
 import Foundation
 
 protocol QuizPartThreeInteractorInput {
-
+    func getQuestion() -> PartThreeQuestion
+    func getGunningFoqIndex(for text: String) throws -> Int
+    func save(answer: PartThreeAnswer) throws
 }

@@ -8,4 +8,5 @@
 
 protocol QuizPartThreeViewOutput {
     func viewIsReady()
+    func save(userText: String)
 }

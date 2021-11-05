@@ -26,6 +26,7 @@ class OptionStringView: UIView {
         label.textColor = .black
         return label
     }()
+    
     var delegate: OptionViewDelegate?
     
     var state: State = .notSelected {

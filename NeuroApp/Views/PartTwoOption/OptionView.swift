@@ -31,10 +31,16 @@ class OptionView: UIView, OptionViewDelegate {
         super.init(coder: coder)
         setupInitialState()
     }
-
+    
+    override var intrinsicContentSize: CGSize {
+        return imageContainerView.isHidden ? stringContainerView.frame.size : imageContainerView.frame.size
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageContainerView.isHidden ? layoutStringContainer() : layoutImageContainer()
+//        imageContainerView.isHidden ? layoutStringContainer() : layoutImageContainer()
+        layoutStringContainer()
+        layoutImageContainer()
     }
     
     private func setupInitialState() {
@@ -44,7 +50,7 @@ class OptionView: UIView, OptionViewDelegate {
     
     private func setupImageContainer() {
         for _ in 0...3 {
-            let optionImageView = OptionImageView(frame: CGRect.init())
+            let optionImageView = OptionImageView(frame: CGRect())
             optionImageView.delegate = self
             optionImageViews.append(optionImageView)
             imageContainerView.addSubview(optionImageView)
@@ -73,7 +79,7 @@ class OptionView: UIView, OptionViewDelegate {
             optionImageView.frame.size = .init(width: optionWidth, height: optionWidth)
             optionImageView.frame.origin = getPoint(from: index)
         }
-        self.frame.size = .init(width: self.frame.width, height: self.frame.width)
+//        self.frame.size = .init(width: self.frame.width, height: self.frame.width)
     }
     
     private func layoutStringContainer() {
@@ -87,10 +93,11 @@ class OptionView: UIView, OptionViewDelegate {
             optionStringView.frame.size = .init(width: optionWidth, height: optionHeight)
             optionStringView.frame.origin = getPoint(from: index)
         }
-        self.frame.size = .init(width: self.frame.width,
-                                height: optionHeight * 2 + margin)
+//        self.frame.size = .init(width: self.frame.width,
+//                                height: optionHeight * 2 + margin)
     }
     
+    //TODO: name: origin
     private func getPoint(from index: Int) -> CGPoint {
         let index = index + 1
         let col = CGFloat((maxColumn - index % maxColumn) - 1)
@@ -107,7 +114,7 @@ class OptionView: UIView, OptionViewDelegate {
             }
             layoutImageContainer()
         }
-        if (options.first as? StringOption) != nil {
+        if options.first is StringOption {
             for index in 0...3 {
                 optionStringViews[index].option = options[index]
                 imageContainerView.isHidden = true

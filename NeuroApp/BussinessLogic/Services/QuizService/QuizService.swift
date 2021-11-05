@@ -45,6 +45,14 @@ class QuizService: QuizServiceProtocol {
         return quiz.partTwoAnswers
     }
     
+    func save(_ partThreeAnswer: PartThreeAnswer) throws {
+        quiz.partThreeAnswer = partThreeAnswer
+    }
+    
+    func getPartThreeQuestion() -> PartThreeQuestion {
+        return quiz.partThreeQuestion
+    }
+    
     static private func fetchQuiz() -> Quiz {
     //TODO: реализовать после подключения CoreData
         return Quiz()
@@ -65,7 +73,6 @@ class QuizService: QuizServiceProtocol {
     }
     
     //MARK: - Observer
-    
     func notifyObservers() {
         observers.forEach { weakBox in
             weakBox.object?.update(with: quiz)

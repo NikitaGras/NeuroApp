@@ -16,6 +16,7 @@ class OptionImageView: UIImageView {
             self.image = option.asImage()
         }
     }
+    
     var state: State = .none {
         didSet {
             switch state {
@@ -28,6 +29,7 @@ class OptionImageView: UIImageView {
             }
         }
     }
+    
     var delegate: OptionViewDelegate?
     
     override init(frame: CGRect) {

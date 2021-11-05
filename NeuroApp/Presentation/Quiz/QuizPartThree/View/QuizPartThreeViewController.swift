@@ -9,7 +9,10 @@
 import UIKit
 
 class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
-
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var answerTextField: UITextField!
+    @IBOutlet weak var nextButton: RoundButton!
+    
     var output: QuizPartThreeViewOutput!
 
     // MARK: Life cycle
@@ -21,5 +24,16 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
 
     // MARK: QuizPartThreeViewInput
     func setupInitialState() {
+        nextButton.setTitle(.Button.next, for: .normal)
+        answerTextField.placeholder = .PartThreeQuiz.placeholder
+    }
+    
+    func show(question: PartThreeQuestion) {
+        questionLabel.text = question
+    }
+    
+    @IBAction func next(sender: RoundButton) {
+        let text = answerTextField.text ?? ""
+        output.save(userText: text)
     }
 }
