@@ -69,6 +69,7 @@
 		5AA6E28F272FE67E00E64ABA /* OptionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */; };
 		5AA6E2912730001B00E64ABA /* OptionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */; };
 		5AA6E2932730DF8800E64ABA /* OptionStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2922730DF8800E64ABA /* OptionStringView.swift */; };
+		5AA6E2962734E96C00E64ABA /* QuizPartThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA6E2952734E96C00E64ABA /* QuizPartThree.storyboard */; };
 		5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F03271AB68400B5C3AD /* Observer.swift */; };
 		5ABF2F06271AB9CC00B5C3AD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F05271AB9CC00B5C3AD /* Observable.swift */; };
 		5ABF2F08271D914A00B5C3AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F07271D914A00B5C3AD /* Result.swift */; };
@@ -83,6 +84,7 @@
 		62A6E81090071380E7518D40 /* PreviewPartInfoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA5EB1A2C4E47B600AF12E /* PreviewPartInfoViewOutput.swift */; };
 		62C499E38C23A315356603BA /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BE893CAC0953665FDE976 /* HomeRouterInput.swift */; };
 		62FDB63C8AEDD2D53D288F05 /* QuizPartTwoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FA06AD6BF8A80A3D2EC59 /* QuizPartTwoViewInput.swift */; };
+		633BB537916E82581B0B24BD /* QuizPartThreePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75473C274EC04A2AA104543 /* QuizPartThreePresenter.swift */; };
 		710455902FBCF885CF95A846 /* PreviewPartInfoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2864988193F828DED9F8E6 /* PreviewPartInfoConfigurator.swift */; };
 		72139DC4AAE04F466499440C /* EditInformationInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9315268719AF54B2F1656A1 /* EditInformationInteractorInput.swift */; };
 		7527CAD75382A2FA6E456768 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A9CC1E7A655A123351912 /* HomeInteractor.swift */; };
@@ -93,6 +95,7 @@
 		7B7961C4C67AF094EEAA999D /* PreviewPartInfoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679D96F989CFDF511D796794 /* PreviewPartInfoViewInput.swift */; };
 		7CB0BE1BF83FB1F714E5437F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADBEAD0623485CAB867408 /* HomeViewController.swift */; };
 		7D1EBBB2F404B950434F134C /* PreviewBaseInfoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC376FB5F49982C0005B02 /* PreviewBaseInfoConfigurator.swift */; };
+		7D33EE8AF7F5A8C9E3C58CA9 /* QuizPartThreeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54F4FFB2EEF5FE592D18BD /* QuizPartThreeViewInput.swift */; };
 		7DED072E5EC31A88F94113F7 /* EditInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B9B58C3A65CF663034C347 /* EditInformationPresenter.swift */; };
 		7E26FAEE0F8F2ED7E8391A49 /* QuizPartTwoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD7F21C2C6CB2D6E99149 /* QuizPartTwoRouterInput.swift */; };
 		7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B3F436F6510CF6946D596 /* LoginModuleInput.swift */; };
@@ -102,11 +105,13 @@
 		8738DA5F04B33A3B23D2E540 /* PreviewBaseInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C14C16E34C22AF0DD76060D /* PreviewBaseInfoPresenter.swift */; };
 		8B66E60129903C989F98FEC4 /* HomeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3884B6BBFCFC05A5337FDC95 /* HomeInteractorOutput.swift */; };
 		8EC133E5A2945E72D636FA32 /* ProfileInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C642DB194C16080141E1F13 /* ProfileInteractorInput.swift */; };
+		92FF0EA0F3872BA10D1BEE8B /* QuizPartThreeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9197D5F3167CC6C7B38155FD /* QuizPartThreeConfigurator.swift */; };
 		95BB39AC7342CF1019409C52 /* QuizPartTwoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9BBA75E70C956F243AF49 /* QuizPartTwoPresenter.swift */; };
 		95DF157672D2724F1B2842E5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3593C045FE6D5C5ABC78CE /* ProfileViewController.swift */; };
 		96051E01400C77D7B3CCFE49 /* PreviewPartInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9891BA34CDCCF98D4BA57 /* PreviewPartInfoPresenter.swift */; };
 		97B595820F9DB1D896A92F71 /* ProfileViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE355EABA470CF110C7EA29 /* ProfileViewInput.swift */; };
 		9B9B2EE8B558B52CB9602C40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40202D76FE8F86631EECED60 /* LoginViewController.swift */; };
+		9D83677A7C39F4F65800C6AC /* QuizPartThreeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE47E1744C628B3441EBC4E /* QuizPartThreeModuleInput.swift */; };
 		9E0E88237F92C68D8522838A /* PreviewBaseInfoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04051379896106512F87DE7B /* PreviewBaseInfoInteractorOutput.swift */; };
 		9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D87C7304176BA9AC667ECD /* LoginViewOutput.swift */; };
 		A19DD678EE6D5CD7BF691D79 /* QuizPartTwoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D6C004361D5A77C9A8F98 /* QuizPartTwoConfigurator.swift */; };
@@ -120,9 +125,11 @@
 		B13C421F8F565A9E005CFADA /* QuizPartTwoInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0385E47F09CC39E0C0D90 /* QuizPartTwoInitializer.swift */; };
 		B2548BC03A552198447AFD45 /* PreviewBaseInfoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616945C04BEA3216A99AFC72 /* PreviewBaseInfoModuleInput.swift */; };
 		B5DD76BE58A0599B47FDB58C /* QuizPartOneInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCA617EDC2C643932EEBCB /* QuizPartOneInitializer.swift */; };
+		B8B350C756F3B85145F5996C /* QuizPartThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782BB4BF45A63B2ABF64549 /* QuizPartThreeViewController.swift */; };
 		B968B3FFC2686DE6E06636AC /* QuizPartOnePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728932528407A3FAE6CD2862 /* QuizPartOnePresenter.swift */; };
 		BEA3CCD1030E3AFEFD03EF36 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF999ACCFCEDDA5A94E6E7 /* ProfileRouter.swift */; };
 		C10F448C496F867013E649C5 /* EditInformationRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758DB157F183D1E96EA715E /* EditInformationRouterInput.swift */; };
+		C4B9710953CF3F3F9C952B66 /* QuizPartThreeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDEBB78E2681F9948129A4 /* QuizPartThreeInitializer.swift */; };
 		C5EF1488C0836FE095CDD259 /* Pods_NeuroApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA0EA2B4FCF93DB77BBF460 /* Pods_NeuroApp.framework */; };
 		C9A4233FC287672D17CFFF1D /* QuizPartOneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C2BC7D016D2D778CEBD88 /* QuizPartOneInteractor.swift */; };
 		CACD5CC8D70C94070EB2B7A1 /* QuizPartOneRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BC27D92D45532C60DC5BF /* QuizPartOneRouterInput.swift */; };
@@ -130,14 +137,20 @@
 		CB4A5B3489D0395473C8AB96 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3005244E99B30E6EDE9DC5 /* HomeConfigurator.swift */; };
 		CDBB2D374B7E0CD950A6A2B5 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9654D168ABD17C9D1BAEE /* ProfilePresenter.swift */; };
 		CE2C02BB1BC9BC42DEE8A186 /* QuizPartTwoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619AB8C305720E576D874231 /* QuizPartTwoModuleInput.swift */; };
+		CFEECAD8E8F406F375BEAE94 /* QuizPartThreeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B36399BCF6B31521CDCC4 /* QuizPartThreeInteractorInput.swift */; };
 		D67932EF786BD43578E9EEFE /* PreviewPartInfoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDD7B2E442D0C63166489EF /* PreviewPartInfoRouterInput.swift */; };
 		D8E75D43246BF0C78E6A0B1A /* EditInformationModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C9959B355F415BFAC9490E /* EditInformationModuleInput.swift */; };
 		DA0B3781A7564A7610428B51 /* QuizPartOneModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA271BB062056B67681AD120 /* QuizPartOneModuleInput.swift */; };
 		DA4B114206270A679A55F579 /* PreviewPartInfoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0880BC912EE4C23379C739 /* PreviewPartInfoInteractorOutput.swift */; };
+		DA819E72AE52ADFD60070E26 /* QuizPartThreeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172C29A1C660CF89E982D957 /* QuizPartThreeInteractor.swift */; };
 		DC40A00B20A3786F8C53AE08 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEFB1E4E929268C0496E42F /* LoginPresenter.swift */; };
 		DD071CB98B5F5861BD9F8A8B /* EditInformationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D17835045787ABEB1D8ADA /* EditInformationRouter.swift */; };
+		E43865F1C9E3F189D850C6E5 /* QuizPartThreeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB344D3B29764D3E84590D7F /* QuizPartThreeRouter.swift */; };
 		E82616554F277E1DF872E609 /* EditInformationViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF67239ECED810C5334CD3E /* EditInformationViewInput.swift */; };
+		ED58F7496684B7D8695010F5 /* QuizPartThreeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104D90CB2B1D9A928DB7BCE /* QuizPartThreeRouterInput.swift */; };
 		F1326626EA12D7448B95F0C6 /* LoginViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE92981166A6B978CB561F9 /* LoginViewInput.swift */; };
+		F38E76649F562BC3CE4644A4 /* QuizPartThreeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3241BC2FC5794E8E0E3B6D /* QuizPartThreeViewOutput.swift */; };
+		F825188DDC9C18739DB0BE48 /* QuizPartThreeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369B13B6DD2E4448D21FC61E /* QuizPartThreeInteractorOutput.swift */; };
 		F9509ED53CBB70AE2ACCEABE /* ProfileRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FFAB5641B63D2D0BE280F6 /* ProfileRouterInput.swift */; };
 		FA7B6A630650C47C6100CE47 /* QuizPartTwoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417FB0DC41BAC7114326AB3 /* QuizPartTwoRouter.swift */; };
 		FBAA2CFEA779E79C9486E8C2 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */; };
@@ -154,18 +167,22 @@
 		0CFFD28B57959F5B32F0FD98 /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		0EA0EA2B4FCF93DB77BBF460 /* Pods_NeuroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeuroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AF999ACCFCEDDA5A94E6E7 /* ProfileRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		172C29A1C660CF89E982D957 /* QuizPartThreeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeInteractor.swift; sourceTree = "<group>"; };
 		19332506BB8A17E0B2F8A8FB /* ProfileInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractorOutput.swift; sourceTree = "<group>"; };
 		1A2A9CC1E7A655A123351912 /* HomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		1BA9891BA34CDCCF98D4BA57 /* PreviewPartInfoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoPresenter.swift; sourceTree = "<group>"; };
 		1BBECF3885BB89903358CA2D /* ProfileModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileModuleInput.swift; sourceTree = "<group>"; };
 		1C14C16E34C22AF0DD76060D /* PreviewBaseInfoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoPresenter.swift; sourceTree = "<group>"; };
+		1F54F4FFB2EEF5FE592D18BD /* QuizPartThreeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeViewInput.swift; sourceTree = "<group>"; };
 		1F9846573C3502D504D96B87 /* QuizPartTwoInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoInteractor.swift; sourceTree = "<group>"; };
+		204B36399BCF6B31521CDCC4 /* QuizPartThreeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeInteractorInput.swift; sourceTree = "<group>"; };
 		25FFAB5641B63D2D0BE280F6 /* ProfileRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileRouterInput.swift; sourceTree = "<group>"; };
 		28E089A54B68C75B990FB0BE /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
 		328E967285539AC224BE97A3 /* QuizPartTwoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoInteractorOutput.swift; sourceTree = "<group>"; };
 		33FCA617EDC2C643932EEBCB /* QuizPartOneInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneInitializer.swift; sourceTree = "<group>"; };
 		34B079B954C2CF4F346CAFB3 /* EditInformationConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationConfigurator.swift; sourceTree = "<group>"; };
 		351D07B465ED6331EA66045E /* QuizPartTwoViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoViewOutput.swift; sourceTree = "<group>"; };
+		369B13B6DD2E4448D21FC61E /* QuizPartThreeInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeInteractorOutput.swift; sourceTree = "<group>"; };
 		36B9B58C3A65CF663034C347 /* EditInformationPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationPresenter.swift; sourceTree = "<group>"; };
 		36D87C7304176BA9AC667ECD /* LoginViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewOutput.swift; sourceTree = "<group>"; };
 		3884B6BBFCFC05A5337FDC95 /* HomeInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorOutput.swift; sourceTree = "<group>"; };
@@ -213,6 +230,7 @@
 		5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionImageView.swift; sourceTree = "<group>"; };
 		5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewDelegate.swift; sourceTree = "<group>"; };
 		5AA6E2922730DF8800E64ABA /* OptionStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionStringView.swift; sourceTree = "<group>"; };
+		5AA6E2952734E96C00E64ABA /* QuizPartThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizPartThree.storyboard; sourceTree = "<group>"; };
 		5ABF2F03271AB68400B5C3AD /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5ABF2F05271AB9CC00B5C3AD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		5ABF2F07271D914A00B5C3AD /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -225,6 +243,7 @@
 		5F872E576D287CE17D07E27D /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		601732125D831F12018DD966 /* EditInformationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationViewController.swift; sourceTree = "<group>"; };
 		60C9959B355F415BFAC9490E /* EditInformationModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationModuleInput.swift; sourceTree = "<group>"; };
+		6104D90CB2B1D9A928DB7BCE /* QuizPartThreeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeRouterInput.swift; sourceTree = "<group>"; };
 		616945C04BEA3216A99AFC72 /* PreviewBaseInfoModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoModuleInput.swift; sourceTree = "<group>"; };
 		619AB8C305720E576D874231 /* QuizPartTwoModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoModuleInput.swift; sourceTree = "<group>"; };
 		62E9BBA75E70C956F243AF49 /* QuizPartTwoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoPresenter.swift; sourceTree = "<group>"; };
@@ -245,8 +264,10 @@
 		889C2BC7D016D2D778CEBD88 /* QuizPartOneInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneInteractor.swift; sourceTree = "<group>"; };
 		8BE92981166A6B978CB561F9 /* LoginViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
 		8C611BBCDA1AAA639E9FE7B6 /* PreviewBaseInfoInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInteractorInput.swift; sourceTree = "<group>"; };
+		8CE47E1744C628B3441EBC4E /* QuizPartThreeModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeModuleInput.swift; sourceTree = "<group>"; };
 		8FAC376FB5F49982C0005B02 /* PreviewBaseInfoConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoConfigurator.swift; sourceTree = "<group>"; };
 		8FB0385E47F09CC39E0C0D90 /* QuizPartTwoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoInitializer.swift; sourceTree = "<group>"; };
+		9197D5F3167CC6C7B38155FD /* QuizPartThreeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeConfigurator.swift; sourceTree = "<group>"; };
 		9417FB0DC41BAC7114326AB3 /* QuizPartTwoRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoRouter.swift; sourceTree = "<group>"; };
 		962886E9107AEA9C60246EAD /* HomeInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInitializer.swift; sourceTree = "<group>"; };
 		99B22D46305F45EFAE95A50C /* PreviewBaseInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoRouterInput.swift; sourceTree = "<group>"; };
@@ -262,8 +283,10 @@
 		B1FCBB046E2CD0618F38EF62 /* QuizPartTwoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoViewController.swift; sourceTree = "<group>"; };
 		B2EDFC1ED741046D2C0186B0 /* PreviewBaseInfoRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoRouter.swift; sourceTree = "<group>"; };
 		B32659D09DDAB211BD5B95F5 /* HomeViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewOutput.swift; sourceTree = "<group>"; };
+		B75473C274EC04A2AA104543 /* QuizPartThreePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreePresenter.swift; sourceTree = "<group>"; };
 		B9C07331B69F3FDFE224B9B1 /* LoginInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractorInput.swift; sourceTree = "<group>"; };
 		BB022E839B9E8C9FC1A77D5A /* PreviewPartInfoModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoModuleInput.swift; sourceTree = "<group>"; };
+		BB3241BC2FC5794E8E0E3B6D /* QuizPartThreeViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeViewOutput.swift; sourceTree = "<group>"; };
 		BD3593C045FE6D5C5ABC78CE /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BEB5D7C3CD95221617F4863F /* Pods-NeuroApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeuroApp.debug.xcconfig"; path = "Target Support Files/Pods-NeuroApp/Pods-NeuroApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C2A85F777BBBA6EC2FD06443 /* EditInformationViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationViewOutput.swift; sourceTree = "<group>"; };
@@ -274,6 +297,7 @@
 		CFF67239ECED810C5334CD3E /* EditInformationViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationViewInput.swift; sourceTree = "<group>"; };
 		D072AD93DCEAFD5C9BF4BA60 /* LoginConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		D5E9654D168ABD17C9D1BAEE /* ProfilePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		D782BB4BF45A63B2ABF64549 /* QuizPartThreeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeViewController.swift; sourceTree = "<group>"; };
 		DBEFB1E4E929268C0496E42F /* LoginPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		E42BE893CAC0953665FDE976 /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
 		E7977A52F4CF991FBF2F7872 /* QuizPartOneRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneRouter.swift; sourceTree = "<group>"; };
@@ -283,7 +307,9 @@
 		ED3005244E99B30E6EDE9DC5 /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		EE2B3F436F6510CF6946D596 /* LoginModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleInput.swift; sourceTree = "<group>"; };
 		EEC048A1E0E203965C17CA61 /* EditInformationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInteractor.swift; sourceTree = "<group>"; };
+		EFEDEBB78E2681F9948129A4 /* QuizPartThreeInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeInitializer.swift; sourceTree = "<group>"; };
 		FA271BB062056B67681AD120 /* QuizPartOneModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneModuleInput.swift; sourceTree = "<group>"; };
+		FB344D3B29764D3E84590D7F /* QuizPartThreeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +430,15 @@
 				BD3593C045FE6D5C5ABC78CE /* ProfileViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		24EFCCAB35A1041B9D2369E5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CE47E1744C628B3441EBC4E /* QuizPartThreeModuleInput.swift */,
+				B75473C274EC04A2AA104543 /* QuizPartThreePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		24F2A61E3822EFBBE6B758A8 /* Router */ = {
@@ -579,6 +614,7 @@
 			children = (
 				5A511289270BF1E9008020AB /* QuizPartOne.storyboard */,
 				5A8805192723CEFF00BA12B3 /* QuizPartTwo.storyboard */,
+				5AA6E2952734E96C00E64ABA /* QuizPartThree.storyboard */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -586,6 +622,7 @@
 		5A51128B270C0DF3008020AB /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				8F0CE8572D01A6196D6E1778 /* QuizPartThree */,
 				92301B85E4B9CB561ADEA7A2 /* QuizPartTwo */,
 				1E5712CB8A5FB0A514B61C2D /* QuizPartOne */,
 			);
@@ -767,6 +804,16 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		8AA922B520E860732B281AB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F54F4FFB2EEF5FE592D18BD /* QuizPartThreeViewInput.swift */,
+				BB3241BC2FC5794E8E0E3B6D /* QuizPartThreeViewOutput.swift */,
+				D782BB4BF45A63B2ABF64549 /* QuizPartThreeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8AE8CFEBE763825884950FED /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -805,6 +852,18 @@
 				497C2ADF3575B2F4AF3C6F46 /* HomePresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8F0CE8572D01A6196D6E1778 /* QuizPartThree */ = {
+			isa = PBXGroup;
+			children = (
+				8AA922B520E860732B281AB3 /* View */,
+				24EFCCAB35A1041B9D2369E5 /* Presenter */,
+				D2CCD87DB58EA1645D6837D6 /* Interactor */,
+				F23DEA11A8120DE9B83D95EA /* Router */,
+				B79D2017DA61FF26739D9365 /* Configurator */,
+			);
+			path = QuizPartThree;
 			sourceTree = "<group>";
 		};
 		92301B85E4B9CB561ADEA7A2 /* QuizPartTwo */ = {
@@ -875,6 +934,15 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		B79D2017DA61FF26739D9365 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9197D5F3167CC6C7B38155FD /* QuizPartThreeConfigurator.swift */,
+				EFEDEBB78E2681F9948129A4 /* QuizPartThreeInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		B7E2157F47C66A34AC9CCF63 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -920,6 +988,16 @@
 				CDEC23566E7924311A79135A /* PreviewPartInfoRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		D2CCD87DB58EA1645D6837D6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				204B36399BCF6B31521CDCC4 /* QuizPartThreeInteractorInput.swift */,
+				369B13B6DD2E4448D21FC61E /* QuizPartThreeInteractorOutput.swift */,
+				172C29A1C660CF89E982D957 /* QuizPartThreeInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		D4C0D033C0A9E640EDCE78BF /* Configurator */ = {
@@ -983,6 +1061,15 @@
 				7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F23DEA11A8120DE9B83D95EA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6104D90CB2B1D9A928DB7BCE /* QuizPartThreeRouterInput.swift */,
+				FB344D3B29764D3E84590D7F /* QuizPartThreeRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		F24C6DE97B0195768F66D3CB /* View */ = {
@@ -1059,6 +1146,7 @@
 				5A88051A2723CEFF00BA12B3 /* QuizPartTwo.storyboard in Resources */,
 				5A1E8BB226983D62001179F7 /* Login.storyboard in Resources */,
 				5A3801BB2695D93200883225 /* LaunchScreen.storyboard in Resources */,
+				5AA6E2962734E96C00E64ABA /* QuizPartThree.storyboard in Resources */,
 				5A3801B82695D93200883225 /* Assets.xcassets in Resources */,
 				5AE1A50326E61722009FCD4A /* Preview.storyboard in Resources */,
 				5A166C04269BF43200E590C7 /* Home.storyboard in Resources */,
@@ -1240,6 +1328,18 @@
 				FA7B6A630650C47C6100CE47 /* QuizPartTwoRouter.swift in Sources */,
 				A19DD678EE6D5CD7BF691D79 /* QuizPartTwoConfigurator.swift in Sources */,
 				B13C421F8F565A9E005CFADA /* QuizPartTwoInitializer.swift in Sources */,
+				7D33EE8AF7F5A8C9E3C58CA9 /* QuizPartThreeViewInput.swift in Sources */,
+				F38E76649F562BC3CE4644A4 /* QuizPartThreeViewOutput.swift in Sources */,
+				B8B350C756F3B85145F5996C /* QuizPartThreeViewController.swift in Sources */,
+				9D83677A7C39F4F65800C6AC /* QuizPartThreeModuleInput.swift in Sources */,
+				633BB537916E82581B0B24BD /* QuizPartThreePresenter.swift in Sources */,
+				CFEECAD8E8F406F375BEAE94 /* QuizPartThreeInteractorInput.swift in Sources */,
+				F825188DDC9C18739DB0BE48 /* QuizPartThreeInteractorOutput.swift in Sources */,
+				DA819E72AE52ADFD60070E26 /* QuizPartThreeInteractor.swift in Sources */,
+				ED58F7496684B7D8695010F5 /* QuizPartThreeRouterInput.swift in Sources */,
+				E43865F1C9E3F189D850C6E5 /* QuizPartThreeRouter.swift in Sources */,
+				92FF0EA0F3872BA10D1BEE8B /* QuizPartThreeConfigurator.swift in Sources */,
+				C4B9710953CF3F3F9C952B66 /* QuizPartThreeInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
