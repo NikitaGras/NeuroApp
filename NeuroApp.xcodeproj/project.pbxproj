@@ -54,6 +54,9 @@
 		5A3801B82695D93200883225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3801B72695D93200883225 /* Assets.xcassets */; };
 		5A3801BB2695D93200883225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3801B92695D93200883225 /* LaunchScreen.storyboard */; };
 		5A51128A270BF1E9008020AB /* QuizPartOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A511289270BF1E9008020AB /* QuizPartOne.storyboard */; };
+		5A5313522738EBC000C38578 /* OptionImageContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5313512738EBC000C38578 /* OptionImageContainerView.swift */; };
+		5A5313542738F7C500C38578 /* CGPoint+getOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5313532738F7C500C38578 /* CGPoint+getOrigin.swift */; };
+		5A5313562738FFF600C38578 /* OptionStringContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5313552738FFF600C38578 /* OptionStringContainerView.swift */; };
 		5A5C373D0BE9E526F03B1298 /* PreviewPartInfoInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D941F60EA44BE783C634B3 /* PreviewPartInfoInitializer.swift */; };
 		5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C50269AAB32006B065D /* ViewInput.swift */; };
 		5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C52269AB779006B065D /* RoundButton.swift */; };
@@ -217,6 +220,9 @@
 		5A3801BA2695D93200883225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3801BC2695D93200883225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A511289270BF1E9008020AB /* QuizPartOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizPartOne.storyboard; sourceTree = "<group>"; };
+		5A5313512738EBC000C38578 /* OptionImageContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionImageContainerView.swift; sourceTree = "<group>"; };
+		5A5313532738F7C500C38578 /* CGPoint+getOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+getOrigin.swift"; sourceTree = "<group>"; };
+		5A5313552738FFF600C38578 /* OptionStringContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionStringContainerView.swift; sourceTree = "<group>"; };
 		5A635CDC65637FC2A99FBB87 /* EditInformationInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInitializer.swift; sourceTree = "<group>"; };
 		5A6F2C50269AAB32006B065D /* ViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInput.swift; sourceTree = "<group>"; };
 		5A6F2C52269AB779006B065D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -652,6 +658,7 @@
 				5A6F2C59269ADD24006B065D /* UserDefaults+Key.swift */,
 				5A6F2C5E269B58A9006B065D /* String+isValid.swift */,
 				5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */,
+				5A5313532738F7C500C38578 /* CGPoint+getOrigin.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -682,6 +689,8 @@
 				5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */,
 				5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */,
 				5AA6E2922730DF8800E64ABA /* OptionStringView.swift */,
+				5A5313512738EBC000C38578 /* OptionImageContainerView.swift */,
+				5A5313552738FFF600C38578 /* OptionStringContainerView.swift */,
 			);
 			path = PartTwoOption;
 			sourceTree = "<group>";
@@ -1266,6 +1275,7 @@
 				86B2746274732B392ACAA9AF /* HomeInitializer.swift in Sources */,
 				97B595820F9DB1D896A92F71 /* ProfileViewInput.swift in Sources */,
 				5B176EBE641D291752067AA8 /* ProfileViewOutput.swift in Sources */,
+				5A5313542738F7C500C38578 /* CGPoint+getOrigin.swift in Sources */,
 				95DF157672D2724F1B2842E5 /* ProfileViewController.swift in Sources */,
 				4CC5A9741515EC05FC66C938 /* ProfileModuleInput.swift in Sources */,
 				CDBB2D374B7E0CD950A6A2B5 /* ProfilePresenter.swift in Sources */,
@@ -1316,6 +1326,8 @@
 				A9E0B1E37CDF82DC10CDBC14 /* PreviewPartInfoInteractor.swift in Sources */,
 				5AA6E28F272FE67E00E64ABA /* OptionImageView.swift in Sources */,
 				D67932EF786BD43578E9EEFE /* PreviewPartInfoRouterInput.swift in Sources */,
+				5A5313562738FFF600C38578 /* OptionStringContainerView.swift in Sources */,
+				5A5313522738EBC000C38578 /* OptionImageContainerView.swift in Sources */,
 				505014C02EB507DCA4B96406 /* PreviewPartInfoRouter.swift in Sources */,
 				710455902FBCF885CF95A846 /* PreviewPartInfoConfigurator.swift in Sources */,
 				5A5C373D0BE9E526F03B1298 /* PreviewPartInfoInitializer.swift in Sources */,

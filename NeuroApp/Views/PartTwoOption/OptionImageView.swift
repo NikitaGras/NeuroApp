@@ -62,6 +62,7 @@ class OptionImageView: UIImageView {
     }
     
     private func switchNotSelectedState() {
+        // TODO: затемнить View
         self.layer.borderWidth = 0
     }
     
