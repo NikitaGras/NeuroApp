@@ -8,104 +8,60 @@
 import UIKit
 
 class OptionView: UIView, OptionViewDelegate {
-    var delegate: OptionViewDelegate?
+    private let imageContainerView = OptionImageContainerView()
+    private let stringContainerView = OptionStringContainerView()
+
+    weak var delegate: OptionViewDelegate?
     
+    lazy var heightConstraint: NSLayoutConstraint = {
+        return NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0)
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupInitialState()
+    }
     
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupInitialState()
+    }
     
+    private func setupInitialState() {
+        imageContainerView.translatesAutoresizingMaskIntoConstraints = false
+        imageContainerView.frame.origin = CGPoint.zero
+        imageContainerView.frame.size = frame.size
+        imageContainerView.delegate = self
+        
+        stringContainerView.translatesAutoresizingMaskIntoConstraints = false
+        stringContainerView.frame.origin = CGPoint.zero
+        stringContainerView.frame.size = frame.size
+        stringContainerView.delegate = self
+        
+        heightConstraint.isActive = true
+    }
+    
+    func show(options: [Option]) {
+        subviews.forEach { $0.removeFromSuperview() }
+        
+        if let options = options as? [ImageOption] {
+            imageContainerView.setup(with: options)
+            heightConstraint.constant = imageContainerView.frame.height
+            addSubview(imageContainerView)
+        }
+        
+        if let options = options as? [StringOption] {
+            stringContainerView.setup(with: options)
+            heightConstraint.constant = stringContainerView.frame.height
+            addSubview(stringContainerView)
+        }
+    }
+
     func optionView(_ view: UIView, selectedOption: Option) {
         delegate?.optionView(self, selectedOption: selectedOption)
     }
 }
 
-//class OptionView: UIView, OptionViewDelegate {
-//    private let imageContainerView = OptionImageContainerView()
-//    private let stringContainerView = OptionStringContainerView()
-//
-//    weak var delegate: OptionViewDelegate?
-//
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        setupInitialState()
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        super.init(coder: coder)
-//        setupInitialState()
-//    }
-//
-////    override var intrinsicContentSize: CGSize {
-////        return imageContainerView.isHidden ? stringContainerView.frame.size : imageContainerView.frame.size
-////    }
-//
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-////        let isImageContainer = imageContainerView.superview != nil
-////
-////        if isImageContainer {
-////            imageContainerView.frame.size.width = frame.width
-////        } else {
-////            stringContainerView.frame.size.width = frame.width
-////        }
-//
-////        stringContainerView.frame.size.width = frame.width
-////        imageContainerView.frame.size.width = frame.width
-////        imageContainerView.isHidden ? layoutStringContainer() : layoutImageContainer()
-//    }
-//
-//    private func setupInitialState() {
-////        addSubview(imageContainerView)
-////        addSubview(stringContainerView)
-//    }
-//
-////    private func layoutImageContainer() {
-////        imageContainerView.frame.origin = .zero
-////        imageContainerView.frame.size = self.frame.size
-////    }
-////
-////    private func layoutStringContainer() {
-////        stringContainerView.frame.origin = .zero
-////        stringContainerView.frame.size = self.frame.size
-////    }
-//
-//    func show(options: [Option]) {
-//        if let options = options as? [ImageOption] {
-//            stringContainerView.removeFromSuperview()
-//            addSubview(imageContainerView)
-//            imageContainerView.translatesAutoresizingMaskIntoConstraints = false
-//            NSLayoutConstraint.activate([
-//                imageContainerView.leftAnchor.constraint(equalTo: leftAnchor),
-//                imageContainerView.rightAnchor.constraint(equalTo: rightAnchor),
-//                imageContainerView.bottomAnchor.constraint(equalTo: bottomAnchor),
-//                imageContainerView.topAnchor.constraint(equalTo: topAnchor),
-//            ])
-////            imageContainerView.isHidden = false
-////            stringContainerView.isHidden = true
-////            imageContainerView.setup(with: options)
-////            frame.size.height = imageContainerView.frame.size.height
-//        }
-//        if let options = options as? [StringOption] {
-//            imageContainerView.removeFromSuperview()
-//            addSubview(stringContainerView)
-//            stringContainerView.translatesAutoresizingMaskIntoConstraints = false
-//            NSLayoutConstraint.activate([
-//                stringContainerView.leftAnchor.constraint(equalTo: leftAnchor),
-//                stringContainerView.rightAnchor.constraint(equalTo: rightAnchor),
-//                stringContainerView.bottomAnchor.constraint(equalTo: bottomAnchor),
-//                stringContainerView.topAnchor.constraint(equalTo: topAnchor),
-//            ])
-////            imageContainerView.isHidden = true
-////            stringContainerView.isHidden = false
-//            stringContainerView.setup(with: options)
-////            frame.size.height = stringContainerView.frame.size.height
-//        }
-//        layoutSubviews()
-//    }
-//
-//    func optionView(_ view: UIView, selectedOption: Option) {
-//        delegate?.optionView(self, selectedOption: selectedOption)
-//    }
-//}
-//
 //class OptionImageContainerView: UIStackView {
 //
 //    struct Appearance {
@@ -160,5 +116,5 @@ class OptionView: UIView, OptionViewDelegate {
 //
 //        imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
 //    }
-//
-//}
+
+//    }

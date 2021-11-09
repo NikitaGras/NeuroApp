@@ -8,25 +8,14 @@
 import UIKit
 
 class OptionImageView: UIImageView {
-    var option: Option? {
+    var option: ImageOption? {
         didSet {
-            guard let option = option as? ImageOption else {
-                return
-            }
-            self.image = option.asImage()
+            self.image = option?.asImage()
         }
     }
-    
     var state: State = .none {
         didSet {
-            switch state {
-            case .none:
-                return
-            case .notSelected:
-                switchNotSelectedState()
-            case .selected:
-                switchSelectedState()
-            }
+            state == .notSelected ? switchNotSelectedState() : switchSelectedState()
         }
     }
     
@@ -45,6 +34,7 @@ class OptionImageView: UIImageView {
     private func setupInitialState() {
         isUserInteractionEnabled = true
         contentMode = .scaleAspectFit
+        
         let gesture = UITapGestureRecognizer(target: self, action: #selector(tap))
         addGestureRecognizer(gesture)
     }

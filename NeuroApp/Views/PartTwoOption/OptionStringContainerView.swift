@@ -33,22 +33,25 @@ class OptionStringContainerView: UIView, OptionViewDelegate {
             optionStringView.delegate = self
             addSubview(optionStringView)
         }
-        layout()
+        frame.size.height = optionHeight * 2 + margin
     }
     
     private func layout() {
         subviews.enumerated().forEach { index, view in
-            view.frame.origin = CGPoint.getOrigin(for: index, with: maxColumnNumber, width: optionWidth, height: optionHeight, margin: margin)
+            view.frame.origin = CGPoint.getOrigin(for: index,
+                                                     with: maxColumnNumber,
+                                                     width: optionWidth,
+                                                     height: optionHeight,
+                                                     margin: margin)
             view.frame.size = CGSize(width: optionWidth, height: optionHeight)
         }
-        frame.size.height = optionHeight * 2 + margin
     }
     
     func optionView(_ view: UIView, selectedOption: Option) {
         subviews.forEach { view in
-            let imageView = view as? OptionImageView
-            if imageView?.option?.value != selectedOption.value {
-                imageView?.state = .notSelected
+            let stringView = view as? OptionStringView
+            if stringView?.option?.value != selectedOption.value {
+                stringView?.state = .notSelected
             }
         }
         delegate?.optionView(self, selectedOption: selectedOption)

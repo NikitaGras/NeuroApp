@@ -42,6 +42,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="1" constant="200" id="C3A-t8-InF"/>
+                                    <constraint firstAttribute="width" constant="374" id="m6a-Pm-ez8"/>
                                 </constraints>
                             </view>
                         </subviews>

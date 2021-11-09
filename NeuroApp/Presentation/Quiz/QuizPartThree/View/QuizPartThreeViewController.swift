@@ -25,6 +25,7 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     // MARK: QuizPartThreeViewInput
     func setupInitialState() {
         nextButton.setTitle(.Button.next, for: .normal)
+        nextButton.isEnabled = false
         answerTextField.placeholder = .PartThreeQuiz.placeholder
     }
     

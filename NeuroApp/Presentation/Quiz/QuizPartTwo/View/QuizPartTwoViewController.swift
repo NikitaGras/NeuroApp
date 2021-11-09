@@ -29,6 +29,7 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
     
     func show(question: PartTwoQuestion) {
         questionLabel.text = question.text
+        nextButton.isEnabled = false
     }
     
     func show(imageOptions: [ImageOption]) {
@@ -47,5 +48,6 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
 extension QuizPartTwoViewController: OptionViewDelegate {
     func optionView(_ view: UIView, selectedOption: Option) {
         output.selectedOption = selectedOption
+        nextButton.isEnabled = true
     }
 }

@@ -20,16 +20,6 @@ class OptionImageContainerView: UIView, OptionViewDelegate {
         return optionWidth
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         layout()
@@ -43,6 +33,7 @@ class OptionImageContainerView: UIView, OptionViewDelegate {
             optionImageView.delegate = self
             addSubview(optionImageView)
         }
+        frame.size.height = frame.width
     }
     
     private func layout() {
@@ -54,7 +45,6 @@ class OptionImageContainerView: UIView, OptionViewDelegate {
                                                      margin: margin)
             view.frame.size = CGSize(width: optionWidth, height: optionHeight)
         }
-        frame.size.height = optionHeight * 2 + margin
     }
     
     func optionView(_ view: UIView, selectedOption: Option) {
