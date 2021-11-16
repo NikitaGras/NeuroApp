@@ -12,19 +12,29 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
     var interactor: QuizPartThreeInteractorInput!
     var router: QuizPartThreeRouterInput!
 
+    var userText: String = ""
+    
     func viewIsReady() {
         view.setupInitialState()
         showQuestion()
     }
     
-    func save(userText: String) {
+    func check(userText: String) {
+        self.userText = userText
+        interactor.getGunningFoqIndex(for: userText)
+    }
+    
+    func save(with gunningFog: Double) {
         do {
-            let ganningFoqIndex = try interactor.getGunningFoqIndex(for: userText)
-            let answer = PartThreeAnswer(userText: userText, value: ganningFoqIndex)
+            let answer = PartThreeAnswer(userText: userText, value: gunningFog)
             try interactor.save(answer: answer)
         } catch {
             view.show(error)
         }
+    }
+    
+    func denied(with error: Error) {
+        view.show(error)
     }
     
     func showQuestion() {

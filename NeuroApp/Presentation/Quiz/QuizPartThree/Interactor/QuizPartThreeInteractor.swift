@@ -6,22 +6,31 @@
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
 
+import Alamofire
+
 class QuizPartThreeInteractor: QuizPartThreeInteractorInput {
     weak var output: QuizPartThreeInteractorOutput!
+    
     var quizService: QuizServiceProtocol!
     var ganningFogService: GanningFogSeviceProtocol!
     
-    var question: PartThreeQuestion {
-        return quizService.getPartThreeQuestion()
-    }
+//    var question: PartThreeQuestion {
+//        return quizService.getPartThreeQuestion()
+//    }
     
     func getQuestion() -> PartThreeQuestion {
         return quizService.getPartThreeQuestion()
     }
     
-    func getGunningFoqIndex(for text: String) throws -> Int {
-        let ganningFogIndex = try ganningFogService.getGunninhFogIndex(for: text)
-        return ganningFogIndex
+    func getGunningFoqIndex(for text: String) {
+        ganningFogService.getGunninhFogIndex(for: text) { gunningFog, error in
+            if let gunningFog = gunningFog {
+                self.output.save(with: gunningFog)
+            }
+            if let error = error {
+                self.output.denied(with: error)
+            }
+        }
     }
     
     func save(answer: PartThreeAnswer) throws {

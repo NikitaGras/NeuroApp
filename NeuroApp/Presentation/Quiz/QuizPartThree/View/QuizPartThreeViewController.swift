@@ -24,9 +24,8 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
 
     // MARK: QuizPartThreeViewInput
     func setupInitialState() {
-        nextButton.setTitle(.Button.next, for: .normal)
-        nextButton.isEnabled = false
-        answerTextField.placeholder = .PartThreeQuiz.placeholder
+        nextButton.setTitle(String.Button.next, for: .normal)
+        answerTextField.placeholder = String.PartThreeQuiz.placeholder
     }
     
     func show(question: PartThreeQuestion) {
@@ -35,6 +34,6 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     
     @IBAction func next(sender: RoundButton) {
         let text = answerTextField.text ?? ""
-        output.save(userText: text)
+        output.check(userText: text)
     }
 }

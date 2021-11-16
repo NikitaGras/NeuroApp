@@ -37,6 +37,7 @@ struct Result {
     }
     
     var partThreeScore: Int {
-        return partThreeAnswer.value
+        //TODO:
+        return Int(partThreeAnswer.value)
     }
 }

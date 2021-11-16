@@ -9,5 +9,6 @@
 import Foundation
 
 protocol QuizPartThreeInteractorOutput: AnyObject {
-
+    func save(with gunningFog: Double)
+    func denied(with error: Error)
 }

@@ -24,6 +24,9 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
     // MARK: - QuizPartTwoViewInput
     func setupInitialState() {
         nextButton.setTitle(.Button.next, for: .normal)
+        nextButton.setBackgroundColor(UIColor.NAGreen, for: .normal)
+        nextButton.setBackgroundColor(UIColor.gray, for: .disabled)
+        nextButton.isEnabled = false
         optionView.delegate = self
     }
     

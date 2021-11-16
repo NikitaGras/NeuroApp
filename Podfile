@@ -8,5 +8,6 @@ target 'NeuroApp' do
   # Pods for NeuroApp
   pod 'IQKeyboardManagerSwift'
   pod "ViperMcFlurry"
+  pod 'Alamofire', '~> 5.4'
 
 end

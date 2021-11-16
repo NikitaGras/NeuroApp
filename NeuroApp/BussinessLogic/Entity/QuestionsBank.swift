@@ -72,5 +72,5 @@ typealias PartThreeQuestion = String
 
 struct PartThreeAnswer {
     let userText: String
-    let value: Int
+    let value: Double
 }
