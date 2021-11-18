@@ -26,6 +26,7 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
 
     // MARK: - QuizPartOneViewInput
     func setupInitialState() {
+        navigationController?.isNavigationBarHidden = true
         taskLabel.text = .PartOneQuiz.taskText
         scaleDescriptionLabels.forEach { label in
             if label.tag == 0 {

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quiz Part One View Controller-->
+        <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="QuizPartOne" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="QuizPartOneViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -180,6 +180,8 @@
                             <constraint firstItem="09e-Jy-04b" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="y6p-mz-lAR"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="mlC-nb-tE7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="nextButton" destination="KgL-tj-cQ7" id="5qD-fc-heG"/>
                         <outlet property="questionLabel" destination="09e-Jy-04b" id="uzO-Ke-SQ5"/>
@@ -199,7 +201,7 @@
                         <outletCollection property="scaleDescriptionLabels" destination="uoo-4r-CFi" collectionClass="NSMutableArray" id="AGr-EE-VAY"/>
                         <outletCollection property="scaleDescriptionLabels" destination="BoS-zb-TpZ" collectionClass="NSMutableArray" id="wfi-R2-D46"/>
                         <outletCollection property="scaleDescriptionLabels" destination="gp5-7V-2K9" collectionClass="NSMutableArray" id="w4X-XJ-si2"/>
-                        <segue destination="2HC-QN-cgG" kind="presentation" identifier="showPreviewPartInfo" modalPresentationStyle="fullScreen" id="fuL-16-EFH"/>
+                        <segue destination="2HC-QN-cgG" kind="show" identifier="showPreviewPartInfo" id="fuL-16-EFH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

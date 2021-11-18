@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quiz Part Three View Controller-->
+        <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="QuizPartThreeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="QuizPartThreeViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,6 +60,8 @@
                             <constraint firstItem="FNR-Ys-L6j" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qeb-9N-t5p"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="dMz-HB-PDt"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="answerTextField" destination="1Eo-7b-Q1n" id="AYd-gP-9Rg"/>
                         <outlet property="nextButton" destination="Mhc-M6-q16" id="Ae8-Vz-nVb"/>

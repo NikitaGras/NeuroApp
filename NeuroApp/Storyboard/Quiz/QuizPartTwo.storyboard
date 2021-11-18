@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quiz Part Two View Controller-->
+        <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="QuizPartTwo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="QuizPartTwoViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,11 +61,13 @@
                             <constraint firstItem="cUP-Lg-hUv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="wVK-MR-3N8"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="bKA-Ij-dSd"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="nextButton" destination="TRS-2p-kCH" id="F9M-FN-VuQ"/>
                         <outlet property="optionView" destination="gxw-Jk-1xZ" id="ecz-9w-Bp7"/>
                         <outlet property="questionLabel" destination="cUP-Lg-hUv" id="isL-7i-5Ky"/>
-                        <segue destination="DSI-Bc-Xc7" kind="presentation" identifier="ShowPreviewViewController" modalPresentationStyle="fullScreen" id="5dm-9t-GvP"/>
+                        <segue destination="DSI-Bc-Xc7" kind="show" identifier="ShowPreviewViewController" id="5dm-9t-GvP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

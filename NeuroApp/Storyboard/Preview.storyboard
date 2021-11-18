@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Preview Base Info View Controller-->
+        <!--Item-->
         <scene sceneID="5yf-b0-r5e">
             <objects>
                 <viewController id="K80-14-Tdl" customClass="PreviewBaseInfoViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2af-8x-KUY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqp-wW-qid">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-VC-zsx" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="748" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="699" width="374" height="50"/>
                                                 <color key="backgroundColor" name="NAGreen"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="kUo-tZ-ziX"/>
@@ -75,10 +75,12 @@
                             <constraint firstItem="2af-8x-KUY" firstAttribute="leading" secondItem="mvb-oY-cnG" secondAttribute="leading" id="wr1-Fr-mwh"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="HuQ-2V-uJ7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="infoLabel" destination="A15-Le-435" id="Pn5-1c-Xq2"/>
                         <outlet property="nextButton" destination="5t4-VC-zsx" id="lKz-LJ-bv0"/>
-                        <segue destination="Y6W-OH-hqX" kind="presentation" identifier="showPreviewPartInfo" modalPresentationStyle="fullScreen" id="biH-uP-xmd"/>
+                        <segue destination="Y6W-OH-hqX" kind="show" identifier="showPreviewPartInfo" id="biH-uP-xmd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1O-rX-lfD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -90,19 +92,19 @@
             </objects>
             <point key="canvasLocation" x="-736.23188405797111" y="172.76785714285714"/>
         </scene>
-        <!--Preview Part Info View Controller-->
+        <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="PreviewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PreviewPartInfoViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrI-rY-nFK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnz-TY-m64">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PV-ij-DsV">
                                                 <rect key="frame" x="20" y="20" width="374" height="30"/>
@@ -117,7 +119,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wo-pw-vwY" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="748" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="689" width="374" height="50"/>
                                                 <color key="backgroundColor" name="NAGreen"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="wX5-7N-5Ra"/>
@@ -164,14 +166,16 @@
                             <constraint firstItem="xrI-rY-nFK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rv8-zC-u0m"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ox0-gA-p4M"/>
                     <navigationItem key="navigationItem" id="V2B-p4-CHr"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="infoLabel" destination="6XB-39-ulb" id="vqq-bZ-Lzu"/>
                         <outlet property="nextButton" destination="1Wo-pw-vwY" id="jJL-eg-YHF"/>
                         <outlet property="titleLabel" destination="3PV-ij-DsV" id="7fb-8T-iba"/>
-                        <segue destination="TbF-CC-e94" kind="presentation" identifier="showPartOneQuiz" modalPresentationStyle="fullScreen" id="rOq-T4-Zpe"/>
-                        <segue destination="Bvd-54-I6U" kind="presentation" identifier="showPartTwoQuiz" modalPresentationStyle="fullScreen" id="b9Q-h1-Fqq"/>
-                        <segue destination="diN-d7-4iK" kind="presentation" identifier="showPartThreeQuiz" modalPresentationStyle="fullScreen" id="ITg-a3-SVf"/>
+                        <segue destination="TbF-CC-e94" kind="show" identifier="showPartOneQuiz" id="rOq-T4-Zpe"/>
+                        <segue destination="Bvd-54-I6U" kind="show" identifier="showPartTwoQuiz" id="b9Q-h1-Fqq"/>
+                        <segue destination="diN-d7-4iK" kind="show" identifier="showPartThreeQuiz" id="ITg-a3-SVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -186,7 +190,9 @@
         <!--QuizPartOne-->
         <scene sceneID="eWw-C1-QUk">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="QuizPartOne" storyboardName="QuizPartOne" id="TbF-CC-e94" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="QuizPartOne" storyboardName="QuizPartOne" id="TbF-CC-e94" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OnB-dO-xbM"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQN-1L-f75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="792" y="95"/>
