@@ -24,16 +24,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-7b-Q1n">
-                                <rect key="frame" x="20" y="114" width="374" height="374"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="1Eo-7b-Q1n" secondAttribute="height" id="ffR-vQ-83R"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhc-M6-q16" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
-                                <rect key="frame" x="40" y="518" width="334" height="50"/>
+                                <rect key="frame" x="40" y="508" width="334" height="50"/>
                                 <color key="backgroundColor" name="NAGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6k6-qU-x1e"/>
@@ -45,25 +37,35 @@
                                     <action selector="nextWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uAs-x8-gz6"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5PS-mk-88z" customClass="PlaceholderTextView" customModule="NeuroApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="114" width="374" height="374"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5PS-mk-88z" secondAttribute="height" id="MVv-tM-lgx"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1Eo-7b-Q1n" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2tC-nX-7K3"/>
                             <constraint firstItem="Mhc-M6-q16" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="6eA-BW-a1S"/>
                             <constraint firstItem="FNR-Ys-L6j" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="8MB-Tx-THP"/>
+                            <constraint firstItem="5PS-mk-88z" firstAttribute="top" secondItem="FNR-Ys-L6j" secondAttribute="bottom" constant="20" id="Bbd-4Z-tWP"/>
                             <constraint firstItem="Mhc-M6-q16" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Dua-8g-Nzi"/>
-                            <constraint firstItem="Mhc-M6-q16" firstAttribute="top" secondItem="1Eo-7b-Q1n" secondAttribute="bottom" constant="30" id="aKT-zD-OAP"/>
+                            <constraint firstItem="5PS-mk-88z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="UbS-Vu-Zje"/>
+                            <constraint firstItem="Mhc-M6-q16" firstAttribute="top" secondItem="5PS-mk-88z" secondAttribute="bottom" constant="20" id="YUJ-iV-lBj"/>
                             <constraint firstItem="FNR-Ys-L6j" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="bO4-Vz-B9G"/>
-                            <constraint firstItem="1Eo-7b-Q1n" firstAttribute="top" secondItem="FNR-Ys-L6j" secondAttribute="bottom" constant="20" id="ggT-AL-1UL"/>
-                            <constraint firstItem="1Eo-7b-Q1n" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="l7Z-Vp-Uuw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5PS-mk-88z" secondAttribute="trailing" constant="20" id="bg2-OO-Xxu"/>
                             <constraint firstItem="FNR-Ys-L6j" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qeb-9N-t5p"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dMz-HB-PDt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="answerTextField" destination="1Eo-7b-Q1n" id="AYd-gP-9Rg"/>
+                        <outlet property="answerTextView" destination="5PS-mk-88z" id="yAN-Mq-4aE"/>
                         <outlet property="nextButton" destination="Mhc-M6-q16" id="Ae8-Vz-nVb"/>
                         <outlet property="questionLabel" destination="FNR-Ys-L6j" id="j6r-hz-mse"/>
                     </connections>
@@ -82,6 +84,9 @@
         <namedColor name="NAGreen">
             <color red="0.37999999523162842" green="0.80000001192092896" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

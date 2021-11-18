@@ -10,7 +10,7 @@ import UIKit
 
 class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var answerTextField: UITextField!
+    @IBOutlet weak var answerTextView: PlaceholderTextView!
     @IBOutlet weak var nextButton: RoundButton!
     
     var output: QuizPartThreeViewOutput!
@@ -25,8 +25,7 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     // MARK: QuizPartThreeViewInput
     func setupInitialState() {
         nextButton.setTitle(String.Button.next, for: .normal)
-        answerTextField.placeholder = String.PartThreeQuiz.placeholder
-        answerTextField.contentVerticalAlignment = .top
+        answerTextView.placeholderText = String.PartThreeQuiz.placeholder
     }
     
     func show(question: PartThreeQuestion) {
@@ -34,7 +33,7 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     }
     
     @IBAction func next(sender: RoundButton) {
-        let text = answerTextField.text ?? ""
+        let text = answerTextView.text ?? ""
         output.check(userText: text)
     }
 }

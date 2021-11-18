@@ -19,6 +19,7 @@ extension String {
         static let wrongName = "Wrong name"
         static let wrongAge = "Wrong age"
         static let wrongEmail = "Wrong email"
+        static let shortAnswer = "Your answer must contain more than 50s characters"
     }
     
     struct UserStatus {
