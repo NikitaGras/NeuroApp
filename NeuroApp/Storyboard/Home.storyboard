@@ -101,6 +101,7 @@
                         <outlet property="statusLabel" destination="cc6-zh-nTf" id="zzU-p7-ymk"/>
                         <outlet property="statusView" destination="mG5-g7-eFA" id="7KA-Ip-Mcq"/>
                         <segue destination="KZR-jP-9ra" kind="show" identifier="openPreviewBaseInfo" id="Pdx-Fi-I0P"/>
+                        <segue destination="w82-PV-uY3" kind="show" identifier="openPreviewPartInfo" id="xvM-lT-zPt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -115,12 +116,22 @@
         <!--Preview-->
         <scene sceneID="ThE-Fr-NLx">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="PreviewViewController" storyboardName="Preview" id="KZR-jP-9ra" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Preview" id="KZR-jP-9ra" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ree-hA-PN7"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaO-fM-iyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1695" y="106"/>
+        </scene>
+        <!--PreviewViewController-->
+        <scene sceneID="nLy-Pl-Pe8">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PreviewViewController" storyboardName="Preview" referencedIdentifier="PreviewViewController" id="w82-PV-uY3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vJR-2T-8y3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="enK-wp-cs6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760" y="177"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TlR-zl-1KC">

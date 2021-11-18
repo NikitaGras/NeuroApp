@@ -21,14 +21,19 @@ class GanningFogService: GanningFogSeviceProtocol {
             switch response.result {
             case .success(let data):
                 guard let json = data as? [String:Any],
-                      let gunningFog = json["GUNNING_FOG"] as? Double else {
+                      let gunningFogIndex = json["GUNNING_FOG"] as? Double else {
                           complitionHandler(nil, SystemError.default)
                           return
                       }
+                let gunningFog = self.calculate(gunningFog: gunningFogIndex)
                 complitionHandler(gunningFog, nil)
             case .failure(let error):
                 complitionHandler(nil, error)
             }
         }
+    }
+    
+    func calculate(gunningFog: Double) -> Double {
+        return atan(gunningFog) * 100.0 / (Double.pi / 2)
     }
 }

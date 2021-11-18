@@ -14,6 +14,10 @@ class HomeRouter: HomeRouterInput {
         let _ = transitionHandler.openModule?(usingSegue: "openPreviewBaseInfo")
     }
     
+    func openPreviewPartInfo() {
+        let _ = transitionHandler.openModule?(usingSegue: "openPreviewPartInfo")
+    }
+    
     func openLogin() {
         let router = AppRouter.shared
         router.open(module: .login)

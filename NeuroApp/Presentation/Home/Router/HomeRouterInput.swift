@@ -10,5 +10,6 @@ import Foundation
 
 protocol HomeRouterInput {
     func openPreviewBaseInfo()
+    func openPreviewPartInfo()
     func openLogin()
 }
