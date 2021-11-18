@@ -26,6 +26,7 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     func setupInitialState() {
         nextButton.setTitle(String.Button.next, for: .normal)
         answerTextField.placeholder = String.PartThreeQuiz.placeholder
+        answerTextField.contentVerticalAlignment = .top
     }
     
     func show(question: PartThreeQuestion) {

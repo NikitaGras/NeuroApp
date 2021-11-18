@@ -28,6 +28,7 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
         do {
             let answer = PartThreeAnswer(userText: userText, value: gunningFog)
             try interactor.save(answer: answer)
+            router.showResultScreen()
         } catch {
             view.show(error)
         }

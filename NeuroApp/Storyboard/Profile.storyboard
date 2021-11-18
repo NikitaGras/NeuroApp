@@ -119,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="1038.7850467289718" y="105.61555075593954"/>
         </scene>
-        <!--Edit Information View Controller-->
+        <!--Edit profile-->
         <scene sceneID="AG8-Eo-93g">
             <objects>
                 <viewController id="HGt-lJ-s7U" customClass="EditInformationViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -198,7 +198,7 @@
                             <constraint firstItem="756-eC-Tuk" firstAttribute="leading" secondItem="wVZ-nv-y2J" secondAttribute="leading" constant="40" id="wJ8-Q9-dZ3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qDK-er-eRJ"/>
+                    <navigationItem key="navigationItem" title="Edit profile" id="qDK-er-eRJ"/>
                     <connections>
                         <outlet property="ageTextField" destination="HXr-TB-haD" id="kr8-ae-tb7"/>
                         <outlet property="emailTextField" destination="6oe-Cb-nJh" id="ySP-ey-fGq"/>
