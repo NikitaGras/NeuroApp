@@ -15,7 +15,9 @@
 		13EDF50C0DEC9793B217B50C /* PreviewBaseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075EABC646777AFA395C1CDE /* PreviewBaseInfoViewController.swift */; };
 		1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E9FBA19EF92A573CABB802 /* LoginRouter.swift */; };
 		14CA5A389553B4DB66AF2C65 /* QuizPartOneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA65B27DB6F300C403ED9F5 /* QuizPartOneConfigurator.swift */; };
+		1538495593398253E2C71E3B /* ScoreScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83294CED18EFE49B44109C74 /* ScoreScreenViewController.swift */; };
 		170AA0A5DDF36109EBBEEC73 /* QuizPartOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EDC329C61457D79167CA4 /* QuizPartOneViewController.swift */; };
+		17AA32A040E0DCD91D23B76D /* ScoreScreenViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E820419046E1CAB86A333AE /* ScoreScreenViewOutput.swift */; };
 		1D6C762DF0CE88CB3A6B94DE /* HomeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E089A54B68C75B990FB0BE /* HomeInteractorInput.swift */; };
 		1E9E5931750F06171AB67E8B /* PreviewBaseInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BDE582C1AF26CF4A15741 /* PreviewBaseInfoInteractor.swift */; };
 		202EEC6BA12FB36640986E66 /* QuizPartOneInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037AE0E345ED3304C484E501 /* QuizPartOneInteractorInput.swift */; };
@@ -24,18 +26,24 @@
 		2553D38725C68A7DCFF894ED /* QuizPartTwoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351D07B465ED6331EA66045E /* QuizPartTwoViewOutput.swift */; };
 		2584DCD63B862AF6E55D8AD1 /* QuizPartOneViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9455D74290E8F93D71A69 /* QuizPartOneViewOutput.swift */; };
 		287BE47BB9D393609581989C /* EditInformationInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A635CDC65637FC2A99FBB87 /* EditInformationInitializer.swift */; };
+		2A0924B903B0ECB8656DEC8E /* ScoreScreenInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DE2F7F9E8730B60C94356 /* ScoreScreenInitializer.swift */; };
+		2BC6D36266C2852480A019F1 /* ScoreScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0E0327519CFFC074CBF87 /* ScoreScreenInteractor.swift */; };
 		2D934A296C744ED7E285E9C0 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F872E576D287CE17D07E27D /* ProfileInteractor.swift */; };
 		2E12C249EE024C6F04C4550E /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F452300545C439222B443 /* HomeModuleInput.swift */; };
+		2E5BD8E59CEECD727C169508 /* ScoreScreenViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCD011639164CFD90F917E2 /* ScoreScreenViewInput.swift */; };
 		2F809E1A96097F29CCF044DB /* PreviewPartInfoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB022E839B9E8C9FC1A77D5A /* PreviewPartInfoModuleInput.swift */; };
 		32D11D93136E916C9DEE1881 /* QuizPartTwoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9846573C3502D504D96B87 /* QuizPartTwoInteractor.swift */; };
 		3379FA07F4D8D4D8016D80E9 /* PreviewBaseInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EDFC1ED741046D2C0186B0 /* PreviewBaseInfoRouter.swift */; };
 		352AC50F6742128004C2A225 /* PreviewBaseInfoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B22D46305F45EFAE95A50C /* PreviewBaseInfoRouterInput.swift */; };
 		35E0800B4950274D0E7D4706 /* LoginInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A32D1AB985482BA4609513 /* LoginInitializer.swift */; };
+		36F083BB886B5C49544D57B8 /* ScoreScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0D3F5E3601E16C166370ED /* ScoreScreenConfigurator.swift */; };
 		3863AFB06EF7BA2D2C85BF44 /* ProfileInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CFF49D994BD2777EF36511 /* ProfileInitializer.swift */; };
 		46C8ECFF791F80AC1AD63931 /* QuizPartTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FCBB046E2CD0618F38EF62 /* QuizPartTwoViewController.swift */; };
 		48AD7EDBC5D03B3B4529E2F6 /* QuizPartTwoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E967285539AC224BE97A3 /* QuizPartTwoInteractorOutput.swift */; };
 		4CC5A9741515EC05FC66C938 /* ProfileModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBECF3885BB89903358CA2D /* ProfileModuleInput.swift */; };
 		505014C02EB507DCA4B96406 /* PreviewPartInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC23566E7924311A79135A /* PreviewPartInfoRouter.swift */; };
+		533CE720FBF5E7B4DBB1E57F /* ScoreScreenInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524EB920DE5D00C5A103D4C /* ScoreScreenInteractorInput.swift */; };
+		53A6B9D5269D50594C1EE4C6 /* ScoreScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AF8B88C49558D58DD04152 /* ScoreScreenRouterInput.swift */; };
 		56615C62A114E681AE72A01B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFFD28B57959F5B32F0FD98 /* HomeRouter.swift */; };
 		568CF19A7F36CF7859D1E3A3 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */; };
 		5A126539271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */; };
@@ -95,6 +103,7 @@
 		62C499E38C23A315356603BA /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BE893CAC0953665FDE976 /* HomeRouterInput.swift */; };
 		62FDB63C8AEDD2D53D288F05 /* QuizPartTwoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FA06AD6BF8A80A3D2EC59 /* QuizPartTwoViewInput.swift */; };
 		633BB537916E82581B0B24BD /* QuizPartThreePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75473C274EC04A2AA104543 /* QuizPartThreePresenter.swift */; };
+		6EEDBA2C96801152FE059E09 /* ScoreScreenModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E8C34E518D043734BB4503 /* ScoreScreenModuleInput.swift */; };
 		710455902FBCF885CF95A846 /* PreviewPartInfoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2864988193F828DED9F8E6 /* PreviewPartInfoConfigurator.swift */; };
 		72139DC4AAE04F466499440C /* EditInformationInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9315268719AF54B2F1656A1 /* EditInformationInteractorInput.swift */; };
 		7527CAD75382A2FA6E456768 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A9CC1E7A655A123351912 /* HomeInteractor.swift */; };
@@ -125,9 +134,11 @@
 		9E0E88237F92C68D8522838A /* PreviewBaseInfoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04051379896106512F87DE7B /* PreviewBaseInfoInteractorOutput.swift */; };
 		9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D87C7304176BA9AC667ECD /* LoginViewOutput.swift */; };
 		A19DD678EE6D5CD7BF691D79 /* QuizPartTwoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D6C004361D5A77C9A8F98 /* QuizPartTwoConfigurator.swift */; };
+		A1DC76F3F80D304032782720 /* ScoreScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19171CB6E5559940579F749D /* ScoreScreenPresenter.swift */; };
 		A1EC3F4AAC61F9C0FE25B491 /* PreviewPartInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFB378F487F62ABDA723E90 /* PreviewPartInfoViewController.swift */; };
 		A224D3AD1B8D1D947E327F4A /* QuizPartOneInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5AA6B80105F6428B86A1E /* QuizPartOneInteractorOutput.swift */; };
 		A345F8C3B02C26E745A147D2 /* QuizPartOneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7977A52F4CF991FBF2F7872 /* QuizPartOneRouter.swift */; };
+		A3C32437A94A31CBF3DF74EE /* ScoreScreenInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591353D8AD09E9F0376BA610 /* ScoreScreenInteractorOutput.swift */; };
 		A6641774A39D86DBBDB37790 /* QuizPartTwoInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404466AF95B0C732090040D9 /* QuizPartTwoInteractorInput.swift */; };
 		A6B9C09DA15838EF4C1C6A7D /* LoginInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C07331B69F3FDFE224B9B1 /* LoginInteractorInput.swift */; };
 		A9E0B1E37CDF82DC10CDBC14 /* PreviewPartInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864F1689B49C91D1178C92FA /* PreviewPartInfoInteractor.swift */; };
@@ -136,6 +147,7 @@
 		B2548BC03A552198447AFD45 /* PreviewBaseInfoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616945C04BEA3216A99AFC72 /* PreviewBaseInfoModuleInput.swift */; };
 		B5DD76BE58A0599B47FDB58C /* QuizPartOneInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCA617EDC2C643932EEBCB /* QuizPartOneInitializer.swift */; };
 		B8B350C756F3B85145F5996C /* QuizPartThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782BB4BF45A63B2ABF64549 /* QuizPartThreeViewController.swift */; };
+		B94F4DDBDB9BA1992F36A2A7 /* ScoreScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52862B23FEEE4B7C11DC4906 /* ScoreScreenRouter.swift */; };
 		B968B3FFC2686DE6E06636AC /* QuizPartOnePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728932528407A3FAE6CD2862 /* QuizPartOnePresenter.swift */; };
 		BEA3CCD1030E3AFEFD03EF36 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF999ACCFCEDDA5A94E6E7 /* ProfileRouter.swift */; };
 		C10F448C496F867013E649C5 /* EditInformationRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758DB157F183D1E96EA715E /* EditInformationRouterInput.swift */; };
@@ -176,8 +188,10 @@
 		0CFB378F487F62ABDA723E90 /* PreviewPartInfoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoViewController.swift; sourceTree = "<group>"; };
 		0CFFD28B57959F5B32F0FD98 /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		0EA0EA2B4FCF93DB77BBF460 /* Pods_NeuroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeuroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FCD011639164CFD90F917E2 /* ScoreScreenViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenViewInput.swift; sourceTree = "<group>"; };
 		10AF999ACCFCEDDA5A94E6E7 /* ProfileRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		172C29A1C660CF89E982D957 /* QuizPartThreeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeInteractor.swift; sourceTree = "<group>"; };
+		19171CB6E5559940579F749D /* ScoreScreenPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenPresenter.swift; sourceTree = "<group>"; };
 		19332506BB8A17E0B2F8A8FB /* ProfileInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractorOutput.swift; sourceTree = "<group>"; };
 		1A2A9CC1E7A655A123351912 /* HomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		1BA9891BA34CDCCF98D4BA57 /* PreviewPartInfoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoPresenter.swift; sourceTree = "<group>"; };
@@ -206,7 +220,9 @@
 		4C642DB194C16080141E1F13 /* ProfileInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractorInput.swift; sourceTree = "<group>"; };
 		4D2864988193F828DED9F8E6 /* PreviewPartInfoConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoConfigurator.swift; sourceTree = "<group>"; };
 		517D6C004361D5A77C9A8F98 /* QuizPartTwoConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoConfigurator.swift; sourceTree = "<group>"; };
+		52862B23FEEE4B7C11DC4906 /* ScoreScreenRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenRouter.swift; sourceTree = "<group>"; };
 		549A076939854C22E1C60212 /* ProfileViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewOutput.swift; sourceTree = "<group>"; };
+		591353D8AD09E9F0376BA610 /* ScoreScreenInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenInteractorOutput.swift; sourceTree = "<group>"; };
 		5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboardWhenTapped.swift"; sourceTree = "<group>"; };
 		5A127FF927007D7100832AD2 /* QuestionsBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsBank.swift; sourceTree = "<group>"; };
 		5A166C03269BF43200E590C7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -279,30 +295,38 @@
 		7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		7EF8B148594B4B0EB22EB8B3 /* LoginRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterInput.swift; sourceTree = "<group>"; };
 		807FA06AD6BF8A80A3D2EC59 /* QuizPartTwoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoViewInput.swift; sourceTree = "<group>"; };
+		83294CED18EFE49B44109C74 /* ScoreScreenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenViewController.swift; sourceTree = "<group>"; };
 		864F1689B49C91D1178C92FA /* PreviewPartInfoInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoInteractor.swift; sourceTree = "<group>"; };
 		86BD030DE819C7C9EA024A8B /* EditInformationInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInteractorOutput.swift; sourceTree = "<group>"; };
 		889C2BC7D016D2D778CEBD88 /* QuizPartOneInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneInteractor.swift; sourceTree = "<group>"; };
 		8BE92981166A6B978CB561F9 /* LoginViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
 		8C611BBCDA1AAA639E9FE7B6 /* PreviewBaseInfoInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInteractorInput.swift; sourceTree = "<group>"; };
 		8CE47E1744C628B3441EBC4E /* QuizPartThreeModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeModuleInput.swift; sourceTree = "<group>"; };
+		8D0D3F5E3601E16C166370ED /* ScoreScreenConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenConfigurator.swift; sourceTree = "<group>"; };
 		8FAC376FB5F49982C0005B02 /* PreviewBaseInfoConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoConfigurator.swift; sourceTree = "<group>"; };
 		8FB0385E47F09CC39E0C0D90 /* QuizPartTwoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoInitializer.swift; sourceTree = "<group>"; };
+		90B0E0327519CFFC074CBF87 /* ScoreScreenInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenInteractor.swift; sourceTree = "<group>"; };
 		9197D5F3167CC6C7B38155FD /* QuizPartThreeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeConfigurator.swift; sourceTree = "<group>"; };
+		93AF8B88C49558D58DD04152 /* ScoreScreenRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenRouterInput.swift; sourceTree = "<group>"; };
 		9417FB0DC41BAC7114326AB3 /* QuizPartTwoRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoRouter.swift; sourceTree = "<group>"; };
 		962886E9107AEA9C60246EAD /* HomeInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInitializer.swift; sourceTree = "<group>"; };
 		99B22D46305F45EFAE95A50C /* PreviewBaseInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoRouterInput.swift; sourceTree = "<group>"; };
 		9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractorOutput.swift; sourceTree = "<group>"; };
 		9B491D586CFF261E708DF50F /* PreviewBaseInfoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInitializer.swift; sourceTree = "<group>"; };
+		9E820419046E1CAB86A333AE /* ScoreScreenViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenViewOutput.swift; sourceTree = "<group>"; };
 		A0D17835045787ABEB1D8ADA /* EditInformationRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationRouter.swift; sourceTree = "<group>"; };
 		A13C4F5A64000B97F8FDA19E /* PreviewBaseInfoViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoViewOutput.swift; sourceTree = "<group>"; };
 		A1A9455D74290E8F93D71A69 /* QuizPartOneViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneViewOutput.swift; sourceTree = "<group>"; };
 		A1CFF49D994BD2777EF36511 /* ProfileInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInitializer.swift; sourceTree = "<group>"; };
+		A4E8C34E518D043734BB4503 /* ScoreScreenModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenModuleInput.swift; sourceTree = "<group>"; };
+		A69DE2F7F9E8730B60C94356 /* ScoreScreenInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenInitializer.swift; sourceTree = "<group>"; };
 		A7E9FBA19EF92A573CABB802 /* LoginRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		A9315268719AF54B2F1656A1 /* EditInformationInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInteractorInput.swift; sourceTree = "<group>"; };
 		AC7BDE582C1AF26CF4A15741 /* PreviewBaseInfoInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInteractor.swift; sourceTree = "<group>"; };
 		B1FCBB046E2CD0618F38EF62 /* QuizPartTwoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoViewController.swift; sourceTree = "<group>"; };
 		B2EDFC1ED741046D2C0186B0 /* PreviewBaseInfoRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoRouter.swift; sourceTree = "<group>"; };
 		B32659D09DDAB211BD5B95F5 /* HomeViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewOutput.swift; sourceTree = "<group>"; };
+		B524EB920DE5D00C5A103D4C /* ScoreScreenInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenInteractorInput.swift; sourceTree = "<group>"; };
 		B75473C274EC04A2AA104543 /* QuizPartThreePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreePresenter.swift; sourceTree = "<group>"; };
 		B9C07331B69F3FDFE224B9B1 /* LoginInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractorInput.swift; sourceTree = "<group>"; };
 		BB022E839B9E8C9FC1A77D5A /* PreviewPartInfoModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoModuleInput.swift; sourceTree = "<group>"; };
@@ -644,6 +668,7 @@
 		5A51128B270C0DF3008020AB /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				9A0615A8140B74C32DA03E2B /* ScoreScreen */,
 				8F0CE8572D01A6196D6E1778 /* QuizPartThree */,
 				92301B85E4B9CB561ADEA7A2 /* QuizPartTwo */,
 				1E5712CB8A5FB0A514B61C2D /* QuizPartOne */,
@@ -763,6 +788,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		63A7ABAE28452E269402678F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				93AF8B88C49558D58DD04152 /* ScoreScreenRouterInput.swift */,
+				52862B23FEEE4B7C11DC4906 /* ScoreScreenRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		664AD6C48FE9B30C72082A1F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -818,6 +852,16 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		7A119A4A0F3796A97BE5B8A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FCD011639164CFD90F917E2 /* ScoreScreenViewInput.swift */,
+				9E820419046E1CAB86A333AE /* ScoreScreenViewOutput.swift */,
+				83294CED18EFE49B44109C74 /* ScoreScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7D55D20DED44814299BFA6F2 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -839,6 +883,15 @@
 				563F547600A4AD2684816266 /* EditInformation */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		86D99DC2830CE11D53043E83 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				8D0D3F5E3601E16C166370ED /* ScoreScreenConfigurator.swift */,
+				A69DE2F7F9E8730B60C94356 /* ScoreScreenInitializer.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		889ACCE0A408BC9F598FA8A3 /* Presenter */ = {
@@ -934,6 +987,18 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		9A0615A8140B74C32DA03E2B /* ScoreScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7A119A4A0F3796A97BE5B8A7 /* View */,
+				A18DD15AAA219DB1B9BF252C /* Presenter */,
+				D751643F2D8BC48A7A8E9167 /* Interactor */,
+				63A7ABAE28452E269402678F /* Router */,
+				86D99DC2830CE11D53043E83 /* Configurator */,
+			);
+			path = ScoreScreen;
+			sourceTree = "<group>";
+		};
 		9CEE67E2285EC8FB9449C2C8 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -960,6 +1025,15 @@
 				5F872E576D287CE17D07E27D /* ProfileInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A18DD15AAA219DB1B9BF252C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A4E8C34E518D043734BB4503 /* ScoreScreenModuleInput.swift */,
+				19171CB6E5559940579F749D /* ScoreScreenPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		A5DBFB403431FAF309503FD7 /* Router */ = {
@@ -1053,6 +1127,16 @@
 				A1CFF49D994BD2777EF36511 /* ProfileInitializer.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		D751643F2D8BC48A7A8E9167 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B524EB920DE5D00C5A103D4C /* ScoreScreenInteractorInput.swift */,
+				591353D8AD09E9F0376BA610 /* ScoreScreenInteractorOutput.swift */,
+				90B0E0327519CFFC074CBF87 /* ScoreScreenInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		D8BAFDFE6A13E0CB76D98A80 /* View */ = {
@@ -1396,6 +1480,18 @@
 				92FF0EA0F3872BA10D1BEE8B /* QuizPartThreeConfigurator.swift in Sources */,
 				5AAFFFAE27464E7100C46DB0 /* PlaceholderTextView.swift in Sources */,
 				C4B9710953CF3F3F9C952B66 /* QuizPartThreeInitializer.swift in Sources */,
+				2E5BD8E59CEECD727C169508 /* ScoreScreenViewInput.swift in Sources */,
+				17AA32A040E0DCD91D23B76D /* ScoreScreenViewOutput.swift in Sources */,
+				1538495593398253E2C71E3B /* ScoreScreenViewController.swift in Sources */,
+				6EEDBA2C96801152FE059E09 /* ScoreScreenModuleInput.swift in Sources */,
+				A1DC76F3F80D304032782720 /* ScoreScreenPresenter.swift in Sources */,
+				533CE720FBF5E7B4DBB1E57F /* ScoreScreenInteractorInput.swift in Sources */,
+				A3C32437A94A31CBF3DF74EE /* ScoreScreenInteractorOutput.swift in Sources */,
+				2BC6D36266C2852480A019F1 /* ScoreScreenInteractor.swift in Sources */,
+				53A6B9D5269D50594C1EE4C6 /* ScoreScreenRouterInput.swift in Sources */,
+				B94F4DDBDB9BA1992F36A2A7 /* ScoreScreenRouter.swift in Sources */,
+				36F083BB886B5C49544D57B8 /* ScoreScreenConfigurator.swift in Sources */,
+				2A0924B903B0ECB8656DEC8E /* ScoreScreenInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

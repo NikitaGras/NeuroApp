@@ -12,7 +12,7 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerTextView: PlaceholderTextView!
     @IBOutlet weak var nextButton: RoundButton!
-    
+
     var output: QuizPartThreeViewOutput!
 
     // MARK: Life cycle

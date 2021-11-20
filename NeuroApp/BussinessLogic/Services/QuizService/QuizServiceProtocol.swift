@@ -9,6 +9,7 @@ import Foundation
 
 protocol QuizServiceProtocol: Observable {
     var quiz: Quiz { get }
+    var history: [Result] { get }
     
     func save(_ quiz: Quiz) throws
     func deleteQuiz()
@@ -24,4 +25,6 @@ protocol QuizServiceProtocol: Observable {
     
     func save(_ partThreeAnswer: PartThreeAnswer) throws
     func getPartThreeQuestion() -> PartThreeQuestion
+    
+    func saveQuizResult()
 }

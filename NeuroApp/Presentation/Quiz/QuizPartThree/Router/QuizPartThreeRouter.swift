@@ -11,6 +11,6 @@ class QuizPartThreeRouter: QuizPartThreeRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func showResultScreen() {
-        
+        let _ = transitionHandler.openModule?(usingSegue: "ShowScoreScreen")
     }
 }

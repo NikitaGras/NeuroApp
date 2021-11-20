@@ -49,6 +49,15 @@ class QuizService: QuizServiceProtocol {
         quiz.partThreeAnswer = partThreeAnswer
     }
     
+    func saveQuizResult() {
+        if let partThreeAnswer = quiz.partThreeAnswer {
+            let result = Result(partOneAnswers: quiz.partOneAnswers,
+                                partTwoAnswers: quiz.partTwoAnswers,
+                                partThreeAnswer: partThreeAnswer)
+            history.append(result)
+        }
+    }
+        
     func getPartThreeQuestion() -> PartThreeQuestion {
         return quiz.partThreeQuestion
     }

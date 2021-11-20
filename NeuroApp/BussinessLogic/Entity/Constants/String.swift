@@ -64,5 +64,14 @@ extension String {
         static let next = "NEXT"
         static let begin = "BEGIN"
         static let ok = "OK"
+        static let goHome = "GO TO HOME PAGE"
+    }
+    
+    struct Score {
+        static let avarage = "Averge:"
+        static let partOne = "Part 1:"
+        static let partTwo = "Part 2:"
+        static let partThree = "Part 3:"
+        static let mainText = "Thank you for finishing the questionnaire! \n\nYou scores are:"
     }
 }

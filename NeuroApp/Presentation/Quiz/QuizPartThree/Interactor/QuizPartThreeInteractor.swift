@@ -35,5 +35,6 @@ class QuizPartThreeInteractor: QuizPartThreeInteractorInput {
     
     func save(answer: PartThreeAnswer) throws {
         try quizService.save(answer)
+        quizService.saveQuizResult()
     }
 }

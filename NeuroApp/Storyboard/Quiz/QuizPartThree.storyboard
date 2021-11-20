@@ -68,6 +68,7 @@
                         <outlet property="answerTextView" destination="5PS-mk-88z" id="yAN-Mq-4aE"/>
                         <outlet property="nextButton" destination="Mhc-M6-q16" id="Ae8-Vz-nVb"/>
                         <outlet property="questionLabel" destination="FNR-Ys-L6j" id="j6r-hz-mse"/>
+                        <segue destination="7xP-Jr-byf" kind="show" identifier="ShowScoreScreen" id="K9H-Iz-i7M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -78,6 +79,16 @@
                 </customObject>
             </objects>
             <point key="canvasLocation" x="139" y="135"/>
+        </scene>
+        <!--Score-->
+        <scene sceneID="e1E-XF-EnA">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ScoreScreenViewController" storyboardName="Score" id="7xP-Jr-byf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fhg-hg-aoy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bL-9W-8MW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="135"/>
         </scene>
     </scenes>
     <resources>
