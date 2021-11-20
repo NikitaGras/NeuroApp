@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asq-Dk-t2Y">
+                                <rect key="frame" x="20" y="44" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpJ-Yb-PlI" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
+                                <rect key="frame" x="124" y="104" width="166" height="186.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KpJ-Yb-PlI" secondAttribute="height" multiplier="8:9" id="XNG-Pv-nAW"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WFx-Rc-X7D">
+                                <rect key="frame" x="20" y="310.5" width="374" height="125"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-zt-Bd4" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="125"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xbM-zt-Bd4" secondAttribute="height" multiplier="8:9" id="wcy-gv-Fl5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bik-u3-PkS" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
+                                        <rect key="frame" x="131.5" y="0.0" width="111" height="125"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Bik-u3-PkS" secondAttribute="height" multiplier="8:9" id="Jh0-cw-1Ts"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfg-Vf-kVy" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
+                                        <rect key="frame" x="262.5" y="0.0" width="111.5" height="125"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="sfg-Vf-kVy" secondAttribute="height" multiplier="8:9" id="iys-Tl-Xvt"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdi-xS-QTq">
+                                <rect key="frame" x="52" y="782" width="310.5" height="50"/>
+                                <color key="backgroundColor" name="NABlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oDb-tn-ZoJ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Asq-Dk-t2Y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="3l3-a9-xIc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Gdi-xS-QTq" secondAttribute="bottom" constant="30" id="4Cs-81-qZC"/>
+                            <constraint firstItem="KpJ-Yb-PlI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6xs-uX-1Ry"/>
+                            <constraint firstItem="Gdi-xS-QTq" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.75" id="9aJ-9n-gzx"/>
+                            <constraint firstItem="KpJ-Yb-PlI" firstAttribute="top" secondItem="Asq-Dk-t2Y" secondAttribute="bottom" constant="30" id="Gex-oM-b2g"/>
+                            <constraint firstItem="WFx-Rc-X7D" firstAttribute="top" secondItem="KpJ-Yb-PlI" secondAttribute="bottom" constant="20" id="JK3-W1-TmK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WFx-Rc-X7D" secondAttribute="trailing" constant="20" id="KZz-eP-Nma"/>
+                            <constraint firstItem="Asq-Dk-t2Y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="KbX-a1-Miu"/>
+                            <constraint firstItem="WFx-Rc-X7D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="PZ4-G2-vIa"/>
+                            <constraint firstItem="Asq-Dk-t2Y" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hFn-Ya-SD2"/>
+                            <constraint firstItem="Gdi-xS-QTq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nti-nz-50w"/>
+                            <constraint firstItem="KpJ-Yb-PlI" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.4" id="rCi-zT-JsA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="NABlue">
+            <color red="0.28235294117647058" green="0.6705882352941176" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

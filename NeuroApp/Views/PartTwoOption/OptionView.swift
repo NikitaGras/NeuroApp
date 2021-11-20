@@ -19,11 +19,17 @@ class OptionView: UIView, OptionViewDelegate {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupInitialState()
+        clipsToBounds = true
+//        setupInitialState()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        clipsToBounds = true
+//        setupInitialState()
+    }
+    
+    override func layoutSubviews() {
         setupInitialState()
     }
     

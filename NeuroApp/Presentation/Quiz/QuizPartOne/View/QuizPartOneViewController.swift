@@ -23,10 +23,16 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
     // MARK: - QuizPartOneViewInput
     func setupInitialState() {
-        navigationController?.isNavigationBarHidden = true
+//        navigationController?.isNavigationBarHidden = true
         taskLabel.text = .PartOneQuiz.taskText
         scaleDescriptionLabels.forEach { label in
             if label.tag == 0 {

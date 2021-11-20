@@ -76,6 +76,10 @@
 		5AA6E2992735654600E64ABA /* GunningFogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2982735654600E64ABA /* GunningFogService.swift */; };
 		5AA6E29B2735655B00E64ABA /* GunningFogServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E29A2735655B00E64ABA /* GunningFogServiceProtocol.swift */; };
 		5AAFFFAE27464E7100C46DB0 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFFFAD27464E7100C46DB0 /* PlaceholderTextView.swift */; };
+		5AAFFFB027467D6900C46DB0 /* Score.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AAFFFAF27467D6900C46DB0 /* Score.storyboard */; };
+		5AAFFFB327467D9100C46DB0 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFFFB227467D9100C46DB0 /* ScoreView.swift */; };
+		5AAFFFB527467DAB00C46DB0 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAFFFB427467DAB00C46DB0 /* ScoreView.xib */; };
+		5AAFFFB927468CC300C46DB0 /* UIView+setupNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFFFB827468CC300C46DB0 /* UIView+setupNib.swift */; };
 		5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F03271AB68400B5C3AD /* Observer.swift */; };
 		5ABF2F06271AB9CC00B5C3AD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F05271AB9CC00B5C3AD /* Observable.swift */; };
 		5ABF2F08271D914A00B5C3AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F07271D914A00B5C3AD /* Result.swift */; };
@@ -243,6 +247,10 @@
 		5AA6E2982735654600E64ABA /* GunningFogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunningFogService.swift; sourceTree = "<group>"; };
 		5AA6E29A2735655B00E64ABA /* GunningFogServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunningFogServiceProtocol.swift; sourceTree = "<group>"; };
 		5AAFFFAD27464E7100C46DB0 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
+		5AAFFFAF27467D6900C46DB0 /* Score.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Score.storyboard; sourceTree = "<group>"; };
+		5AAFFFB227467D9100C46DB0 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		5AAFFFB427467DAB00C46DB0 /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
+		5AAFFFB827468CC300C46DB0 /* UIView+setupNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setupNib.swift"; sourceTree = "<group>"; };
 		5ABF2F03271AB68400B5C3AD /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5ABF2F05271AB9CC00B5C3AD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		5ABF2F07271D914A00B5C3AD /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -628,6 +636,7 @@
 				5A511289270BF1E9008020AB /* QuizPartOne.storyboard */,
 				5A8805192723CEFF00BA12B3 /* QuizPartTwo.storyboard */,
 				5AA6E2952734E96C00E64ABA /* QuizPartThree.storyboard */,
+				5AAFFFAF27467D6900C46DB0 /* Score.storyboard */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -645,6 +654,7 @@
 		5A6F2C4F269AAB20006B065D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5AAFFFB127467D7A00C46DB0 /* ScoreView */,
 				5AA6E2942730DFA800E64ABA /* PartTwoOption */,
 				5A6F2C50269AAB32006B065D /* ViewInput.swift */,
 				5A6F2C52269AB779006B065D /* RoundButton.swift */,
@@ -662,6 +672,7 @@
 				5A6F2C5E269B58A9006B065D /* String+isValid.swift */,
 				5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */,
 				5A5313532738F7C500C38578 /* CGPoint+getOrigin.swift */,
+				5AAFFFB827468CC300C46DB0 /* UIView+setupNib.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -705,6 +716,15 @@
 				5AA6E29A2735655B00E64ABA /* GunningFogServiceProtocol.swift */,
 			);
 			path = GunningFoqService;
+			sourceTree = "<group>";
+		};
+		5AAFFFB127467D7A00C46DB0 /* ScoreView */ = {
+			isa = PBXGroup;
+			children = (
+				5AAFFFB227467D9100C46DB0 /* ScoreView.swift */,
+				5AAFFFB427467DAB00C46DB0 /* ScoreView.xib */,
+			);
+			path = ScoreView;
 			sourceTree = "<group>";
 		};
 		5ABF2F02271AB66900B5C3AD /* Observer */ = {
@@ -1168,6 +1188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A71B2F6269EFE46001A6259 /* Profile.storyboard in Resources */,
+				5AAFFFB527467DAB00C46DB0 /* ScoreView.xib in Resources */,
 				5A166C12269C366600E590C7 /* Tabbar.storyboard in Resources */,
 				5A88051A2723CEFF00BA12B3 /* QuizPartTwo.storyboard in Resources */,
 				5A1E8BB226983D62001179F7 /* Login.storyboard in Resources */,
@@ -1175,6 +1196,7 @@
 				5AA6E2962734E96C00E64ABA /* QuizPartThree.storyboard in Resources */,
 				5A3801B82695D93200883225 /* Assets.xcassets in Resources */,
 				5AE1A50326E61722009FCD4A /* Preview.storyboard in Resources */,
+				5AAFFFB027467D6900C46DB0 /* Score.storyboard in Resources */,
 				5A166C04269BF43200E590C7 /* Home.storyboard in Resources */,
 				5A51128A270BF1E9008020AB /* QuizPartOne.storyboard in Resources */,
 			);
@@ -1246,6 +1268,7 @@
 				5A6F2C5F269B58A9006B065D /* String+isValid.swift in Sources */,
 				9B9B2EE8B558B52CB9602C40 /* LoginViewController.swift in Sources */,
 				7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */,
+				5AAFFFB927468CC300C46DB0 /* UIView+setupNib.swift in Sources */,
 				5A166C0C269C2F7400E590C7 /* String.swift in Sources */,
 				DC40A00B20A3786F8C53AE08 /* LoginPresenter.swift in Sources */,
 				5A166C14269C3E6D00E590C7 /* AppRouter.swift in Sources */,
@@ -1294,6 +1317,7 @@
 				E82616554F277E1DF872E609 /* EditInformationViewInput.swift in Sources */,
 				5AE8500926DB9C2300A834D2 /* QuizServiceProtocol.swift in Sources */,
 				234F0F3C5BAADEB25BBE8584 /* EditInformationViewOutput.swift in Sources */,
+				5AAFFFB327467D9100C46DB0 /* ScoreView.swift in Sources */,
 				1340A306828C795A080C0FC7 /* EditInformationViewController.swift in Sources */,
 				D8E75D43246BF0C78E6A0B1A /* EditInformationModuleInput.swift in Sources */,
 				7DED072E5EC31A88F94113F7 /* EditInformationPresenter.swift in Sources */,
