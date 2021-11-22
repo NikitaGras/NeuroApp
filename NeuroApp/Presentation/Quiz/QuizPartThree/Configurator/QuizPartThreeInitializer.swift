@@ -10,8 +10,8 @@ import UIKit
 
 class QuizPartThreeModuleInitializer: NSObject {
     @IBOutlet weak var quizpartthreeViewController: QuizPartThreeViewController!
+    
     override func awakeFromNib() {
-
         let configurator = QuizPartThreeModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: quizpartthreeViewController)
     }

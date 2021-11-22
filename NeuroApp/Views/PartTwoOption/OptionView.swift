@@ -19,37 +19,39 @@ class OptionView: UIView, OptionViewDelegate {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        clipsToBounds = true
-//        setupInitialState()
+        setupInitialState()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        clipsToBounds = true
-//        setupInitialState()
+        setupInitialState()
     }
     
     override func layoutSubviews() {
-        setupInitialState()
+        super.layoutSubviews()
+        layout()
     }
     
     private func setupInitialState() {
         imageContainerView.translatesAutoresizingMaskIntoConstraints = false
-        imageContainerView.frame.origin = CGPoint.zero
-        imageContainerView.frame.size = frame.size
         imageContainerView.delegate = self
         
         stringContainerView.translatesAutoresizingMaskIntoConstraints = false
-        stringContainerView.frame.origin = CGPoint.zero
-        stringContainerView.frame.size = frame.size
         stringContainerView.delegate = self
         
         heightConstraint.isActive = true
     }
     
+    func layout() {
+        imageContainerView.frame.origin = CGPoint.zero
+        imageContainerView.frame.size = frame.size
+        
+        stringContainerView.frame.origin = CGPoint.zero
+        stringContainerView.frame.size = frame.size
+    }
+    
     func show(options: [Option]) {
         subviews.forEach { $0.removeFromSuperview() }
-        
         if let options = options as? [ImageOption] {
             imageContainerView.setup(with: options)
             heightConstraint.constant = imageContainerView.frame.height

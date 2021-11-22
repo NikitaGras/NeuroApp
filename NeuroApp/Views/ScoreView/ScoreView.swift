@@ -29,12 +29,9 @@ class ScoreView: UIView {
     }
     
     private func setupInitialState() {
-        setupScoreView()
-    }
-    
-    private func setupScoreView() {
         scoreView.layer.borderWidth = 5
         scoreView.layer.borderColor = UIColor.NABlue.cgColor
+        layout()
     }
     
     private func layout() {

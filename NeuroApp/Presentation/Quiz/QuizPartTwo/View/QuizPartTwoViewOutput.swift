@@ -9,5 +9,6 @@
 protocol QuizPartTwoViewOutput {
     var selectedOption: Option? { get set }
     func viewIsReady()
+    func viewDidLayout()
     func save()
 }

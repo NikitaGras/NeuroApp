@@ -20,6 +20,11 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        output.viewDidLayout()
+    }
 
     // MARK: - QuizPartTwoViewInput
     func setupInitialState() {

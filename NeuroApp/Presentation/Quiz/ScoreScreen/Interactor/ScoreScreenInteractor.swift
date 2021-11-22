@@ -16,4 +16,8 @@ class ScoreScreenInteractor: ScoreScreenInteractorInput {
         }
         return result
     }
+    
+    func changeQuize(to state: Quiz.State) {
+        service.changeQuiz(to: state)
+    }
 }

@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Asq-Dk-t2Y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Asq-Dk-t2Y">
                                 <rect key="frame" x="20" y="44" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -32,7 +32,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WFx-Rc-X7D">
-                                <rect key="frame" x="20" y="310.5" width="374" height="125"/>
+                                <rect key="frame" x="20" y="320.5" width="374" height="125"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-zt-Bd4" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="111.5" height="125"/>
@@ -57,7 +57,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdi-xS-QTq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdi-xS-QTq" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
                                 <rect key="frame" x="52" y="782" width="310.5" height="50"/>
                                 <color key="backgroundColor" name="NABlue"/>
                                 <constraints>
@@ -66,10 +66,10 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="goHomeWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JGS-gm-keJ"/>
+                                    <action selector="next:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xw6-9F-nD8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,7 +81,7 @@
                             <constraint firstItem="KpJ-Yb-PlI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6xs-uX-1Ry"/>
                             <constraint firstItem="Gdi-xS-QTq" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.75" id="9aJ-9n-gzx"/>
                             <constraint firstItem="KpJ-Yb-PlI" firstAttribute="top" secondItem="Asq-Dk-t2Y" secondAttribute="bottom" constant="30" id="Gex-oM-b2g"/>
-                            <constraint firstItem="WFx-Rc-X7D" firstAttribute="top" secondItem="KpJ-Yb-PlI" secondAttribute="bottom" constant="20" id="JK3-W1-TmK"/>
+                            <constraint firstItem="WFx-Rc-X7D" firstAttribute="top" secondItem="KpJ-Yb-PlI" secondAttribute="bottom" constant="30" id="JK3-W1-TmK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WFx-Rc-X7D" secondAttribute="trailing" constant="20" id="KZz-eP-Nma"/>
                             <constraint firstItem="Asq-Dk-t2Y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="KbX-a1-Miu"/>
                             <constraint firstItem="WFx-Rc-X7D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="PZ4-G2-vIa"/>
@@ -91,18 +91,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="averageScoreView" destination="KpJ-Yb-PlI" id="Jjr-Rv-rGg"/>
-                        <outlet property="textLabel" destination="Asq-Dk-t2Y" id="zT0-OY-7aU"/>
-                        <outletCollection property="scoreViews" destination="xbM-zt-Bd4" collectionClass="NSMutableArray" id="o3K-s8-9vB"/>
-                        <outletCollection property="scoreViews" destination="Bik-u3-PkS" collectionClass="NSMutableArray" id="bzf-v0-7uE"/>
-                        <outletCollection property="scoreViews" destination="sfg-Vf-kVy" collectionClass="NSMutableArray" id="oRn-BA-3Gu"/>
-                        <segue destination="DB9-MF-mqg" kind="show" identifier="ShowHomeViewController" id="GYC-kP-Qbu"/>
+                        <outlet property="averageScoreView" destination="KpJ-Yb-PlI" id="RrW-Xv-E4e"/>
+                        <outlet property="nextButton" destination="Gdi-xS-QTq" id="bp1-pG-oYU"/>
+                        <outlet property="titleTextLabel" destination="Asq-Dk-t2Y" id="pDa-BV-DKj"/>
+                        <outletCollection property="scoreViews" destination="xbM-zt-Bd4" collectionClass="NSMutableArray" id="1OU-k0-IRq"/>
+                        <outletCollection property="scoreViews" destination="Bik-u3-PkS" collectionClass="NSMutableArray" id="IJO-gd-ojs"/>
+                        <outletCollection property="scoreViews" destination="sfg-Vf-kVy" collectionClass="NSMutableArray" id="Bl9-yv-qJL"/>
+                        <segue destination="DB9-MF-mqg" kind="presentation" identifier="ShowHomeViewController" id="GYC-kP-Qbu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="2R9-tZ-Za3" customClass="ScoreScreenModuleInitializer" customModule="NeuroApp" customModuleProvider="target">
                     <connections>
-                        <outlet property="scorescreenViewController" destination="Y6W-OH-hqX" id="DSY-Zb-XSG"/>
+                        <outlet property="scorescreenViewController" destination="Y6W-OH-hqX" id="8q7-Dg-ThI"/>
                     </connections>
                 </customObject>
             </objects>

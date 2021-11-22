@@ -9,9 +9,10 @@
 import UIKit
 
 class ScoreScreenViewController: UIViewController, ScoreScreenViewInput {
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var titleTextLabel: UILabel!
     @IBOutlet weak var averageScoreView: ScoreView!
     @IBOutlet var scoreViews: [ScoreView]!
+    @IBOutlet weak var nextButton: RoundButton!
     
     var output: ScoreScreenViewOutput!
 
@@ -35,6 +36,8 @@ class ScoreScreenViewController: UIViewController, ScoreScreenViewInput {
                 scoreView.titleLabel.text = String.Score.partThree
             }
         }
+        nextButton.setTitle(String.Button.goHome, for: .normal)
+        titleTextLabel.text = String.Score.mainText
     }
     
     func setup(with result: Result) {
@@ -52,7 +55,7 @@ class ScoreScreenViewController: UIViewController, ScoreScreenViewInput {
         }
     }
     
-    @IBAction func goHome(sender: Any) {
+    @IBAction func next(_ sender: Any) {
         output.goHome()
     }
 }

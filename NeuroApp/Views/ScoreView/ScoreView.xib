@@ -18,11 +18,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="222" height="284"/>
+            <rect key="frame" x="0.0" y="0.0" width="222" height="255"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HQ-AT-TZX">
-                    <rect key="frame" x="0.0" y="62" width="222" height="222"/>
+                    <rect key="frame" x="0.0" y="33" width="222" height="222"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="83S-um-Spk">
                             <rect key="frame" x="5" y="96" width="212" height="30"/>
@@ -41,7 +41,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="APG-bW-M5m">
-                    <rect key="frame" x="10" y="25.5" width="202" height="26.5"/>
+                    <rect key="frame" x="10" y="1.5" width="202" height="26.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -56,12 +56,12 @@
                 <constraint firstItem="1HQ-AT-TZX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="22H-rM-g5b"/>
                 <constraint firstItem="APG-bW-M5m" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="2nv-Ve-Fc2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1HQ-AT-TZX" secondAttribute="bottom" id="6f3-fU-hGE"/>
-                <constraint firstItem="1HQ-AT-TZX" firstAttribute="top" secondItem="APG-bW-M5m" secondAttribute="bottom" constant="10" id="GTV-JM-dZp"/>
+                <constraint firstItem="1HQ-AT-TZX" firstAttribute="top" secondItem="APG-bW-M5m" secondAttribute="bottom" constant="5" id="GTV-JM-dZp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="APG-bW-M5m" secondAttribute="trailing" constant="10" id="aCw-Yc-BhK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1HQ-AT-TZX" secondAttribute="trailing" id="oSK-JU-eST"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="45" y="-2.112676056338028"/>
+            <point key="canvasLocation" x="45" y="13.204225352112676"/>
         </view>
     </objects>
     <resources>

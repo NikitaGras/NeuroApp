@@ -10,6 +10,7 @@ import ViperMcFlurry
 
 class ScoreScreenRouter: ScoreScreenRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
+    var viewController: UIViewController!
     
     func goHome() {
         _ = transitionHandler.openModule?(usingSegue: "ShowHomeViewController")

@@ -12,7 +12,7 @@ class ScoreScreenPresenter: ScoreScreenModuleInput, ScoreScreenViewOutput, Score
     var router: ScoreScreenRouterInput!
 
     func viewIsReady() {
-        viewIsReady()
+        view.setupInitialState()
         getResult()
     }
     
@@ -26,6 +26,7 @@ class ScoreScreenPresenter: ScoreScreenModuleInput, ScoreScreenViewOutput, Score
     }
     
     func goHome() {
+        interactor.changeQuize(to: .notAvailable)
         router.goHome()
     }
 }

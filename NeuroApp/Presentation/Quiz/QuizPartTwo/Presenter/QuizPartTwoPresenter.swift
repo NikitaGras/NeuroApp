@@ -25,6 +25,9 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
         questions = interactor.getQuestions()
         answers = interactor.getAnswers()
         index = answers.count
+    }
+    
+    func viewDidLayout() {
         show(question: questions[index])
     }
     

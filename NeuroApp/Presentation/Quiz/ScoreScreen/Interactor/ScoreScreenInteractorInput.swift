@@ -10,4 +10,5 @@ import Foundation
 
 protocol ScoreScreenInteractorInput {
     func getResult()throws -> Result
+    func changeQuize(to state: Quiz.State)
 }
