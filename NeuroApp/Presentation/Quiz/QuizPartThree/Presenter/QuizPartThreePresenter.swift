@@ -7,7 +7,6 @@
 //
 
 class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput, QuizPartThreeInteractorOutput {
-
     weak var view: QuizPartThreeViewInput!
     var interactor: QuizPartThreeInteractorInput!
     var router: QuizPartThreeRouterInput!
@@ -19,9 +18,10 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
         showQuestion()
     }
     
-    func check(userText: String) {
+    func save(userText: String) {
         self.userText = userText
-        if userText.count <= 49 {
+        let maxCharNumber = 49
+        if userText.count <= maxCharNumber {
             let error = ValidationError.custom(String.ValidationError.shortAnswer)
             view.show(error)
         } else {

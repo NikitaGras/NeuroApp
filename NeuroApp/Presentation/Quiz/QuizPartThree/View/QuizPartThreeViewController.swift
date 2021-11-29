@@ -34,6 +34,6 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     
     @IBAction func next(sender: RoundButton) {
         let text = answerTextView.text ?? ""
-        output.check(userText: text)
+        output.save(userText: text)
     }
 }

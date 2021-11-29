@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -97,10 +97,11 @@
                         <outletCollection property="scoreViews" destination="xbM-zt-Bd4" collectionClass="NSMutableArray" id="1OU-k0-IRq"/>
                         <outletCollection property="scoreViews" destination="Bik-u3-PkS" collectionClass="NSMutableArray" id="IJO-gd-ojs"/>
                         <outletCollection property="scoreViews" destination="sfg-Vf-kVy" collectionClass="NSMutableArray" id="Bl9-yv-qJL"/>
-                        <segue destination="DB9-MF-mqg" kind="presentation" identifier="ShowHomeViewController" id="GYC-kP-Qbu"/>
+                        <segue destination="9TM-Hp-jyo" kind="unwind" identifier="ShowHomeViewController" unwindAction="unwind:" id="jfn-tO-tIA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9TM-Hp-jyo" userLabel="Exit" sceneMemberID="exit"/>
                 <customObject id="2R9-tZ-Za3" customClass="ScoreScreenModuleInitializer" customModule="NeuroApp" customModuleProvider="target">
                     <connections>
                         <outlet property="scorescreenViewController" destination="Y6W-OH-hqX" id="8q7-Dg-ThI"/>
@@ -108,16 +109,6 @@
                 </customObject>
             </objects>
             <point key="canvasLocation" x="100.00000000000001" y="134.59821428571428"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="iQC-NL-3AJ">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="HomeViewController" storyboardName="Home" id="DB9-MF-mqg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="tFH-Y7-DT3"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cw8-SD-ReS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="665" y="135"/>
         </scene>
     </scenes>
     <resources>
