@@ -34,4 +34,8 @@ class PreviewBaseInfoViewController: UIViewController, PreviewBaseInfoViewInput 
     @IBAction func next(_ sender: Any) {
         output.next()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        navigationItem.backButtonTitle = String.Button.backQuiz
+    }
 }

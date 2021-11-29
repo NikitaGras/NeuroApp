@@ -59,4 +59,8 @@ class HomeViewController: UIViewController, HomeViewInput {
     @IBAction func examine(_ sender: RoundButton) {
         output.openQuiz()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        navigationItem.backButtonTitle = String.Button.backHome
+    }
 }

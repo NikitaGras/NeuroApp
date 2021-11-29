@@ -65,6 +65,8 @@ extension String {
         static let begin = "BEGIN"
         static let ok = "OK"
         static let goHome = "GO TO HOME PAGE"
+        static let backHome = "Home"
+        static let backQuiz = "Questionnaire"
     }
     
     struct Score {

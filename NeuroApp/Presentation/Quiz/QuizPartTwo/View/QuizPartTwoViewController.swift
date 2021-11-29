@@ -19,6 +19,7 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+        nextButton.isEnabled = false
     }
     
     override func viewDidLayoutSubviews() {

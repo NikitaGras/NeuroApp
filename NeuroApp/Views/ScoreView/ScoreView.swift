@@ -25,16 +25,13 @@ class ScoreView: UIView {
     }
     
     override func layoutSubviews() {
-        layout()
+        super.layoutSubviews()
+        scoreView.layer.cornerRadius = self.frame.width / 2
     }
     
     private func setupInitialState() {
         scoreView.layer.borderWidth = 5
         scoreView.layer.borderColor = UIColor.NABlue.cgColor
-        layout()
     }
-    
-    private func layout() {
-        scoreView.layer.cornerRadius = scoreView.frame.width / 2
-    }
+
 }

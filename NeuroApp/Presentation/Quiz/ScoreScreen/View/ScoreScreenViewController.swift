@@ -52,6 +52,8 @@ class ScoreScreenViewController: UIViewController, ScoreScreenViewInput {
             if scoreView.tag == 2 {
                 scoreView.scoreLabel.text = result.partThreeScore.description
             }
+            
+            scoreView.layoutSubviews()
         }
     }
     

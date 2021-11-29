@@ -25,7 +25,6 @@ struct Result {
     }
     
     var partTwoScore: Int {
-        // TODO: не помню как рассчитывается.
         var sum: Double = 0
         partTwoAnswers.forEach { answer in
             if answer.option.isRight {

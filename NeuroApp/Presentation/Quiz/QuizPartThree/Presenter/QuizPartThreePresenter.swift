@@ -22,7 +22,8 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
     func check(userText: String) {
         self.userText = userText
         if userText.count <= 49 {
-            view.show(ValidationError.custom(String.ValidationError.shortAnswer))
+            let error = ValidationError.custom(String.ValidationError.shortAnswer)
+            view.show(error)
         } else {
             interactor.getGunningFoqIndex(for: userText)
         }
