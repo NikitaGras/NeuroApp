@@ -28,6 +28,7 @@ struct Result {
         var sum: Double = 0
         partTwoAnswers.forEach { answer in
             if answer.option.isRight {
+                //TODO: поправить расчет
                 sum += 0.5
                 sum += answer.responseTime < 4 ? 0.5 : 0
             }
@@ -36,7 +37,6 @@ struct Result {
     }
     
     var partThreeScore: Int {
-        //TODO:
         return Int(partThreeAnswer.value)
     }
 }

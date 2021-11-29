@@ -8,7 +8,7 @@
 import Alamofire
 
 class GanningFogService: GanningFogSeviceProtocol {
-    func getGunninhFogIndex(for text: String, complitionHandler: @escaping (Double?, Error?) -> Void) {
+    func getGunningFogIndex(for text: String, complitionHandler: @escaping (Double?, Error?) -> Void) {
         let url = "https://ipeirotis-readability-metrics.p.rapidapi.com/getReadabilityMetrics"
         let headers: HTTPHeaders = [
             HTTPHeader(name: "x-rapidapi-host", value: "ipeirotis-readability-metrics.p.rapidapi.com"),
@@ -22,8 +22,7 @@ class GanningFogService: GanningFogSeviceProtocol {
             case .success(let data):
                 guard let json = data as? [String:Any],
                       let gunningFogIndex = json["GUNNING_FOG"] as? Double else {
-                          complitionHandler(nil, SystemError.default)
-                          return
+                          return complitionHandler(nil, SystemError.default)
                       }
                 complitionHandler(gunningFogIndex, nil)
             case .failure(let error):

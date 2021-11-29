@@ -21,7 +21,6 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
         output.viewIsReady()
     }
 
-
     // MARK: QuizPartThreeViewInput
     func setupInitialState() {
         nextButton.setTitle(String.Button.next, for: .normal)

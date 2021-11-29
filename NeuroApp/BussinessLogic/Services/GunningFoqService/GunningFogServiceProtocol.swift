@@ -8,5 +8,5 @@
 import Foundation
 
 protocol GanningFogSeviceProtocol {
-    func getGunninhFogIndex(for text: String, complitionHandler: @escaping (Double?, Error?) -> Void)
+    func getGunningFogIndex(for text: String, complitionHandler: @escaping (Double?, Error?) -> Void)
 }

@@ -16,41 +16,23 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
     
     func viewIsReady() {
         view.setupInitialState()
-        showQuestion()
+        let question = interactor.getQuestion()
+        view.show(question: question)
     }
-    
+
     func save(userText: String) {
-        self.userText = userText
         let maxCharNumber = 49
-        if userText.count <= maxCharNumber {
-            let error = ValidationError.custom(String.ValidationError.shortAnswer)
-            view.show(error)
-        } else {
-            interactor.getGunningFoqIndex(for: userText)
+        guard userText.count >= maxCharNumber else {
+            return view.show(ValidationError.custom(String.ValidationError.shortAnswer))
         }
-    }
-    
-    func save(with gunningFog: Double) {
-        do {
-            let value = calculateIntoPercent(gunningFog)
-            let answer = PartThreeAnswer(userText: userText, value: value)
-            try interactor.save(answer: answer)
-            router.showResultScreen()
-        } catch {
-            view.show(error)
-        }
+        interactor.save(userText: userText)
     }
     
     func denied(with error: Error) {
         view.show(error)
     }
     
-    func showQuestion() {
-        let question = interactor.getQuestion()
-        view.show(question: question)
-    }
-    
-    func calculateIntoPercent(_ gunningFogIndex: Double) -> Double {
-        return atan(gunningFogIndex) * 100.0 / (Double.pi / 2)
+    func showResultScreen() {
+        router.showResultScreen()
     }
 }

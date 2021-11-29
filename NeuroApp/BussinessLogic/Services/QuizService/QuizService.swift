@@ -14,7 +14,6 @@ class QuizService: QuizServiceProtocol {
             notifyObservers()
         }
     }
-    
     var history = [Result]()
     var quiz: Quiz
     
@@ -22,33 +21,43 @@ class QuizService: QuizServiceProtocol {
         self.quiz = QuizService.fetchQuiz()
     }
     
+    static private func fetchQuiz() -> Quiz {
+    //TODO: реализовать после подключения CoreData
+        return Quiz()
+    }
+    
     func save(_ partOneAnswer: PartOneAnswer) throws {
         quiz.partOneAnswers.append(partOneAnswer)
     }
-    
-    func getPartOneQuestions() -> [PartOneQuestion] {
-        return  quiz.partOneQuestions
-    }
-    
-    func getPartOneAnswers() -> [PartOneAnswer] {
-        return quiz.partOneAnswers
-    }
+//
+//    func getPartOneQuestions() -> [PartOneQuestion] {
+//        return quiz.partOneQuestions
+//    }
+//
+//    func getPartOneAnswers() -> [PartOneAnswer] {
+//        return quiz.partOneAnswers
+//    }
     
     func save(_ partTwoAnswer: PartTwoAnswer) throws {
         quiz.partTwoAnswers.append(partTwoAnswer)
     }
-    
-    func getPartTwoQuestions() -> [PartTwoQuestion] {
-        return quiz.partTwoQuestions
-    }
-    
-    func getPartTwoAnswers() -> [PartTwoAnswer] {
-        return quiz.partTwoAnswers
-    }
+//
+//    func getPartTwoQuestions() -> [PartTwoQuestion] {
+//        return quiz.partTwoQuestions
+//    }
+//
+//    func getPartTwoAnswers() -> [PartTwoAnswer] {
+//        return quiz.partTwoAnswers
+//    }
     
     func save(_ partThreeAnswer: PartThreeAnswer) throws {
         quiz.partThreeAnswer = partThreeAnswer
+        saveQuizResult()
     }
+    
+//    func getPartThreeQuestion() -> PartThreeQuestion {
+//        return quiz.partThreeQuestion
+//    }
     
     func saveQuizResult() {
         if let partThreeAnswer = quiz.partThreeAnswer {
@@ -58,23 +67,13 @@ class QuizService: QuizServiceProtocol {
             history.append(result)
         }
     }
-        
-    func getPartThreeQuestion() -> PartThreeQuestion {
-        return quiz.partThreeQuestion
-    }
     
-    static private func fetchQuiz() -> Quiz {
-    //TODO: реализовать после подключения CoreData
-        return Quiz()
-    }
-    
-    func save(_ quiz: Quiz) throws {
-        self.quiz = quiz
-    }
-    
-    // TODO: delete?
     func deleteQuiz() {
         quiz = Quiz()
+    }
+    
+    func deleteHistory() {
+        history = []
     }
     
     func changeQuiz(to state: Quiz.State) {

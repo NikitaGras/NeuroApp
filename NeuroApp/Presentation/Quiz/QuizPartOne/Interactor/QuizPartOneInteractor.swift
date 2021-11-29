@@ -11,18 +11,14 @@ class QuizPartOneInteractor: QuizPartOneInteractorInput {
     var service: QuizServiceProtocol!
     
     func getQuestions() -> [PartOneQuestion] {
-        return service.getPartOneQuestions()
+        return service.quiz.partOneQuestions
     }
     
     func getAnswers() -> [PartOneAnswer] {
-        service.getPartOneAnswers()
+        return service.quiz.partOneAnswers
     }
     
     func save(_ answer: PartOneAnswer) throws {
         try service.save(answer)
-    }
-    
-    func changeQuiz(to state: Quiz.State) {
-        service.changeQuiz(to: state)
     }
 }

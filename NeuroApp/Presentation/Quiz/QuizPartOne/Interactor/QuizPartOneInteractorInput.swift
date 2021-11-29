@@ -12,5 +12,4 @@ protocol QuizPartOneInteractorInput {
     func save(_ answer: PartOneAnswer) throws
     func getQuestions() -> [PartOneQuestion]
     func getAnswers() -> [PartOneAnswer]
-    func changeQuiz(to state: Quiz.State)
 }

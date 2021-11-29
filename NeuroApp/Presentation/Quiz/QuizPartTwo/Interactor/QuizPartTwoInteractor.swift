@@ -15,14 +15,10 @@ class QuizPartTwoInteractor: QuizPartTwoInteractorInput {
     }
     
     func getQuestions() -> [PartTwoQuestion] {
-        return service.getPartTwoQuestions()
+        return service.quiz.partTwoQuestions
     }
     
     func getAnswers() -> [PartTwoAnswer] {
-        return service.getPartTwoAnswers()
-    }
-    
-    func changeQuiz(to state: Quiz.State) {
-        service.changeQuiz(to: .partThreeProceed)
+        return service.quiz.partTwoAnswers
     }
 }

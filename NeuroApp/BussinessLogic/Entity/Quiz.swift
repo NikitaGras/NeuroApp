@@ -14,13 +14,29 @@ struct Quiz {
     }
     
     var partOneQuestions = QuestionsBank().partOneQuestions
-    var partOneAnswers = [PartOneAnswer]()
+    var partOneAnswers = [PartOneAnswer]() {
+        didSet {
+            if partOneAnswers.count == partOneQuestions.count {
+                self.state = .partTwoProceed
+            }
+        }
+    }
     
     var partTwoQuestions = QuestionsBank().partTwoQuestions
-    var partTwoAnswers = [PartTwoAnswer]()
+    var partTwoAnswers = [PartTwoAnswer]() {
+        didSet {
+            if partTwoAnswers.count == partTwoQuestions.count {
+                self.state = .partThreeProceed
+            }
+        }
+    }
     
     var partThreeQuestion = QuestionsBank().partThreeQuestion
-    var partThreeAnswer: PartThreeAnswer?
+    var partThreeAnswer: PartThreeAnswer? {
+        didSet {
+            self.state = .notAvailable
+        }
+    }
 }
 
 extension Quiz {

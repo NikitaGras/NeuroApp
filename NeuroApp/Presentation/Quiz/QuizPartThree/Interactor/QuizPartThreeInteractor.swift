@@ -14,27 +14,33 @@ class QuizPartThreeInteractor: QuizPartThreeInteractorInput {
     var quizService: QuizServiceProtocol!
     var ganningFogService: GanningFogSeviceProtocol!
     
-//    var question: PartThreeQuestion {
-//        return quizService.getPartThreeQuestion()
-//    }
-    
     func getQuestion() -> PartThreeQuestion {
-        return quizService.getPartThreeQuestion()
+        return quizService.quiz.partThreeQuestion
     }
     
-    func getGunningFoqIndex(for text: String) {
-        ganningFogService.getGunninhFogIndex(for: text) { gunningFog, error in
-            if let gunningFog = gunningFog {
-                self.output.save(with: gunningFog)
+    func save(userText: String) {
+        ganningFogService.getGunningFogIndex(for: userText) { gunningFogIndex, error in
+            if let gunningFogIndex = gunningFogIndex {
+                let value = self.calculateIntoPercent(gunningFogIndex)
+                let answer = PartThreeAnswer(userText: userText, value: value)
+                self.save(answer: answer)
             }
             if let error = error {
                 self.output.denied(with: error)
             }
         }
     }
+
+    func calculateIntoPercent(_ gunningFogIndex: Double) -> Double {
+        return atan(gunningFogIndex) * 100.0 / (Double.pi / 2)
+    }
     
-    func save(answer: PartThreeAnswer) throws {
-        try quizService.save(answer)
-        quizService.saveQuizResult()
+    func save(answer: PartThreeAnswer) {
+        do {
+            try self.quizService.save(answer)
+            self.output.showResultScreen()
+        } catch {
+            self.output.denied(with: error)
+        }
     }
 }

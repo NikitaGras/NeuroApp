@@ -60,7 +60,6 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
     }
     
     func openNextPart() {
-        interactor.changeQuiz(to: .partThreeProceed)
         router.openNextPart()
     }
     
