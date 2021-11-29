@@ -14,6 +14,7 @@ class QuizService: QuizServiceProtocol {
             notifyObservers()
         }
     }
+    
     var history = [Result]()
     var quiz: Quiz
     

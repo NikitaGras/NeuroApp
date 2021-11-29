@@ -5,6 +5,7 @@
 //  Created by Nikita Gras on 05/11/2021.
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
+import Foundation
 
 class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput, QuizPartThreeInteractorOutput {
     weak var view: QuizPartThreeViewInput!
@@ -31,7 +32,8 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
     
     func save(with gunningFog: Double) {
         do {
-            let answer = PartThreeAnswer(userText: userText, value: gunningFog)
+            let value = calculateIntoPercent(gunningFog)
+            let answer = PartThreeAnswer(userText: userText, value: value)
             try interactor.save(answer: answer)
             router.showResultScreen()
         } catch {
@@ -46,5 +48,9 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
     func showQuestion() {
         let question = interactor.getQuestion()
         view.show(question: question)
+    }
+    
+    func calculateIntoPercent(_ gunningFogIndex: Double) -> Double {
+        return atan(gunningFogIndex) * 100.0 / (Double.pi / 2)
     }
 }

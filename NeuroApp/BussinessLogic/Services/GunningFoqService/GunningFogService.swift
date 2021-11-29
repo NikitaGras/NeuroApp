@@ -25,15 +25,10 @@ class GanningFogService: GanningFogSeviceProtocol {
                           complitionHandler(nil, SystemError.default)
                           return
                       }
-                let gunningFog = self.calculate(gunningFog: gunningFogIndex)
-                complitionHandler(gunningFog, nil)
+                complitionHandler(gunningFogIndex, nil)
             case .failure(let error):
                 complitionHandler(nil, error)
             }
         }
-    }
-    
-    func calculate(gunningFog: Double) -> Double {
-        return atan(gunningFog) * 100.0 / (Double.pi / 2)
     }
 }
