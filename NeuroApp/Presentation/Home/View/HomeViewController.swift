@@ -28,22 +28,13 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
     
     func update(with quiz: Quiz) {
-        updateQuizButton(with: quiz)
-    }
-    
-    func update(with user: User) {
-        updateStatus(with: user)
-    }
-    
-    func updateQuizButton(with quiz: Quiz) {
         if quiz.state == .begin {
             let title = String.QuizState.begin
             quizButton.isEnabled = true
             quizButton.setTitle(title, for: .normal)
         } else if quiz.state == .notAvailable {
-            let title = String.QuizState.notAvailable
             quizButton.isEnabled = false
-            quizButton.setTitle(title, for: .disabled)
+            output.startTimer()
         } else if quiz.isProceed {
             let title = String.QuizState.proceed
             quizButton.isEnabled = true
@@ -51,9 +42,14 @@ class HomeViewController: UIViewController, HomeViewInput {
         }
     }
     
-    func updateStatus(with user: User) {
+    func update(with user: User) {
         statusLabel.text = user.status.description
         statusView.setBorderColor(for: user.status)
+    }
+    
+    func setupButtonTitle(with timeInterval: TimeInterval) {
+        let title = timeInterval.description + " " + String.QuizState.notAvailable
+        quizButton.setTitle(title, for: .disabled)
     }
     
     @IBAction func examine(_ sender: RoundButton) {
@@ -65,6 +61,5 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        
     }
 }

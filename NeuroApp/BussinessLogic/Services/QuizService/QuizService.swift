@@ -29,47 +29,30 @@ class QuizService: QuizServiceProtocol {
     func save(_ partOneAnswer: PartOneAnswer) throws {
         quiz.partOneAnswers.append(partOneAnswer)
     }
-//
-//    func getPartOneQuestions() -> [PartOneQuestion] {
-//        return quiz.partOneQuestions
-//    }
-//
-//    func getPartOneAnswers() -> [PartOneAnswer] {
-//        return quiz.partOneAnswers
-//    }
     
     func save(_ partTwoAnswer: PartTwoAnswer) throws {
         quiz.partTwoAnswers.append(partTwoAnswer)
     }
-//
-//    func getPartTwoQuestions() -> [PartTwoQuestion] {
-//        return quiz.partTwoQuestions
-//    }
-//
-//    func getPartTwoAnswers() -> [PartTwoAnswer] {
-//        return quiz.partTwoAnswers
-//    }
     
     func save(_ partThreeAnswer: PartThreeAnswer) throws {
         quiz.partThreeAnswer = partThreeAnswer
         saveQuizResult()
     }
     
-//    func getPartThreeQuestion() -> PartThreeQuestion {
-//        return quiz.partThreeQuestion
-//    }
-    
     func saveQuizResult() {
         if let partThreeAnswer = quiz.partThreeAnswer {
+            let finishTime = Date()
             let result = Result(partOneAnswers: quiz.partOneAnswers,
                                 partTwoAnswers: quiz.partTwoAnswers,
-                                partThreeAnswer: partThreeAnswer)
+                                partThreeAnswer: partThreeAnswer,
+                                finishTime: finishTime)
             history.append(result)
         }
     }
     
-    func deleteQuiz() {
-        quiz = Quiz()
+    func startNewQuiz() {
+        self.quiz = Quiz()
+        notifyObservers()
     }
     
     func deleteHistory() {

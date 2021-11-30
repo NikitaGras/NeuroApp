@@ -5,6 +5,7 @@
 //  Created by Nikita Gras on 12/07/2021.
 //  Copyright © 2021 MyCompany. All rights reserved.
 //
+import Foundation
 
 class HomeInteractor: HomeInteractorInput, Observer {
     weak var output: HomeInteractorOutput!
@@ -31,6 +32,14 @@ class HomeInteractor: HomeInteractorInput, Observer {
         if let user = data as? User {
             output.update(with: user)
         }
+    }
+    
+    func startNewQuiz() {
+        quizService.startNewQuiz()
+    }
+    
+    func getFinishTime() -> TimeInterval {
+        quizService.history.last?.finishTime.timeIntervalSince1970 ?? 0
     }
     
     func registerObserver() {

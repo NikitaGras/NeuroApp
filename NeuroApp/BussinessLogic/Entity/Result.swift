@@ -11,6 +11,7 @@ struct Result {
     let partOneAnswers: [PartOneAnswer]
     let partTwoAnswers: [PartTwoAnswer]
     let partThreeAnswer: PartThreeAnswer
+    let finishTime: Date
     
     var avarageScore: Int {
         return (partOneScore + partTwoScore + partThreeScore) / 3

@@ -12,7 +12,7 @@ protocol QuizServiceProtocol: Observable {
     var quiz: Quiz { get }
     
     func deleteHistory()
-    func deleteQuiz()
+    func startNewQuiz()
     func changeQuiz(to state: Quiz.State)
     
     func save(_ partOneAnswer: PartOneAnswer) throws
