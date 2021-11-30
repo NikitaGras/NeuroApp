@@ -25,6 +25,7 @@ class HomeViewController: UIViewController, HomeViewInput {
     func setupInitialState() {
         quizButton.setBackgroundColor(.NAGray, for: .disabled)
         quizButton.setBackgroundColor(.NABlue, for: .normal)
+        quizButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     func update(with quiz: Quiz) {

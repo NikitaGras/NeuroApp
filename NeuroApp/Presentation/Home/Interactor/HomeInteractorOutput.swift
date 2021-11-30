@@ -11,5 +11,6 @@ import Foundation
 protocol HomeInteractorOutput: AnyObject {
     func update(with quiz: Quiz)
     func update(with user: User)
+    
     func openLogin()
 }
