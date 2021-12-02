@@ -29,15 +29,18 @@ struct Result {
         var sum: Double = 0
         partTwoAnswers.forEach { answer in
             if answer.option.isRight {
-                //TODO: поправить расчет
                 sum += 0.5
-                sum += answer.responseTime < 4 ? 0.5 : 0
+                if answer.responseTime <= 1 {
+                    sum += 0.5
+                } else if answer.responseTime <= 3 {
+                    sum += (-0.25 * answer.responseTime + 0.75)
+                }
             }
         }
         return Int(sum * 100 / Double(partTwoAnswers.count))
     }
     
     var partThreeScore: Int {
-        return Int(partThreeAnswer.value)
+        return Int(atan(partThreeAnswer.value) * 100.0 / (Double.pi / 2))
     }
 }

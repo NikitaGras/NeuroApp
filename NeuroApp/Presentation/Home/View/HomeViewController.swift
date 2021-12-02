@@ -20,6 +20,10 @@ class HomeViewController: UIViewController, HomeViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     // MARK: - HomeViewInput
     func setupInitialState() {

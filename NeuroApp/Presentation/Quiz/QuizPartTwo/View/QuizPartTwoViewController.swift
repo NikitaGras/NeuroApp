@@ -29,6 +29,7 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
 
     // MARK: - QuizPartTwoViewInput
     func setupInitialState() {
+        navigationController?.setNavigationBarHidden(true, animated: true)
         nextButton.setTitle(.Button.next, for: .normal)
         nextButton.setBackgroundColor(UIColor.NAGreen, for: .normal)
         nextButton.setBackgroundColor(UIColor.gray, for: .disabled)

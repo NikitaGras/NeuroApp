@@ -23,6 +23,7 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
 
     // MARK: QuizPartThreeViewInput
     func setupInitialState() {
+        navigationController?.setNavigationBarHidden(true, animated: true)
         nextButton.setTitle(String.Button.next, for: .normal)
         answerTextView.placeholderText = String.PartThreeQuiz.placeholder
     }

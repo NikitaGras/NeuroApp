@@ -21,18 +21,13 @@ class QuizPartThreeInteractor: QuizPartThreeInteractorInput {
     func save(userText: String) {
         ganningFogService.getGunningFogIndex(for: userText) { gunningFogIndex, error in
             if let gunningFogIndex = gunningFogIndex {
-                let value = self.calculateIntoPercent(gunningFogIndex)
-                let answer = PartThreeAnswer(userText: userText, value: value)
+                let answer = PartThreeAnswer(userText: userText, value: gunningFogIndex)
                 self.save(answer: answer)
             }
             if let error = error {
                 self.output.denied(with: error)
             }
         }
-    }
-
-    func calculateIntoPercent(_ gunningFogIndex: Double) -> Double {
-        return atan(gunningFogIndex) * 100.0 / (Double.pi / 2)
     }
     
     func save(answer: PartThreeAnswer) {
