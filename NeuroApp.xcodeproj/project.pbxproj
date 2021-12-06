@@ -81,6 +81,8 @@
 		5A9251BA275E649800D9195F /* MainHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9251B9275E649800D9195F /* MainHistory.storyboard */; };
 		5A9251BC275E680E00D9195F /* AverageScoreHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9251BB275E680E00D9195F /* AverageScoreHistory.storyboard */; };
 		5A9251BE275E690600D9195F /* PartOneHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9251BD275E690600D9195F /* PartOneHistory.storyboard */; };
+		5A9251C2275E6EF400D9195F /* PartTwoHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9251C1275E6EF400D9195F /* PartTwoHistory.storyboard */; };
+		5A9251C4275E70FF00D9195F /* PartThreeHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9251C3275E70FF00D9195F /* PartThreeHistory.storyboard */; };
 		5AA6E28D272FE62E00E64ABA /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E28C272FE62E00E64ABA /* OptionView.swift */; };
 		5AA6E28F272FE67E00E64ABA /* OptionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */; };
 		5AA6E2912730001B00E64ABA /* OptionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */; };
@@ -265,6 +267,8 @@
 		5A9251B9275E649800D9195F /* MainHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainHistory.storyboard; sourceTree = "<group>"; };
 		5A9251BB275E680E00D9195F /* AverageScoreHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AverageScoreHistory.storyboard; sourceTree = "<group>"; };
 		5A9251BD275E690600D9195F /* PartOneHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PartOneHistory.storyboard; sourceTree = "<group>"; };
+		5A9251C1275E6EF400D9195F /* PartTwoHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PartTwoHistory.storyboard; sourceTree = "<group>"; };
+		5A9251C3275E70FF00D9195F /* PartThreeHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PartThreeHistory.storyboard; sourceTree = "<group>"; };
 		5AA6E28C272FE62E00E64ABA /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
 		5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionImageView.swift; sourceTree = "<group>"; };
 		5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewDelegate.swift; sourceTree = "<group>"; };
@@ -740,6 +744,8 @@
 				5A9251B9275E649800D9195F /* MainHistory.storyboard */,
 				5A9251BB275E680E00D9195F /* AverageScoreHistory.storyboard */,
 				5A9251BD275E690600D9195F /* PartOneHistory.storyboard */,
+				5A9251C1275E6EF400D9195F /* PartTwoHistory.storyboard */,
+				5A9251C3275E70FF00D9195F /* PartThreeHistory.storyboard */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -1297,6 +1303,8 @@
 				5A71B2F6269EFE46001A6259 /* Profile.storyboard in Resources */,
 				5AAFFFB527467DAB00C46DB0 /* ScoreView.xib in Resources */,
 				5A9251BA275E649800D9195F /* MainHistory.storyboard in Resources */,
+				5A9251C2275E6EF400D9195F /* PartTwoHistory.storyboard in Resources */,
+				5A9251C4275E70FF00D9195F /* PartThreeHistory.storyboard in Resources */,
 				5A166C12269C366600E590C7 /* Tabbar.storyboard in Resources */,
 				5A88051A2723CEFF00BA12B3 /* QuizPartTwo.storyboard in Resources */,
 				5A1E8BB226983D62001179F7 /* Login.storyboard in Resources */,
