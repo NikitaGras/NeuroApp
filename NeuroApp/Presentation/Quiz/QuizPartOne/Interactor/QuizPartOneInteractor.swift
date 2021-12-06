@@ -10,6 +10,10 @@ class QuizPartOneInteractor: QuizPartOneInteractorInput {
     weak var output: QuizPartOneInteractorOutput!
     var service: QuizServiceProtocol!
     
+    var quiz: Quiz {
+        return service.quiz
+    }
+    
     func getQuestions() -> [PartOneQuestion] {
         return service.quiz.partOneQuestions
     }

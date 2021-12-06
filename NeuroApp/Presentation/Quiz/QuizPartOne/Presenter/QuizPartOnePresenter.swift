@@ -21,6 +21,7 @@ class QuizPartOnePresenter: QuizPartOneModuleInput, QuizPartOneViewOutput, QuizP
         index = interactor.getAnswers().count
         view.show(questions[index])
         view.setupProgressBar(viewsNumber: questions.count, currentIndex: index, startValue: 0)
+        view.setupProgressViewStack(with: interactor.quiz)
     }
     
     func save(_ answer: PartOneAnswer) {

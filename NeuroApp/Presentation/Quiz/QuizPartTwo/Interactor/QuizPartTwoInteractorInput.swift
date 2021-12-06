@@ -9,6 +9,7 @@
 import Foundation
 
 protocol QuizPartTwoInteractorInput {
+    var quiz: Quiz { get }
     func save(_ answer: PartTwoAnswer) throws
     func getQuestions() -> [PartTwoQuestion]
     func getAnswers() -> [PartTwoAnswer]

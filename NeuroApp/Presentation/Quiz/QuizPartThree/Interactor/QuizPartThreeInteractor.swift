@@ -14,6 +14,10 @@ class QuizPartThreeInteractor: QuizPartThreeInteractorInput {
     var quizService: QuizServiceProtocol!
     var ganningFogService: GanningFogSeviceProtocol!
     
+    var quiz: Quiz {
+        return quizService.quiz
+    }
+    
     func getQuestion() -> PartThreeQuestion {
         return quizService.quiz.partThreeQuestion
     }

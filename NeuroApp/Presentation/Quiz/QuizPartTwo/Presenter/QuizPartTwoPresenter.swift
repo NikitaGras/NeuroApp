@@ -27,6 +27,7 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
         index = answers.count
         let partOneQuestionCount = interactor.getPartOneQuestionCount()
         view.setupProgressBar(viewsNumber: questions.count, currentIndex: index, startValue: partOneQuestionCount)
+        view.setupProgressViewStack(with: interactor.quiz)
     }
     
     func viewDidLayout() {

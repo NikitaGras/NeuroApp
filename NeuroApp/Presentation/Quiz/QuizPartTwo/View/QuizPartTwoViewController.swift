@@ -13,6 +13,7 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
     @IBOutlet weak var nextButton: RoundButton!
     @IBOutlet weak var optionView: OptionView!
     @IBOutlet weak var progressBar: ProgressBar!
+    @IBOutlet weak var progressViewStack: ProgressViewStack!
     
     var output: QuizPartTwoViewOutput!
     
@@ -42,6 +43,10 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
         progressBar.addArrangedViews(numberOfViews: viewsNumber, currentIndex: currentIndex, startFrom: startValue)
     }
     
+    func setupProgressViewStack(with quiz: Quiz) {
+        progressViewStack.setup(with: quiz)
+    }
+    
     func show(question: PartTwoQuestion) {
         questionLabel.text = question.text
         nextButton.isEnabled = false
@@ -61,6 +66,7 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
     
     func moveProgressBar() {
         progressBar.goForward()
+        progressViewStack.fill()
     }
 }
 

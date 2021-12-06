@@ -16,6 +16,7 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
     @IBOutlet weak var nextButton: RoundButton!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressBar: ProgressBar!
+    @IBOutlet weak var progressViewStack: ProgressViewStack!
     
     var output: QuizPartOneViewOutput!
     
@@ -51,6 +52,10 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
         progressBar.addArrangedViews(numberOfViews: viewsNumber, currentIndex: currentIndex, startFrom: startValue)
     }
     
+    func setupProgressViewStack(with quiz: Quiz) {
+        progressViewStack.setup(with: quiz)
+    }
+    
     func show(_ question: PartOneQuestion) {
         questionLabel.text = question.text
     }
@@ -65,6 +70,7 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
     
     func moveProgressbar() {
         progressBar.goForward()
+        progressViewStack.fill()
     }
     
     @IBAction func slide(_ sender: UISlider) {

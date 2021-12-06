@@ -77,6 +77,7 @@
 		5A71B2F6269EFE46001A6259 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A71B2F5269EFE46001A6259 /* Profile.storyboard */; };
 		5A8805182722CDE100BA12B3 /* UserStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8805172722CDE100BA12B3 /* UserStatusView.swift */; };
 		5A88051A2723CEFF00BA12B3 /* QuizPartTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8805192723CEFF00BA12B3 /* QuizPartTwo.storyboard */; };
+		5A9251B5275E2E8500D9195F /* ProgressViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9251B4275E2E8500D9195F /* ProgressViewStack.swift */; };
 		5AA6E28D272FE62E00E64ABA /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E28C272FE62E00E64ABA /* OptionView.swift */; };
 		5AA6E28F272FE67E00E64ABA /* OptionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */; };
 		5AA6E2912730001B00E64ABA /* OptionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */; };
@@ -257,6 +258,7 @@
 		5A71B2F5269EFE46001A6259 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		5A8805172722CDE100BA12B3 /* UserStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusView.swift; sourceTree = "<group>"; };
 		5A8805192723CEFF00BA12B3 /* QuizPartTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizPartTwo.storyboard; sourceTree = "<group>"; };
+		5A9251B4275E2E8500D9195F /* ProgressViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStack.swift; sourceTree = "<group>"; };
 		5AA6E28C272FE62E00E64ABA /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
 		5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionImageView.swift; sourceTree = "<group>"; };
 		5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewDelegate.swift; sourceTree = "<group>"; };
@@ -688,6 +690,7 @@
 				5A8805172722CDE100BA12B3 /* UserStatusView.swift */,
 				5AAFFFAD27464E7100C46DB0 /* PlaceholderTextView.swift */,
 				5A519DC3275A355B000F657B /* ProgressBar.swift */,
+				5A9251B4275E2E8500D9195F /* ProgressViewStack.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1490,6 +1493,7 @@
 				6EEDBA2C96801152FE059E09 /* ScoreScreenModuleInput.swift in Sources */,
 				A1DC76F3F80D304032782720 /* ScoreScreenPresenter.swift in Sources */,
 				533CE720FBF5E7B4DBB1E57F /* ScoreScreenInteractorInput.swift in Sources */,
+				5A9251B5275E2E8500D9195F /* ProgressViewStack.swift in Sources */,
 				A3C32437A94A31CBF3DF74EE /* ScoreScreenInteractorOutput.swift in Sources */,
 				2BC6D36266C2852480A019F1 /* ScoreScreenInteractor.swift in Sources */,
 				53A6B9D5269D50594C1EE4C6 /* ScoreScreenRouterInput.swift in Sources */,

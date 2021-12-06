@@ -11,5 +11,6 @@ protocol QuizPartThreeViewInput: AnyObject, ViewInput {
     func show(question: PartThreeQuestion)
     
     func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int)
+    func setupProgressViewStack(with quiz: Quiz)
     func moveProgressBar()
 }

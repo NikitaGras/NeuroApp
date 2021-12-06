@@ -9,8 +9,9 @@
 import Foundation
 
 protocol QuizPartThreeInteractorInput {
+    var quiz: Quiz { get }
+    
     func getQuestion() -> PartThreeQuestion
     func save(userText: String)
-    
     func getPriviousPartQuestionsNumber() -> Int
 }

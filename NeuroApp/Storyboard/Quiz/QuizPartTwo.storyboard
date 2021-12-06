@@ -46,15 +46,15 @@
                                     <constraint firstAttribute="height" priority="1" constant="200" id="C3A-t8-InF"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLy-jn-RqY">
-                                <rect key="frame" x="20" y="803" width="374" height="10"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLy-jn-RqY" customClass="ProgressViewStack" customModule="NeuroApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="808" width="374" height="5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="UFo-pW-yaG"/>
+                                    <constraint firstAttribute="height" constant="5" id="UFo-pW-yaG"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2u-At-gcT" customClass="ProgressBar" customModule="NeuroApp" customModuleProvider="target">
-                                <rect key="frame" x="30" y="763" width="354" height="30"/>
+                                <rect key="frame" x="30" y="768" width="354" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="IDS-IO-0qL"/>
@@ -87,6 +87,7 @@
                         <outlet property="nextButton" destination="TRS-2p-kCH" id="F9M-FN-VuQ"/>
                         <outlet property="optionView" destination="gxw-Jk-1xZ" id="ecz-9w-Bp7"/>
                         <outlet property="progressBar" destination="J2u-At-gcT" id="QgG-vC-7KD"/>
+                        <outlet property="progressViewStack" destination="RLy-jn-RqY" id="ufq-P4-3wS"/>
                         <outlet property="questionLabel" destination="cUP-Lg-hUv" id="isL-7i-5Ky"/>
                         <segue destination="DSI-Bc-Xc7" kind="show" identifier="ShowPreviewViewController" id="5dm-9t-GvP"/>
                     </connections>
@@ -117,9 +118,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

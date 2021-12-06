@@ -13,6 +13,7 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     @IBOutlet weak var answerTextView: PlaceholderTextView!
     @IBOutlet weak var nextButton: RoundButton!
     @IBOutlet weak var progressBar: ProgressBar!
+    @IBOutlet weak var progressViewStack: ProgressViewStack!
     
     var output: QuizPartThreeViewOutput!
 
@@ -35,6 +36,10 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     
     func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int) {
         progressBar.addArrangedViews(numberOfViews: viewsNumber, currentIndex: currentIndex, startFrom: startValue)
+    }
+    
+    func setupProgressViewStack(with quiz: Quiz) {
+        progressViewStack.setup(with: quiz)
     }
     
     func moveProgressBar() {

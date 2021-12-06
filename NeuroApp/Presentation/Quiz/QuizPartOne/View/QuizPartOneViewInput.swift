@@ -9,6 +9,9 @@
 protocol QuizPartOneViewInput: AnyObject, ViewInput {
     func setupInitialState()
     func show(_ question: PartOneQuestion)
+    
     func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int)
+    func setupProgressViewStack(with quiz: Quiz)
+    
     func moveProgressbar()
 }

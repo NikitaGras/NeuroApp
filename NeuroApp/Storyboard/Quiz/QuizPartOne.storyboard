@@ -159,15 +159,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t42-1U-WYX">
-                                <rect key="frame" x="20" y="803" width="374" height="10"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t42-1U-WYX" customClass="ProgressViewStack" customModule="NeuroApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="808" width="374" height="5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="0gA-p5-vRw"/>
+                                    <constraint firstAttribute="height" constant="5" id="0gA-p5-vRw"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqq-rf-2gk" customClass="ProgressBar" customModule="NeuroApp" customModuleProvider="target">
-                                <rect key="frame" x="30" y="763" width="354" height="30"/>
+                                <rect key="frame" x="30" y="768" width="354" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WnN-9x-9bM"/>
@@ -205,6 +205,7 @@
                     <connections>
                         <outlet property="nextButton" destination="KgL-tj-cQ7" id="5qD-fc-heG"/>
                         <outlet property="progressBar" destination="Wqq-rf-2gk" id="Ao3-oT-w6F"/>
+                        <outlet property="progressViewStack" destination="t42-1U-WYX" id="T8k-6j-Kfj"/>
                         <outlet property="questionLabel" destination="09e-Jy-04b" id="uzO-Ke-SQ5"/>
                         <outlet property="slider" destination="78R-an-4bs" id="NfO-n5-YHm"/>
                         <outlet property="taskLabel" destination="Bbd-Fc-PJj" id="EF6-dj-X3f"/>
@@ -251,9 +252,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

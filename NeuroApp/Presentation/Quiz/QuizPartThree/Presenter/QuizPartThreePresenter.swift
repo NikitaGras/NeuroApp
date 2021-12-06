@@ -25,6 +25,7 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
         view.setupProgressBar(viewsNumber: questionsNumber,
                               currentIndex: currentQuestionIndex,
                               startValue: startValue)
+        view.setupProgressViewStack(with: interactor.quiz)
     }
 
     func save(userText: String) {

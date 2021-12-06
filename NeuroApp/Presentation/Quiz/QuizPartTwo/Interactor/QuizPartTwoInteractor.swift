@@ -10,6 +10,10 @@ class QuizPartTwoInteractor: QuizPartTwoInteractorInput {
     weak var output: QuizPartTwoInteractorOutput!
     var service: QuizServiceProtocol!
     
+    var quiz: Quiz {
+        return service.quiz
+    }
+    
     func save(_ answer: PartTwoAnswer) throws {
         try service.save(answer)
     }

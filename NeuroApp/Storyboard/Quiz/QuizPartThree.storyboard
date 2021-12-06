@@ -47,15 +47,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afg-Ta-jzk">
-                                <rect key="frame" x="20" y="803" width="374" height="10"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afg-Ta-jzk" customClass="ProgressViewStack" customModule="NeuroApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="808" width="374" height="5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="MPA-AO-4Tf"/>
+                                    <constraint firstAttribute="height" constant="5" id="MPA-AO-4Tf"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSq-IM-AXc" customClass="ProgressBar" customModule="NeuroApp" customModuleProvider="target">
-                                <rect key="frame" x="30" y="763" width="354" height="30"/>
+                                <rect key="frame" x="30" y="768" width="354" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ONZ-iN-TH4"/>
@@ -88,6 +88,7 @@
                         <outlet property="answerTextView" destination="5PS-mk-88z" id="yAN-Mq-4aE"/>
                         <outlet property="nextButton" destination="Mhc-M6-q16" id="Ae8-Vz-nVb"/>
                         <outlet property="progressBar" destination="NSq-IM-AXc" id="VTt-w7-r2t"/>
+                        <outlet property="progressViewStack" destination="afg-Ta-jzk" id="9uM-N0-4hP"/>
                         <outlet property="questionLabel" destination="FNR-Ys-L6j" id="j6r-hz-mse"/>
                         <segue destination="7xP-Jr-byf" kind="presentation" identifier="ShowScoreScreen" modalPresentationStyle="fullScreen" id="K9H-Iz-i7M"/>
                     </connections>
@@ -121,9 +122,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
