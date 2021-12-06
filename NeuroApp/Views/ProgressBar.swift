@@ -75,11 +75,11 @@ class ProgressBar: UIStackView {
     
     private func setCompleteState(for label: UILabel) {
         label.layer.borderColor = UIColor.black.cgColor
-        label.backgroundColor = UIColor.green
+        label.backgroundColor = UIColor.NAGreen
     }
     
     private func setCurrentState(for label: UILabel) {
-        label.layer.borderColor = UIColor.blue.cgColor
+        label.layer.borderColor = UIColor.NABlue.cgColor
         label.backgroundColor = UIColor.clear
     }
 }

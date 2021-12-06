@@ -18,6 +18,13 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
         view.setupInitialState()
         let question = interactor.getQuestion()
         view.show(question: question)
+        
+        let questionsNumber = 1
+        let currentQuestionIndex = 0
+        let startValue = interactor.getPriviousPartQuestionsNumber()
+        view.setupProgressBar(viewsNumber: questionsNumber,
+                              currentIndex: currentQuestionIndex,
+                              startValue: startValue)
     }
 
     func save(userText: String) {
@@ -33,6 +40,7 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
     }
     
     func showResultScreen() {
+        view.moveProgressBar()
         router.showResultScreen()
     }
 }

@@ -12,4 +12,5 @@ protocol QuizPartTwoInteractorInput {
     func save(_ answer: PartTwoAnswer) throws
     func getQuestions() -> [PartTwoQuestion]
     func getAnswers() -> [PartTwoAnswer]
+    func getPartOneQuestionCount() -> Int
 }

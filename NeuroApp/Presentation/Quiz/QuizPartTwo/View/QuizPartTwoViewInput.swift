@@ -11,4 +11,7 @@ protocol QuizPartTwoViewInput: AnyObject, ViewInput {
     func show(imageOptions: [ImageOption])
     func show(stringOptions: [StringOption])
     func show(question: PartTwoQuestion)
+    
+    func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int)
+    func moveProgressBar()
 }

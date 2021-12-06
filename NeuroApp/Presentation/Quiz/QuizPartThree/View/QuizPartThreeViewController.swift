@@ -12,7 +12,8 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerTextView: PlaceholderTextView!
     @IBOutlet weak var nextButton: RoundButton!
-
+    @IBOutlet weak var progressBar: ProgressBar!
+    
     var output: QuizPartThreeViewOutput!
 
     // MARK: Life cycle
@@ -30,6 +31,14 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     
     func show(question: PartThreeQuestion) {
         questionLabel.text = question
+    }
+    
+    func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int) {
+        progressBar.addArrangedViews(numberOfViews: viewsNumber, currentIndex: currentIndex, startFrom: startValue)
+    }
+    
+    func moveProgressBar() {
+        progressBar.goForward()
     }
     
     @IBAction func next(sender: RoundButton) {

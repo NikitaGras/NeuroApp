@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -47,18 +47,38 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afg-Ta-jzk">
+                                <rect key="frame" x="20" y="803" width="374" height="10"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="MPA-AO-4Tf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSq-IM-AXc" customClass="ProgressBar" customModule="NeuroApp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="763" width="354" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ONZ-iN-TH4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="afg-Ta-jzk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="0u7-vw-xGw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="afg-Ta-jzk" secondAttribute="trailing" constant="20" id="5Rf-Ml-Y7Z"/>
                             <constraint firstItem="Mhc-M6-q16" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="6eA-BW-a1S"/>
                             <constraint firstItem="FNR-Ys-L6j" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="8MB-Tx-THP"/>
+                            <constraint firstItem="afg-Ta-jzk" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="9rb-Fd-RpF"/>
                             <constraint firstItem="5PS-mk-88z" firstAttribute="top" secondItem="FNR-Ys-L6j" secondAttribute="bottom" constant="20" id="Bbd-4Z-tWP"/>
                             <constraint firstItem="Mhc-M6-q16" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Dua-8g-Nzi"/>
+                            <constraint firstItem="afg-Ta-jzk" firstAttribute="top" secondItem="NSq-IM-AXc" secondAttribute="bottom" constant="10" id="MT7-i3-9NE"/>
                             <constraint firstItem="5PS-mk-88z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="UbS-Vu-Zje"/>
                             <constraint firstItem="Mhc-M6-q16" firstAttribute="top" secondItem="5PS-mk-88z" secondAttribute="bottom" constant="20" id="YUJ-iV-lBj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NSq-IM-AXc" secondAttribute="trailing" constant="30" id="ZT2-uJ-xn5"/>
                             <constraint firstItem="FNR-Ys-L6j" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="bO4-Vz-B9G"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5PS-mk-88z" secondAttribute="trailing" constant="20" id="bg2-OO-Xxu"/>
+                            <constraint firstItem="NSq-IM-AXc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="qUH-uC-FdY"/>
                             <constraint firstItem="FNR-Ys-L6j" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qeb-9N-t5p"/>
                         </constraints>
                     </view>
@@ -67,6 +87,7 @@
                     <connections>
                         <outlet property="answerTextView" destination="5PS-mk-88z" id="yAN-Mq-4aE"/>
                         <outlet property="nextButton" destination="Mhc-M6-q16" id="Ae8-Vz-nVb"/>
+                        <outlet property="progressBar" destination="NSq-IM-AXc" id="VTt-w7-r2t"/>
                         <outlet property="questionLabel" destination="FNR-Ys-L6j" id="j6r-hz-mse"/>
                         <segue destination="7xP-Jr-byf" kind="presentation" identifier="ShowScoreScreen" modalPresentationStyle="fullScreen" id="K9H-Iz-i7M"/>
                     </connections>
@@ -100,6 +121,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

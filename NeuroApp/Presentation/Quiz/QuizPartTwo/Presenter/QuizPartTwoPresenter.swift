@@ -25,6 +25,8 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
         questions = interactor.getQuestions()
         answers = interactor.getAnswers()
         index = answers.count
+        let partOneQuestionCount = interactor.getPartOneQuestionCount()
+        view.setupProgressBar(viewsNumber: questions.count, currentIndex: index, startValue: partOneQuestionCount)
     }
     
     func viewDidLayout() {
@@ -40,6 +42,7 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
             
             let answer = PartTwoAnswer(questionText: questions[index].text, option: selectedOption, responseTime: runtime)
             try interactor.save(answer)
+            view.moveProgressBar()
             index += 1
             index >= questions.count ? openNextPart() : show(question: questions[index])
         } catch {

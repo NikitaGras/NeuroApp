@@ -38,4 +38,10 @@ class QuizPartThreeInteractor: QuizPartThreeInteractorInput {
             self.output.denied(with: error)
         }
     }
+    
+    func getPriviousPartQuestionsNumber() -> Int {
+        let partOneQuestionNumber = quizService.quiz.partOneQuestions.count
+        let partTwoQuestionNumber = quizService.quiz.partTwoQuestions.count
+        return partOneQuestionNumber + partTwoQuestionNumber
+    }
 }

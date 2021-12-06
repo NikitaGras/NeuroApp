@@ -21,4 +21,8 @@ class QuizPartTwoInteractor: QuizPartTwoInteractorInput {
     func getAnswers() -> [PartTwoAnswer] {
         return service.quiz.partTwoAnswers
     }
+    
+    func getPartOneQuestionCount() -> Int {
+        return service.quiz.partOneQuestions.count
+    }
 }

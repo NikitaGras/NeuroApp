@@ -15,6 +15,7 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var nextButton: RoundButton!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var progressBar: ProgressBar!
     
     var output: QuizPartOneViewOutput!
     
@@ -31,7 +32,7 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
 
     // MARK: - QuizPartOneViewInput
     func setupInitialState() {
-//        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = true
         taskLabel.text = .PartOneQuiz.taskText
         scaleDescriptionLabels.forEach { label in
             if label.tag == 0 {
@@ -46,6 +47,10 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
         nextButton.setTitle(.Button.next, for: .normal)
     }
     
+    func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int) {
+        progressBar.addArrangedViews(numberOfViews: viewsNumber, currentIndex: currentIndex, startFrom: startValue)
+    }
+    
     func show(_ question: PartOneQuestion) {
         questionLabel.text = question.text
     }
@@ -56,6 +61,10 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
             let answer = PartOneAnswer(questionText: questionText, value: value)
             output.save(answer)
         }
+    }
+    
+    func moveProgressbar() {
+        progressBar.goForward()
     }
     
     @IBAction func slide(_ sender: UISlider) {

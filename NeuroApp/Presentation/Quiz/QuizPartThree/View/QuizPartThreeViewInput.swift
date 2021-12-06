@@ -9,4 +9,7 @@
 protocol QuizPartThreeViewInput: AnyObject, ViewInput {
     func setupInitialState()
     func show(question: PartThreeQuestion)
+    
+    func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int)
+    func moveProgressBar()
 }

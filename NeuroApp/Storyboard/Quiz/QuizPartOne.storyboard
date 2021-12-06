@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -159,10 +159,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t42-1U-WYX">
+                                <rect key="frame" x="20" y="803" width="374" height="10"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="0gA-p5-vRw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqq-rf-2gk" customClass="ProgressBar" customModule="NeuroApp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="763" width="354" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WnN-9x-9bM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="t42-1U-WYX" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="1zR-gW-wVR"/>
                             <constraint firstItem="Bbd-Fc-PJj" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2Y0-mt-H7t"/>
                             <constraint firstItem="zGR-cF-CB4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="3Bt-ME-Ea1"/>
                             <constraint firstItem="Bbd-Fc-PJj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="4yt-vk-Irs"/>
@@ -170,12 +185,17 @@
                             <constraint firstItem="GHD-mw-2po" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="EQ6-R0-NYO"/>
                             <constraint firstItem="GHD-mw-2po" firstAttribute="top" secondItem="09e-Jy-04b" secondAttribute="bottom" constant="20" id="FCe-5U-YC0"/>
                             <constraint firstItem="KgL-tj-cQ7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Gtk-US-d4K"/>
+                            <constraint firstItem="t42-1U-WYX" firstAttribute="top" secondItem="Wqq-rf-2gk" secondAttribute="bottom" constant="10" id="Ouy-cS-yln"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="t42-1U-WYX" secondAttribute="trailing" constant="20" id="WkS-zB-hJR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wqq-rf-2gk" secondAttribute="trailing" constant="30" id="YfJ-bK-rMR"/>
                             <constraint firstItem="KgL-tj-cQ7" firstAttribute="top" secondItem="zGR-cF-CB4" secondAttribute="bottom" constant="40" id="cK6-Te-vxR"/>
                             <constraint firstItem="Bbd-Fc-PJj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="e2E-S7-ak7"/>
+                            <constraint firstItem="t42-1U-WYX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="eef-9u-nQ3"/>
                             <constraint firstItem="zGR-cF-CB4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gmt-MO-Pb9"/>
                             <constraint firstItem="KgL-tj-cQ7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="guW-fy-rg8"/>
                             <constraint firstItem="zGR-cF-CB4" firstAttribute="top" secondItem="GHD-mw-2po" secondAttribute="bottom" constant="20" id="iuN-Kf-z8Q"/>
                             <constraint firstItem="09e-Jy-04b" firstAttribute="top" secondItem="Bbd-Fc-PJj" secondAttribute="bottom" constant="20" id="osF-3t-Czw"/>
+                            <constraint firstItem="Wqq-rf-2gk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="p4G-Vo-N5S"/>
                             <constraint firstItem="09e-Jy-04b" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="tJh-Kh-3eY"/>
                             <constraint firstItem="09e-Jy-04b" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="y6p-mz-lAR"/>
                         </constraints>
@@ -184,6 +204,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="nextButton" destination="KgL-tj-cQ7" id="5qD-fc-heG"/>
+                        <outlet property="progressBar" destination="Wqq-rf-2gk" id="Ao3-oT-w6F"/>
                         <outlet property="questionLabel" destination="09e-Jy-04b" id="uzO-Ke-SQ5"/>
                         <outlet property="slider" destination="78R-an-4bs" id="NfO-n5-YHm"/>
                         <outlet property="taskLabel" destination="Bbd-Fc-PJj" id="EF6-dj-X3f"/>
@@ -230,6 +251,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
