@@ -78,6 +78,9 @@
 		5A8805182722CDE100BA12B3 /* UserStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8805172722CDE100BA12B3 /* UserStatusView.swift */; };
 		5A88051A2723CEFF00BA12B3 /* QuizPartTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8805192723CEFF00BA12B3 /* QuizPartTwo.storyboard */; };
 		5A9251B5275E2E8500D9195F /* ProgressViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9251B4275E2E8500D9195F /* ProgressViewStack.swift */; };
+		5A9251BA275E649800D9195F /* MainHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9251B9275E649800D9195F /* MainHistory.storyboard */; };
+		5A9251BC275E680E00D9195F /* AverageScoreHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9251BB275E680E00D9195F /* AverageScoreHistory.storyboard */; };
+		5A9251BE275E690600D9195F /* PartOneHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9251BD275E690600D9195F /* PartOneHistory.storyboard */; };
 		5AA6E28D272FE62E00E64ABA /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E28C272FE62E00E64ABA /* OptionView.swift */; };
 		5AA6E28F272FE67E00E64ABA /* OptionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */; };
 		5AA6E2912730001B00E64ABA /* OptionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */; };
@@ -259,6 +262,9 @@
 		5A8805172722CDE100BA12B3 /* UserStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusView.swift; sourceTree = "<group>"; };
 		5A8805192723CEFF00BA12B3 /* QuizPartTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizPartTwo.storyboard; sourceTree = "<group>"; };
 		5A9251B4275E2E8500D9195F /* ProgressViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStack.swift; sourceTree = "<group>"; };
+		5A9251B9275E649800D9195F /* MainHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainHistory.storyboard; sourceTree = "<group>"; };
+		5A9251BB275E680E00D9195F /* AverageScoreHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AverageScoreHistory.storyboard; sourceTree = "<group>"; };
+		5A9251BD275E690600D9195F /* PartOneHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PartOneHistory.storyboard; sourceTree = "<group>"; };
 		5AA6E28C272FE62E00E64ABA /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
 		5AA6E28E272FE67E00E64ABA /* OptionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionImageView.swift; sourceTree = "<group>"; };
 		5AA6E2902730001B00E64ABA /* OptionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewDelegate.swift; sourceTree = "<group>"; };
@@ -590,6 +596,7 @@
 		5A1E8BB026983D3E001179F7 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				5A9251B6275E63CC00D9195F /* History */,
 				5A511288270BF1D6008020AB /* Quiz */,
 				5A1E8BB126983D62001179F7 /* Login.storyboard */,
 				5A3801B92695D93200883225 /* LaunchScreen.storyboard */,
@@ -725,6 +732,16 @@
 				5A166C0F269C319000E590C7 /* ProfileServiceProtocol.swift */,
 			);
 			path = ProfileService;
+			sourceTree = "<group>";
+		};
+		5A9251B6275E63CC00D9195F /* History */ = {
+			isa = PBXGroup;
+			children = (
+				5A9251B9275E649800D9195F /* MainHistory.storyboard */,
+				5A9251BB275E680E00D9195F /* AverageScoreHistory.storyboard */,
+				5A9251BD275E690600D9195F /* PartOneHistory.storyboard */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		5AA6E2942730DFA800E64ABA /* PartTwoOption */ = {
@@ -1279,13 +1296,16 @@
 			files = (
 				5A71B2F6269EFE46001A6259 /* Profile.storyboard in Resources */,
 				5AAFFFB527467DAB00C46DB0 /* ScoreView.xib in Resources */,
+				5A9251BA275E649800D9195F /* MainHistory.storyboard in Resources */,
 				5A166C12269C366600E590C7 /* Tabbar.storyboard in Resources */,
 				5A88051A2723CEFF00BA12B3 /* QuizPartTwo.storyboard in Resources */,
 				5A1E8BB226983D62001179F7 /* Login.storyboard in Resources */,
 				5A3801BB2695D93200883225 /* LaunchScreen.storyboard in Resources */,
 				5AA6E2962734E96C00E64ABA /* QuizPartThree.storyboard in Resources */,
 				5A3801B82695D93200883225 /* Assets.xcassets in Resources */,
+				5A9251BE275E690600D9195F /* PartOneHistory.storyboard in Resources */,
 				5AE1A50326E61722009FCD4A /* Preview.storyboard in Resources */,
+				5A9251BC275E680E00D9195F /* AverageScoreHistory.storyboard in Resources */,
 				5AAFFFB027467D6900C46DB0 /* Score.storyboard in Resources */,
 				5A166C04269BF43200E590C7 /* Home.storyboard in Resources */,
 				5A51128A270BF1E9008020AB /* QuizPartOne.storyboard in Resources */,
