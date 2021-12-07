@@ -11,6 +11,7 @@
 		055AD0AEA86CC2FE0331F04B /* PreviewBaseInfoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A384F13B090E81DDC10F9ED /* PreviewBaseInfoViewInput.swift */; };
 		0CADEB544403BE1B6120ED6C /* PreviewPartInfoInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9835977281873EFBABE39 /* PreviewPartInfoInteractorInput.swift */; };
 		0DEDCC47A4971DDDB32CD298 /* ProfileInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19332506BB8A17E0B2F8A8FB /* ProfileInteractorOutput.swift */; };
+		104D6BBB011FB18A51B1CBA4 /* HistoryMainViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09F5F52AEA951DF14A706D /* HistoryMainViewOutput.swift */; };
 		1340A306828C795A080C0FC7 /* EditInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601732125D831F12018DD966 /* EditInformationViewController.swift */; };
 		13EDF50C0DEC9793B217B50C /* PreviewBaseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075EABC646777AFA395C1CDE /* PreviewBaseInfoViewController.swift */; };
 		1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E9FBA19EF92A573CABB802 /* LoginRouter.swift */; };
@@ -28,6 +29,7 @@
 		287BE47BB9D393609581989C /* EditInformationInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A635CDC65637FC2A99FBB87 /* EditInformationInitializer.swift */; };
 		2A0924B903B0ECB8656DEC8E /* ScoreScreenInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DE2F7F9E8730B60C94356 /* ScoreScreenInitializer.swift */; };
 		2BC6D36266C2852480A019F1 /* ScoreScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0E0327519CFFC074CBF87 /* ScoreScreenInteractor.swift */; };
+		2CCDF90F72F8BCC7F14E979E /* HistoryMainInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942B75EAE56AE021EDB6B656 /* HistoryMainInteractorInput.swift */; };
 		2D934A296C744ED7E285E9C0 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F872E576D287CE17D07E27D /* ProfileInteractor.swift */; };
 		2E12C249EE024C6F04C4550E /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F452300545C439222B443 /* HomeModuleInput.swift */; };
 		2E5BD8E59CEECD727C169508 /* ScoreScreenViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCD011639164CFD90F917E2 /* ScoreScreenViewInput.swift */; };
@@ -41,6 +43,7 @@
 		46C8ECFF791F80AC1AD63931 /* QuizPartTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FCBB046E2CD0618F38EF62 /* QuizPartTwoViewController.swift */; };
 		48AD7EDBC5D03B3B4529E2F6 /* QuizPartTwoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E967285539AC224BE97A3 /* QuizPartTwoInteractorOutput.swift */; };
 		4CC5A9741515EC05FC66C938 /* ProfileModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBECF3885BB89903358CA2D /* ProfileModuleInput.swift */; };
+		4D7981684581F0706143AD12 /* HistoryMainModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BC6680B990E909A474C61 /* HistoryMainModuleInput.swift */; };
 		505014C02EB507DCA4B96406 /* PreviewPartInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC23566E7924311A79135A /* PreviewPartInfoRouter.swift */; };
 		533CE720FBF5E7B4DBB1E57F /* ScoreScreenInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524EB920DE5D00C5A103D4C /* ScoreScreenInteractorInput.swift */; };
 		53A6B9D5269D50594C1EE4C6 /* ScoreScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AF8B88C49558D58DD04152 /* ScoreScreenRouterInput.swift */; };
@@ -67,6 +70,12 @@
 		5A5313542738F7C500C38578 /* CGPoint+getOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5313532738F7C500C38578 /* CGPoint+getOrigin.swift */; };
 		5A5313562738FFF600C38578 /* OptionStringContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5313552738FFF600C38578 /* OptionStringContainerView.swift */; };
 		5A5C373D0BE9E526F03B1298 /* PreviewPartInfoInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D941F60EA44BE783C634B3 /* PreviewPartInfoInitializer.swift */; };
+		5A67E22E275F2A83006FFABF /* HistoryMainDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A67E22D275F2A83006FFABF /* HistoryMainDisplayManager.swift */; };
+		5A67E230275F2D3D006FFABF /* HistoryMainDisplayManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A67E22F275F2D3D006FFABF /* HistoryMainDisplayManagerDelegate.swift */; };
+		5A67E232275F2EC4006FFABF /* UITableView+registerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A67E231275F2EC4006FFABF /* UITableView+registerCell.swift */; };
+		5A67E234275F2F2D006FFABF /* UITableViewCell+nib+identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A67E233275F2F2D006FFABF /* UITableViewCell+nib+identifier.swift */; };
+		5A67E238275F2FD8006FFABF /* HistoryMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A67E236275F2FD8006FFABF /* HistoryMainTableViewCell.swift */; };
+		5A67E239275F2FD8006FFABF /* HistoryMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A67E237275F2FD8006FFABF /* HistoryMainTableViewCell.xib */; };
 		5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C50269AAB32006B065D /* ViewInput.swift */; };
 		5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C52269AB779006B065D /* RoundButton.swift */; };
 		5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */; };
@@ -116,6 +125,7 @@
 		7527CAD75382A2FA6E456768 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A9CC1E7A655A123351912 /* HomeInteractor.swift */; };
 		76065D4EE9D4EA031CC33D6A /* EditInformationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B079B954C2CF4F346CAFB3 /* EditInformationConfigurator.swift */; };
 		76931ADB234837C57BFBD1E7 /* EditInformationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC048A1E0E203965C17CA61 /* EditInformationInteractor.swift */; };
+		7A8D3305EDBF43EA7E341F25 /* HistoryMainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4025965F645558804250B2 /* HistoryMainViewInput.swift */; };
 		7A97706392CC30BB97940C40 /* PreviewBaseInfoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C4F5A64000B97F8FDA19E /* PreviewBaseInfoViewOutput.swift */; };
 		7AA7E08EA584ECAFD5692688 /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796822C594D58E6E7A7FE43D /* HomeViewInput.swift */; };
 		7B7961C4C67AF094EEAA999D /* PreviewPartInfoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679D96F989CFDF511D796794 /* PreviewPartInfoViewInput.swift */; };
@@ -128,7 +138,9 @@
 		83BFFBA563C37C176ACA47FD /* QuizPartOneViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702376DC3C35307A2EBF5ED /* QuizPartOneViewInput.swift */; };
 		8442C56DA9E51614B65C96E2 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C2ADF3575B2F4AF3C6F46 /* HomePresenter.swift */; };
 		86B2746274732B392ACAA9AF /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962886E9107AEA9C60246EAD /* HomeInitializer.swift */; };
+		86E6FF5BF5BD7B4B406E3CA6 /* HistoryMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD6BBA3AE76EB8A85BE7DB /* HistoryMainPresenter.swift */; };
 		8738DA5F04B33A3B23D2E540 /* PreviewBaseInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C14C16E34C22AF0DD76060D /* PreviewBaseInfoPresenter.swift */; };
+		88F503DD2C9CA7F177FDF085 /* HistoryMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E987C5B8E2BD14BF30E8961C /* HistoryMainInteractor.swift */; };
 		8B66E60129903C989F98FEC4 /* HomeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3884B6BBFCFC05A5337FDC95 /* HomeInteractorOutput.swift */; };
 		8EC133E5A2945E72D636FA32 /* ProfileInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C642DB194C16080141E1F13 /* ProfileInteractorInput.swift */; };
 		92FF0EA0F3872BA10D1BEE8B /* QuizPartThreeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9197D5F3167CC6C7B38155FD /* QuizPartThreeConfigurator.swift */; };
@@ -140,6 +152,7 @@
 		9D83677A7C39F4F65800C6AC /* QuizPartThreeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE47E1744C628B3441EBC4E /* QuizPartThreeModuleInput.swift */; };
 		9E0E88237F92C68D8522838A /* PreviewBaseInfoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04051379896106512F87DE7B /* PreviewBaseInfoInteractorOutput.swift */; };
 		9E92996860D761801CB29D86 /* LoginViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D87C7304176BA9AC667ECD /* LoginViewOutput.swift */; };
+		A138CF635CEB51A81E81BF87 /* HistoryMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980DECC2F5B494628DBCAD99 /* HistoryMainViewController.swift */; };
 		A19DD678EE6D5CD7BF691D79 /* QuizPartTwoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D6C004361D5A77C9A8F98 /* QuizPartTwoConfigurator.swift */; };
 		A1DC76F3F80D304032782720 /* ScoreScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19171CB6E5559940579F749D /* ScoreScreenPresenter.swift */; };
 		A1EC3F4AAC61F9C0FE25B491 /* PreviewPartInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFB378F487F62ABDA723E90 /* PreviewPartInfoViewController.swift */; };
@@ -151,12 +164,15 @@
 		A9E0B1E37CDF82DC10CDBC14 /* PreviewPartInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864F1689B49C91D1178C92FA /* PreviewPartInfoInteractor.swift */; };
 		B0388DAFB78645FC4999865C /* LoginRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8B148594B4B0EB22EB8B3 /* LoginRouterInput.swift */; };
 		B13C421F8F565A9E005CFADA /* QuizPartTwoInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0385E47F09CC39E0C0D90 /* QuizPartTwoInitializer.swift */; };
+		B19EE2FD5CE137F75A293014 /* HistoryMainInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097FD289306717A7B459DDE0 /* HistoryMainInteractorOutput.swift */; };
 		B2548BC03A552198447AFD45 /* PreviewBaseInfoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616945C04BEA3216A99AFC72 /* PreviewBaseInfoModuleInput.swift */; };
 		B5DD76BE58A0599B47FDB58C /* QuizPartOneInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCA617EDC2C643932EEBCB /* QuizPartOneInitializer.swift */; };
 		B8B350C756F3B85145F5996C /* QuizPartThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782BB4BF45A63B2ABF64549 /* QuizPartThreeViewController.swift */; };
+		B9177503F65485DE7D184DAC /* HistoryMainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D57A9CB32C384B9655978 /* HistoryMainConfigurator.swift */; };
 		B94F4DDBDB9BA1992F36A2A7 /* ScoreScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52862B23FEEE4B7C11DC4906 /* ScoreScreenRouter.swift */; };
 		B968B3FFC2686DE6E06636AC /* QuizPartOnePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728932528407A3FAE6CD2862 /* QuizPartOnePresenter.swift */; };
 		BEA3CCD1030E3AFEFD03EF36 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF999ACCFCEDDA5A94E6E7 /* ProfileRouter.swift */; };
+		C088B258F5AFC88E7E66A437 /* HistoryMainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA10B2A5DB6B1D9C1D01036 /* HistoryMainRouter.swift */; };
 		C10F448C496F867013E649C5 /* EditInformationRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758DB157F183D1E96EA715E /* EditInformationRouterInput.swift */; };
 		C4B9710953CF3F3F9C952B66 /* QuizPartThreeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDEBB78E2681F9948129A4 /* QuizPartThreeInitializer.swift */; };
 		C5EF1488C0836FE095CDD259 /* Pods_NeuroApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA0EA2B4FCF93DB77BBF460 /* Pods_NeuroApp.framework */; };
@@ -167,6 +183,8 @@
 		CDBB2D374B7E0CD950A6A2B5 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9654D168ABD17C9D1BAEE /* ProfilePresenter.swift */; };
 		CE2C02BB1BC9BC42DEE8A186 /* QuizPartTwoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619AB8C305720E576D874231 /* QuizPartTwoModuleInput.swift */; };
 		CFEECAD8E8F406F375BEAE94 /* QuizPartThreeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B36399BCF6B31521CDCC4 /* QuizPartThreeInteractorInput.swift */; };
+		D1318A7766CF97BB24B0E04E /* HistoryMainRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F49A994FB61EF4B7D732A /* HistoryMainRouterInput.swift */; };
+		D26C9118AB17BE2C20BAD7BB /* HistoryMainInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2AEBA132DE9F40CDD9188 /* HistoryMainInitializer.swift */; };
 		D67932EF786BD43578E9EEFE /* PreviewPartInfoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDD7B2E442D0C63166489EF /* PreviewPartInfoRouterInput.swift */; };
 		D8E75D43246BF0C78E6A0B1A /* EditInformationModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C9959B355F415BFAC9490E /* EditInformationModuleInput.swift */; };
 		DA0B3781A7564A7610428B51 /* QuizPartOneModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA271BB062056B67681AD120 /* QuizPartOneModuleInput.swift */; };
@@ -191,10 +209,12 @@
 		04051379896106512F87DE7B /* PreviewBaseInfoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInteractorOutput.swift; sourceTree = "<group>"; };
 		075EABC646777AFA395C1CDE /* PreviewBaseInfoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoViewController.swift; sourceTree = "<group>"; };
 		07A32D1AB985482BA4609513 /* LoginInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInitializer.swift; sourceTree = "<group>"; };
+		097FD289306717A7B459DDE0 /* HistoryMainInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainInteractorOutput.swift; sourceTree = "<group>"; };
 		09ADBEAD0623485CAB867408 /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0CFB378F487F62ABDA723E90 /* PreviewPartInfoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoViewController.swift; sourceTree = "<group>"; };
 		0CFFD28B57959F5B32F0FD98 /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		0EA0EA2B4FCF93DB77BBF460 /* Pods_NeuroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeuroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5D57A9CB32C384B9655978 /* HistoryMainConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainConfigurator.swift; sourceTree = "<group>"; };
 		0FCD011639164CFD90F917E2 /* ScoreScreenViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenViewInput.swift; sourceTree = "<group>"; };
 		10AF999ACCFCEDDA5A94E6E7 /* ProfileRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		172C29A1C660CF89E982D957 /* QuizPartThreeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeInteractor.swift; sourceTree = "<group>"; };
@@ -208,7 +228,9 @@
 		1F9846573C3502D504D96B87 /* QuizPartTwoInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoInteractor.swift; sourceTree = "<group>"; };
 		204B36399BCF6B31521CDCC4 /* QuizPartThreeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeInteractorInput.swift; sourceTree = "<group>"; };
 		25FFAB5641B63D2D0BE280F6 /* ProfileRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileRouterInput.swift; sourceTree = "<group>"; };
+		272F49A994FB61EF4B7D732A /* HistoryMainRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainRouterInput.swift; sourceTree = "<group>"; };
 		28E089A54B68C75B990FB0BE /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
+		2BC2AEBA132DE9F40CDD9188 /* HistoryMainInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainInitializer.swift; sourceTree = "<group>"; };
 		328E967285539AC224BE97A3 /* QuizPartTwoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoInteractorOutput.swift; sourceTree = "<group>"; };
 		33FCA617EDC2C643932EEBCB /* QuizPartOneInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneInitializer.swift; sourceTree = "<group>"; };
 		34B079B954C2CF4F346CAFB3 /* EditInformationConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationConfigurator.swift; sourceTree = "<group>"; };
@@ -253,6 +275,12 @@
 		5A5313532738F7C500C38578 /* CGPoint+getOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+getOrigin.swift"; sourceTree = "<group>"; };
 		5A5313552738FFF600C38578 /* OptionStringContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionStringContainerView.swift; sourceTree = "<group>"; };
 		5A635CDC65637FC2A99FBB87 /* EditInformationInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInitializer.swift; sourceTree = "<group>"; };
+		5A67E22D275F2A83006FFABF /* HistoryMainDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMainDisplayManager.swift; sourceTree = "<group>"; };
+		5A67E22F275F2D3D006FFABF /* HistoryMainDisplayManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMainDisplayManagerDelegate.swift; sourceTree = "<group>"; };
+		5A67E231275F2EC4006FFABF /* UITableView+registerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+registerCell.swift"; sourceTree = "<group>"; };
+		5A67E233275F2F2D006FFABF /* UITableViewCell+nib+identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+nib+identifier.swift"; sourceTree = "<group>"; };
+		5A67E236275F2FD8006FFABF /* HistoryMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMainTableViewCell.swift; sourceTree = "<group>"; };
+		5A67E237275F2FD8006FFABF /* HistoryMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryMainTableViewCell.xib; sourceTree = "<group>"; };
 		5A6F2C50269AAB32006B065D /* ViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInput.swift; sourceTree = "<group>"; };
 		5A6F2C52269AB779006B065D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		5A6F2C55269ABB34006B065D /* UIButton+setBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setBackgroundColor.swift"; sourceTree = "<group>"; };
@@ -299,6 +327,7 @@
 		62E9BBA75E70C956F243AF49 /* QuizPartTwoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoPresenter.swift; sourceTree = "<group>"; };
 		64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
 		679D96F989CFDF511D796794 /* PreviewPartInfoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoViewInput.swift; sourceTree = "<group>"; };
+		6B09F5F52AEA951DF14A706D /* HistoryMainViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainViewOutput.swift; sourceTree = "<group>"; };
 		6B4EDC329C61457D79167CA4 /* QuizPartOneViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneViewController.swift; sourceTree = "<group>"; };
 		6DDD7B2E442D0C63166489EF /* PreviewPartInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoRouterInput.swift; sourceTree = "<group>"; };
 		6F0880BC912EE4C23379C739 /* PreviewPartInfoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoInteractorOutput.swift; sourceTree = "<group>"; };
@@ -307,6 +336,7 @@
 		7702376DC3C35307A2EBF5ED /* QuizPartOneViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneViewInput.swift; sourceTree = "<group>"; };
 		796822C594D58E6E7A7FE43D /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
 		7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		7E4025965F645558804250B2 /* HistoryMainViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainViewInput.swift; sourceTree = "<group>"; };
 		7EF8B148594B4B0EB22EB8B3 /* LoginRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterInput.swift; sourceTree = "<group>"; };
 		807FA06AD6BF8A80A3D2EC59 /* QuizPartTwoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoViewInput.swift; sourceTree = "<group>"; };
 		83294CED18EFE49B44109C74 /* ScoreScreenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenViewController.swift; sourceTree = "<group>"; };
@@ -320,10 +350,13 @@
 		8FAC376FB5F49982C0005B02 /* PreviewBaseInfoConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoConfigurator.swift; sourceTree = "<group>"; };
 		8FB0385E47F09CC39E0C0D90 /* QuizPartTwoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoInitializer.swift; sourceTree = "<group>"; };
 		90B0E0327519CFFC074CBF87 /* ScoreScreenInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenInteractor.swift; sourceTree = "<group>"; };
+		90FD6BBA3AE76EB8A85BE7DB /* HistoryMainPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainPresenter.swift; sourceTree = "<group>"; };
 		9197D5F3167CC6C7B38155FD /* QuizPartThreeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeConfigurator.swift; sourceTree = "<group>"; };
 		93AF8B88C49558D58DD04152 /* ScoreScreenRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenRouterInput.swift; sourceTree = "<group>"; };
 		9417FB0DC41BAC7114326AB3 /* QuizPartTwoRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoRouter.swift; sourceTree = "<group>"; };
+		942B75EAE56AE021EDB6B656 /* HistoryMainInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainInteractorInput.swift; sourceTree = "<group>"; };
 		962886E9107AEA9C60246EAD /* HomeInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInitializer.swift; sourceTree = "<group>"; };
+		980DECC2F5B494628DBCAD99 /* HistoryMainViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainViewController.swift; sourceTree = "<group>"; };
 		99B22D46305F45EFAE95A50C /* PreviewBaseInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoRouterInput.swift; sourceTree = "<group>"; };
 		9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractorOutput.swift; sourceTree = "<group>"; };
 		9B491D586CFF261E708DF50F /* PreviewBaseInfoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInitializer.swift; sourceTree = "<group>"; };
@@ -336,6 +369,7 @@
 		A69DE2F7F9E8730B60C94356 /* ScoreScreenInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenInitializer.swift; sourceTree = "<group>"; };
 		A7E9FBA19EF92A573CABB802 /* LoginRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		A9315268719AF54B2F1656A1 /* EditInformationInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInteractorInput.swift; sourceTree = "<group>"; };
+		AB1BC6680B990E909A474C61 /* HistoryMainModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainModuleInput.swift; sourceTree = "<group>"; };
 		AC7BDE582C1AF26CF4A15741 /* PreviewBaseInfoInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInteractor.swift; sourceTree = "<group>"; };
 		B1FCBB046E2CD0618F38EF62 /* QuizPartTwoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoViewController.swift; sourceTree = "<group>"; };
 		B2EDFC1ED741046D2C0186B0 /* PreviewBaseInfoRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoRouter.swift; sourceTree = "<group>"; };
@@ -345,6 +379,7 @@
 		B9C07331B69F3FDFE224B9B1 /* LoginInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractorInput.swift; sourceTree = "<group>"; };
 		BB022E839B9E8C9FC1A77D5A /* PreviewPartInfoModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoModuleInput.swift; sourceTree = "<group>"; };
 		BB3241BC2FC5794E8E0E3B6D /* QuizPartThreeViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeViewOutput.swift; sourceTree = "<group>"; };
+		BCA10B2A5DB6B1D9C1D01036 /* HistoryMainRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainRouter.swift; sourceTree = "<group>"; };
 		BD3593C045FE6D5C5ABC78CE /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BEB5D7C3CD95221617F4863F /* Pods-NeuroApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeuroApp.debug.xcconfig"; path = "Target Support Files/Pods-NeuroApp/Pods-NeuroApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C2A85F777BBBA6EC2FD06443 /* EditInformationViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationViewOutput.swift; sourceTree = "<group>"; };
@@ -359,6 +394,7 @@
 		DBEFB1E4E929268C0496E42F /* LoginPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		E42BE893CAC0953665FDE976 /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
 		E7977A52F4CF991FBF2F7872 /* QuizPartOneRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneRouter.swift; sourceTree = "<group>"; };
+		E987C5B8E2BD14BF30E8961C /* HistoryMainInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainInteractor.swift; sourceTree = "<group>"; };
 		E99BC27D92D45532C60DC5BF /* QuizPartOneRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneRouterInput.swift; sourceTree = "<group>"; };
 		E9BA5EB1A2C4E47B600AF12E /* PreviewPartInfoViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoViewOutput.swift; sourceTree = "<group>"; };
 		EBECD7F21C2C6CB2D6E99149 /* QuizPartTwoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoRouterInput.swift; sourceTree = "<group>"; };
@@ -382,6 +418,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00DA7B0AA140EF8BA2588056 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AB1BC6680B990E909A474C61 /* HistoryMainModuleInput.swift */,
+				90FD6BBA3AE76EB8A85BE7DB /* HistoryMainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		03C584857A4EE1CB2FABD843 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +492,18 @@
 				962886E9107AEA9C60246EAD /* HomeInitializer.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		1D35114D01737DBF3A76E285 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A67E235275F2F95006FFABF /* HistoryMainTableViewCell */,
+				5A67E22C275F2A57006FFABF /* HistoryMainDisplayManager */,
+				7E4025965F645558804250B2 /* HistoryMainViewInput.swift */,
+				6B09F5F52AEA951DF14A706D /* HistoryMainViewOutput.swift */,
+				980DECC2F5B494628DBCAD99 /* HistoryMainViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1E5712CB8A5FB0A514B61C2D /* QuizPartOne */ = {
@@ -516,6 +573,15 @@
 				1F9846573C3502D504D96B87 /* QuizPartTwoInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		37BFEBD5A3A3BFC2F565890F /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				0F5D57A9CB32C384B9655978 /* HistoryMainConfigurator.swift */,
+				2BC2AEBA132DE9F40CDD9188 /* HistoryMainInitializer.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		3958E35821616C6E1F37F1F5 /* Router */ = {
@@ -691,6 +757,36 @@
 			path = Quiz;
 			sourceTree = "<group>";
 		};
+		5A65B9BF56278131879FD5C1 /* HistoryMain */ = {
+			isa = PBXGroup;
+			children = (
+				1D35114D01737DBF3A76E285 /* View */,
+				00DA7B0AA140EF8BA2588056 /* Presenter */,
+				FAE2FC93AA2731A36D592908 /* Interactor */,
+				7380BC12895A319340AAA975 /* Router */,
+				37BFEBD5A3A3BFC2F565890F /* Configurator */,
+			);
+			path = HistoryMain;
+			sourceTree = "<group>";
+		};
+		5A67E22C275F2A57006FFABF /* HistoryMainDisplayManager */ = {
+			isa = PBXGroup;
+			children = (
+				5A67E22D275F2A83006FFABF /* HistoryMainDisplayManager.swift */,
+				5A67E22F275F2D3D006FFABF /* HistoryMainDisplayManagerDelegate.swift */,
+			);
+			path = HistoryMainDisplayManager;
+			sourceTree = "<group>";
+		};
+		5A67E235275F2F95006FFABF /* HistoryMainTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A67E236275F2FD8006FFABF /* HistoryMainTableViewCell.swift */,
+				5A67E237275F2FD8006FFABF /* HistoryMainTableViewCell.xib */,
+			);
+			path = HistoryMainTableViewCell;
+			sourceTree = "<group>";
+		};
 		5A6F2C4F269AAB20006B065D /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -715,6 +811,8 @@
 				5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */,
 				5A5313532738F7C500C38578 /* CGPoint+getOrigin.swift */,
 				5AAFFFB827468CC300C46DB0 /* UIView+setupNib.swift */,
+				5A67E231275F2EC4006FFABF /* UITableView+registerCell.swift */,
+				5A67E233275F2F2D006FFABF /* UITableViewCell+nib+identifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -746,6 +844,14 @@
 				5A9251BD275E690600D9195F /* PartOneHistory.storyboard */,
 				5A9251C1275E6EF400D9195F /* PartTwoHistory.storyboard */,
 				5A9251C3275E70FF00D9195F /* PartThreeHistory.storyboard */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		5A9251C5275E720C00D9195F /* History */ = {
+			isa = PBXGroup;
+			children = (
+				5A65B9BF56278131879FD5C1 /* HistoryMain */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -881,6 +987,15 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		7380BC12895A319340AAA975 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				272F49A994FB61EF4B7D732A /* HistoryMainRouterInput.swift */,
+				BCA10B2A5DB6B1D9C1D01036 /* HistoryMainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		7A119A4A0F3796A97BE5B8A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,6 +1019,7 @@
 		81436725E27502BEDDF99F19 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5A9251C5275E720C00D9195F /* History */,
 				5A51128B270C0DF3008020AB /* Quiz */,
 				DB23E1C2A8445B2E475B23CC /* Login */,
 				8BAED2B17F10964A8D060F01 /* Home */,
@@ -1241,6 +1357,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FAE2FC93AA2731A36D592908 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				942B75EAE56AE021EDB6B656 /* HistoryMainInteractorInput.swift */,
+				097FD289306717A7B459DDE0 /* HistoryMainInteractorOutput.swift */,
+				E987C5B8E2BD14BF30E8961C /* HistoryMainInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1307,6 +1433,7 @@
 				5A9251C4275E70FF00D9195F /* PartThreeHistory.storyboard in Resources */,
 				5A166C12269C366600E590C7 /* Tabbar.storyboard in Resources */,
 				5A88051A2723CEFF00BA12B3 /* QuizPartTwo.storyboard in Resources */,
+				5A67E239275F2FD8006FFABF /* HistoryMainTableViewCell.xib in Resources */,
 				5A1E8BB226983D62001179F7 /* Login.storyboard in Resources */,
 				5A3801BB2695D93200883225 /* LaunchScreen.storyboard in Resources */,
 				5AA6E2962734E96C00E64ABA /* QuizPartThree.storyboard in Resources */,
@@ -1388,6 +1515,7 @@
 				7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */,
 				5AAFFFB927468CC300C46DB0 /* UIView+setupNib.swift in Sources */,
 				5A166C0C269C2F7400E590C7 /* String.swift in Sources */,
+				5A67E238275F2FD8006FFABF /* HistoryMainTableViewCell.swift in Sources */,
 				DC40A00B20A3786F8C53AE08 /* LoginPresenter.swift in Sources */,
 				5A166C14269C3E6D00E590C7 /* AppRouter.swift in Sources */,
 				A6B9C09DA15838EF4C1C6A7D /* LoginInteractorInput.swift in Sources */,
@@ -1409,6 +1537,7 @@
 				2E12C249EE024C6F04C4550E /* HomeModuleInput.swift in Sources */,
 				8442C56DA9E51614B65C96E2 /* HomePresenter.swift in Sources */,
 				1D6C762DF0CE88CB3A6B94DE /* HomeInteractorInput.swift in Sources */,
+				5A67E232275F2EC4006FFABF /* UITableView+registerCell.swift in Sources */,
 				8B66E60129903C989F98FEC4 /* HomeInteractorOutput.swift in Sources */,
 				7527CAD75382A2FA6E456768 /* HomeInteractor.swift in Sources */,
 				5ABF2F06271AB9CC00B5C3AD /* Observable.swift in Sources */,
@@ -1452,6 +1581,7 @@
 				13EDF50C0DEC9793B217B50C /* PreviewBaseInfoViewController.swift in Sources */,
 				B2548BC03A552198447AFD45 /* PreviewBaseInfoModuleInput.swift in Sources */,
 				8738DA5F04B33A3B23D2E540 /* PreviewBaseInfoPresenter.swift in Sources */,
+				5A67E230275F2D3D006FFABF /* HistoryMainDisplayManagerDelegate.swift in Sources */,
 				CAF230FEF6D976BCCB47B55A /* PreviewBaseInfoInteractorInput.swift in Sources */,
 				9E0E88237F92C68D8522838A /* PreviewBaseInfoInteractorOutput.swift in Sources */,
 				1E9E5931750F06171AB67E8B /* PreviewBaseInfoInteractor.swift in Sources */,
@@ -1493,6 +1623,7 @@
 				62FDB63C8AEDD2D53D288F05 /* QuizPartTwoViewInput.swift in Sources */,
 				2553D38725C68A7DCFF894ED /* QuizPartTwoViewOutput.swift in Sources */,
 				46C8ECFF791F80AC1AD63931 /* QuizPartTwoViewController.swift in Sources */,
+				5A67E234275F2F2D006FFABF /* UITableViewCell+nib+identifier.swift in Sources */,
 				CE2C02BB1BC9BC42DEE8A186 /* QuizPartTwoModuleInput.swift in Sources */,
 				95BB39AC7342CF1019409C52 /* QuizPartTwoPresenter.swift in Sources */,
 				A6641774A39D86DBBDB37790 /* QuizPartTwoInteractorInput.swift in Sources */,
@@ -1519,6 +1650,7 @@
 				17AA32A040E0DCD91D23B76D /* ScoreScreenViewOutput.swift in Sources */,
 				1538495593398253E2C71E3B /* ScoreScreenViewController.swift in Sources */,
 				6EEDBA2C96801152FE059E09 /* ScoreScreenModuleInput.swift in Sources */,
+				5A67E22E275F2A83006FFABF /* HistoryMainDisplayManager.swift in Sources */,
 				A1DC76F3F80D304032782720 /* ScoreScreenPresenter.swift in Sources */,
 				533CE720FBF5E7B4DBB1E57F /* ScoreScreenInteractorInput.swift in Sources */,
 				5A9251B5275E2E8500D9195F /* ProgressViewStack.swift in Sources */,
@@ -1528,6 +1660,18 @@
 				B94F4DDBDB9BA1992F36A2A7 /* ScoreScreenRouter.swift in Sources */,
 				36F083BB886B5C49544D57B8 /* ScoreScreenConfigurator.swift in Sources */,
 				2A0924B903B0ECB8656DEC8E /* ScoreScreenInitializer.swift in Sources */,
+				7A8D3305EDBF43EA7E341F25 /* HistoryMainViewInput.swift in Sources */,
+				104D6BBB011FB18A51B1CBA4 /* HistoryMainViewOutput.swift in Sources */,
+				A138CF635CEB51A81E81BF87 /* HistoryMainViewController.swift in Sources */,
+				4D7981684581F0706143AD12 /* HistoryMainModuleInput.swift in Sources */,
+				86E6FF5BF5BD7B4B406E3CA6 /* HistoryMainPresenter.swift in Sources */,
+				2CCDF90F72F8BCC7F14E979E /* HistoryMainInteractorInput.swift in Sources */,
+				B19EE2FD5CE137F75A293014 /* HistoryMainInteractorOutput.swift in Sources */,
+				88F503DD2C9CA7F177FDF085 /* HistoryMainInteractor.swift in Sources */,
+				D1318A7766CF97BB24B0E04E /* HistoryMainRouterInput.swift in Sources */,
+				C088B258F5AFC88E7E66A437 /* HistoryMainRouter.swift in Sources */,
+				B9177503F65485DE7D184DAC /* HistoryMainConfigurator.swift in Sources */,
+				D26C9118AB17BE2C20BAD7BB /* HistoryMainInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

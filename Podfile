@@ -9,5 +9,6 @@ target 'NeuroApp' do
   pod 'IQKeyboardManagerSwift'
   pod "ViperMcFlurry"
   pod 'Alamofire', '~> 5.4'
+  pod 'Charts'
 
 end

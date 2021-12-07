@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0JR-UP-u3L">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,14 +9,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--History Main View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryMainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HistoryMainViewController" customModule="NeuroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8s-Nd-FtT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AlM-bn-QUP">
+                                        <rect key="frame" x="40" y="347.5" width="334" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="AlM-bn-QUP" firstAttribute="centerY" secondItem="V8s-Nd-FtT" secondAttribute="centerY" id="RhU-Uf-ASU"/>
+                                    <constraint firstItem="AlM-bn-QUP" firstAttribute="centerX" secondItem="V8s-Nd-FtT" secondAttribute="centerX" id="lgI-7C-dOZ"/>
+                                    <constraint firstItem="AlM-bn-QUP" firstAttribute="leading" secondItem="V8s-Nd-FtT" secondAttribute="leading" constant="40" id="rFz-8X-3Va"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93f-YP-wnn">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
@@ -29,7 +46,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-u8-wLg">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-u8-wLg" customClass="LineChartView" customModule="Charts">
                                                 <rect key="frame" x="20" y="46.5" width="374" height="280.5"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                 <constraints>
@@ -69,17 +86,33 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="V8s-Nd-FtT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="2oZ-1z-m2x"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="V8s-Nd-FtT" secondAttribute="trailing" id="DHx-7o-gZd"/>
                             <constraint firstItem="93f-YP-wnn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="MX0-qA-LpY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="93f-YP-wnn" secondAttribute="trailing" id="e2E-Hq-dD9"/>
+                            <constraint firstItem="V8s-Nd-FtT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="eP1-Ra-SHY"/>
                             <constraint firstItem="93f-YP-wnn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kQW-ov-UEp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="V8s-Nd-FtT" secondAttribute="bottom" id="mUq-bu-Q1Z"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="93f-YP-wnn" secondAttribute="bottom" id="pkD-iG-sZi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="timer" catalog="system" id="zAy-Ac-eyy"/>
                     <navigationItem key="navigationItem" id="BcS-Fe-WoN"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="chartView" destination="J7q-u8-wLg" id="z0X-Yx-QNt"/>
+                        <outlet property="contentView" destination="hGv-Ml-Rzb" id="X6R-rH-L6M"/>
+                        <outlet property="emptyHistoryLabel" destination="AlM-bn-QUP" id="LpT-HW-nk6"/>
+                        <outlet property="tableView" destination="snM-8J-yE5" id="mTh-iH-Ff5"/>
+                        <outlet property="titleLabel" destination="5wD-IC-S8r" id="Zf3-Tn-ESi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="COX-u5-SCu" customClass="HistoryMainModuleInitializer" customModule="NeuroApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="historymainViewController" destination="Y6W-OH-hqX" id="W1c-pO-E20"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
         </scene>

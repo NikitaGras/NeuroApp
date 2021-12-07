@@ -68,6 +68,7 @@ class QuizService: QuizServiceProtocol {
     func notifyObservers() {
         observers.forEach { weakBox in
             weakBox.object?.update(with: quiz)
+            weakBox.object?.update(with: history)
         }
     }
 }

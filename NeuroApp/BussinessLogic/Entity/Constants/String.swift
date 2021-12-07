@@ -70,10 +70,16 @@ extension String {
     }
     
     struct Score {
+        static let score = "Score:"
         static let avarage = "Averge:"
         static let partOne = "Part 1:"
         static let partTwo = "Part 2:"
         static let partThree = "Part 3:"
+        
         static let mainText = "Thank you for finishing the questionnaire! \n\nYou scores are:"
+        static let yourRecentScore = "Your recent scores:"
+    }
+    struct History {
+        static let empty = "You have no history yet. You can watch your history if you have answered at least one quiestionnaire!"
     }
 }
