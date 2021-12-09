@@ -54,11 +54,23 @@
                                     <constraint firstAttribute="height" constant="5" id="MPA-AO-4Tf"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSq-IM-AXc" customClass="ProgressBar" customModule="NeuroApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QzR-8L-aC8">
                                 <rect key="frame" x="30" y="768" width="354" height="30"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSq-IM-AXc" customClass="ProgressBar" customModule="NeuroApp" customModuleProvider="target">
+                                        <rect key="frame" x="162" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="J6e-O0-Ffe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ONZ-iN-TH4"/>
+                                    <constraint firstItem="NSq-IM-AXc" firstAttribute="centerX" secondItem="QzR-8L-aC8" secondAttribute="centerX" id="BJQ-bI-E2V"/>
+                                    <constraint firstAttribute="height" constant="30" id="Tnz-nn-m2p"/>
+                                    <constraint firstItem="NSq-IM-AXc" firstAttribute="top" secondItem="QzR-8L-aC8" secondAttribute="top" id="VJd-8h-F5X"/>
+                                    <constraint firstAttribute="bottom" secondItem="NSq-IM-AXc" secondAttribute="bottom" id="vaJ-9h-MO5"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -72,14 +84,14 @@
                             <constraint firstItem="afg-Ta-jzk" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="9rb-Fd-RpF"/>
                             <constraint firstItem="5PS-mk-88z" firstAttribute="top" secondItem="FNR-Ys-L6j" secondAttribute="bottom" constant="20" id="Bbd-4Z-tWP"/>
                             <constraint firstItem="Mhc-M6-q16" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Dua-8g-Nzi"/>
-                            <constraint firstItem="afg-Ta-jzk" firstAttribute="top" secondItem="NSq-IM-AXc" secondAttribute="bottom" constant="10" id="MT7-i3-9NE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QzR-8L-aC8" secondAttribute="trailing" constant="30" id="QIS-87-2NR"/>
+                            <constraint firstItem="QzR-8L-aC8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="QsV-Oy-EDo"/>
                             <constraint firstItem="5PS-mk-88z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="UbS-Vu-Zje"/>
                             <constraint firstItem="Mhc-M6-q16" firstAttribute="top" secondItem="5PS-mk-88z" secondAttribute="bottom" constant="20" id="YUJ-iV-lBj"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NSq-IM-AXc" secondAttribute="trailing" constant="30" id="ZT2-uJ-xn5"/>
                             <constraint firstItem="FNR-Ys-L6j" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="bO4-Vz-B9G"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5PS-mk-88z" secondAttribute="trailing" constant="20" id="bg2-OO-Xxu"/>
-                            <constraint firstItem="NSq-IM-AXc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="qUH-uC-FdY"/>
                             <constraint firstItem="FNR-Ys-L6j" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qeb-9N-t5p"/>
+                            <constraint firstItem="afg-Ta-jzk" firstAttribute="top" secondItem="QzR-8L-aC8" secondAttribute="bottom" constant="10" id="xfv-TP-Zx3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dMz-HB-PDt"/>
@@ -100,7 +112,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="139" y="135"/>
+            <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
         </scene>
         <!--ScoreScreenViewController-->
         <scene sceneID="e1E-XF-EnA">

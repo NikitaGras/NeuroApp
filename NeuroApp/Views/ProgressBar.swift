@@ -48,6 +48,7 @@ class ProgressBar: UIStackView {
         self.axis = .horizontal
         self.distribution = .fillEqually
         self.alignment = .center
+        self.spacing = 10
     }
     
     private func createLabel() -> UILabel {
