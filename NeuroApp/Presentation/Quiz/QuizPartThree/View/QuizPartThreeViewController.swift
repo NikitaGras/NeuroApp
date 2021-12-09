@@ -35,7 +35,7 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     }
     
     func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int) {
-        progressBar.addArrangedViews(numberOfViews: viewsNumber, currentIndex: currentIndex, startFrom: startValue)
+        progressBar.setup(numberOfViews: viewsNumber, currentIndex: currentIndex, startFrom: startValue)
     }
     
     func setupProgressViewStack(with quiz: Quiz) {

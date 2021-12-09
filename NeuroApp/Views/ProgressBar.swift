@@ -12,15 +12,22 @@ class ProgressBar: UIStackView {
     private var currentIndex: Int = 0
     private var valueForLabel: Int = 0
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupStackView()
     }
     
-    func addArrangedViews(numberOfViews: Int, currentIndex: Int = 0, startFrom value: Int = 0) {
+    required init(coder: NSCoder) {
+        super.init(coder: coder)
+        setupStackView()
+    }
+    
+    func setup(numberOfViews: Int, currentIndex: Int = 0, startFrom value: Int = 0) {
+        arrangedSubviews.forEach { view in
+            view.removeFromSuperview()
+        }
         self.currentIndex = currentIndex
         self.valueForLabel = value
-        
         for _ in 0 ..< numberOfViews {
             let label = createLabel()
             labels.append(label)
@@ -39,7 +46,7 @@ class ProgressBar: UIStackView {
     
     private func setupStackView() {
         self.axis = .horizontal
-        self.distribution = .equalSpacing
+        self.distribution = .fillEqually
         self.alignment = .center
     }
     
@@ -54,8 +61,10 @@ class ProgressBar: UIStackView {
         label.translatesAutoresizingMaskIntoConstraints = false
         setInitialState(for: label)
         NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: label, attribute: .width, relatedBy: .equal, toItem: label, attribute: .height, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: label, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 30)])
+            NSLayoutConstraint(item: label, attribute: .width, relatedBy: .equal,
+                               toItem: label, attribute: .height, multiplier: 1, constant: 0),
+            label.heightAnchor.constraint(equalToConstant: 30)
+        ])
         return label
     }
     

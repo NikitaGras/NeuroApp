@@ -13,11 +13,12 @@ class HistoryMainDisplayManager: NSObject {
     weak var delegate: HistoryMainDisplayManagerDelegate?
     
     private let identifier = HistoryMainTableViewCell.identifier
-    private let rowHeight: CGFloat = 60
+    private let rowHeight: CGFloat = 80
     
     init(_ tableView: UITableView) {
         self.tableView = tableView
         super.init()
+        setupTableView()
     }
     
     private func setupTableView() {

@@ -11,8 +11,8 @@ class HistoryMainTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scoreTitleLabel: UILabel!
     @IBOutlet weak var scoreValueLabel: UILabel!
+    @IBOutlet weak var container: UIView!
     
-    //TODO: нужно переместить, чтобы не создавался в каждой ячейке?
     private var dateFormatter: DateFormatter = {
         let df = DateFormatter()
         df.locale = Locale(identifier: "en_US")
@@ -22,7 +22,11 @@ class HistoryMainTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        scoreTitleLabel.text = "\(String.Score.score):"
+        self.selectionStyle = .none
+        scoreTitleLabel.text = String.Score.score
+        container.layer.cornerRadius = 15
+        container.layer.borderWidth = 2
+        container.layer.borderColor = UIColor.NAGray.cgColor
     }
     
     func fill(with result: Result) {
