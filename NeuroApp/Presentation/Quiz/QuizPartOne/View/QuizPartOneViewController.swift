@@ -15,10 +15,16 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var nextButton: RoundButton!
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var progressBar: ProgressBar!
+    @IBOutlet weak var progressTabBar: ProgressTabBar!
     @IBOutlet weak var progressViewStack: ProgressViewStack!
     
     var output: QuizPartOneViewOutput!
+    var questions: [PartOneQuestion] {
+        return output.questions
+    }
+    var currentQuestionIndex: Int {
+        return output.currentQuestionIndex
+    }
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -37,23 +43,26 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
         taskLabel.text = .PartOneQuiz.taskText
         scaleDescriptionLabels.forEach { label in
             if label.tag == 0 {
-                label.text = .PartOneQuiz.leftScaleDescription
+                label.text = String.PartOneQuiz.leftScaleDescription
             } else if label.tag == 1 {
-                label.text = .PartOneQuiz.centerScaleDescription
+                label.text = String.PartOneQuiz.centerScaleDescription
             } else if label.tag == 2 {
-                label.text = .PartOneQuiz.rightScaleDescription
+                label.text = String.PartOneQuiz.rightScaleDescription
             }
         }
         setupScaleLabels(with: slider)
         nextButton.setTitle(.Button.next, for: .normal)
     }
     
-    func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int) {
-        progressBar.setup(numberOfViews: viewsNumber, currentIndex: currentIndex, startFrom: startValue)
-    }
-    
-    func setupProgressViewStack(with quiz: Quiz) {
-        progressViewStack.setup(with: quiz)
+    func setupProgressBar() {
+        progressTabBar.setup(numberOfViews: questions.count,
+                             currentIndex: currentQuestionIndex,
+                             startFrom: 0)
+        let quizPartsNumber = 3
+        progressViewStack.setup(progressViewsNumber: quizPartsNumber,
+                                currentProgressViewIndex: 0,
+                                questionsNumber: questions.count,
+                                currentQuestionIndex: currentQuestionIndex)
     }
     
     func show(_ question: PartOneQuestion) {
@@ -68,8 +77,8 @@ class QuizPartOneViewController: UIViewController, QuizPartOneViewInput {
         }
     }
     
-    func moveProgressbar() {
-        progressBar.goForward()
+    func fillProgressbar() {
+        progressTabBar.goForward()
         progressViewStack.fill()
     }
     

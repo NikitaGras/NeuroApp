@@ -7,6 +7,7 @@
 //
 
 protocol QuizPartThreeViewOutput {
+    var previousPartQuestionsCount: Int { get }
     func viewIsReady()
     func save(userText: String)
 }

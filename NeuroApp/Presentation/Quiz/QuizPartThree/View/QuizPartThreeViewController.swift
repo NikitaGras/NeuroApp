@@ -12,10 +12,13 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerTextView: PlaceholderTextView!
     @IBOutlet weak var nextButton: RoundButton!
-    @IBOutlet weak var progressBar: ProgressBar!
+    @IBOutlet weak var progressTabBar: ProgressTabBar!
     @IBOutlet weak var progressViewStack: ProgressViewStack!
     
     var output: QuizPartThreeViewOutput!
+    var previousPartQuestionsCount: Int {
+        return output.previousPartQuestionsCount
+    }
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -34,16 +37,16 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
         questionLabel.text = question
     }
     
-    func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int) {
-        progressBar.setup(numberOfViews: viewsNumber, currentIndex: currentIndex, startFrom: startValue)
+    func setupProgressBar() {
+        progressTabBar.setup(numberOfViews: 1, currentIndex: 0, startFrom: previousPartQuestionsCount)
+        progressViewStack.setup(progressViewsNumber: 3,
+                                currentProgressViewIndex: 2,
+                                questionsNumber: 1,
+                                currentQuestionIndex: 0)
     }
     
-    func setupProgressViewStack(with quiz: Quiz) {
-        progressViewStack.setup(with: quiz)
-    }
-    
-    func moveProgressBar() {
-        progressBar.goForward()
+    func fillProgressBar() {
+        progressTabBar.goForward()
     }
     
     @IBAction func next(sender: RoundButton) {

@@ -169,7 +169,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34A-fc-9t3">
                                 <rect key="frame" x="30" y="768" width="354" height="30"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqq-rf-2gk" customClass="ProgressBar" customModule="NeuroApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqq-rf-2gk" customClass="ProgressTabBar" customModule="NeuroApp" customModuleProvider="target">
                                         <rect key="frame" x="162" y="0.0" width="30" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -216,7 +216,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="nextButton" destination="KgL-tj-cQ7" id="5qD-fc-heG"/>
-                        <outlet property="progressBar" destination="Wqq-rf-2gk" id="Ao3-oT-w6F"/>
+                        <outlet property="progressTabBar" destination="Wqq-rf-2gk" id="Ao3-oT-w6F"/>
                         <outlet property="progressViewStack" destination="t42-1U-WYX" id="T8k-6j-Kfj"/>
                         <outlet property="questionLabel" destination="09e-Jy-04b" id="uzO-Ke-SQ5"/>
                         <outlet property="slider" destination="78R-an-4bs" id="NfO-n5-YHm"/>

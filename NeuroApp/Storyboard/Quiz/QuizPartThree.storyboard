@@ -57,7 +57,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QzR-8L-aC8">
                                 <rect key="frame" x="30" y="768" width="354" height="30"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSq-IM-AXc" customClass="ProgressBar" customModule="NeuroApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSq-IM-AXc" customClass="ProgressTabBar" customModule="NeuroApp" customModuleProvider="target">
                                         <rect key="frame" x="162" y="0.0" width="30" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -99,7 +99,7 @@
                     <connections>
                         <outlet property="answerTextView" destination="5PS-mk-88z" id="yAN-Mq-4aE"/>
                         <outlet property="nextButton" destination="Mhc-M6-q16" id="Ae8-Vz-nVb"/>
-                        <outlet property="progressBar" destination="NSq-IM-AXc" id="VTt-w7-r2t"/>
+                        <outlet property="progressTabBar" destination="NSq-IM-AXc" id="VTt-w7-r2t"/>
                         <outlet property="progressViewStack" destination="afg-Ta-jzk" id="9uM-N0-4hP"/>
                         <outlet property="questionLabel" destination="FNR-Ys-L6j" id="j6r-hz-mse"/>
                         <segue destination="7xP-Jr-byf" kind="presentation" identifier="ShowScoreScreen" modalPresentationStyle="fullScreen" id="K9H-Iz-i7M"/>

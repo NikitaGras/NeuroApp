@@ -7,6 +7,9 @@
 //
 
 protocol QuizPartOneViewOutput {
+    var questions: [PartOneQuestion] { get }
+    var currentQuestionIndex: Int { get }
+    
     func viewIsReady()
     func save(_ answer: PartOneAnswer)
 }

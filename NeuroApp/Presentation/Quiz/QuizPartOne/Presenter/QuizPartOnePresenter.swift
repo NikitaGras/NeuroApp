@@ -11,25 +11,25 @@ class QuizPartOnePresenter: QuizPartOneModuleInput, QuizPartOneViewOutput, QuizP
     var interactor: QuizPartOneInteractorInput!
     var router: QuizPartOneRouterInput!
     
-    var questions: [PartOneQuestion] = []
-    var index: Int = 0
+    var questions: [PartOneQuestion] {
+        return interactor.getQuestions()
+    }
+    var currentQuestionIndex: Int = 0
     
     func viewIsReady() {
         view.setupInitialState()
-        
-        questions = interactor.getQuestions()
-        index = interactor.getAnswers().count
-        view.show(questions[index])
-        view.setupProgressBar(viewsNumber: questions.count, currentIndex: index, startValue: 0)
-        view.setupProgressViewStack(with: interactor.quiz)
+        currentQuestionIndex = interactor.getAnswers().count
+        view.show(questions[currentQuestionIndex])
+        view.setupProgressBar()
     }
     
     func save(_ answer: PartOneAnswer) {
         do {
             try interactor.save(answer)
-            view.moveProgressbar()
-            index += 1
-            index >= questions.count ? openNextPart() : view.show(questions[index])
+            view.fillProgressbar()
+            currentQuestionIndex += 1
+            currentQuestionIndex >= questions.count ?
+            openNextPart() : view.show(questions[currentQuestionIndex])
         } catch {
             view.show(error)
         }

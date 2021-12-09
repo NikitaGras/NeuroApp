@@ -13,25 +13,25 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
     var interactor: QuizPartTwoInteractorInput!
     var router: QuizPartTwoRouterInput!
 
-    var questions: [PartTwoQuestion] = []
-    var answers: [PartTwoAnswer] = []
-    var index = 0
+    var questions: [PartTwoQuestion] {
+        return interactor.getQuestions()
+    }
+    var previousPartQuestionsCount: Int {
+        interactor.getPartOneQuestionCount()
+    }
+    var currentQuestionIndex: Int = 0
     
     var selectedOption: Option?
-    var startTime: Date = .init()
+    var startTime: Date = Date.init()
     
     func viewIsReady() {
         view.setupInitialState()
-        questions = interactor.getQuestions()
-        answers = interactor.getAnswers()
-        index = answers.count
-        let partOneQuestionCount = interactor.getPartOneQuestionCount()
-        view.setupProgressBar(viewsNumber: questions.count, currentIndex: index, startValue: partOneQuestionCount)
-        view.setupProgressViewStack(with: interactor.quiz)
+        currentQuestionIndex = interactor.getAnswers().count
+        view.setupProgressBar()
     }
     
     func viewDidLayout() {
-        show(question: questions[index])
+        show(question: questions[currentQuestionIndex])
     }
     
     func save() {
@@ -40,12 +40,13 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
                 return
             }
             let runtime = getRuntime()
-            
-            let answer = PartTwoAnswer(questionText: questions[index].text, option: selectedOption, responseTime: runtime)
+            let answer = PartTwoAnswer(questionText: questions[currentQuestionIndex].text,
+                                       option: selectedOption, responseTime: runtime)
             try interactor.save(answer)
-            view.moveProgressBar()
-            index += 1
-            index >= questions.count ? openNextPart() : show(question: questions[index])
+            view.fillProgressBar()
+            currentQuestionIndex += 1
+            currentQuestionIndex >= questions.count ?
+            openNextPart() : show(question: questions[currentQuestionIndex])
         } catch {
             view.show(error)
         }
@@ -59,8 +60,7 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
         if let options = question.options as? [StringOption] {
             view.show(stringOptions: options)
         }
-        //TODO: писать подробнее
-        startTime = .init()
+        startTime = Date.init()
     }
     
     func openNextPart() {
@@ -68,7 +68,7 @@ class QuizPartTwoPresenter: QuizPartTwoModuleInput, QuizPartTwoViewOutput, QuizP
     }
     
     func getRuntime() -> TimeInterval {
-        let finishTime: Date = .init()
+        let finishTime = Date.init()
         return finishTime.timeIntervalSince1970 - startTime.timeIntervalSince1970
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ProgressBar.swift
+//  ProgressTabBar.swift
 //  NeuroApp
 //
 //  Created by Nikita Gras on 03.12.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProgressBar: UIStackView {
+class ProgressTabBar: UIStackView {
     private var labels: [UILabel] = []
     private var currentIndex: Int = 0
     private var valueForLabel: Int = 0

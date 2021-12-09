@@ -8,6 +8,10 @@
 
 protocol QuizPartTwoViewOutput {
     var selectedOption: Option? { get set }
+    var questions: [PartTwoQuestion] { get }
+    var currentQuestionIndex: Int { get }
+    var previousPartQuestionsCount: Int { get}
+    
     func viewIsReady()
     func viewDidLayout()
     func save()

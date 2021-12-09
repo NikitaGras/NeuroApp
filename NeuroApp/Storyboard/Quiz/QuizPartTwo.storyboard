@@ -56,7 +56,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-tO-HnR">
                                 <rect key="frame" x="30" y="768" width="354" height="30"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2u-At-gcT" customClass="ProgressBar" customModule="NeuroApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2u-At-gcT" customClass="ProgressTabBar" customModule="NeuroApp" customModuleProvider="target">
                                         <rect key="frame" x="162" y="0.0" width="30" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -98,7 +98,7 @@
                     <connections>
                         <outlet property="nextButton" destination="TRS-2p-kCH" id="F9M-FN-VuQ"/>
                         <outlet property="optionView" destination="gxw-Jk-1xZ" id="ecz-9w-Bp7"/>
-                        <outlet property="progressBar" destination="J2u-At-gcT" id="QgG-vC-7KD"/>
+                        <outlet property="progressTabBar" destination="J2u-At-gcT" id="QgG-vC-7KD"/>
                         <outlet property="progressViewStack" destination="RLy-jn-RqY" id="ufq-P4-3wS"/>
                         <outlet property="questionLabel" destination="cUP-Lg-hUv" id="isL-7i-5Ky"/>
                         <segue destination="DSI-Bc-Xc7" kind="show" identifier="ShowPreviewViewController" id="5dm-9t-GvP"/>

@@ -12,10 +12,16 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var nextButton: RoundButton!
     @IBOutlet weak var optionView: OptionView!
-    @IBOutlet weak var progressBar: ProgressBar!
+    @IBOutlet weak var progressTabBar: ProgressTabBar!
     @IBOutlet weak var progressViewStack: ProgressViewStack!
     
     var output: QuizPartTwoViewOutput!
+    var questions: [PartTwoQuestion] {
+        return output.questions
+    }
+    var currentQuestionIndex: Int {
+        return output.currentQuestionIndex
+    }
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -39,12 +45,14 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
         optionView.delegate = self
     }
     
-    func setupProgressBar(viewsNumber: Int, currentIndex: Int, startValue: Int) {
-        progressBar.setup(numberOfViews: viewsNumber, currentIndex: currentIndex, startFrom: startValue)
-    }
-    
-    func setupProgressViewStack(with quiz: Quiz) {
-        progressViewStack.setup(with: quiz)
+    func setupProgressBar() {
+        progressTabBar.setup(numberOfViews: questions.count,
+                          currentIndex: currentQuestionIndex,
+                          startFrom: currentQuestionIndex)
+        progressViewStack.setup(progressViewsNumber: 3,
+                                currentProgressViewIndex: 1,
+                                questionsNumber: questions.count,
+                                currentQuestionIndex: currentQuestionIndex)
     }
     
     func show(question: PartTwoQuestion) {
@@ -64,8 +72,8 @@ class QuizPartTwoViewController: UIViewController, QuizPartTwoViewInput {
         output.save()
     }
     
-    func moveProgressBar() {
-        progressBar.goForward()
+    func fillProgressBar() {
+        progressTabBar.goForward()
         progressViewStack.fill()
     }
 }

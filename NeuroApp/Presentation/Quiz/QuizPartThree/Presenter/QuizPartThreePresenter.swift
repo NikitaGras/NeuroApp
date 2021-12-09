@@ -12,20 +12,18 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
     var interactor: QuizPartThreeInteractorInput!
     var router: QuizPartThreeRouterInput!
 
+    var question: PartThreeQuestion {
+        return interactor.getQuestion()
+    }
+    var previousPartQuestionsCount: Int {
+        return interactor.getPriviousPartQuestionsNumber()
+    }
     var userText: String = ""
     
     func viewIsReady() {
         view.setupInitialState()
-        let question = interactor.getQuestion()
         view.show(question: question)
-        
-        let questionsNumber = 1
-        let currentQuestionIndex = 0
-        let startValue = interactor.getPriviousPartQuestionsNumber()
-        view.setupProgressBar(viewsNumber: questionsNumber,
-                              currentIndex: currentQuestionIndex,
-                              startValue: startValue)
-        view.setupProgressViewStack(with: interactor.quiz)
+        view.setupProgressBar()
     }
 
     func save(userText: String) {
@@ -41,7 +39,7 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
     }
     
     func showResultScreen() {
-        view.moveProgressBar()
+        view.fillProgressBar()
         router.showResultScreen()
     }
 }
