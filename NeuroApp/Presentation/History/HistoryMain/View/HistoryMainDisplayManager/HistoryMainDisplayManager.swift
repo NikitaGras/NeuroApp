@@ -13,7 +13,10 @@ class HistoryMainDisplayManager: NSObject {
     weak var delegate: HistoryMainDisplayManagerDelegate?
     
     private let identifier = HistoryMainTableViewCell.identifier
-    private let rowHeight: CGFloat = 80
+    
+    struct Appearance {
+        static let rowHeight: CGFloat = 80
+    }
     
     init(_ tableView: UITableView) {
         self.tableView = tableView
@@ -23,9 +26,10 @@ class HistoryMainDisplayManager: NSObject {
     
     private func setupTableView() {
         tableView.register(cell: HistoryMainTableViewCell.self)
+        tableView.register(HistoryHeaderView.self, forHeaderFooterViewReuseIdentifier: HistoryHeaderView.identifier)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = rowHeight
+        tableView.rowHeight = Appearance.rowHeight
         tableView.isScrollEnabled = false
         tableView.isEditing = false
     }
@@ -33,7 +37,7 @@ class HistoryMainDisplayManager: NSObject {
     func set(history: [Result]) {
         self.history = history
         tableView.reloadData()
-        tableView.frame.size.height = CGFloat(history.count) * rowHeight
+        tableView.frame.size.height = CGFloat(history.count) * Appearance.rowHeight
     }
 }
 
@@ -50,6 +54,16 @@ extension HistoryMainDisplayManager: UITableViewDataSource {
 }
 
 extension HistoryMainDisplayManager: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HistoryHeaderView.identifier) as! HistoryHeaderView
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let height = (tableView.bounds.width - 2 * HistoryHeaderView.Appearance.margin) * 3 / 4 + HistoryHeaderView.Appearance.margin * 2 + HistoryHeaderView.Appearance.labelHeight
+        return height
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.displayManager(self, didSelectResult: history[indexPath.row])
     }

@@ -10,9 +10,6 @@ import UIKit
 import Charts
 
 class HistoryMainViewController: UIViewController, HistoryMainViewInput {
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var chartView: LineChartView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyHistoryLabel: UILabel!
     
@@ -29,17 +26,16 @@ class HistoryMainViewController: UIViewController, HistoryMainViewInput {
     func setupInitialState() {
         displayManager = HistoryMainDisplayManager(tableView)
         displayManager.delegate = self
-        titleLabel.text = String.Score.yourRecentScore
         emptyHistoryLabel.text = String.History.empty
     }
     
     func setup(with history: [Result]) {
-        contentView.isHidden = false
+        tableView.isHidden = false
         displayManager.set(history: history)
     }
     
     func showEmptyHistory() {
-        contentView.isHidden = true
+        tableView.isHidden = true
     }
 }
 
