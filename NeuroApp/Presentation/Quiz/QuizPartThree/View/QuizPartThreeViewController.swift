@@ -49,7 +49,12 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
         progressTabBar.goForward()
     }
     
+    func setupNextButon(isEnabler: Bool) {
+        nextButton.isEnabled = isEnabler
+    }
+    
     @IBAction func next(sender: RoundButton) {
+        nextButton.isEnabled = false
         let text = answerTextView.text ?? ""
         output.save(userText: text)
     }

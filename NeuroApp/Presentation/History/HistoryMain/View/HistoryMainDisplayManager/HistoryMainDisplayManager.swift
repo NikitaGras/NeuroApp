@@ -15,7 +15,7 @@ class HistoryMainDisplayManager: NSObject {
     private let identifier = HistoryMainTableViewCell.identifier
     
     struct Appearance {
-        static let rowHeight: CGFloat = 80
+        static let rowHeight: CGFloat = 480
     }
     
     init(_ tableView: UITableView) {
@@ -30,7 +30,6 @@ class HistoryMainDisplayManager: NSObject {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = Appearance.rowHeight
-        tableView.isScrollEnabled = false
         tableView.isEditing = false
     }
     
@@ -56,6 +55,7 @@ extension HistoryMainDisplayManager: UITableViewDataSource {
 extension HistoryMainDisplayManager: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HistoryHeaderView.identifier) as! HistoryHeaderView
+        
         return headerView
     }
     

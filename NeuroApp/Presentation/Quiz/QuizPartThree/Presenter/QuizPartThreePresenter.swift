@@ -29,7 +29,9 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
     func save(userText: String) {
         let maxCharNumber = 49
         guard userText.count >= maxCharNumber else {
-            return view.show(ValidationError.custom(String.ValidationError.shortAnswer))
+            view.show(ValidationError.custom(String.ValidationError.shortAnswer))
+            view.setupNextButon(isEnabler: true)
+            return
         }
         interactor.save(userText: userText)
     }
