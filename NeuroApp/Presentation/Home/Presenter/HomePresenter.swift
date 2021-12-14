@@ -8,12 +8,22 @@
 import Foundation
 
 class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
+    lazy var timer: Timer = {
+        let timeInterval = 1.0
+        let timer = Timer(timeInterval: timeInterval, repeats: true) { [weak self] timer in
+            self?.setupButtonTitle()
+        }
+        return timer
+    }()
+    
     weak var view: HomeViewInput!
     
     var interactor: HomeInteractorInput!
     var router: HomeRouterInput!
     
-    var timer: Timer?
+    var quiz: Quiz {
+        interactor.quiz
+    }
     
     func viewIsReady() {
         view.setupInitialState()
@@ -40,22 +50,10 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     func openLogin() {
         router.openLogin()
     }
-}
-
-//MARK: - Timer
-extension HomePresenter {
+    
+    //MARK: - Timer
     func startTimer() {
-        setupButtonTitle()
-        timer = {
-            let timeInterval = 1.0
-            let timer = Timer(timeInterval: timeInterval, repeats: true) { [weak self] timer in
-                self?.setupButtonTitle()
-            }
-            return timer
-        }()
-        if let timer = timer {
-            RunLoop.current.add(timer, forMode: .default)
-        }
+        RunLoop.current.add(timer, forMode: .default)
     }
     
     func setupButtonTitle() {
@@ -67,8 +65,15 @@ extension HomePresenter {
         if timeInterval > 1 {
             view.setupButtonTitle(with: timeInterval.rounded())
         } else {
-            timer?.invalidate()
+            timer.invalidate()
             interactor.startNewQuiz()
+            timer = {
+                let timeInterval = 1.0
+                let timer = Timer(timeInterval: timeInterval, repeats: true) { [weak self] timer in
+                    self?.setupButtonTitle()
+                }
+                return timer
+            }()
         }
     }
 }

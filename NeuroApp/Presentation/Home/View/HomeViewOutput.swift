@@ -7,6 +7,7 @@
 //
 
 protocol HomeViewOutput {
+    var quiz: Quiz { get }
     func viewIsReady()
     func openQuiz()
     func startTimer()

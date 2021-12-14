@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, HomeViewInput {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+        self.update(with: output.quiz)
     }
 
     // MARK: - HomeViewInput

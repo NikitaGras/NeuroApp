@@ -20,8 +20,21 @@ class HistoryHeaderView: UITableViewHeaderFooterView {
     }()
     var chartView: LineChartView = {
         let chartView = LineChartView()
-        chartView.backgroundColor = .systemGray
+        chartView.rightAxis.enabled = false
+        chartView.leftAxis.labelFont = UIFont.systemFont(ofSize: 18)
+        
+        chartView.xAxis.labelPosition = .bottom
+        chartView.xAxis.labelFont = UIFont.systemFont(ofSize: 18)
+        
+        chartView.drawGridBackgroundEnabled = false
+        
         return chartView
+    }()
+    private var dateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "en_US")
+        df.setLocalizedDateFormatFromTemplate("MMM d")
+        return df
     }()
     
     struct Appearance {
@@ -42,6 +55,30 @@ class HistoryHeaderView: UITableViewHeaderFooterView {
     override func layoutSubviews() {
         super .layoutSubviews()
         layout()
+    }
+    
+    func setupChartView(with history: [Result]) {
+        chartView.xAxis.labelCount = history.count
+        
+        var chartDataEntry: [ChartDataEntry] = []
+        for result in history {
+            let dataEntryX = Double(result.finishTime.timeIntervalSince1970)
+            let dataEntryY = Double(result.avarageScore)
+            let dataEntry = ChartDataEntry(x: dataEntryX, y: dataEntryY)
+            chartDataEntry.append(dataEntry)
+        }
+        
+        let dataSet = LineChartDataSet(chartDataEntry)
+        dataSet.label = ""
+        dataSet.form = .none
+        dataSet.setCircleColor(UIColor.NABlue)
+        dataSet.drawVerticalHighlightIndicatorEnabled = false
+        dataSet.lineWidth = 4
+        
+        let data = LineChartData(dataSet: dataSet)
+        data.setDrawValues(false)
+    
+        chartView.data = data
     }
     
     private func setupInitialState() {
