@@ -15,7 +15,7 @@ class HistoryMainDisplayManager: NSObject {
     private let identifier = HistoryMainTableViewCell.identifier
     
     struct Appearance {
-        static let rowHeight: CGFloat = 480
+        static let rowHeight: CGFloat = 80
     }
     
     init(_ tableView: UITableView) {

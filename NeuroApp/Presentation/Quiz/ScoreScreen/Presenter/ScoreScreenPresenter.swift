@@ -26,7 +26,6 @@ class ScoreScreenPresenter: ScoreScreenModuleInput, ScoreScreenViewOutput, Score
     }
     
     func goHome() {
-        interactor.changeQuize(to: .notAvailable)
         router.goHome()
     }
 }
