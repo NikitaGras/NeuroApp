@@ -55,7 +55,7 @@ extension HistoryMainDisplayManager: UITableViewDataSource {
 extension HistoryMainDisplayManager: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HistoryHeaderView.identifier) as! HistoryHeaderView
-        headerView.setupChartView(with: history)
+        headerView.updateChartView(with: history)
         return headerView
     }
     
