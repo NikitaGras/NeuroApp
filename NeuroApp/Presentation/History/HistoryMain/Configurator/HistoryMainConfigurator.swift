@@ -18,7 +18,7 @@ class HistoryMainModuleConfigurator {
 
     private func configure(viewController: HistoryMainViewController) {
         let router = HistoryMainRouter()
-        router.tarnsitionHandler = viewController
+        router.transitionHandler = viewController
 
         let presenter = HistoryMainPresenter()
         presenter.view = viewController

@@ -8,9 +8,9 @@
 import ViperMcFlurry
 
 class HistoryMainRouter: HistoryMainRouterInput {
-    var tarnsitionHandler: RamblerViperModuleTransitionHandlerProtocol!
+    var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func openHistoryAverage(with result: Result) {
-        // TODO:
+        _ = transitionHandler.openModule?(usingSegue: "openAvarage")
     }
 }
