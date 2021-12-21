@@ -30,6 +30,7 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
     func setupInitialState() {
         navigationController?.setNavigationBarHidden(true, animated: true)
         nextButton.setTitle(String.Button.next, for: .normal)
+        nextButton.setBackgroundColor(UIColor.NAGray, for: .disabled)
         answerTextView.placeholderText = String.PartThreeQuiz.placeholder
     }
     
@@ -49,8 +50,8 @@ class QuizPartThreeViewController: UIViewController, QuizPartThreeViewInput {
         progressTabBar.goForward()
     }
     
-    func setupNextButon(isEnabler: Bool) {
-        nextButton.isEnabled = isEnabler
+    func setupNextButon(isEnabled: Bool) {
+        nextButton.isEnabled = isEnabled
     }
     
     @IBAction func next(sender: RoundButton) {

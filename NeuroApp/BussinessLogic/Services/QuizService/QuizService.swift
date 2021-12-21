@@ -47,6 +47,7 @@ class QuizService: QuizServiceProtocol {
                                 partThreeAnswer: partThreeAnswer,
                                 finishTime: finishTime)
             history.append(result)
+            notifyObservers()
         }
     }
     
