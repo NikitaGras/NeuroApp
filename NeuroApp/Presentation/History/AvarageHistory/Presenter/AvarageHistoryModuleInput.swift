@@ -7,5 +7,5 @@
 //
 
 protocol AvarageHistoryModuleInput: AnyObject {
-
+    var result: Result! { get set }
 }

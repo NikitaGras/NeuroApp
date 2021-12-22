@@ -21,6 +21,15 @@ class HistoryMainViewController: UIViewController, HistoryMainViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        guard let tableHeaderView = tableView.tableHeaderView else {
+            return
+        }
+        let height = tableHeaderView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+        tableHeaderView.frame.size.height = height
+    }
 
     // MARK: HistoryMainViewInput
     func setupInitialState() {

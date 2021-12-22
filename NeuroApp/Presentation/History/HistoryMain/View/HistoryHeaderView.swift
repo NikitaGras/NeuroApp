@@ -6,13 +6,37 @@
 //
 
 import Charts
+import UIKit
 
-class HistoryHeaderView: UITableViewHeaderFooterView {
-    var titleLabel = UILabel()
-    var chartView = LineChartView()
+class HistoryHeaderView: UIView {
+    struct Appearance {
+        static let spasing: CGFloat = 20
+    }
+    
+    var titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = String.Score.yourRecentScore
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.minimumScaleFactor = 0.5
+        label.numberOfLines = 1
+        return label
+    }()
+    var chartView: LineChartView = {
+        let chartView = LineChartView()
+        chartView.pinchZoomEnabled = false
+        chartView.doubleTapToZoomEnabled = false
+        chartView.rightAxis.enabled = false
+        chartView.leftAxis.labelFont = UIFont.systemFont(ofSize: 16)
+        chartView.xAxis.labelPosition = .bottom
+        chartView.xAxis.labelFont = UIFont.systemFont(ofSize: 16)
+        chartView.xAxis.drawGridLinesEnabled = false
+        chartView.xAxis.centerAxisLabelsEnabled = true
+        chartView.leftAxis.drawGridLinesEnabled = false
+        return chartView
+    }()
     
     var axisFormatterDelegate: IAxisValueFormatter?
-    
     private var dateFormatter: DateFormatter = {
         let df = DateFormatter()
         df.locale = Locale(identifier: "en_US")
@@ -20,81 +44,60 @@ class HistoryHeaderView: UITableViewHeaderFooterView {
         return df
     }()
     
-    struct Appearance {
-        static let labelHeight: CGFloat = 20
-        static let margin: CGFloat = 20
-    }
+    var history: [Result] = []
     
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupInitialState()
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupInitialState()
-    }
-    
-    override func layoutSubviews() {
-        super .layoutSubviews()
-        layout()
-    }
-
-    func updateChartView(with history: [Result]) {
-        chartView.xAxis.setLabelCount(history.count, force: false)
-        var chartDataEntry: [ChartDataEntry] = []
-        for index in 0..<history.count {
-            let xAxisValue = Double(history[index].finishTime.timeIntervalSince1970)
-            let dataEntryX = xAxisValue
-            let dataEntryY = Double(history[index].avarageScore)
-            let dataEntry = ChartDataEntry(x: dataEntryX, y: dataEntryY)
-            chartDataEntry.append(dataEntry)
-        }
-        let dataSet = LineChartDataSet(chartDataEntry)
-        setup(dataSet: dataSet)
-        let data = LineChartData(dataSet: dataSet)
-        data.setDrawValues(false)
-        chartView.data = data
-    }
+    required init?(coder: NSCoder) { nil }
     
     private func setupInitialState() {
         axisFormatterDelegate = self
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(chartView)
-        setup(chartView: chartView)
-        setup(label: titleLabel)
+        chartView.xAxis.valueFormatter = axisFormatterDelegate
+        layout()
     }
     
     private func layout() {
-        titleLabel.frame = CGRect(x: Appearance.margin,
-                                  y: 0,
-                                  width: contentView.bounds.width - 2 * Appearance.margin,
-                                  height: Appearance.labelHeight)
-        chartView.frame = CGRect(x: Appearance.margin,
-                                 y: Appearance.margin + titleLabel.frame.height,
-                                 width: contentView.bounds.width - 2 * Appearance.margin,
-                                 height: contentView.bounds.height - 2 * Appearance.margin - titleLabel.frame.height)
+        self.addSubview(titleLabel)
+        self.addSubview(chartView)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Appearance.spasing),
+            titleLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: Appearance.spasing),
+            titleLabel.bottomAnchor.constraint(equalTo: chartView.topAnchor, constant: -Appearance.spasing)
+        ])
+        chartView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            //TODO: Необходимо придумать как расставить констрейнты
+            chartView.widthAnchor.constraint(equalToConstant: 370),
+            
+            chartView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            chartView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Appearance.spasing),
+            NSLayoutConstraint(item: chartView, attribute: .height, relatedBy: .equal, toItem: chartView, attribute: .width, multiplier: 0.5, constant: 0),
+        ])
     }
     
-    private func setup(chartView: LineChartView) {
-        chartView.pinchZoomEnabled = false
-        chartView.doubleTapToZoomEnabled = false
-        chartView.rightAxis.enabled = false
-        chartView.leftAxis.labelFont = UIFont.systemFont(ofSize: 18)
-        chartView.xAxis.labelPosition = .bottom
-        chartView.xAxis.labelFont = UIFont.systemFont(ofSize: 18)
-        chartView.xAxis.drawGridLinesEnabled = false
-        chartView.leftAxis.drawGridLinesEnabled = false
-        chartView.xAxis.valueFormatter = axisFormatterDelegate
-    }
-    
-    private func setup(label: UILabel) {
-        label.text = String.Score.yourRecentScore
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.minimumScaleFactor = 0.5
-        label.numberOfLines = 1
-        label.frame.size.height = Appearance.labelHeight
+    func updateChartView(with history: [Result]) {
+        chartView.xAxis.axisMinLabels = 1
+        chartView.xAxis.granularityEnabled = true
+        chartView.xAxis.setLabelCount(history.count, force: false)
+        
+        let chartDataEntry: [ChartDataEntry] = history.map { result in
+            let xAxisValue = Double(result.finishTime.timeIntervalSince1970)
+            let dataEntryX = xAxisValue
+            let dataEntryY = Double(result.avarageScore)
+            return ChartDataEntry(x: dataEntryX, y: dataEntryY)
+        }
+        
+        let dataSet = LineChartDataSet(chartDataEntry)
+        setup(dataSet: dataSet)
+        
+        let data = LineChartData(dataSet: dataSet)
+        data.setDrawValues(false)
+        chartView.data = data
     }
     
     private func setup(dataSet: LineChartDataSet) {
@@ -107,6 +110,7 @@ class HistoryHeaderView: UITableViewHeaderFooterView {
         dataSet.lineWidth = 4
     }
 }
+
 
 extension HistoryHeaderView: IAxisValueFormatter {
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
