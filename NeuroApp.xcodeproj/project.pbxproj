@@ -55,6 +55,7 @@
 		53A6B9D5269D50594C1EE4C6 /* ScoreScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AF8B88C49558D58DD04152 /* ScoreScreenRouterInput.swift */; };
 		56615C62A114E681AE72A01B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFFD28B57959F5B32F0FD98 /* HomeRouter.swift */; };
 		568CF19A7F36CF7859D1E3A3 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */; };
+		5A0F84D7277476AF003C127D /* AverageHistoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F84D6277476AF003C127D /* AverageHistoryHeaderView.swift */; };
 		5A126539271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */; };
 		5A127FFA27007D7100832AD2 /* QuestionsBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A127FF927007D7100832AD2 /* QuestionsBank.swift */; };
 		5A166C04269BF43200E590C7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A166C03269BF43200E590C7 /* Home.storyboard */; };
@@ -276,6 +277,7 @@
 		52862B23FEEE4B7C11DC4906 /* ScoreScreenRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenRouter.swift; sourceTree = "<group>"; };
 		549A076939854C22E1C60212 /* ProfileViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewOutput.swift; sourceTree = "<group>"; };
 		591353D8AD09E9F0376BA610 /* ScoreScreenInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenInteractorOutput.swift; sourceTree = "<group>"; };
+		5A0F84D6277476AF003C127D /* AverageHistoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageHistoryHeaderView.swift; sourceTree = "<group>"; };
 		5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboardWhenTapped.swift"; sourceTree = "<group>"; };
 		5A127FF927007D7100832AD2 /* QuestionsBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsBank.swift; sourceTree = "<group>"; };
 		5A166C03269BF43200E590C7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -817,6 +819,7 @@
 			children = (
 				5A5676772773954100CA53D5 /* AverageHistoryDisplayManager.swift */,
 				5A5676792773955E00CA53D5 /* AverageHistoryDisplayMangerDelegate.swift */,
+				5A0F84D6277476AF003C127D /* AverageHistoryHeaderView.swift */,
 			);
 			path = AverageHistoryDisplayManager;
 			sourceTree = "<group>";
@@ -1749,6 +1752,7 @@
 				95BB39AC7342CF1019409C52 /* QuizPartTwoPresenter.swift in Sources */,
 				A6641774A39D86DBBDB37790 /* QuizPartTwoInteractorInput.swift in Sources */,
 				48AD7EDBC5D03B3B4529E2F6 /* QuizPartTwoInteractorOutput.swift in Sources */,
+				5A0F84D7277476AF003C127D /* AverageHistoryHeaderView.swift in Sources */,
 				32D11D93136E916C9DEE1881 /* QuizPartTwoInteractor.swift in Sources */,
 				7E26FAEE0F8F2ED7E8391A49 /* QuizPartTwoRouterInput.swift in Sources */,
 				FA7B6A630650C47C6100CE47 /* QuizPartTwoRouter.swift in Sources */,

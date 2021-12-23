@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,26 +22,27 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-Ch-ZIw">
                         <rect key="frame" x="10" y="11.5" width="192" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OdS-4Z-uc7">
-                        <rect key="frame" x="281" y="7.5" width="34" height="29"/>
+                        <rect key="frame" x="296" y="17.5" width="14" height="9"/>
+                        <color key="tintColor" name="NAGray"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="OdS-4Z-uc7" secondAttribute="height" id="5XZ-fs-afO"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z3a-20-ZW7">
-                        <rect key="frame" x="225" y="11.5" width="46" height="21"/>
+                        <rect key="frame" x="224" y="11.5" width="62" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <color key="textColor" systemColor="systemGrayColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EwS-H3-f9J">
-                        <rect key="frame" x="212" y="5" width="3" height="34"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <rect key="frame" x="212" y="5" width="2" height="34"/>
+                        <color key="backgroundColor" name="NAGray"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="3" id="88Z-6G-YE8"/>
+                            <constraint firstAttribute="width" constant="2" id="88Z-6G-YE8"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -48,14 +50,14 @@
                     <constraint firstItem="EwS-H3-f9J" firstAttribute="centerY" secondItem="Jt9-Ch-ZIw" secondAttribute="centerY" id="3PA-bB-w0B"/>
                     <constraint firstItem="EwS-H3-f9J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="4O3-a7-unp"/>
                     <constraint firstItem="Jt9-Ch-ZIw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5JO-Sh-lbo"/>
-                    <constraint firstItem="OdS-4Z-uc7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="8A5-s6-9nz"/>
-                    <constraint firstAttribute="trailing" secondItem="OdS-4Z-uc7" secondAttribute="trailing" constant="5" id="8W0-EK-Ryw"/>
+                    <constraint firstItem="OdS-4Z-uc7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="8A5-s6-9nz"/>
+                    <constraint firstAttribute="trailing" secondItem="OdS-4Z-uc7" secondAttribute="trailing" constant="10" id="8W0-EK-Ryw"/>
                     <constraint firstItem="Jt9-Ch-ZIw" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.6" id="A8m-bK-qfA"/>
                     <constraint firstAttribute="bottom" secondItem="EwS-H3-f9J" secondAttribute="bottom" constant="5" id="Dna-Eu-DR9"/>
                     <constraint firstItem="Jt9-Ch-ZIw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="NHH-ax-tHg"/>
                     <constraint firstItem="EwS-H3-f9J" firstAttribute="leading" secondItem="Jt9-Ch-ZIw" secondAttribute="trailing" constant="10" id="YA4-FY-x2X"/>
                     <constraint firstItem="z3a-20-ZW7" firstAttribute="leading" secondItem="EwS-H3-f9J" secondAttribute="trailing" constant="10" id="c8v-FS-Xvf"/>
-                    <constraint firstAttribute="bottom" secondItem="OdS-4Z-uc7" secondAttribute="bottom" constant="5" id="cfa-kt-4LO"/>
+                    <constraint firstAttribute="bottom" secondItem="OdS-4Z-uc7" secondAttribute="bottom" constant="15" id="cfa-kt-4LO"/>
                     <constraint firstItem="OdS-4Z-uc7" firstAttribute="leading" secondItem="z3a-20-ZW7" secondAttribute="trailing" constant="10" id="hdg-Ap-J8W"/>
                     <constraint firstItem="z3a-20-ZW7" firstAttribute="centerY" secondItem="Jt9-Ch-ZIw" secondAttribute="centerY" id="nYP-X6-haK"/>
                 </constraints>
@@ -70,9 +72,9 @@
     </objects>
     <resources>
         <image name="arrow.forward" catalog="system" width="128" height="98"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="NAGray">
+            <color red="0.792156862745098" green="0.79607843137254897" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

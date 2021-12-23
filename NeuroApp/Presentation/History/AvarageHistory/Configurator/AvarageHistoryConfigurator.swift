@@ -29,7 +29,7 @@ class AvarageHistoryModuleConfigurator {
 
         presenter.interactor = interactor
         viewController.output = presenter
-        viewController.displayManager = AverageHistoryDisplayManager(viewController.tableView)
+        viewController.moduleInput = presenter
     }
 
 }

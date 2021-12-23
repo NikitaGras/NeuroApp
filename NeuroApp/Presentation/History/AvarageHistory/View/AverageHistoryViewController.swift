@@ -21,7 +21,7 @@ class AverageHistoryViewController: UIViewController, AvarageHistoryViewInput, A
 
     // MARK: AvarageHistoryViewInput
     func setupInitialState() {
-        
+        displayManager = AverageHistoryDisplayManager(tableView)
     }
     
     func setup(with result: Result) {

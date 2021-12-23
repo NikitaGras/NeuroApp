@@ -23,6 +23,8 @@ class AverageHistoryDisplayManager: NSObject {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(cell: AverageHistoryTableViewCell.self)
+        tableView.rowHeight = 80
+        
     }
     
     func setup(with result: Result) {
