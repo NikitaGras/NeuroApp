@@ -45,7 +45,7 @@
                     <connections>
                         <outlet property="emptyHistoryLabel" destination="AlM-bn-QUP" id="LpT-HW-nk6"/>
                         <outlet property="tableView" destination="pve-yd-Om5" id="gfX-Lf-tzn"/>
-                        <segue destination="dQJ-tJ-BSY" kind="show" identifier="openAvarage" id="dis-Rr-qIS"/>
+                        <segue destination="dQJ-tJ-BSY" kind="show" identifier="openAverage" id="dis-Rr-qIS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="114.50892857142857"/>
         </scene>
-        <!--AverageScoreHistory-->
+        <!--AverageHistoryViewController-->
         <scene sceneID="ehX-Sl-LTt">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="AvarageHistoryViewController" storyboardName="AverageScoreHistory" id="dQJ-tJ-BSY" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="AverageHistoryViewController" storyboardName="AverageScoreHistory" referencedIdentifier="AverageHistoryViewController" id="dQJ-tJ-BSY" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="kt5-hX-JH7"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9l-cQ-5gN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

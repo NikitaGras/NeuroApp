@@ -15,6 +15,19 @@ class AvarageHistoryPresenter: NSObject, AvarageHistoryModuleInput, AvarageHisto
     var result: Result!
 
     func viewIsReady() {
-
+        view.setupInitialState()
+        view.setup(with: result)
+    }
+    
+    func showPartOneResult() {
+        router.showPartOne(result)
+    }
+    
+    func showPartTwoResult() {
+        router.showPartTwo(result)
+    }
+    
+    func showPartThreeResult() {
+        router.showPartThree(result)
     }
 }

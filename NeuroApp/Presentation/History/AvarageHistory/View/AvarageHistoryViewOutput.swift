@@ -8,4 +8,7 @@
 
 protocol AvarageHistoryViewOutput {
     func viewIsReady()
+    func showPartOneResult()
+    func showPartTwoResult()
+    func showPartThreeResult()
 }

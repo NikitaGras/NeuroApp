@@ -81,5 +81,8 @@ extension String {
     }
     struct History {
         static let empty = "You have no history yet. You can watch your history if you have answered at least one quiestionnaire!"
+        static let partOneTitle = "Part 1: Self Efficacy"
+        static let partTwoTitle = "Part 2: Short Answer"
+        static let partThreeTitle = "Part 3: Long Answer"
     }
 }

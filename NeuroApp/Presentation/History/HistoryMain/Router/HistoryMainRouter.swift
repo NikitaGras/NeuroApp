@@ -11,7 +11,7 @@ class HistoryMainRouter: HistoryMainRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func openHistoryAverage(with result: Result) {
-        let promise = transitionHandler.openModule?(usingSegue: "openAvarage")
+        let promise = transitionHandler.openModule?(usingSegue: "openAverage")
         promise?.thenChain({ moduleInput in
             let input = moduleInput as? AvarageHistoryModuleInput
             input?.result = result

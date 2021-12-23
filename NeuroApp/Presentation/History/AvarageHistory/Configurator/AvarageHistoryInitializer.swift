@@ -9,7 +9,7 @@
 import UIKit
 
 class AvarageHistoryModuleInitializer: NSObject {
-    @IBOutlet weak var avaragehistoryViewController: AvarageHistoryViewController!
+    @IBOutlet weak var avaragehistoryViewController: AverageHistoryViewController!
 
     override func awakeFromNib() {
         let configurator = AvarageHistoryModuleConfigurator()

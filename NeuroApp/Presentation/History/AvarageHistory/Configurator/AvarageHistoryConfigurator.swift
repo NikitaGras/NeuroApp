@@ -11,13 +11,14 @@ import UIKit
 class AvarageHistoryModuleConfigurator {
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
-        if let viewController = viewInput as? AvarageHistoryViewController {
+        if let viewController = viewInput as? AverageHistoryViewController {
             configure(viewController: viewController)
         }
     }
 
-    private func configure(viewController: AvarageHistoryViewController) {
+    private func configure(viewController: AverageHistoryViewController) {
         let router = AvarageHistoryRouter()
+        router.transitionHandler = viewController
 
         let presenter = AvarageHistoryPresenter()
         presenter.view = viewController
@@ -28,6 +29,7 @@ class AvarageHistoryModuleConfigurator {
 
         presenter.interactor = interactor
         viewController.output = presenter
+        viewController.displayManager = AverageHistoryDisplayManager(viewController.tableView)
     }
 
 }
