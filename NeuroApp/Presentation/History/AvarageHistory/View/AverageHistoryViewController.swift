@@ -18,10 +18,16 @@ class AverageHistoryViewController: UIViewController, AvarageHistoryViewInput, A
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.setupTableHeaderViewHeight()
+    }
 
     // MARK: AvarageHistoryViewInput
     func setupInitialState() {
         displayManager = AverageHistoryDisplayManager(tableView)
+        displayManager.delegate = self
     }
     
     func setup(with result: Result) {

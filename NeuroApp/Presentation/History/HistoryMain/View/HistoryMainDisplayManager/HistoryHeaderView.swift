@@ -73,7 +73,6 @@ class HistoryHeaderView: UIView {
         NSLayoutConstraint.activate([
             //TODO: Необходимо придумать как расставить констрейнты
             chartView.widthAnchor.constraint(equalToConstant: 370),
-            
             chartView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             chartView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Appearance.spasing),
             NSLayoutConstraint(item: chartView, attribute: .height, relatedBy: .equal, toItem: chartView, attribute: .width, multiplier: 0.5, constant: 0),

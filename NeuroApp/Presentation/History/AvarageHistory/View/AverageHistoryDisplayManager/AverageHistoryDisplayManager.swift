@@ -9,6 +9,8 @@ import UIKit
 
 class AverageHistoryDisplayManager: NSObject {
     private let tableView: UITableView
+    private let tableHeaderView = AverageHistoryHeaderView()
+    
     private var scores: [(key: String, value: Int)] = []
     
     var delegate: AverageHistoryDisplayManagerDelegate?
@@ -24,7 +26,7 @@ class AverageHistoryDisplayManager: NSObject {
         tableView.delegate = self
         tableView.register(cell: AverageHistoryTableViewCell.self)
         tableView.rowHeight = 80
-        
+        tableView.tableHeaderView = tableHeaderView
     }
     
     func setup(with result: Result) {
@@ -34,6 +36,9 @@ class AverageHistoryDisplayManager: NSObject {
         scores.append(score)
         score = (key: String.History.partThreeTitle, value: result.partOneScore)
         scores.append(score)
+        
+        tableHeaderView.setup(with: result)
+        
         tableView.reloadData()
     }
 }
@@ -63,5 +68,7 @@ extension AverageHistoryDisplayManager: UITableViewDelegate {
         default:
             return
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

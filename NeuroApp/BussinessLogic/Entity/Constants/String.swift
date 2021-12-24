@@ -72,6 +72,7 @@ extension String {
     struct Score {
         static let score = "Score:"
         static let avarage = "Averge:"
+        static let averageScore = "Average score:"
         static let partOne = "Part 1:"
         static let partTwo = "Part 2:"
         static let partThree = "Part 3:"
