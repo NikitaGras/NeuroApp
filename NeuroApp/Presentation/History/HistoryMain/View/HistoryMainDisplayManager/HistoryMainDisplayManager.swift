@@ -9,7 +9,7 @@ import UIKit
 
 class HistoryMainDisplayManager: NSObject {
     private let tableView: UITableView
-    private var headerView: HistoryHeaderView = HistoryHeaderView()
+    var headerView: HistoryHeaderView = HistoryHeaderView()
     
     private var history: [Result] = []
     
@@ -29,6 +29,7 @@ class HistoryMainDisplayManager: NSObject {
         let rowHeight: CGFloat = 80
         tableView.rowHeight = rowHeight
         tableView.tableHeaderView = headerView
+        headerView.frame.size.height = 1
     }
     
     func set(history: [Result]) {

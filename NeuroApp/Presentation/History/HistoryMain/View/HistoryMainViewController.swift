@@ -21,9 +21,10 @@ class HistoryMainViewController: UIViewController, HistoryMainViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+//        displayManager.headerView.frame.size.height = 249
         tableView.setupTableHeaderViewHeight()
     }
 

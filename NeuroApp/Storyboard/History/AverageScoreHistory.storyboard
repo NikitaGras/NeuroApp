@@ -35,6 +35,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Yih-vD-2bv" id="yJy-uH-aFL"/>
+                        <segue destination="iaw-6d-3Ls" kind="show" identifier="ShowPartOneHistory" id="sCJ-lC-tbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -45,6 +46,16 @@
                 </customObject>
             </objects>
             <point key="canvasLocation" x="139" y="115"/>
+        </scene>
+        <!--PartOneHistory-->
+        <scene sceneID="NKL-i4-QYs">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PartOneHistoryViewController" storyboardName="PartOneHistory" id="iaw-6d-3Ls" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CEb-sw-c6f"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YA2-2x-XQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="115"/>
         </scene>
     </scenes>
     <resources>

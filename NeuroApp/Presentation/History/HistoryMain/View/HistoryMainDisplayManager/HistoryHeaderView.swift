@@ -22,6 +22,7 @@ class HistoryHeaderView: UIView {
         label.numberOfLines = 1
         return label
     }()
+    
     var chartView: LineChartView = {
         let chartView = LineChartView()
         chartView.pinchZoomEnabled = false
@@ -37,6 +38,7 @@ class HistoryHeaderView: UIView {
     }()
     
     var axisFormatterDelegate: IAxisValueFormatter?
+    
     private var dateFormatter: DateFormatter = {
         let df = DateFormatter()
         df.locale = Locale(identifier: "en_US")
@@ -75,7 +77,9 @@ class HistoryHeaderView: UIView {
             chartView.widthAnchor.constraint(equalToConstant: 370),
             chartView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             chartView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Appearance.spasing),
-            NSLayoutConstraint(item: chartView, attribute: .height, relatedBy: .equal, toItem: chartView, attribute: .width, multiplier: 0.5, constant: 0),
+            chartView.heightAnchor.constraint(equalToConstant: 200),
+//            NSLayoutConstraint(item: chartView, attribute: .height, relatedBy: .equal,
+//                               toItem: chartView, attribute: .width, multiplier: 0.5, constant: 0),
         ])
     }
     
@@ -97,6 +101,7 @@ class HistoryHeaderView: UIView {
         let data = LineChartData(dataSet: dataSet)
         data.setDrawValues(false)
         chartView.data = data
+    
     }
     
     private func setup(dataSet: LineChartDataSet) {

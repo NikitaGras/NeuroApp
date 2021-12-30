@@ -37,18 +37,21 @@ class AverageHistoryHeaderView: UIView {
         self.addSubview(dateLabel)
         self.addSubview(scoreView)
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
+        scoreView.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             dateLabel.topAnchor.constraint(equalTo: topAnchor),
             dateLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
             dateLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            dateLabel.bottomAnchor.constraint(equalTo: scoreView.topAnchor, constant: -20)
-        ])
-        scoreView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
+            dateLabel.bottomAnchor.constraint(equalTo: scoreView.topAnchor, constant: -20),
+
             scoreView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            scoreView.heightAnchor.constraint(equalToConstant: 200),
+//            scoreView.heightAnchor.constraint(equalToConstant: 200),
             scoreView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
-            NSLayoutConstraint(item: scoreView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0.4, constant: 0)
+            NSLayoutConstraint(item: scoreView, attribute: .width, relatedBy: .equal,
+                               toItem: self, attribute: .width, multiplier: 0.4, constant: 0),
+            NSLayoutConstraint(item: scoreView, attribute: .height, relatedBy: .equal,
+                               toItem: scoreView, attribute: .width, multiplier: 1, constant: 0)
         ])
     }
     
