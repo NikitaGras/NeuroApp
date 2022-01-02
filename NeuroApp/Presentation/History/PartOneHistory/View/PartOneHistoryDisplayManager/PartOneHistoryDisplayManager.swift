@@ -8,8 +8,10 @@
 import UIKit
 
 class PartOneHistoryDisplayManager: NSObject {
-    let tableView: UITableView
-    private var answers: [PartOneAnswer] = []
+    private let tableView: UITableView
+    private let headerView = PartOneHistoryHeaderView()
+    
+    private var result: Result?
     
     init(_ tableView: UITableView) {
         self.tableView = tableView
@@ -23,10 +25,12 @@ class PartOneHistoryDisplayManager: NSObject {
         tableView.register(cell: PartOneHistoryTableViewCell.self)
         // TODO: Определять размер ячейки в зависимости от размера Label
         tableView.rowHeight = 80
+        tableView.tableHeaderView = headerView
     }
     
-    func update(with answers: [PartOneAnswer]) {
-        self.answers = answers
+    func update(with result: Result) {
+        self.result = result
+        self.headerView.setup(with: result)
         tableView.reloadData()
     }
 }
@@ -34,11 +38,12 @@ class PartOneHistoryDisplayManager: NSObject {
 
 extension PartOneHistoryDisplayManager: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return answers.count
+        return result?.partOneAnswers.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PartOneHistoryTableViewCell.identifier) as? PartOneHistoryTableViewCell
+        let answers: [PartOneAnswer] = result?.partOneAnswers ?? []
         cell?.fill(with: answers[indexPath.row], number: indexPath.row + 1)
         return cell ?? UITableViewCell()
     }

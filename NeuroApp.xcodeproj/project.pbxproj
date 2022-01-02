@@ -73,6 +73,7 @@
 		5A1E8BB226983D62001179F7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1E8BB126983D62001179F7 /* Login.storyboard */; };
 		5A1E8BB6269840B9001179F7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E8BB5269840B9001179F7 /* User.swift */; };
 		5A1E8BB826984454001179F7 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E8BB726984454001179F7 /* ValidationError.swift */; };
+		5A2E2A84277DA6DF0032385C /* DateFormatter+fullDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E2A83277DA6DF0032385C /* DateFormatter+fullDate.swift */; };
 		5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3801AE2695D93100883225 /* AppDelegate.swift */; };
 		5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3801B02695D93100883225 /* SceneDelegate.swift */; };
 		5A3801B82695D93200883225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3801B72695D93200883225 /* Assets.xcassets */; };
@@ -134,6 +135,7 @@
 		5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500326DB98DA00A834D2 /* Quiz.swift */; };
 		5AE8500726DB9C1600A834D2 /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500626DB9C1600A834D2 /* QuizService.swift */; };
 		5AE8500926DB9C2300A834D2 /* QuizServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */; };
+		5AF5CE51278165F500868619 /* DoubleSidedArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */; };
 		5AFFFCEA26AEC03400E9F3F1 /* SystemError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */; };
 		5B176EBE641D291752067AA8 /* ProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A076939854C22E1C60212 /* ProfileViewOutput.swift */; };
 		5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */; };
@@ -311,6 +313,7 @@
 		5A1E8BB126983D62001179F7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5A1E8BB5269840B9001179F7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A1E8BB726984454001179F7 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		5A2E2A83277DA6DF0032385C /* DateFormatter+fullDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+fullDate.swift"; sourceTree = "<group>"; };
 		5A3801AB2695D93100883225 /* NeuroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeuroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3801AE2695D93100883225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A3801B02695D93100883225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -375,6 +378,7 @@
 		5AE8500326DB98DA00A834D2 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		5AE8500626DB9C1600A834D2 /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
 		5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizServiceProtocol.swift; sourceTree = "<group>"; };
+		5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSidedArrowView.swift; sourceTree = "<group>"; };
 		5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemError.swift; sourceTree = "<group>"; };
 		5EA65B27DB6F300C403ED9F5 /* QuizPartOneConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneConfigurator.swift; sourceTree = "<group>"; };
 		5F872E576D287CE17D07E27D /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
@@ -951,6 +955,7 @@
 				5AAFFFAD27464E7100C46DB0 /* PlaceholderTextView.swift */,
 				5A519DC3275A355B000F657B /* ProgressTabBar.swift */,
 				5A9251B4275E2E8500D9195F /* ProgressViewStack.swift */,
+				5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -968,6 +973,7 @@
 				5A67E233275F2F2D006FFABF /* UITableViewCell+nib+identifier.swift */,
 				5ADC5DAB2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift */,
 				5AA6EC472775BEE300A6FA5B /* UITableView+setupTableHeaderViewHeight.swift */,
+				5A2E2A83277DA6DF0032385C /* DateFormatter+fullDate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1897,6 +1903,7 @@
 				6EEDBA2C96801152FE059E09 /* ScoreScreenModuleInput.swift in Sources */,
 				5A67E22E275F2A83006FFABF /* HistoryMainDisplayManager.swift in Sources */,
 				A1DC76F3F80D304032782720 /* ScoreScreenPresenter.swift in Sources */,
+				5AF5CE51278165F500868619 /* DoubleSidedArrowView.swift in Sources */,
 				5ADC5DAC2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift in Sources */,
 				533CE720FBF5E7B4DBB1E57F /* ScoreScreenInteractorInput.swift in Sources */,
 				5A9251B5275E2E8500D9195F /* ProgressViewStack.swift in Sources */,
@@ -1936,6 +1943,7 @@
 				DF99A549704F24B2A1B0CD88 /* PartOneHistoryViewOutput.swift in Sources */,
 				68F80EDFD579E3D067F7283E /* PartOneHistoryViewController.swift in Sources */,
 				25E96AAC7E68E7197578AEB6 /* PartOneHistoryModuleInput.swift in Sources */,
+				5A2E2A84277DA6DF0032385C /* DateFormatter+fullDate.swift in Sources */,
 				16824E73F7D6D97C02D1CEBD /* PartOneHistoryPresenter.swift in Sources */,
 				DEAEEDEBEA46200FCEE682E1 /* PartOneHistoryInteractorInput.swift in Sources */,
 				40B21884FE726B2776CDC0BF /* PartOneHistoryInteractorOutput.swift in Sources */,

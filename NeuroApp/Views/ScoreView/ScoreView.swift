@@ -34,4 +34,8 @@ class ScoreView: UIView {
         scoreView.layer.borderColor = UIColor.NABlue.cgColor
     }
 
+    func setup(_ title: String, _ score: String) {
+        titleLabel.text = title
+        scoreLabel.text = score
+    }
 }

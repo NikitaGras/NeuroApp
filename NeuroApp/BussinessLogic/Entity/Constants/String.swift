@@ -12,7 +12,7 @@ extension String {
     
     struct Error {
         static let `default` = "Something going wrong. Try again later"
-        static let noUser = "Sorry, your data was lost"
+        static let noUser = "Sorry, your data has lost"
     }
     
     struct ValidationError {
@@ -74,6 +74,7 @@ extension String {
         static let avarage = "Averge:"
         static let averageScore = "Average score:"
         static let partOne = "Part 1:"
+        static let partOneDescription = "Self Efficacy Questions"
         static let partTwo = "Part 2:"
         static let partThree = "Part 3:"
         

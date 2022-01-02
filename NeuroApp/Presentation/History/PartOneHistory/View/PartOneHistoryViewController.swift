@@ -19,10 +19,15 @@ class PartOneHistoryViewController: UIViewController, PartOneHistoryViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.setupTableHeaderViewHeight()
+    }
 
     // MARK: PartOneHistoryViewInput
     func setupInitialState() {
         displayManager = PartOneHistoryDisplayManager(tableView)
-        displayManager.update(with: output.result.partOneAnswers)
+        displayManager.update(with: output.result)
     }
 }

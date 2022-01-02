@@ -19,12 +19,6 @@ class AverageHistoryHeaderView: UIView {
         let view = ScoreView()
         return view
     }()
-    let dateFormatter: DateFormatter = {
-        let df = DateFormatter()
-        df.locale = Locale(identifier: "en_US")
-        df.setLocalizedDateFormatFromTemplate("dd MMMM YYYY")
-        return df
-    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,17 +43,18 @@ class AverageHistoryHeaderView: UIView {
 //            scoreView.heightAnchor.constraint(equalToConstant: 200),
             scoreView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
             NSLayoutConstraint(item: scoreView, attribute: .width, relatedBy: .equal,
-                               toItem: self, attribute: .width, multiplier: 0.4, constant: 0),
+                               toItem: self, attribute: .width, multiplier: 0.3, constant: 0),
             NSLayoutConstraint(item: scoreView, attribute: .height, relatedBy: .equal,
                                toItem: scoreView, attribute: .width, multiplier: 1, constant: 0)
         ])
     }
     
     func setup(with result: Result) {
-        let dateString = dateFormatter.string(from: result.finishTime)
+        let dateString = DateFormatter.fulldate.string(from: result.finishTime)
         dateLabel.text = dateString
         
-        scoreView.titleLabel.text = String.Score.averageScore
-        scoreView.scoreLabel.text = result.avarageScore.description
+        let title = String.Score.averageScore
+        let score = result.avarageScore.description
+        scoreView.setup(title, score)
     }
 }
