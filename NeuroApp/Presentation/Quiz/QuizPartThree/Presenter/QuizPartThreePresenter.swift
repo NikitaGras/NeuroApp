@@ -37,6 +37,7 @@ class QuizPartThreePresenter: QuizPartThreeModuleInput, QuizPartThreeViewOutput,
     }
     
     func denied(with error: Error) {
+        // TODO: Сделать кнопку Next активной
         view.show(error)
     }
     
