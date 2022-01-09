@@ -10,7 +10,9 @@ import UIKit
 
 class ScoreScreenViewController: UIViewController, ScoreScreenViewInput {
     @IBOutlet weak var titleTextLabel: UILabel!
+    @IBOutlet weak var averageScoreLabel: UILabel!
     @IBOutlet weak var averageScoreView: ScoreView!
+    @IBOutlet var scoreLabels: [UILabel]!
     @IBOutlet var scoreViews: [ScoreView]!
     @IBOutlet weak var nextButton: RoundButton!
     
@@ -24,16 +26,16 @@ class ScoreScreenViewController: UIViewController, ScoreScreenViewInput {
 
     // MARK: ScoreScreenViewInput
     func setupInitialState() {
-        averageScoreView.titleLabel.text = String.Score.avarage
-        scoreViews.forEach { scoreView in
-            if scoreView.tag == 0 {
-                scoreView.titleLabel.text = String.Score.partOne
+        averageScoreLabel.text = String.Score.avarage
+        scoreLabels.forEach { scoreLabel in
+            if scoreLabel.tag == 0 {
+                scoreLabel.text = String.Score.partOne
             }
-            if scoreView.tag == 1 {
-                scoreView.titleLabel.text = String.Score.partTwo
+            if scoreLabel.tag == 1 {
+                scoreLabel.text = String.Score.partTwo
             }
-            if scoreView.tag == 2 {
-                scoreView.titleLabel.text = String.Score.partThree
+            if scoreLabel.tag == 2 {
+                scoreLabel.text = String.Score.partThree
             }
         }
         nextButton.setTitle(String.Button.goHome, for: .normal)
@@ -41,19 +43,17 @@ class ScoreScreenViewController: UIViewController, ScoreScreenViewInput {
     }
     
     func setup(with result: Result) {
-        averageScoreView.scoreLabel.text = result.avarageScore.description
+        averageScoreView.setup(with: result.avarageScore)
         scoreViews.forEach { scoreView in
             if scoreView.tag == 0 {
-                scoreView.scoreLabel.text = result.partOneScore.description
+                scoreView.setup(with: result.partOneScore)
             }
             if scoreView.tag == 1 {
-                scoreView.scoreLabel.text = result.partTwoScore.description
+                scoreView.setup(with: result.partTwoScore)
             }
             if scoreView.tag == 2 {
-                scoreView.scoreLabel.text = result.partThreeScore.description
+                scoreView.setup(with: result.partThreeScore)
             }
-            
-            scoreView.layoutSubviews()
         }
     }
     

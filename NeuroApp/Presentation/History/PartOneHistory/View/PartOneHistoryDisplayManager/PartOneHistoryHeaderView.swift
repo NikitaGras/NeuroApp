@@ -96,9 +96,8 @@ class PartOneHistoryHeaderView: UIView {
         let dateString = DateFormatter.fulldate.string(from: result.finishTime)
         dateLabel.text = dateString
         
-        let title = String.Score.partOneDescription
-        let score = result.partOneScore.description
-        scoreView.setup(title, score)
+//        let title = String.Score.partOneDescription
+        scoreView.setup(with: result.partOneScore)
     }
     
     private func layout() {

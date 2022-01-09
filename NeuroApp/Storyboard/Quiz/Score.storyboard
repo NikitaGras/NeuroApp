@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,39 +24,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpJ-Yb-PlI" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
-                                <rect key="frame" x="124" y="104" width="166" height="186.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="KpJ-Yb-PlI" secondAttribute="height" multiplier="8:9" id="XNG-Pv-nAW"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WFx-Rc-X7D">
-                                <rect key="frame" x="20" y="320.5" width="374" height="125"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-zt-Bd4" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="125"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="xbM-zt-Bd4" secondAttribute="height" multiplier="8:9" id="wcy-gv-Fl5"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bik-u3-PkS" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
-                                        <rect key="frame" x="131.5" y="0.0" width="111" height="125"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Bik-u3-PkS" secondAttribute="height" multiplier="8:9" id="Jh0-cw-1Ts"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfg-Vf-kVy" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
-                                        <rect key="frame" x="262.5" y="0.0" width="111.5" height="125"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="sfg-Vf-kVy" secondAttribute="height" multiplier="8:9" id="iys-Tl-Xvt"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdi-xS-QTq" customClass="RoundButton" customModule="NeuroApp" customModuleProvider="target">
                                 <rect key="frame" x="52" y="782" width="310.5" height="50"/>
                                 <color key="backgroundColor" name="NABlue"/>
@@ -72,31 +39,142 @@
                                     <action selector="next:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xw6-9F-nD8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Squ-33-xEc">
+                                <rect key="frame" x="183" y="82" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-4j-HKy" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
+                                <rect key="frame" x="124" y="114" width="166" height="165.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oAu-4j-HKy" secondAttribute="height" id="Xsj-ln-WvT"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vTY-FK-icN">
+                                <rect key="frame" x="20" y="299.5" width="374" height="148"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odt-Mj-g9y">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="148"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oty-ie-kFS">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="RIR-Mv-8v1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdK-Qw-vAN" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="30" width="118" height="118"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="CdK-Qw-vAN" secondAttribute="height" id="jP8-3g-Xve"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="CdK-Qw-vAN" firstAttribute="top" secondItem="oty-ie-kFS" secondAttribute="bottom" constant="10" id="5Is-cq-0fE"/>
+                                            <constraint firstAttribute="bottom" secondItem="CdK-Qw-vAN" secondAttribute="bottom" id="7ip-p6-fJv"/>
+                                            <constraint firstItem="CdK-Qw-vAN" firstAttribute="leading" secondItem="Odt-Mj-g9y" secondAttribute="leading" id="89M-iI-TOc"/>
+                                            <constraint firstItem="oty-ie-kFS" firstAttribute="leading" secondItem="Odt-Mj-g9y" secondAttribute="leading" id="OME-Q6-ZbD"/>
+                                            <constraint firstAttribute="trailing" secondItem="CdK-Qw-vAN" secondAttribute="trailing" id="XhT-K3-DJ6"/>
+                                            <constraint firstItem="oty-ie-kFS" firstAttribute="top" secondItem="Odt-Mj-g9y" secondAttribute="top" id="l88-lD-hab"/>
+                                            <constraint firstAttribute="trailing" secondItem="oty-ie-kFS" secondAttribute="trailing" id="vG6-oz-O6n"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIT-TD-EYc">
+                                        <rect key="frame" x="128" y="0.0" width="118" height="148"/>
+                                        <subviews>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJ4-w8-uWy" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="30" width="118" height="118"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XJ4-w8-uWy" secondAttribute="height" id="MwT-Wx-B8c"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSX-eI-eCZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="OSX-eI-eCZ" secondAttribute="trailing" id="1n4-MG-KZ8"/>
+                                            <constraint firstItem="XJ4-w8-uWy" firstAttribute="top" secondItem="OSX-eI-eCZ" secondAttribute="bottom" constant="10" id="GW2-aL-2Bk"/>
+                                            <constraint firstAttribute="bottom" secondItem="XJ4-w8-uWy" secondAttribute="bottom" id="Wky-f7-uz9"/>
+                                            <constraint firstItem="OSX-eI-eCZ" firstAttribute="top" secondItem="QIT-TD-EYc" secondAttribute="top" id="bbt-FN-Q0q"/>
+                                            <constraint firstAttribute="trailing" secondItem="XJ4-w8-uWy" secondAttribute="trailing" id="eZP-xL-g8z"/>
+                                            <constraint firstItem="XJ4-w8-uWy" firstAttribute="leading" secondItem="QIT-TD-EYc" secondAttribute="leading" id="yLc-mt-6Gt"/>
+                                            <constraint firstItem="OSX-eI-eCZ" firstAttribute="leading" secondItem="QIT-TD-EYc" secondAttribute="leading" id="ypT-sJ-8yB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g32-L7-eeE">
+                                        <rect key="frame" x="256" y="0.0" width="118" height="148"/>
+                                        <subviews>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24j-RY-vtu" customClass="ScoreView" customModule="NeuroApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="30" width="118" height="118"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="24j-RY-vtu" secondAttribute="height" id="1MO-Ih-N9H"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJx-h4-aBv">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="24j-RY-vtu" secondAttribute="bottom" id="GnA-54-2as"/>
+                                            <constraint firstAttribute="trailing" secondItem="MJx-h4-aBv" secondAttribute="trailing" id="K0u-w8-yfj"/>
+                                            <constraint firstItem="24j-RY-vtu" firstAttribute="top" secondItem="MJx-h4-aBv" secondAttribute="bottom" constant="10" id="Stp-U6-dgd"/>
+                                            <constraint firstItem="MJx-h4-aBv" firstAttribute="top" secondItem="g32-L7-eeE" secondAttribute="top" id="TEv-45-2WD"/>
+                                            <constraint firstItem="24j-RY-vtu" firstAttribute="leading" secondItem="g32-L7-eeE" secondAttribute="leading" id="bRN-kZ-9Qp"/>
+                                            <constraint firstAttribute="trailing" secondItem="24j-RY-vtu" secondAttribute="trailing" id="iL4-Dr-HrV"/>
+                                            <constraint firstItem="MJx-h4-aBv" firstAttribute="leading" secondItem="g32-L7-eeE" secondAttribute="leading" id="r3n-Ks-wlX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Asq-Dk-t2Y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="3l3-a9-xIc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Gdi-xS-QTq" secondAttribute="bottom" constant="30" id="4Cs-81-qZC"/>
-                            <constraint firstItem="KpJ-Yb-PlI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6xs-uX-1Ry"/>
                             <constraint firstItem="Gdi-xS-QTq" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.75" id="9aJ-9n-gzx"/>
-                            <constraint firstItem="KpJ-Yb-PlI" firstAttribute="top" secondItem="Asq-Dk-t2Y" secondAttribute="bottom" constant="30" id="Gex-oM-b2g"/>
-                            <constraint firstItem="WFx-Rc-X7D" firstAttribute="top" secondItem="KpJ-Yb-PlI" secondAttribute="bottom" constant="30" id="JK3-W1-TmK"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WFx-Rc-X7D" secondAttribute="trailing" constant="20" id="KZz-eP-Nma"/>
+                            <constraint firstItem="vTY-FK-icN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Gju-MN-CfV"/>
                             <constraint firstItem="Asq-Dk-t2Y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="KbX-a1-Miu"/>
-                            <constraint firstItem="WFx-Rc-X7D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="PZ4-G2-vIa"/>
+                            <constraint firstItem="Squ-33-xEc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Ptm-9t-bI3"/>
+                            <constraint firstItem="oAu-4j-HKy" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.4" id="WGE-4f-Ufz"/>
+                            <constraint firstItem="vTY-FK-icN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bu0-Vr-sdh"/>
+                            <constraint firstItem="oAu-4j-HKy" firstAttribute="top" secondItem="Squ-33-xEc" secondAttribute="bottom" constant="8" symbolic="YES" id="d4c-rk-a1Y"/>
+                            <constraint firstItem="Squ-33-xEc" firstAttribute="top" secondItem="Asq-Dk-t2Y" secondAttribute="bottom" constant="8" symbolic="YES" id="fQE-7E-x7m"/>
                             <constraint firstItem="Asq-Dk-t2Y" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hFn-Ya-SD2"/>
                             <constraint firstItem="Gdi-xS-QTq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nti-nz-50w"/>
-                            <constraint firstItem="KpJ-Yb-PlI" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.4" id="rCi-zT-JsA"/>
+                            <constraint firstItem="vTY-FK-icN" firstAttribute="top" secondItem="oAu-4j-HKy" secondAttribute="bottom" constant="20" id="s4b-bK-49T"/>
+                            <constraint firstItem="oAu-4j-HKy" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xxw-9K-uVr"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="averageScoreView" destination="KpJ-Yb-PlI" id="RrW-Xv-E4e"/>
+                        <outlet property="averageScoreLabel" destination="Squ-33-xEc" id="QuR-uu-IQp"/>
+                        <outlet property="averageScoreView" destination="oAu-4j-HKy" id="ZjH-Wv-FDG"/>
                         <outlet property="nextButton" destination="Gdi-xS-QTq" id="bp1-pG-oYU"/>
                         <outlet property="titleTextLabel" destination="Asq-Dk-t2Y" id="pDa-BV-DKj"/>
-                        <outletCollection property="scoreViews" destination="xbM-zt-Bd4" collectionClass="NSMutableArray" id="1OU-k0-IRq"/>
-                        <outletCollection property="scoreViews" destination="Bik-u3-PkS" collectionClass="NSMutableArray" id="IJO-gd-ojs"/>
-                        <outletCollection property="scoreViews" destination="sfg-Vf-kVy" collectionClass="NSMutableArray" id="Bl9-yv-qJL"/>
+                        <outletCollection property="scoreLabels" destination="oty-ie-kFS" collectionClass="NSMutableArray" id="ONN-ys-9Fx"/>
+                        <outletCollection property="scoreLabels" destination="OSX-eI-eCZ" collectionClass="NSMutableArray" id="ZDU-l2-CDW"/>
+                        <outletCollection property="scoreLabels" destination="MJx-h4-aBv" collectionClass="NSMutableArray" id="XZJ-eN-E0q"/>
+                        <outletCollection property="scoreViews" destination="CdK-Qw-vAN" collectionClass="NSMutableArray" id="M6h-yI-Twk"/>
+                        <outletCollection property="scoreViews" destination="XJ4-w8-uWy" collectionClass="NSMutableArray" id="UAY-0L-Yxo"/>
+                        <outletCollection property="scoreViews" destination="24j-RY-vtu" collectionClass="NSMutableArray" id="5dl-V2-q0L"/>
                         <segue destination="9TM-Hp-jyo" kind="unwind" identifier="ShowHomeViewController" unwindAction="unwind:" id="jfn-tO-tIA"/>
                     </connections>
                 </viewController>

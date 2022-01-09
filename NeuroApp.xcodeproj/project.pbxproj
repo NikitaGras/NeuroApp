@@ -80,6 +80,7 @@
 		5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3801B02695D93100883225 /* SceneDelegate.swift */; };
 		5A3801B82695D93200883225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3801B72695D93200883225 /* Assets.xcassets */; };
 		5A3801BB2695D93200883225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3801B92695D93200883225 /* LaunchScreen.storyboard */; };
+		5A3FA50C278ABC28008954BD /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FA50B278ABC28008954BD /* ScoreView.swift */; };
 		5A51128A270BF1E9008020AB /* QuizPartOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A511289270BF1E9008020AB /* QuizPartOne.storyboard */; };
 		5A519DC4275A355B000F657B /* ProgressTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A519DC3275A355B000F657B /* ProgressTabBar.swift */; };
 		5A5313522738EBC000C38578 /* OptionImageContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5313512738EBC000C38578 /* OptionImageContainerView.swift */; };
@@ -126,8 +127,6 @@
 		5AA6EC5227760C8600A6FA5B /* PartOneHistoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6EC5127760C8600A6FA5B /* PartOneHistoryHeaderView.swift */; };
 		5AAFFFAE27464E7100C46DB0 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFFFAD27464E7100C46DB0 /* PlaceholderTextView.swift */; };
 		5AAFFFB027467D6900C46DB0 /* Score.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AAFFFAF27467D6900C46DB0 /* Score.storyboard */; };
-		5AAFFFB327467D9100C46DB0 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFFFB227467D9100C46DB0 /* ScoreView.swift */; };
-		5AAFFFB527467DAB00C46DB0 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAFFFB427467DAB00C46DB0 /* ScoreView.xib */; };
 		5AAFFFB927468CC300C46DB0 /* UIView+setupNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFFFB827468CC300C46DB0 /* UIView+setupNib.swift */; };
 		5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F03271AB68400B5C3AD /* Observer.swift */; };
 		5ABF2F06271AB9CC00B5C3AD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F05271AB9CC00B5C3AD /* Observable.swift */; };
@@ -339,6 +338,7 @@
 		5A3801BA2695D93200883225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3801BC2695D93200883225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A3E6B095076155DBC2672A1 /* AvarageHistoryViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AvarageHistoryViewOutput.swift; sourceTree = "<group>"; };
+		5A3FA50B278ABC28008954BD /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		5A511289270BF1E9008020AB /* QuizPartOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizPartOne.storyboard; sourceTree = "<group>"; };
 		5A519DC3275A355B000F657B /* ProgressTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTabBar.swift; sourceTree = "<group>"; };
 		5A5313512738EBC000C38578 /* OptionImageContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionImageContainerView.swift; sourceTree = "<group>"; };
@@ -385,8 +385,6 @@
 		5AA6EC5127760C8600A6FA5B /* PartOneHistoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOneHistoryHeaderView.swift; sourceTree = "<group>"; };
 		5AAFFFAD27464E7100C46DB0 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		5AAFFFAF27467D6900C46DB0 /* Score.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Score.storyboard; sourceTree = "<group>"; };
-		5AAFFFB227467D9100C46DB0 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
-		5AAFFFB427467DAB00C46DB0 /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
 		5AAFFFB827468CC300C46DB0 /* UIView+setupNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setupNib.swift"; sourceTree = "<group>"; };
 		5ABF2F03271AB68400B5C3AD /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5ABF2F05271AB9CC00B5C3AD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -998,7 +996,6 @@
 		5A6F2C4F269AAB20006B065D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5AAFFFB127467D7A00C46DB0 /* ScoreView */,
 				5AA6E2942730DFA800E64ABA /* PartTwoOption */,
 				5A6F2C50269AAB32006B065D /* ViewInput.swift */,
 				5A6F2C52269AB779006B065D /* RoundButton.swift */,
@@ -1007,6 +1004,7 @@
 				5A519DC3275A355B000F657B /* ProgressTabBar.swift */,
 				5A9251B4275E2E8500D9195F /* ProgressViewStack.swift */,
 				5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */,
+				5A3FA50B278ABC28008954BD /* ScoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1109,15 +1107,6 @@
 				5AA6EC4E2775E43800A6FA5B /* PartOneHistoryTableViewCell.xib */,
 			);
 			path = PartOneHistoryTableViewCell;
-			sourceTree = "<group>";
-		};
-		5AAFFFB127467D7A00C46DB0 /* ScoreView */ = {
-			isa = PBXGroup;
-			children = (
-				5AAFFFB227467D9100C46DB0 /* ScoreView.swift */,
-				5AAFFFB427467DAB00C46DB0 /* ScoreView.xib */,
-			);
-			path = ScoreView;
 			sourceTree = "<group>";
 		};
 		5ABF2F02271AB66900B5C3AD /* Observer */ = {
@@ -1778,7 +1767,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A71B2F6269EFE46001A6259 /* Profile.storyboard in Resources */,
-				5AAFFFB527467DAB00C46DB0 /* ScoreView.xib in Resources */,
 				5A9251BA275E649800D9195F /* MainHistory.storyboard in Resources */,
 				5A9251C2275E6EF400D9195F /* PartTwoHistory.storyboard in Resources */,
 				5A9251C4275E70FF00D9195F /* PartThreeHistory.storyboard in Resources */,
@@ -1889,6 +1877,7 @@
 				5A166C0A269C2EC500E590C7 /* UIColor.swift in Sources */,
 				7CB0BE1BF83FB1F714E5437F /* HomeViewController.swift in Sources */,
 				5AE8500726DB9C1600A834D2 /* QuizService.swift in Sources */,
+				5A3FA50C278ABC28008954BD /* ScoreView.swift in Sources */,
 				5AFFFCEA26AEC03400E9F3F1 /* SystemError.swift in Sources */,
 				2E12C249EE024C6F04C4550E /* HomeModuleInput.swift in Sources */,
 				8442C56DA9E51614B65C96E2 /* HomePresenter.swift in Sources */,
@@ -1922,7 +1911,6 @@
 				E82616554F277E1DF872E609 /* EditInformationViewInput.swift in Sources */,
 				5AE8500926DB9C2300A834D2 /* QuizServiceProtocol.swift in Sources */,
 				234F0F3C5BAADEB25BBE8584 /* EditInformationViewOutput.swift in Sources */,
-				5AAFFFB327467D9100C46DB0 /* ScoreView.swift in Sources */,
 				5A56767E2774274F00CA53D5 /* AverageHistoryTableViewCell.swift in Sources */,
 				1340A306828C795A080C0FC7 /* EditInformationViewController.swift in Sources */,
 				D8E75D43246BF0C78E6A0B1A /* EditInformationModuleInput.swift in Sources */,

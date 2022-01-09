@@ -53,8 +53,7 @@ class AverageHistoryHeaderView: UIView {
         let dateString = DateFormatter.fulldate.string(from: result.finishTime)
         dateLabel.text = dateString
         
-        let title = String.Score.averageScore
-        let score = result.avarageScore.description
-        scoreView.setup(title, score)
+//        let title = String.Score.averageScore
+        scoreView.setup(with: result.avarageScore)
     }
 }
