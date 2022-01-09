@@ -21,6 +21,7 @@ class AverageHistoryViewController: UIViewController, AvarageHistoryViewInput, A
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        //TODO: - как корректно определить высоту HeaderView?
 //        tableView.setupTableHeaderViewHeight()
         tableView.tableHeaderView?.frame.size.height = 230
     }

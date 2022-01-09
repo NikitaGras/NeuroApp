@@ -8,16 +8,7 @@
 import UIKit
 
 class PartOneHistoryHeaderView: UIView {
-    private let dateLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.textAlignment = .center
-        label.minimumScaleFactor = 0.5
-        label.numberOfLines = 1
-        return label
-    }()
-    
-    private let scoreView: ScoreView = ScoreView()
+    private let baseHeaderView = AverageHistoryHeaderView()
     
     private let baseInfoLabel: UILabel = {
         let label = UILabel()
@@ -42,7 +33,11 @@ class PartOneHistoryHeaderView: UIView {
         stack.distribution = .fillEqually
         return stack
     }()
-    private let arrowView = DoubleSidedArrowView()
+    private let arrowView: DoubleSidedArrowView = {
+        let view = DoubleSidedArrowView()
+        view.backgroundColor = .clear
+        return view
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,21 +53,20 @@ class PartOneHistoryHeaderView: UIView {
     }
     
     private func setupScaleDescriptionStackView() {
-        // TODO: применить прототип для создания лейблов?
         let leftScaleDescriptionLabel = UILabel()
-        leftScaleDescriptionLabel.textAlignment = .left
+        leftScaleDescriptionLabel.textAlignment = .center
         leftScaleDescriptionLabel.font = UIFont.systemFont(ofSize: 17)
         leftScaleDescriptionLabel.numberOfLines = 0
         leftScaleDescriptionLabel.text = String.PartOneQuiz.leftScaleDescription
         
         let centerScaleDescriptionLabel = UILabel()
-        centerScaleDescriptionLabel.textAlignment = .left
+        centerScaleDescriptionLabel.textAlignment = .center
         centerScaleDescriptionLabel.font = UIFont.systemFont(ofSize: 17)
         centerScaleDescriptionLabel.numberOfLines = 0
         centerScaleDescriptionLabel.text = String.PartOneQuiz.centerScaleDescription
         
         let rightScaleDescriptionLabel = UILabel()
-        rightScaleDescriptionLabel.textAlignment = .left
+        rightScaleDescriptionLabel.textAlignment = .center
         rightScaleDescriptionLabel.font = UIFont.systemFont(ofSize: 17)
         rightScaleDescriptionLabel.numberOfLines = 0
         rightScaleDescriptionLabel.text = String.PartOneQuiz.rightScaleDescription
@@ -93,40 +87,27 @@ class PartOneHistoryHeaderView: UIView {
     }
 
     func setup(with result: Result) {
-        let dateString = DateFormatter.fulldate.string(from: result.finishTime)
-        dateLabel.text = dateString
-        
-//        let title = String.Score.partOneDescription
-        scoreView.setup(with: result.partOneScore)
+        baseHeaderView.update(with: result)
     }
     
     private func layout() {
-        addSubview(dateLabel)
-        addSubview(scoreView)
+        addSubview(baseHeaderView)
         addSubview(baseInfoLabel)
         addSubview(scaleDescriptionStackView)
         addSubview(scaleStackView)
         addSubview(arrowView)
         
-        dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        scoreView.translatesAutoresizingMaskIntoConstraints = false
+        baseHeaderView.translatesAutoresizingMaskIntoConstraints = false
         baseInfoLabel.translatesAutoresizingMaskIntoConstraints = false
         scaleDescriptionStackView.translatesAutoresizingMaskIntoConstraints = false
         scaleStackView.translatesAutoresizingMaskIntoConstraints = false
         arrowView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            dateLabel.topAnchor.constraint(equalTo: topAnchor),
-            dateLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
-            dateLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            dateLabel.bottomAnchor.constraint(equalTo: scoreView.topAnchor, constant: -20),
-
-            scoreView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            NSLayoutConstraint(item: scoreView, attribute: .width, relatedBy: .equal,
-                               toItem: self, attribute: .width, multiplier: 0.3, constant: 0),
-            NSLayoutConstraint(item: scoreView, attribute: .height, relatedBy: .equal,
-                               toItem: scoreView, attribute: .width, multiplier: 1, constant: 0),
-            scoreView.bottomAnchor.constraint(equalTo: baseInfoLabel.topAnchor, constant: -20),
+            baseHeaderView.topAnchor.constraint(equalTo: topAnchor),
+            baseHeaderView.leftAnchor.constraint(equalTo: leftAnchor),
+            baseHeaderView.rightAnchor.constraint(equalTo: rightAnchor),
+            baseHeaderView.bottomAnchor.constraint(equalTo: baseInfoLabel.topAnchor),
             
             baseInfoLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
             baseInfoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
