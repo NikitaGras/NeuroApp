@@ -87,5 +87,8 @@ extension String {
         static let partTwoTitle = "Part 2: Short Answer"
         static let partThreeTitle = "Part 3: Long Answer"
         static let yourAnswer = "Your answer"
+        static let correct = "Correct"
+        static let incorrect = "Incorrect"
+        static let responseTime = "Response time"
     }
 }

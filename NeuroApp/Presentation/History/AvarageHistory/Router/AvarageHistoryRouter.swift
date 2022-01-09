@@ -11,23 +11,29 @@ class AvarageHistoryRouter: AvarageHistoryRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func showPartOne(_ result: Result) {
-        openModule(usingSegue: "ShowPartOneHistory", result)
+        let promise = transitionHandler.openModule?(usingSegue: "ShowPartOneHistory")
+        promise?.thenChain({ moduleInput in
+            let input = moduleInput as? PartOneHistoryModuleInput
+            input?.result = result
+            return nil
+        })
     }
     
     func showPartTwo(_ result: Result) {
-        
+        let promise = transitionHandler.openModule?(usingSegue: "ShowPartTwoHistory")
+        promise?.thenChain({ moduleInput in
+            let input = moduleInput as? PartTwoHistoryModuleInput
+            input?.result = result
+            return nil
+        })
     }
     
     func showPartThree(_ result: Result) {
         
     }
     
+    //TODO: подумать как унифицировать в одну функцию, передавать в качестве параметра тип данных.
     func openModule(usingSegue segue: String, _ result: Result) {
-        let promise = transitionHandler.openModule?(usingSegue: segue)
-        promise?.thenChain({ moduleInput in
-            let input = moduleInput as? PartOneHistoryModuleInput
-            input?.result = result
-            return nil
-        })
+
     }
 }

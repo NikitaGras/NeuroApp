@@ -49,7 +49,7 @@ class AverageHistoryHeaderView: UIView {
         ])
     }
     
-    func setup(with result: Result) {
+    func update(with result: Result) {
         let dateString = DateFormatter.fulldate.string(from: result.finishTime)
         dateLabel.text = dateString
         

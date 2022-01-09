@@ -51,6 +51,7 @@
 		40B1B19E26A7576F2E573248 /* AverageHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9AE9AEB5EEB10F3435213 /* AverageHistoryViewController.swift */; };
 		40B21884FE726B2776CDC0BF /* PartOneHistoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C3D527D50535C22E885665 /* PartOneHistoryInteractorOutput.swift */; };
 		46C8ECFF791F80AC1AD63931 /* QuizPartTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FCBB046E2CD0618F38EF62 /* QuizPartTwoViewController.swift */; };
+		4784FEDC6BFA00061B7D43EA /* PartTwoHistoryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686CDE7B8ECF96AF4F74EEA9 /* PartTwoHistoryInteractorOutput.swift */; };
 		48AD7EDBC5D03B3B4529E2F6 /* QuizPartTwoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E967285539AC224BE97A3 /* QuizPartTwoInteractorOutput.swift */; };
 		4CC5A9741515EC05FC66C938 /* ProfileModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBECF3885BB89903358CA2D /* ProfileModuleInput.swift */; };
 		4D7981684581F0706143AD12 /* HistoryMainModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BC6680B990E909A474C61 /* HistoryMainModuleInput.swift */; };
@@ -60,6 +61,7 @@
 		53A6B9D5269D50594C1EE4C6 /* ScoreScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AF8B88C49558D58DD04152 /* ScoreScreenRouterInput.swift */; };
 		56615C62A114E681AE72A01B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFFD28B57959F5B32F0FD98 /* HomeRouter.swift */; };
 		568CF19A7F36CF7859D1E3A3 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */; };
+		56FBFBA97289F3D5EF1B8307 /* PartTwoHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0770AC593D16CEE5DB179CD /* PartTwoHistoryInteractor.swift */; };
 		5A0F84D7277476AF003C127D /* AverageHistoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F84D6277476AF003C127D /* AverageHistoryHeaderView.swift */; };
 		5A126539271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */; };
 		5A127FFA27007D7100832AD2 /* QuestionsBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A127FF927007D7100832AD2 /* QuestionsBank.swift */; };
@@ -136,6 +138,9 @@
 		5AE8500726DB9C1600A834D2 /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500626DB9C1600A834D2 /* QuizService.swift */; };
 		5AE8500926DB9C2300A834D2 /* QuizServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */; };
 		5AF5CE51278165F500868619 /* DoubleSidedArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */; };
+		5AF5CE542784A21600868619 /* PartTwoHistoryDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */; };
+		5AF5CE572784A79A00868619 /* PartTwoHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */; };
+		5AF5CE582784A79A00868619 /* PartTwoHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF5CE562784A79A00868619 /* PartTwoHistoryTableViewCell.xib */; };
 		5AFFFCEA26AEC03400E9F3F1 /* SystemError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */; };
 		5B176EBE641D291752067AA8 /* ProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A076939854C22E1C60212 /* ProfileViewOutput.swift */; };
 		5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */; };
@@ -147,6 +152,7 @@
 		68F80EDFD579E3D067F7283E /* PartOneHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EB6E76F03AE3DD02F5F6FF /* PartOneHistoryViewController.swift */; };
 		6A24F9B56422D2D792D89E56 /* PartOneHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E337F5ED9F7DF945EEDF7BBE /* PartOneHistoryInteractor.swift */; };
 		6EEDBA2C96801152FE059E09 /* ScoreScreenModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E8C34E518D043734BB4503 /* ScoreScreenModuleInput.swift */; };
+		6FB744C1B64933C165CF6476 /* PartTwoHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE4B1FDB9067C9883D9716 /* PartTwoHistoryPresenter.swift */; };
 		70B0EF4912735AA853737E8B /* PartOneHistoryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847533DFA45BDA355C60122C /* PartOneHistoryConfigurator.swift */; };
 		70F3D088C823D6DE74816814 /* AvarageHistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B1B95EED5625A8263106FD /* AvarageHistoryRouter.swift */; };
 		710455902FBCF885CF95A846 /* PreviewPartInfoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2864988193F828DED9F8E6 /* PreviewPartInfoConfigurator.swift */; };
@@ -165,6 +171,7 @@
 		7DA409353C2086F4F53AB9FE /* AvarageHistoryViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD51FC5078ECF7445E0D1BE /* AvarageHistoryViewInput.swift */; };
 		7DED072E5EC31A88F94113F7 /* EditInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B9B58C3A65CF663034C347 /* EditInformationPresenter.swift */; };
 		7E26FAEE0F8F2ED7E8391A49 /* QuizPartTwoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECD7F21C2C6CB2D6E99149 /* QuizPartTwoRouterInput.swift */; };
+		7F22D90F7B217D4E93998127 /* PartTwoHistoryInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D7D7297055956C0022B252 /* PartTwoHistoryInteractorInput.swift */; };
 		7FA0EB6918729B2EA44FE5C6 /* LoginModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B3F436F6510CF6946D596 /* LoginModuleInput.swift */; };
 		83BFFBA563C37C176ACA47FD /* QuizPartOneViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702376DC3C35307A2EBF5ED /* QuizPartOneViewInput.swift */; };
 		8442C56DA9E51614B65C96E2 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C2ADF3575B2F4AF3C6F46 /* HomePresenter.swift */; };
@@ -173,6 +180,7 @@
 		8738DA5F04B33A3B23D2E540 /* PreviewBaseInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C14C16E34C22AF0DD76060D /* PreviewBaseInfoPresenter.swift */; };
 		88F503DD2C9CA7F177FDF085 /* HistoryMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E987C5B8E2BD14BF30E8961C /* HistoryMainInteractor.swift */; };
 		8B66E60129903C989F98FEC4 /* HomeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3884B6BBFCFC05A5337FDC95 /* HomeInteractorOutput.swift */; };
+		8CDA027D80A3A078746709A8 /* PartTwoHistoryViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781BD22ADE2782FDC9AFB2C /* PartTwoHistoryViewInput.swift */; };
 		8EC133E5A2945E72D636FA32 /* ProfileInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C642DB194C16080141E1F13 /* ProfileInteractorInput.swift */; };
 		92FF0EA0F3872BA10D1BEE8B /* QuizPartThreeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9197D5F3167CC6C7B38155FD /* QuizPartThreeConfigurator.swift */; };
 		93B0A3205AEF4F7BF3E6406D /* PartOneHistoryInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080204BB8AA525788844EC2C /* PartOneHistoryInitializer.swift */; };
@@ -191,6 +199,7 @@
 		A224D3AD1B8D1D947E327F4A /* QuizPartOneInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5AA6B80105F6428B86A1E /* QuizPartOneInteractorOutput.swift */; };
 		A345F8C3B02C26E745A147D2 /* QuizPartOneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7977A52F4CF991FBF2F7872 /* QuizPartOneRouter.swift */; };
 		A3C32437A94A31CBF3DF74EE /* ScoreScreenInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591353D8AD09E9F0376BA610 /* ScoreScreenInteractorOutput.swift */; };
+		A4CBFE5F2A11B88BD8892D68 /* PartTwoHistoryInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0DB06860200EDDF29CD9C /* PartTwoHistoryInitializer.swift */; };
 		A6641774A39D86DBBDB37790 /* QuizPartTwoInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404466AF95B0C732090040D9 /* QuizPartTwoInteractorInput.swift */; };
 		A6B9C09DA15838EF4C1C6A7D /* LoginInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C07331B69F3FDFE224B9B1 /* LoginInteractorInput.swift */; };
 		A9E0B1E37CDF82DC10CDBC14 /* PreviewPartInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864F1689B49C91D1178C92FA /* PreviewPartInfoInteractor.swift */; };
@@ -198,6 +207,8 @@
 		B13C421F8F565A9E005CFADA /* QuizPartTwoInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0385E47F09CC39E0C0D90 /* QuizPartTwoInitializer.swift */; };
 		B19EE2FD5CE137F75A293014 /* HistoryMainInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097FD289306717A7B459DDE0 /* HistoryMainInteractorOutput.swift */; };
 		B2548BC03A552198447AFD45 /* PreviewBaseInfoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616945C04BEA3216A99AFC72 /* PreviewBaseInfoModuleInput.swift */; };
+		B276685BE1061FCA7EE9CEA6 /* PartTwoHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C62C6CB04EC0DCFEA3F450B /* PartTwoHistoryViewController.swift */; };
+		B32FD5A18EE1AE030E37DBBD /* PartTwoHistoryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF29E44A042C67E57F965BC /* PartTwoHistoryConfigurator.swift */; };
 		B5DD76BE58A0599B47FDB58C /* QuizPartOneInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCA617EDC2C643932EEBCB /* QuizPartOneInitializer.swift */; };
 		B82CDC89B8AD7DDC65E27AB7 /* AvarageHistoryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E7A281C5F93A5125DDF1C /* AvarageHistoryConfigurator.swift */; };
 		B8B350C756F3B85145F5996C /* QuizPartThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782BB4BF45A63B2ABF64549 /* QuizPartThreeViewController.swift */; };
@@ -216,6 +227,7 @@
 		CDBB2D374B7E0CD950A6A2B5 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9654D168ABD17C9D1BAEE /* ProfilePresenter.swift */; };
 		CE2C02BB1BC9BC42DEE8A186 /* QuizPartTwoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619AB8C305720E576D874231 /* QuizPartTwoModuleInput.swift */; };
 		CFEECAD8E8F406F375BEAE94 /* QuizPartThreeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B36399BCF6B31521CDCC4 /* QuizPartThreeInteractorInput.swift */; };
+		D02A337EC10EE10929FC9185 /* PartTwoHistoryViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C7223983031476F793929 /* PartTwoHistoryViewOutput.swift */; };
 		D1318A7766CF97BB24B0E04E /* HistoryMainRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F49A994FB61EF4B7D732A /* HistoryMainRouterInput.swift */; };
 		D26C9118AB17BE2C20BAD7BB /* HistoryMainInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2AEBA132DE9F40CDD9188 /* HistoryMainInitializer.swift */; };
 		D67932EF786BD43578E9EEFE /* PreviewPartInfoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDD7B2E442D0C63166489EF /* PreviewPartInfoRouterInput.swift */; };
@@ -227,8 +239,10 @@
 		DC40A00B20A3786F8C53AE08 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEFB1E4E929268C0496E42F /* LoginPresenter.swift */; };
 		DD071CB98B5F5861BD9F8A8B /* EditInformationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D17835045787ABEB1D8ADA /* EditInformationRouter.swift */; };
 		DEAEEDEBEA46200FCEE682E1 /* PartOneHistoryInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7921958EDA9458624EB4F8 /* PartOneHistoryInteractorInput.swift */; };
+		DF88BDB6DD1924966EA32574 /* PartTwoHistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC3DA8DDD645D18A17A55E5 /* PartTwoHistoryRouter.swift */; };
 		DF99A549704F24B2A1B0CD88 /* PartOneHistoryViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A47ADB6E12002658EDD163 /* PartOneHistoryViewOutput.swift */; };
 		DFEBD0180F802A28D9F54EC8 /* PartOneHistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB659B4E43211CFF9B12E695 /* PartOneHistoryRouter.swift */; };
+		E164C6868958C8E0C4858F79 /* PartTwoHistoryModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422FD95D8EACAFE8977285FA /* PartTwoHistoryModuleInput.swift */; };
 		E43865F1C9E3F189D850C6E5 /* QuizPartThreeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB344D3B29764D3E84590D7F /* QuizPartThreeRouter.swift */; };
 		E82616554F277E1DF872E609 /* EditInformationViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF67239ECED810C5334CD3E /* EditInformationViewInput.swift */; };
 		ED58F7496684B7D8695010F5 /* QuizPartThreeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104D90CB2B1D9A928DB7BCE /* QuizPartThreeRouterInput.swift */; };
@@ -236,6 +250,7 @@
 		F38E76649F562BC3CE4644A4 /* QuizPartThreeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3241BC2FC5794E8E0E3B6D /* QuizPartThreeViewOutput.swift */; };
 		F825188DDC9C18739DB0BE48 /* QuizPartThreeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369B13B6DD2E4448D21FC61E /* QuizPartThreeInteractorOutput.swift */; };
 		F9509ED53CBB70AE2ACCEABE /* ProfileRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FFAB5641B63D2D0BE280F6 /* ProfileRouterInput.swift */; };
+		FA698D90821B8F92E97E7DE7 /* PartTwoHistoryRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584408CFF2F5D904AF61070 /* PartTwoHistoryRouterInput.swift */; };
 		FA7B6A630650C47C6100CE47 /* QuizPartTwoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417FB0DC41BAC7114326AB3 /* QuizPartTwoRouter.swift */; };
 		FA80AB1145857F64E3550D52 /* AvarageHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA867D319D1FC41D692ABDA /* AvarageHistoryInteractor.swift */; };
 		FBAA2CFEA779E79C9486E8C2 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */; };
@@ -262,6 +277,7 @@
 		19171CB6E5559940579F749D /* ScoreScreenPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenPresenter.swift; sourceTree = "<group>"; };
 		19332506BB8A17E0B2F8A8FB /* ProfileInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractorOutput.swift; sourceTree = "<group>"; };
 		1A2A9CC1E7A655A123351912 /* HomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		1AF29E44A042C67E57F965BC /* PartTwoHistoryConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryConfigurator.swift; sourceTree = "<group>"; };
 		1BA9891BA34CDCCF98D4BA57 /* PreviewPartInfoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoPresenter.swift; sourceTree = "<group>"; };
 		1BBECF3885BB89903358CA2D /* ProfileModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileModuleInput.swift; sourceTree = "<group>"; };
 		1C14C16E34C22AF0DD76060D /* PreviewBaseInfoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoPresenter.swift; sourceTree = "<group>"; };
@@ -275,6 +291,7 @@
 		28A7B4DFCE651175F79FB678 /* AvarageHistoryInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AvarageHistoryInteractorInput.swift; sourceTree = "<group>"; };
 		28E089A54B68C75B990FB0BE /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
 		2BC2AEBA132DE9F40CDD9188 /* HistoryMainInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainInitializer.swift; sourceTree = "<group>"; };
+		2C62C6CB04EC0DCFEA3F450B /* PartTwoHistoryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryViewController.swift; sourceTree = "<group>"; };
 		300D5B26A35B9D7621BFA795 /* PartOneHistoryModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneHistoryModuleInput.swift; sourceTree = "<group>"; };
 		328E967285539AC224BE97A3 /* QuizPartTwoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoInteractorOutput.swift; sourceTree = "<group>"; };
 		33FCA617EDC2C643932EEBCB /* QuizPartOneInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneInitializer.swift; sourceTree = "<group>"; };
@@ -290,6 +307,7 @@
 		3CF92E3AF3D915B2C760514E /* Pods-NeuroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeuroApp.release.xcconfig"; path = "Target Support Files/Pods-NeuroApp/Pods-NeuroApp.release.xcconfig"; sourceTree = "<group>"; };
 		40202D76FE8F86631EECED60 /* LoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		404466AF95B0C732090040D9 /* QuizPartTwoInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoInteractorInput.swift; sourceTree = "<group>"; };
+		422FD95D8EACAFE8977285FA /* PartTwoHistoryModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryModuleInput.swift; sourceTree = "<group>"; };
 		45842F22C231ECBBB117DB12 /* AvarageHistoryInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AvarageHistoryInteractorOutput.swift; sourceTree = "<group>"; };
 		4758DB157F183D1E96EA715E /* EditInformationRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationRouterInput.swift; sourceTree = "<group>"; };
 		497C2ADF3575B2F4AF3C6F46 /* HomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -379,6 +397,9 @@
 		5AE8500626DB9C1600A834D2 /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
 		5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizServiceProtocol.swift; sourceTree = "<group>"; };
 		5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSidedArrowView.swift; sourceTree = "<group>"; };
+		5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryDisplayManager.swift; sourceTree = "<group>"; };
+		5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		5AF5CE562784A79A00868619 /* PartTwoHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartTwoHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemError.swift; sourceTree = "<group>"; };
 		5EA65B27DB6F300C403ED9F5 /* QuizPartOneConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneConfigurator.swift; sourceTree = "<group>"; };
 		5F872E576D287CE17D07E27D /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
@@ -390,21 +411,26 @@
 		62E9BBA75E70C956F243AF49 /* QuizPartTwoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoPresenter.swift; sourceTree = "<group>"; };
 		64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
 		679D96F989CFDF511D796794 /* PreviewPartInfoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoViewInput.swift; sourceTree = "<group>"; };
+		686CDE7B8ECF96AF4F74EEA9 /* PartTwoHistoryInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryInteractorOutput.swift; sourceTree = "<group>"; };
 		6B09F5F52AEA951DF14A706D /* HistoryMainViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainViewOutput.swift; sourceTree = "<group>"; };
 		6B4EDC329C61457D79167CA4 /* QuizPartOneViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneViewController.swift; sourceTree = "<group>"; };
 		6DDD7B2E442D0C63166489EF /* PreviewPartInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoRouterInput.swift; sourceTree = "<group>"; };
 		6F0880BC912EE4C23379C739 /* PreviewPartInfoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoInteractorOutput.swift; sourceTree = "<group>"; };
 		70C843C650377C2607EE7246 /* PartOneHistoryViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneHistoryViewInput.swift; sourceTree = "<group>"; };
 		728932528407A3FAE6CD2862 /* QuizPartOnePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOnePresenter.swift; sourceTree = "<group>"; };
+		7584408CFF2F5D904AF61070 /* PartTwoHistoryRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryRouterInput.swift; sourceTree = "<group>"; };
 		75D941F60EA44BE783C634B3 /* PreviewPartInfoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoInitializer.swift; sourceTree = "<group>"; };
 		7702376DC3C35307A2EBF5ED /* QuizPartOneViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneViewInput.swift; sourceTree = "<group>"; };
 		77C3D527D50535C22E885665 /* PartOneHistoryInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneHistoryInteractorOutput.swift; sourceTree = "<group>"; };
 		78EB6E76F03AE3DD02F5F6FF /* PartOneHistoryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneHistoryViewController.swift; sourceTree = "<group>"; };
 		796822C594D58E6E7A7FE43D /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
+		7BC3DA8DDD645D18A17A55E5 /* PartTwoHistoryRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryRouter.swift; sourceTree = "<group>"; };
 		7C032DA1AA468A79E6DB51B4 /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		7E4025965F645558804250B2 /* HistoryMainViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryMainViewInput.swift; sourceTree = "<group>"; };
 		7EF8B148594B4B0EB22EB8B3 /* LoginRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterInput.swift; sourceTree = "<group>"; };
 		807FA06AD6BF8A80A3D2EC59 /* QuizPartTwoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartTwoViewInput.swift; sourceTree = "<group>"; };
+		81D7D7297055956C0022B252 /* PartTwoHistoryInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryInteractorInput.swift; sourceTree = "<group>"; };
+		82E0DB06860200EDDF29CD9C /* PartTwoHistoryInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryInitializer.swift; sourceTree = "<group>"; };
 		83294CED18EFE49B44109C74 /* ScoreScreenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenViewController.swift; sourceTree = "<group>"; };
 		847533DFA45BDA355C60122C /* PartOneHistoryConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneHistoryConfigurator.swift; sourceTree = "<group>"; };
 		864F1689B49C91D1178C92FA /* PreviewPartInfoInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewPartInfoInteractor.swift; sourceTree = "<group>"; };
@@ -428,8 +454,10 @@
 		99B22D46305F45EFAE95A50C /* PreviewBaseInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoRouterInput.swift; sourceTree = "<group>"; };
 		9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractorOutput.swift; sourceTree = "<group>"; };
 		9B491D586CFF261E708DF50F /* PreviewBaseInfoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoInitializer.swift; sourceTree = "<group>"; };
+		9DEE4B1FDB9067C9883D9716 /* PartTwoHistoryPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryPresenter.swift; sourceTree = "<group>"; };
 		9E820419046E1CAB86A333AE /* ScoreScreenViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenViewOutput.swift; sourceTree = "<group>"; };
 		9FD51FC5078ECF7445E0D1BE /* AvarageHistoryViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AvarageHistoryViewInput.swift; sourceTree = "<group>"; };
+		A0770AC593D16CEE5DB179CD /* PartTwoHistoryInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryInteractor.swift; sourceTree = "<group>"; };
 		A0D17835045787ABEB1D8ADA /* EditInformationRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationRouter.swift; sourceTree = "<group>"; };
 		A13C4F5A64000B97F8FDA19E /* PreviewBaseInfoViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewBaseInfoViewOutput.swift; sourceTree = "<group>"; };
 		A1A9455D74290E8F93D71A69 /* QuizPartOneViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneViewOutput.swift; sourceTree = "<group>"; };
@@ -477,6 +505,8 @@
 		EE2B3F436F6510CF6946D596 /* LoginModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleInput.swift; sourceTree = "<group>"; };
 		EEC048A1E0E203965C17CA61 /* EditInformationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditInformationInteractor.swift; sourceTree = "<group>"; };
 		EFEDEBB78E2681F9948129A4 /* QuizPartThreeInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeInitializer.swift; sourceTree = "<group>"; };
+		F781BD22ADE2782FDC9AFB2C /* PartTwoHistoryViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryViewInput.swift; sourceTree = "<group>"; };
+		FA1C7223983031476F793929 /* PartTwoHistoryViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryViewOutput.swift; sourceTree = "<group>"; };
 		FA271BB062056B67681AD120 /* QuizPartOneModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneModuleInput.swift; sourceTree = "<group>"; };
 		FB344D3B29764D3E84590D7F /* QuizPartThreeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartThreeRouter.swift; sourceTree = "<group>"; };
 		FFA867D319D1FC41D692ABDA /* AvarageHistoryInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AvarageHistoryInteractor.swift; sourceTree = "<group>"; };
@@ -662,6 +692,15 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		27841E223ECD6F50CA7991B1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7584408CFF2F5D904AF61070 /* PartTwoHistoryRouterInput.swift */,
+				7BC3DA8DDD645D18A17A55E5 /* PartTwoHistoryRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		2DBC3C9BA69A19273A909078 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,6 +746,18 @@
 				10AF999ACCFCEDDA5A94E6E7 /* ProfileRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		3B300F3706A3BA76A73B22B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5AF5CE592784A7AA00868619 /* PartTwoHistoryTableViewCell */,
+				5AF5CE522784A1ED00868619 /* PartTwoHistoryDisplayManager */,
+				F781BD22ADE2782FDC9AFB2C /* PartTwoHistoryViewInput.swift */,
+				FA1C7223983031476F793929 /* PartTwoHistoryViewOutput.swift */,
+				2C62C6CB04EC0DCFEA3F450B /* PartTwoHistoryViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3C99C62BED263D2317847798 /* Presenter */ = {
@@ -1015,6 +1066,7 @@
 				5A65B9BF56278131879FD5C1 /* HistoryMain */,
 				AA17B74F35ADD6835DA997D4 /* AvarageHistory */,
 				00B436427BD17A061A835896 /* PartOneHistory */,
+				91BB1118320A2269A93C096D /* PartTwoHistory */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -1086,6 +1138,23 @@
 			path = QuizService;
 			sourceTree = "<group>";
 		};
+		5AF5CE522784A1ED00868619 /* PartTwoHistoryDisplayManager */ = {
+			isa = PBXGroup;
+			children = (
+				5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */,
+			);
+			path = PartTwoHistoryDisplayManager;
+			sourceTree = "<group>";
+		};
+		5AF5CE592784A7AA00868619 /* PartTwoHistoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */,
+				5AF5CE562784A79A00868619 /* PartTwoHistoryTableViewCell.xib */,
+			);
+			path = PartTwoHistoryTableViewCell;
+			sourceTree = "<group>";
+		};
 		5AFFFCE826AEC00400E9F3F1 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -1130,6 +1199,15 @@
 				62E9BBA75E70C956F243AF49 /* QuizPartTwoPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		68875C62E87BBF3E1498A9D6 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				1AF29E44A042C67E57F965BC /* PartTwoHistoryConfigurator.swift */,
+				82E0DB06860200EDDF29CD9C /* PartTwoHistoryInitializer.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		6A5CD1DAF1C24FD860F69AB2 /* Configurator */ = {
@@ -1270,6 +1348,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8E6D51E7D8E533CFE0C8FC61 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				81D7D7297055956C0022B252 /* PartTwoHistoryInteractorInput.swift */,
+				686CDE7B8ECF96AF4F74EEA9 /* PartTwoHistoryInteractorOutput.swift */,
+				A0770AC593D16CEE5DB179CD /* PartTwoHistoryInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		8E878EE91109970CBDC1BF5C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1289,6 +1377,18 @@
 				B79D2017DA61FF26739D9365 /* Configurator */,
 			);
 			path = QuizPartThree;
+			sourceTree = "<group>";
+		};
+		91BB1118320A2269A93C096D /* PartTwoHistory */ = {
+			isa = PBXGroup;
+			children = (
+				3B300F3706A3BA76A73B22B8 /* View */,
+				961C85364E8999DE8F38569C /* Presenter */,
+				8E6D51E7D8E533CFE0C8FC61 /* Interactor */,
+				27841E223ECD6F50CA7991B1 /* Router */,
+				68875C62E87BBF3E1498A9D6 /* Configurator */,
+			);
+			path = PartTwoHistory;
 			sourceTree = "<group>";
 		};
 		92301B85E4B9CB561ADEA7A2 /* QuizPartTwo */ = {
@@ -1311,6 +1411,15 @@
 				889C2BC7D016D2D778CEBD88 /* QuizPartOneInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		961C85364E8999DE8F38569C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				422FD95D8EACAFE8977285FA /* PartTwoHistoryModuleInput.swift */,
+				9DEE4B1FDB9067C9883D9716 /* PartTwoHistoryPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		9A0615A8140B74C32DA03E2B /* ScoreScreen */ = {
@@ -1673,6 +1782,7 @@
 				5A9251BA275E649800D9195F /* MainHistory.storyboard in Resources */,
 				5A9251C2275E6EF400D9195F /* PartTwoHistory.storyboard in Resources */,
 				5A9251C4275E70FF00D9195F /* PartThreeHistory.storyboard in Resources */,
+				5AF5CE582784A79A00868619 /* PartTwoHistoryTableViewCell.xib in Resources */,
 				5A166C12269C366600E590C7 /* Tabbar.storyboard in Resources */,
 				5AA6EC502775E43800A6FA5B /* PartOneHistoryTableViewCell.xib in Resources */,
 				5A88051A2723CEFF00BA12B3 /* QuizPartTwo.storyboard in Resources */,
@@ -1799,6 +1909,7 @@
 				4CC5A9741515EC05FC66C938 /* ProfileModuleInput.swift in Sources */,
 				CDBB2D374B7E0CD950A6A2B5 /* ProfilePresenter.swift in Sources */,
 				8EC133E5A2945E72D636FA32 /* ProfileInteractorInput.swift in Sources */,
+				5AF5CE542784A21600868619 /* PartTwoHistoryDisplayManager.swift in Sources */,
 				0DEDCC47A4971DDDB32CD298 /* ProfileInteractorOutput.swift in Sources */,
 				2D934A296C744ED7E285E9C0 /* ProfileInteractor.swift in Sources */,
 				F9509ED53CBB70AE2ACCEABE /* ProfileRouterInput.swift in Sources */,
@@ -1945,6 +2056,7 @@
 				25E96AAC7E68E7197578AEB6 /* PartOneHistoryModuleInput.swift in Sources */,
 				5A2E2A84277DA6DF0032385C /* DateFormatter+fullDate.swift in Sources */,
 				16824E73F7D6D97C02D1CEBD /* PartOneHistoryPresenter.swift in Sources */,
+				5AF5CE572784A79A00868619 /* PartTwoHistoryTableViewCell.swift in Sources */,
 				DEAEEDEBEA46200FCEE682E1 /* PartOneHistoryInteractorInput.swift in Sources */,
 				40B21884FE726B2776CDC0BF /* PartOneHistoryInteractorOutput.swift in Sources */,
 				6A24F9B56422D2D792D89E56 /* PartOneHistoryInteractor.swift in Sources */,
@@ -1952,6 +2064,18 @@
 				DFEBD0180F802A28D9F54EC8 /* PartOneHistoryRouter.swift in Sources */,
 				70B0EF4912735AA853737E8B /* PartOneHistoryConfigurator.swift in Sources */,
 				93B0A3205AEF4F7BF3E6406D /* PartOneHistoryInitializer.swift in Sources */,
+				8CDA027D80A3A078746709A8 /* PartTwoHistoryViewInput.swift in Sources */,
+				D02A337EC10EE10929FC9185 /* PartTwoHistoryViewOutput.swift in Sources */,
+				B276685BE1061FCA7EE9CEA6 /* PartTwoHistoryViewController.swift in Sources */,
+				E164C6868958C8E0C4858F79 /* PartTwoHistoryModuleInput.swift in Sources */,
+				6FB744C1B64933C165CF6476 /* PartTwoHistoryPresenter.swift in Sources */,
+				7F22D90F7B217D4E93998127 /* PartTwoHistoryInteractorInput.swift in Sources */,
+				4784FEDC6BFA00061B7D43EA /* PartTwoHistoryInteractorOutput.swift in Sources */,
+				56FBFBA97289F3D5EF1B8307 /* PartTwoHistoryInteractor.swift in Sources */,
+				FA698D90821B8F92E97E7DE7 /* PartTwoHistoryRouterInput.swift in Sources */,
+				DF88BDB6DD1924966EA32574 /* PartTwoHistoryRouter.swift in Sources */,
+				B32FD5A18EE1AE030E37DBBD /* PartTwoHistoryConfigurator.swift in Sources */,
+				A4CBFE5F2A11B88BD8892D68 /* PartTwoHistoryInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
