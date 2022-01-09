@@ -48,8 +48,9 @@ class ScoreView: UIView {
         
         NSLayoutConstraint.activate([
             NSLayoutConstraint.init(item: scoreView, attribute: .width, relatedBy: .equal, toItem: scoreView, attribute: .height, multiplier: 1, constant: 0),
-            scoreView.leftAnchor.constraint(equalTo: leftAnchor),
-            scoreView.rightAnchor.constraint(equalTo: rightAnchor),
+            NSLayoutConstraint.init(item: scoreView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1, constant: 0),
+            scoreView.leftAnchor.constraint(greaterThanOrEqualTo: leftAnchor),
+            scoreView.centerXAnchor.constraint(equalTo: centerXAnchor),
             scoreView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             scoreLabel.leftAnchor.constraint(equalTo: scoreView.leftAnchor, constant: 5),

@@ -8,17 +8,25 @@
 import UIKit
 
 class AverageHistoryHeaderView: UIView {
-    let dateLabel: UILabel = {
+    private let dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textAlignment = .center
         label.textColor = UIColor.black
+        label.numberOfLines = 1
+        label.minimumScaleFactor = 0.5
         return label
     }()
-    let scoreView: ScoreView = {
-        let view = ScoreView()
-        return view
+    private let averageScoreLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.textAlignment = .center
+        label.minimumScaleFactor = 0.5
+        label.numberOfLines = 1
+        label.text = String.Score.averageScore
+        return label
     }()
+    private let scoreView = ScoreView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,23 +37,30 @@ class AverageHistoryHeaderView: UIView {
     
     private func layout() {
         self.addSubview(dateLabel)
+        self.addSubview(averageScoreLabel)
         self.addSubview(scoreView)
+        
+//        self.translatesAutoresizingMaskIntoConstraints = false
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
+        averageScoreLabel.translatesAutoresizingMaskIntoConstraints = false
         scoreView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             dateLabel.topAnchor.constraint(equalTo: topAnchor),
             dateLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
-            dateLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            dateLabel.bottomAnchor.constraint(equalTo: scoreView.topAnchor, constant: -20),
+            dateLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
+            dateLabel.bottomAnchor.constraint(equalTo: averageScoreLabel.topAnchor, constant: -10),
 
+            averageScoreLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
+            averageScoreLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
+            averageScoreLabel.bottomAnchor.constraint(equalTo: scoreView.topAnchor, constant: -5),
+            
             scoreView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-//            scoreView.heightAnchor.constraint(equalToConstant: 200),
-            scoreView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
             NSLayoutConstraint(item: scoreView, attribute: .width, relatedBy: .equal,
                                toItem: self, attribute: .width, multiplier: 0.3, constant: 0),
             NSLayoutConstraint(item: scoreView, attribute: .height, relatedBy: .equal,
-                               toItem: scoreView, attribute: .width, multiplier: 1, constant: 0)
+                               toItem: scoreView, attribute: .width, multiplier: 1, constant: 0),
+            scoreView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
         ])
     }
     
@@ -53,7 +68,6 @@ class AverageHistoryHeaderView: UIView {
         let dateString = DateFormatter.fulldate.string(from: result.finishTime)
         dateLabel.text = dateString
         
-//        let title = String.Score.averageScore
         scoreView.setup(with: result.avarageScore)
     }
 }
