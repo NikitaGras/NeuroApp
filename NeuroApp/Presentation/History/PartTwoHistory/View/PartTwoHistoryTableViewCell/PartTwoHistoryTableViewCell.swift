@@ -30,9 +30,17 @@ class PartTwoHistoryTableViewCell: UITableViewCell {
         optionView.subviews.forEach {$0.removeFromSuperview()}
         
         if let option = option as? ImageOption {
-            
-        } else if let option = option as? StringOption {
-            
+            let view = OptionImageView(frame: optionView.frame)
+            view.option = option
+            optionView.addSubview(view)
+            heightConstraint.constant = optionView.frame.width
+        }
+        
+        if let option = option as? StringOption {
+            let view = OptionStringView(frame: optionView.frame)
+            view.option = option
+            optionView.addSubview(view)
+            heightConstraint.constant = optionView.frame.width / 2
         }
     }
 }

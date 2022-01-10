@@ -29,7 +29,7 @@ class PartTwoHistoryDisplayManager: NSObject {
     func update(with result: Result) {
         answers = result.partTwoAnswers
         tableView.reloadData()
-        headerView.update(with: result)
+        headerView.update(with: result, scoreLabelTitle: String.Score.partTwoDescription)
     }
     
     

@@ -76,7 +76,9 @@ extension String {
         static let partOne = "Part 1:"
         static let partOneDescription = "Self Efficacy Questions"
         static let partTwo = "Part 2:"
+        static let partTwoDescription = "Short Answer Questions"
         static let partThree = "Part 3:"
+        static let partThreeDescription = "Long Answer Questions"
         
         static let mainText = "Thank you for finishing the questionnaire! \n\nYou scores are:"
         static let yourRecentScore = "Your recent scores:"

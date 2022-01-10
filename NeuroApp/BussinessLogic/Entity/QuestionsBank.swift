@@ -71,6 +71,7 @@ struct PartTwoAnswer {
 typealias PartThreeQuestion = String
 
 struct PartThreeAnswer {
+    let question: String
     let userText: String
     let value: Double
 }

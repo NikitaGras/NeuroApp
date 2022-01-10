@@ -37,6 +37,7 @@
                         <outlet property="tableView" destination="Yih-vD-2bv" id="yJy-uH-aFL"/>
                         <segue destination="iaw-6d-3Ls" kind="show" identifier="ShowPartOneHistory" id="sCJ-lC-tbU"/>
                         <segue destination="8rT-6g-kqa" kind="show" identifier="ShowPartTwoHistory" id="6fR-dL-YvM"/>
+                        <segue destination="dqD-wq-DXt" kind="show" identifier="ShowPartThreeHistory" id="rBW-Db-8YX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -67,6 +68,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Uj-Lh-8WG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="181"/>
+        </scene>
+        <!--PartThreeHistory-->
+        <scene sceneID="YDv-T1-Bcg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PartThreeHistory" id="dqD-wq-DXt" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gCg-p4-2HB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQl-Hy-gFw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="242"/>
         </scene>
     </scenes>
     <resources>

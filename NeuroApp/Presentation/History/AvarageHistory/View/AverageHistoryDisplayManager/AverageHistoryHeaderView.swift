@@ -23,7 +23,6 @@ class AverageHistoryHeaderView: UIView {
         label.textAlignment = .center
         label.minimumScaleFactor = 0.5
         label.numberOfLines = 1
-        label.text = String.Score.averageScore
         return label
     }()
     private let scoreView = ScoreView()
@@ -64,9 +63,11 @@ class AverageHistoryHeaderView: UIView {
         ])
     }
     
-    func update(with result: Result) {
+    func update(with result: Result, scoreLabelTitle title: String) {
         let dateString = DateFormatter.fulldate.string(from: result.finishTime)
         dateLabel.text = dateString
+        
+        averageScoreLabel.text = title
         
         scoreView.setup(with: result.avarageScore)
     }

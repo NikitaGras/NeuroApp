@@ -37,6 +37,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzB-qr-PVb">
                                 <rect key="frame" x="0.0" y="0.0" width="136" height="135"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="135" id="xeF-C3-BAs"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hru-ld-MN5">
                                 <rect key="frame" x="144" y="38.5" width="299" height="58"/>

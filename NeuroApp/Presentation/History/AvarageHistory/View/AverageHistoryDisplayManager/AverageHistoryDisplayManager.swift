@@ -37,7 +37,7 @@ class AverageHistoryDisplayManager: NSObject {
         score = (key: String.History.partThreeTitle, value: result.partOneScore)
         scores.append(score)
         
-        tableHeaderView.update(with: result)
+        tableHeaderView.update(with: result, scoreLabelTitle: String.Score.averageScore)
         
         tableView.reloadData()
     }

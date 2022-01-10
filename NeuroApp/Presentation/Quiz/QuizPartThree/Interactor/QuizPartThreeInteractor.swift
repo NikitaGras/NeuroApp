@@ -25,7 +25,9 @@ class QuizPartThreeInteractor: QuizPartThreeInteractorInput {
     func save(userText: String) {
         ganningFogService.getGunningFogIndex(for: userText) { gunningFogIndex, error in
             if let gunningFogIndex = gunningFogIndex {
-                let answer = PartThreeAnswer(userText: userText, value: gunningFogIndex)
+                let answer = PartThreeAnswer(question: self.quiz.partThreeQuestion,
+                                             userText: userText,
+                                             value: gunningFogIndex)
                 self.save(answer: answer)
             }
             if let error = error {

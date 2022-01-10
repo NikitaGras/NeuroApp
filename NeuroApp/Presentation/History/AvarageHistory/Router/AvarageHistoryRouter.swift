@@ -29,7 +29,12 @@ class AvarageHistoryRouter: AvarageHistoryRouterInput {
     }
     
     func showPartThree(_ result: Result) {
-        
+        let promise = transitionHandler.openModule?(usingSegue: "ShowPartThreeHistory")
+        promise?.thenChain({ moduleInput in
+            let input = moduleInput as? PartThreeHistoryModuleInput
+            input?.result = result
+            return nil
+        })
     }
     
     //TODO: подумать как унифицировать в одну функцию, передавать в качестве параметра тип данных.

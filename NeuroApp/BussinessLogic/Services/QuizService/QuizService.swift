@@ -14,7 +14,7 @@ class QuizService: QuizServiceProtocol {
             notifyObservers()
         }
     }
-    var history: [Result] = [Result(partOneAnswers: [PartOneAnswer(questionText: "", value: 50)], partTwoAnswers: [PartTwoAnswer(questionText: "", option: StringOption(value: "", isRight: true), responseTime: 2)], partThreeAnswer: PartThreeAnswer(userText: "", value: 50), finishTime: Date())]
+    var history: [Result] = [Result(partOneAnswers: [PartOneAnswer(questionText: "", value: 50)], partTwoAnswers: [PartTwoAnswer(questionText: "", option: StringOption(value: "", isRight: true), responseTime: 2)], partThreeAnswer: PartThreeAnswer(question: "1.", userText: "", value: 50), finishTime: Date())]
     var quiz: Quiz
     
     private init() {
