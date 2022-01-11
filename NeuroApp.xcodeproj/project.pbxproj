@@ -140,6 +140,7 @@
 		5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500326DB98DA00A834D2 /* Quiz.swift */; };
 		5AE8500726DB9C1600A834D2 /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500626DB9C1600A834D2 /* QuizService.swift */; };
 		5AE8500926DB9C2300A834D2 /* QuizServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */; };
+		5AEF1363278DB29C00495100 /* NeuroApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF1361278DB29C00495100 /* NeuroApp.xcdatamodeld */; };
 		5AF5CE51278165F500868619 /* DoubleSidedArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */; };
 		5AF5CE542784A21600868619 /* PartTwoHistoryDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */; };
 		5AF5CE572784A79A00868619 /* PartTwoHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */; };
@@ -414,6 +415,7 @@
 		5AE8500326DB98DA00A834D2 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		5AE8500626DB9C1600A834D2 /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
 		5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizServiceProtocol.swift; sourceTree = "<group>"; };
+		5AEF1362278DB29C00495100 /* NeuroApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NeuroApp.xcdatamodel; sourceTree = "<group>"; };
 		5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSidedArrowView.swift; sourceTree = "<group>"; };
 		5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryDisplayManager.swift; sourceTree = "<group>"; };
 		5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -956,6 +958,7 @@
 		5A3801AD2695D93100883225 /* NeuroApp */ = {
 			isa = PBXGroup;
 			children = (
+				5AEF1360278DB27900495100 /* CoreData */,
 				5A6F2C5B269B2397006B065D /* Core */,
 				5A1E8BB326984097001179F7 /* BussinessLogic */,
 				5A1E8BB026983D3E001179F7 /* Storyboard */,
@@ -1181,6 +1184,14 @@
 				5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */,
 			);
 			path = QuizService;
+			sourceTree = "<group>";
+		};
+		5AEF1360278DB27900495100 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5AEF1361278DB29C00495100 /* NeuroApp.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		5AF5CE522784A1ED00868619 /* PartTwoHistoryDisplayManager */ = {
@@ -1939,6 +1950,7 @@
 				5A6F2C56269ABB34006B065D /* UIButton+setBackgroundColor.swift in Sources */,
 				5A1E8BB6269840B9001179F7 /* User.swift in Sources */,
 				5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */,
+				5AEF1363278DB29C00495100 /* NeuroApp.xcdatamodeld in Sources */,
 				5AA6E2992735654600E64ABA /* GunningFogService.swift in Sources */,
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,
 				5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */,
@@ -2371,6 +2383,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5AEF1361278DB29C00495100 /* NeuroApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5AEF1362278DB29C00495100 /* NeuroApp.xcdatamodel */,
+			);
+			currentVersion = 5AEF1362278DB29C00495100 /* NeuroApp.xcdatamodel */;
+			path = NeuroApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5A3801A32695D93100883225 /* Project object */;
 }
