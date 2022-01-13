@@ -19,11 +19,11 @@ class PreviewPartInfoPresenter: PreviewPartInfoModuleInput, PreviewPartInfoViewO
     
     func next() {
         let state = interactor.getQuizState()
-        if state == .partOneProceed {
+        if state == .partOneInProgress || state == .begin {
             router.openPartOneQuiz()
-        } else if state == .partTwoProceed {
+        } else if state == .partTwoInProgress {
             router.openPartTwoQuiz()
-        } else if state == .partThreeProceed {
+        } else if state == .partThreeInProgress {
             router.openPartThreeQuiz()
         }
     }

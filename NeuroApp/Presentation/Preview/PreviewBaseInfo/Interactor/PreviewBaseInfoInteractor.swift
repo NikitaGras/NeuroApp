@@ -11,7 +11,7 @@ class PreviewBaseInfoInteractor: PreviewBaseInfoInteractorInput {
     var service: QuizServiceProtocol!
     
     func changeQuizStateToProceed() {
-        service.changeQuiz(to: .partOneProceed)
+//        service.changeQuiz(to: .partOneInProgress)
     }
     
     func getQuizState() -> Quiz.State {

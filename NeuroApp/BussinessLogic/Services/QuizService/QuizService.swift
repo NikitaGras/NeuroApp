@@ -60,11 +60,6 @@ class QuizService: QuizServiceProtocol {
         history = []
     }
     
-    func changeQuiz(to state: Quiz.State) {
-        self.quiz.state = state
-        notifyObservers()
-    }
-    
     //MARK: - Observer
     func notifyObservers() {
         observers.forEach { weakBox in

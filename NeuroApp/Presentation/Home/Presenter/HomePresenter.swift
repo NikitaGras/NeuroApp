@@ -59,7 +59,7 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     func setupButtonTitle() {
         let currentTime = Date().timeIntervalSince1970
         let startTime = interactor.getFinishTime()
-        let interval = 6.0
+        let interval = 26.0
         let timeInterval = interval - (currentTime - startTime)
         
         if timeInterval > 1 {

@@ -8,43 +8,39 @@
 import UIKit
 
 struct Quiz {
-    var state: State = .begin
+    var state: State {
+        if partOneAnswers.isEmpty {
+            return .begin
+        } else if partOneAnswers.count < partOneQuestions.count {
+            return .partOneInProgress
+        } else if partTwoAnswers.count < partTwoQuestions.count {
+            return .partTwoInProgress
+        } else if partTwoAnswers.count == partTwoQuestions.count && partThreeAnswer == nil {
+            return .partThreeInProgress
+        } else {
+            return .notAvailable
+        }
+    }
     var isProceed: Bool {
-        return state == .partOneProceed || state == .partTwoProceed || state == .partThreeProceed
+        return state == .partOneInProgress || state == .partTwoInProgress || state == .partThreeInProgress
     }
     
     var partOneQuestions = QuestionsBank().partOneQuestions
-    var partOneAnswers = [PartOneAnswer]() {
-        didSet {
-            if partOneAnswers.count == partOneQuestions.count {
-                self.state = .partTwoProceed
-            }
-        }
-    }
+    var partOneAnswers = [PartOneAnswer]()
     
     var partTwoQuestions = QuestionsBank().partTwoQuestions
-    var partTwoAnswers = [PartTwoAnswer]() {
-        didSet {
-            if partTwoAnswers.count == partTwoQuestions.count {
-                self.state = .partThreeProceed
-            }
-        }
-    }
+    var partTwoAnswers = [PartTwoAnswer]()
     
     var partThreeQuestion = QuestionsBank().partThreeQuestion
-    var partThreeAnswer: PartThreeAnswer? {
-        didSet {
-            self.state = .notAvailable
-        }
-    }
+    var partThreeAnswer: PartThreeAnswer?
 }
 
 extension Quiz {
     enum State: Int, Codable {
         case begin
-        case partOneProceed
-        case partTwoProceed
-        case partThreeProceed
+        case partOneInProgress
+        case partTwoInProgress
+        case partThreeInProgress
         case notAvailable
     }
 }

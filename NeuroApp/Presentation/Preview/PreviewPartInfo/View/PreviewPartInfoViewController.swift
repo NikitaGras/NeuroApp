@@ -27,13 +27,13 @@ class PreviewPartInfoViewController: UIViewController, PreviewPartInfoViewInput 
     }
     
     func update(with state: Quiz.State) {
-        if state == .partOneProceed {
+        if state == .partOneInProgress || state == .begin {
             titleLabel.text = .Preview.partOneTitle
             infoLabel.text = .Preview.partOneInfo
-        } else if state == .partTwoProceed {
+        } else if state == .partTwoInProgress {
             titleLabel.text = .Preview.partTwoTitle
             infoLabel.text = .Preview.partTwoInfo
-        } else if state == .partThreeProceed {
+        } else if state == .partThreeInProgress {
             titleLabel.text = .Preview.partThreeTitle
             infoLabel.text = .Preview.partThreeInfo
         }
