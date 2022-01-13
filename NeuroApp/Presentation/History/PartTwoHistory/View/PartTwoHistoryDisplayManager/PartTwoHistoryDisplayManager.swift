@@ -41,9 +41,13 @@ extension PartTwoHistoryDisplayManager: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PartTwoHistoryTableViewCell.identifier) as? PartTwoHistoryTableViewCell
-        cell?.fill(with: answers[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: PartTwoHistoryTableViewCell.identifier)
         return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let cell = cell as? PartTwoHistoryTableViewCell
+        cell?.fill(with: answers[indexPath.row])
     }
 }
 
