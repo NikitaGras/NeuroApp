@@ -22,7 +22,7 @@ class PartOneHistoryViewController: UIViewController, PartOneHistoryViewInput {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.setupTableHeaderViewHeight()
+//        tableView.setupTableHeaderViewHeight()
     }
 
     // MARK: PartOneHistoryViewInput

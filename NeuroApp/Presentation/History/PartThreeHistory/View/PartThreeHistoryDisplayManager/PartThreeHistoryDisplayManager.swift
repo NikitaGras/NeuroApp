@@ -21,7 +21,8 @@ class PartThreeHistoryDisplayManager: NSObject {
     
     private func setupInitialState() {
         self.tableView.dataSource = self
-        tableView.tableHeaderView = headerView
+        self.tableView.delegate = self
+//        tableView.tableHeaderView = headerView
     }
     
     func update(with result: Result) {
@@ -44,5 +45,15 @@ extension PartThreeHistoryDisplayManager: UITableViewDataSource {
             cell?.fill(with: answer)
         }
         return cell ?? UITableViewCell()
+    }
+}
+
+extension PartThreeHistoryDisplayManager: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 230
     }
 }

@@ -24,7 +24,7 @@ class PartTwoHistoryViewController: UIViewController, PartTwoHistoryViewInput {
         super.viewDidLayoutSubviews()
         //TODO: - как определить высоту HeaderView?
 //        tableView.setupTableHeaderViewHeight()
-        tableView.tableHeaderView?.frame.size.height = 230
+//        tableView.tableHeaderView?.frame.size.height = 230
     }
 
     // MARK: PartTwoHistoryViewInput

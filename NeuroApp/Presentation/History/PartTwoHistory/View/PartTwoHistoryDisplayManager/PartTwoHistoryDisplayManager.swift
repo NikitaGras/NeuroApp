@@ -23,7 +23,7 @@ class PartTwoHistoryDisplayManager: NSObject {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(cell: PartTwoHistoryTableViewCell.self)
-        tableView.tableHeaderView = headerView
+//        tableView.tableHeaderView = headerView
     }
     
     func update(with result: Result) {
@@ -53,4 +53,12 @@ extension PartTwoHistoryDisplayManager: UITableViewDataSource {
 
 extension PartTwoHistoryDisplayManager: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+        return 230
+    }
 }

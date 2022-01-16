@@ -61,6 +61,7 @@ extension AverageHistoryDisplayManager: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return tableHeaderView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         return 230
     }
     

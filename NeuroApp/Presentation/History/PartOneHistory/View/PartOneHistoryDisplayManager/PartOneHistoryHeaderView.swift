@@ -8,7 +8,11 @@
 import UIKit
 
 class PartOneHistoryHeaderView: UIView {
-    private let baseHeaderView = AverageHistoryHeaderView()
+    private let baseHeaderView: AverageHistoryHeaderView = {
+        let view = AverageHistoryHeaderView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     private let baseInfoLabel: UILabel = {
         let label = UILabel()
@@ -16,6 +20,7 @@ class PartOneHistoryHeaderView: UIView {
         label.textAlignment = .left
         label.numberOfLines = 0
         label.text = String.PartOneQuiz.taskText
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -24,6 +29,7 @@ class PartOneHistoryHeaderView: UIView {
         stack.axis = .horizontal
         stack.spacing = 10
         stack.distribution = .fillEqually
+        stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
     
@@ -31,11 +37,13 @@ class PartOneHistoryHeaderView: UIView {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.distribution = .fillEqually
+        stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
     private let arrowView: DoubleSidedArrowView = {
         let view = DoubleSidedArrowView()
         view.backgroundColor = .clear
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -97,12 +105,6 @@ class PartOneHistoryHeaderView: UIView {
         addSubview(scaleStackView)
         addSubview(arrowView)
         
-        baseHeaderView.translatesAutoresizingMaskIntoConstraints = false
-        baseInfoLabel.translatesAutoresizingMaskIntoConstraints = false
-        scaleDescriptionStackView.translatesAutoresizingMaskIntoConstraints = false
-        scaleStackView.translatesAutoresizingMaskIntoConstraints = false
-        arrowView.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             baseHeaderView.topAnchor.constraint(equalTo: topAnchor),
             baseHeaderView.leftAnchor.constraint(equalTo: leftAnchor),
@@ -123,7 +125,7 @@ class PartOneHistoryHeaderView: UIView {
             
             arrowView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
             arrowView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            arrowView.heightAnchor.constraint(equalToConstant: 20),
+            arrowView.heightAnchor.constraint(equalToConstant: 17),
             arrowView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }

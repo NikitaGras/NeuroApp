@@ -23,7 +23,7 @@ class PartThreeHistoryViewController: UIViewController, PartThreeHistoryViewInpu
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 //        tableView.setupTableHeaderViewHeight()
-        tableView.tableHeaderView?.frame.size.height = 230
+//        tableView.tableHeaderView?.frame.size.height = 230
     }
 
     // MARK: PartThreeHistoryViewInput

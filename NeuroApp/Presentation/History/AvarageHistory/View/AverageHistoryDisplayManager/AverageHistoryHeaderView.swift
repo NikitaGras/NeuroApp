@@ -51,10 +51,12 @@ class AverageHistoryHeaderView: UIView {
             dateLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
             dateLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
             dateLabel.bottomAnchor.constraint(equalTo: averageScoreLabel.topAnchor, constant: -10),
+//            dateLabel.heightAnchor.constraint(equalToConstant: 20),
 
             averageScoreLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
             averageScoreLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
             averageScoreLabel.bottomAnchor.constraint(equalTo: scoreView.topAnchor, constant: -5),
+//            averageScoreLabel.heightAnchor.constraint(equalToConstant: 20),
             
             scoreView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             NSLayoutConstraint(item: scoreView, attribute: .width, relatedBy: .equal,

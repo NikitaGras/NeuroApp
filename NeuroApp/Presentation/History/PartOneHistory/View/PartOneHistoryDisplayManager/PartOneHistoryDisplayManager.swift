@@ -25,7 +25,7 @@ class PartOneHistoryDisplayManager: NSObject {
         tableView.register(cell: PartOneHistoryTableViewCell.self)
         // TODO: Определять размер ячейки в зависимости от размера Label
         tableView.rowHeight = 80
-        tableView.tableHeaderView = headerView
+//        tableView.tableHeaderView = headerView
     }
     
     func update(with result: Result) {
@@ -52,5 +52,13 @@ extension PartOneHistoryDisplayManager: UITableViewDataSource {
 extension PartOneHistoryDisplayManager: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return headerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
     }
 }
