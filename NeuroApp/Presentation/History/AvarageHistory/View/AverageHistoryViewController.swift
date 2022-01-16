@@ -23,7 +23,7 @@ class AverageHistoryViewController: UIViewController, AvarageHistoryViewInput, A
         super.viewDidLayoutSubviews()
         //TODO: - как корректно определить высоту HeaderView?
 //        tableView.setupTableHeaderViewHeight()
-        tableView.tableHeaderView?.frame.size.height = 230
+//        tableView.tableHeaderView?.frame.size.height = 230
     }
 
     // MARK: AvarageHistoryViewInput

@@ -8,6 +8,7 @@
 import UIKit
 
 class AverageHistoryHeaderView: UIView {
+    
     private let dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)

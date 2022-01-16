@@ -26,7 +26,6 @@ class AverageHistoryDisplayManager: NSObject {
         tableView.delegate = self
         tableView.register(cell: AverageHistoryTableViewCell.self)
         tableView.rowHeight = 80
-        tableView.tableHeaderView = tableHeaderView
     }
     
     func setup(with result: Result) {
@@ -57,6 +56,14 @@ extension AverageHistoryDisplayManager: UITableViewDataSource {
 }
 
 extension AverageHistoryDisplayManager: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return tableHeaderView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 230
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch scores[indexPath.row].key {
         case String.History.partOneTitle:
