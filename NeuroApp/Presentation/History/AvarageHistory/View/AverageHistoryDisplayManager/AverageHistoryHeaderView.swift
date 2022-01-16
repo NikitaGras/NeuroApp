@@ -15,6 +15,7 @@ class AverageHistoryHeaderView: UIView {
         label.textColor = UIColor.black
         label.numberOfLines = 1
         label.minimumScaleFactor = 0.5
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     private let averageScoreLabel: UILabel = {
@@ -23,9 +24,14 @@ class AverageHistoryHeaderView: UIView {
         label.textAlignment = .center
         label.minimumScaleFactor = 0.5
         label.numberOfLines = 1
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    private let scoreView = ScoreView()
+    private let scoreView: ScoreView = {
+        let view = ScoreView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,11 +44,6 @@ class AverageHistoryHeaderView: UIView {
         self.addSubview(dateLabel)
         self.addSubview(averageScoreLabel)
         self.addSubview(scoreView)
-        
-//        self.translatesAutoresizingMaskIntoConstraints = false
-        dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        averageScoreLabel.translatesAutoresizingMaskIntoConstraints = false
-        scoreView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             dateLabel.topAnchor.constraint(equalTo: topAnchor),
