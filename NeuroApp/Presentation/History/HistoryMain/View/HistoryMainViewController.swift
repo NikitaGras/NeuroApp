@@ -35,7 +35,7 @@ class HistoryMainViewController: UIViewController, HistoryMainViewInput {
         emptyHistoryLabel.text = String.History.empty
     }
     
-    func setup(with history: [Result]) {
+    func setup(with history: [Session]) {
         tableView.isHidden = false
         displayManager.set(history: history)
     }
@@ -46,7 +46,7 @@ class HistoryMainViewController: UIViewController, HistoryMainViewInput {
 }
 
 extension HistoryMainViewController: HistoryMainDisplayManagerDelegate {
-    func displayManager(_ displayManger: HistoryMainDisplayManager, didSelectResult result: Result) {
+    func displayManager(_ displayManger: HistoryMainDisplayManager, didSelectResult result: Session) {
         output.show(result: result)
     }
 }

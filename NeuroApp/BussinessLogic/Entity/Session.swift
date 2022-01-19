@@ -7,11 +7,13 @@
 
 import Foundation
 
-struct Result {
+struct Session {
     let partOneAnswers: [PartOneAnswer]
     let partTwoAnswers: [PartTwoAnswer]
     let partThreeAnswer: PartThreeAnswer
     let finishTime: Date
+    
+    var sessionModel: SessionModel?
     
     var avarageScore: Int {
         return (partOneScore + partTwoScore + partThreeScore) / 3

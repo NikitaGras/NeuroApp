@@ -10,7 +10,7 @@ class ScoreScreenInteractor: ScoreScreenInteractorInput {
     weak var output: ScoreScreenInteractorOutput!
     var service: QuizServiceProtocol!
 
-    func getResult()throws -> Result {
+    func getResult()throws -> Session {
         guard let result = service.history.last else {
             throw SystemError.default
         }

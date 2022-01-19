@@ -14,6 +14,8 @@ protocol Observable {
     mutating func remove(_ observer: Observer)
     func isRegistred(_ observer: Observer) -> Bool
     func notifyObservers()
+    
+    func didRegister(observer: Observer)
 }
 
 extension Observable {
@@ -21,7 +23,6 @@ extension Observable {
         if !isRegistred(observer) {
             let weakBox = WeakBox(observer)
             observers.append(weakBox)
-            
         }
     }
     
@@ -38,4 +39,6 @@ extension Observable {
             observer.object?.update(with: data)
         }
     }
+    
+    func didRegister(observer: Observer) {}
 }

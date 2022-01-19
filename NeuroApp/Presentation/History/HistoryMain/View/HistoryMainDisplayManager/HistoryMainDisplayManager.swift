@@ -11,7 +11,7 @@ class HistoryMainDisplayManager: NSObject {
     private let tableView: UITableView
     var headerView: HistoryHeaderView = HistoryHeaderView()
     
-    private var history: [Result] = []
+    private var history: [Session] = []
     
     weak var delegate: HistoryMainDisplayManagerDelegate?
     
@@ -32,7 +32,7 @@ class HistoryMainDisplayManager: NSObject {
         headerView.frame.size.height = 1
     }
     
-    func set(history: [Result]) {
+    func set(history: [Session]) {
         self.history = history
         headerView.updateChartView(with: history)
         tableView.reloadData()

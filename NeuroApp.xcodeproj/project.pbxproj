@@ -134,7 +134,17 @@
 		5AAFFFB927468CC300C46DB0 /* UIView+setupNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFFFB827468CC300C46DB0 /* UIView+setupNib.swift */; };
 		5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F03271AB68400B5C3AD /* Observer.swift */; };
 		5ABF2F06271AB9CC00B5C3AD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F05271AB9CC00B5C3AD /* Observable.swift */; };
-		5ABF2F08271D914A00B5C3AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F07271D914A00B5C3AD /* Result.swift */; };
+		5ABF2F08271D914A00B5C3AD /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F07271D914A00B5C3AD /* Session.swift */; };
+		5AC37CBE2797A15D00D93D1F /* OptionModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CBC2797A15D00D93D1F /* OptionModel+CoreDataClass.swift */; };
+		5AC37CBF2797A15D00D93D1F /* OptionModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CBD2797A15D00D93D1F /* OptionModel+CoreDataProperties.swift */; };
+		5AC37CC82797A2D500D93D1F /* PartThreeModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC02797A2D500D93D1F /* PartThreeModel+CoreDataClass.swift */; };
+		5AC37CC92797A2D500D93D1F /* PartThreeModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC12797A2D500D93D1F /* PartThreeModel+CoreDataProperties.swift */; };
+		5AC37CCA2797A2D500D93D1F /* SessionModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC22797A2D500D93D1F /* SessionModel+CoreDataClass.swift */; };
+		5AC37CCB2797A2D500D93D1F /* SessionModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC32797A2D500D93D1F /* SessionModel+CoreDataProperties.swift */; };
+		5AC37CCC2797A2D500D93D1F /* PartOneModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC42797A2D500D93D1F /* PartOneModel+CoreDataClass.swift */; };
+		5AC37CCD2797A2D500D93D1F /* PartOneModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC52797A2D500D93D1F /* PartOneModel+CoreDataProperties.swift */; };
+		5AC37CCE2797A2D500D93D1F /* PartTwoModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC62797A2D500D93D1F /* PartTwoModel+CoreDataClass.swift */; };
+		5AC37CCF2797A2D500D93D1F /* PartTwoModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC72797A2D500D93D1F /* PartTwoModel+CoreDataProperties.swift */; };
 		5ADC5DAC2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC5DAB2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift */; };
 		5AE1A50326E61722009FCD4A /* Preview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE1A50226E61722009FCD4A /* Preview.storyboard */; };
 		5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500326DB98DA00A834D2 /* Quiz.swift */; };
@@ -409,7 +419,17 @@
 		5AAFFFB827468CC300C46DB0 /* UIView+setupNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setupNib.swift"; sourceTree = "<group>"; };
 		5ABF2F03271AB68400B5C3AD /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5ABF2F05271AB9CC00B5C3AD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		5ABF2F07271D914A00B5C3AD /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		5ABF2F07271D914A00B5C3AD /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		5AC37CBC2797A15D00D93D1F /* OptionModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionModel+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5AC37CBD2797A15D00D93D1F /* OptionModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionModel+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5AC37CC02797A2D500D93D1F /* PartThreeModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartThreeModel+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5AC37CC12797A2D500D93D1F /* PartThreeModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartThreeModel+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5AC37CC22797A2D500D93D1F /* SessionModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionModel+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5AC37CC32797A2D500D93D1F /* SessionModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionModel+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5AC37CC42797A2D500D93D1F /* PartOneModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartOneModel+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5AC37CC52797A2D500D93D1F /* PartOneModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartOneModel+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5AC37CC62797A2D500D93D1F /* PartTwoModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartTwoModel+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5AC37CC72797A2D500D93D1F /* PartTwoModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartTwoModel+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		5ADC5DAB2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewFooterHeaderView+identifier.swift"; sourceTree = "<group>"; };
 		5AE1A50226E61722009FCD4A /* Preview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
 		5AE8500326DB98DA00A834D2 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
@@ -932,7 +952,7 @@
 				5A1E8BB5269840B9001179F7 /* User.swift */,
 				5AE8500326DB98DA00A834D2 /* Quiz.swift */,
 				5A127FF927007D7100832AD2 /* QuestionsBank.swift */,
-				5ABF2F07271D914A00B5C3AD /* Result.swift */,
+				5ABF2F07271D914A00B5C3AD /* Session.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1189,6 +1209,16 @@
 		5AEF1360278DB27900495100 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				5AC37CC02797A2D500D93D1F /* PartThreeModel+CoreDataClass.swift */,
+				5AC37CC12797A2D500D93D1F /* PartThreeModel+CoreDataProperties.swift */,
+				5AC37CC22797A2D500D93D1F /* SessionModel+CoreDataClass.swift */,
+				5AC37CC32797A2D500D93D1F /* SessionModel+CoreDataProperties.swift */,
+				5AC37CC42797A2D500D93D1F /* PartOneModel+CoreDataClass.swift */,
+				5AC37CC52797A2D500D93D1F /* PartOneModel+CoreDataProperties.swift */,
+				5AC37CC62797A2D500D93D1F /* PartTwoModel+CoreDataClass.swift */,
+				5AC37CC72797A2D500D93D1F /* PartTwoModel+CoreDataProperties.swift */,
+				5AC37CBC2797A15D00D93D1F /* OptionModel+CoreDataClass.swift */,
+				5AC37CBD2797A15D00D93D1F /* OptionModel+CoreDataProperties.swift */,
 				5AEF1361278DB29C00495100 /* NeuroApp.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -1953,9 +1983,11 @@
 				5AEF1363278DB29C00495100 /* NeuroApp.xcdatamodeld in Sources */,
 				5AA6E2992735654600E64ABA /* GunningFogService.swift in Sources */,
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,
+				5AC37CBE2797A15D00D93D1F /* OptionModel+CoreDataClass.swift in Sources */,
 				5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */,
 				5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */,
 				5A166C10269C319000E590C7 /* ProfileServiceProtocol.swift in Sources */,
+				5AC37CCC2797A2D500D93D1F /* PartOneModel+CoreDataClass.swift in Sources */,
 				5A3801B12695D93100883225 /* SceneDelegate.swift in Sources */,
 				F1326626EA12D7448B95F0C6 /* LoginViewInput.swift in Sources */,
 				5AA6EC5227760C8600A6FA5B /* PartOneHistoryHeaderView.swift in Sources */,
@@ -1977,6 +2009,7 @@
 				5A6F2C58269AD8BA006B065D /* ProfileService.swift in Sources */,
 				5A75DE61278C277A00BDAF54 /* PartThreeHistoryDisplayManager.swift in Sources */,
 				FBAA2CFEA779E79C9486E8C2 /* LoginInteractor.swift in Sources */,
+				5AC37CCE2797A2D500D93D1F /* PartTwoModel+CoreDataClass.swift in Sources */,
 				5AA6E2912730001B00E64ABA /* OptionViewDelegate.swift in Sources */,
 				B0388DAFB78645FC4999865C /* LoginRouterInput.swift in Sources */,
 				1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */,
@@ -1985,6 +2018,7 @@
 				5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */,
 				7AA7E08EA584ECAFD5692688 /* HomeViewInput.swift in Sources */,
 				FD05C95E98B90F25AEE63C18 /* HomeViewOutput.swift in Sources */,
+				5AC37CBF2797A15D00D93D1F /* OptionModel+CoreDataProperties.swift in Sources */,
 				5A166C0A269C2EC500E590C7 /* UIColor.swift in Sources */,
 				7CB0BE1BF83FB1F714E5437F /* HomeViewController.swift in Sources */,
 				5AE8500726DB9C1600A834D2 /* QuizService.swift in Sources */,
@@ -2002,6 +2036,7 @@
 				56615C62A114E681AE72A01B /* HomeRouter.swift in Sources */,
 				CB4A5B3489D0395473C8AB96 /* HomeConfigurator.swift in Sources */,
 				86B2746274732B392ACAA9AF /* HomeInitializer.swift in Sources */,
+				5AC37CCD2797A2D500D93D1F /* PartOneModel+CoreDataProperties.swift in Sources */,
 				97B595820F9DB1D896A92F71 /* ProfileViewInput.swift in Sources */,
 				5B176EBE641D291752067AA8 /* ProfileViewOutput.swift in Sources */,
 				5A5313542738F7C500C38578 /* CGPoint+getOrigin.swift in Sources */,
@@ -2010,6 +2045,7 @@
 				CDBB2D374B7E0CD950A6A2B5 /* ProfilePresenter.swift in Sources */,
 				8EC133E5A2945E72D636FA32 /* ProfileInteractorInput.swift in Sources */,
 				5AF5CE542784A21600868619 /* PartTwoHistoryDisplayManager.swift in Sources */,
+				5AC37CCB2797A2D500D93D1F /* SessionModel+CoreDataProperties.swift in Sources */,
 				0DEDCC47A4971DDDB32CD298 /* ProfileInteractorOutput.swift in Sources */,
 				2D934A296C744ED7E285E9C0 /* ProfileInteractor.swift in Sources */,
 				F9509ED53CBB70AE2ACCEABE /* ProfileRouterInput.swift in Sources */,
@@ -2031,11 +2067,12 @@
 				76931ADB234837C57BFBD1E7 /* EditInformationInteractor.swift in Sources */,
 				C10F448C496F867013E649C5 /* EditInformationRouterInput.swift in Sources */,
 				DD071CB98B5F5861BD9F8A8B /* EditInformationRouter.swift in Sources */,
+				5AC37CCF2797A2D500D93D1F /* PartTwoModel+CoreDataProperties.swift in Sources */,
 				76065D4EE9D4EA031CC33D6A /* EditInformationConfigurator.swift in Sources */,
 				287BE47BB9D393609581989C /* EditInformationInitializer.swift in Sources */,
 				055AD0AEA86CC2FE0331F04B /* PreviewBaseInfoViewInput.swift in Sources */,
 				7A97706392CC30BB97940C40 /* PreviewBaseInfoViewOutput.swift in Sources */,
-				5ABF2F08271D914A00B5C3AD /* Result.swift in Sources */,
+				5ABF2F08271D914A00B5C3AD /* Session.swift in Sources */,
 				13EDF50C0DEC9793B217B50C /* PreviewBaseInfoViewController.swift in Sources */,
 				B2548BC03A552198447AFD45 /* PreviewBaseInfoModuleInput.swift in Sources */,
 				8738DA5F04B33A3B23D2E540 /* PreviewBaseInfoPresenter.swift in Sources */,
@@ -2151,7 +2188,9 @@
 				502D5BE7AC5051F53F69F2A8 /* AvarageHistoryInitializer.swift in Sources */,
 				38634554FE380A08206CDA03 /* PartOneHistoryViewInput.swift in Sources */,
 				DF99A549704F24B2A1B0CD88 /* PartOneHistoryViewOutput.swift in Sources */,
+				5AC37CCA2797A2D500D93D1F /* SessionModel+CoreDataClass.swift in Sources */,
 				68F80EDFD579E3D067F7283E /* PartOneHistoryViewController.swift in Sources */,
+				5AC37CC92797A2D500D93D1F /* PartThreeModel+CoreDataProperties.swift in Sources */,
 				25E96AAC7E68E7197578AEB6 /* PartOneHistoryModuleInput.swift in Sources */,
 				5A2E2A84277DA6DF0032385C /* DateFormatter+fullDate.swift in Sources */,
 				16824E73F7D6D97C02D1CEBD /* PartOneHistoryPresenter.swift in Sources */,
@@ -2166,6 +2205,7 @@
 				8CDA027D80A3A078746709A8 /* PartTwoHistoryViewInput.swift in Sources */,
 				D02A337EC10EE10929FC9185 /* PartTwoHistoryViewOutput.swift in Sources */,
 				B276685BE1061FCA7EE9CEA6 /* PartTwoHistoryViewController.swift in Sources */,
+				5AC37CC82797A2D500D93D1F /* PartThreeModel+CoreDataClass.swift in Sources */,
 				E164C6868958C8E0C4858F79 /* PartTwoHistoryModuleInput.swift in Sources */,
 				6FB744C1B64933C165CF6476 /* PartTwoHistoryPresenter.swift in Sources */,
 				7F22D90F7B217D4E93998127 /* PartTwoHistoryInteractorInput.swift in Sources */,

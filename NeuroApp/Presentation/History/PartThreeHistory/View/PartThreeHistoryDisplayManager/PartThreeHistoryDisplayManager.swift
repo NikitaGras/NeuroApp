@@ -25,7 +25,7 @@ class PartThreeHistoryDisplayManager: NSObject {
 //        tableView.tableHeaderView = headerView
     }
     
-    func update(with result: Result) {
+    func update(with result: Session) {
         self.answer = result.partThreeAnswer
         tableView.reloadData()
         

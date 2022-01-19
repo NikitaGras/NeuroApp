@@ -46,7 +46,7 @@ class HistoryHeaderView: UIView {
         return df
     }()
     
-    var history: [Result] = []
+    var history: [Session] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -83,7 +83,7 @@ class HistoryHeaderView: UIView {
         ])
     }
     
-    func updateChartView(with history: [Result]) {
+    func updateChartView(with history: [Session]) {
         chartView.xAxis.axisMinLabels = 1
         chartView.xAxis.granularityEnabled = true
         chartView.xAxis.setLabelCount(history.count, force: false)

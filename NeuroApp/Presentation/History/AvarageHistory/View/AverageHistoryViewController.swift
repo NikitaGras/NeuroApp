@@ -32,7 +32,7 @@ class AverageHistoryViewController: UIViewController, AvarageHistoryViewInput, A
         displayManager.delegate = self
     }
     
-    func setup(with result: Result) {
+    func setup(with result: Session) {
         displayManager.setup(with: result)
     }
     

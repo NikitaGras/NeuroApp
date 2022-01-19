@@ -12,7 +12,7 @@ class PartOneHistoryPresenter: NSObject, PartOneHistoryModuleInput, PartOneHisto
     var interactor: PartOneHistoryInteractorInput!
     var router: PartOneHistoryRouterInput!
     
-    var result: Result!
+    var result: Session!
 
     func viewIsReady() {
         view.setupInitialState()

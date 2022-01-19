@@ -9,7 +9,7 @@
 import Foundation
 
 protocol AvarageHistoryRouterInput {
-    func showPartOne(_ result: Result)
-    func showPartTwo(_ result: Result)
-    func showPartThree(_ result: Result)
+    func showPartOne(_ result: Session)
+    func showPartTwo(_ result: Session)
+    func showPartThree(_ result: Session)
 }

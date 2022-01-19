@@ -7,7 +7,7 @@
 //
 
 protocol PartOneHistoryViewOutput {
-    var result: Result! { get }
+    var result: Session! { get }
     
     func viewIsReady()
 }

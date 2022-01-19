@@ -10,7 +10,7 @@ import ViperMcFlurry
 class HistoryMainRouter: HistoryMainRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
-    func openHistoryAverage(with result: Result) {
+    func openHistoryAverage(with result: Session) {
         let promise = transitionHandler.openModule?(usingSegue: "openAverage")
         promise?.thenChain({ moduleInput in
             let input = moduleInput as? AvarageHistoryModuleInput

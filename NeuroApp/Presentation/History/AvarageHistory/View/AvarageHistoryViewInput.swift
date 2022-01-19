@@ -8,5 +8,5 @@
 
 protocol AvarageHistoryViewInput: AnyObject {
     func setupInitialState()
-    func setup(with result: Result)
+    func setup(with result: Session)
 }

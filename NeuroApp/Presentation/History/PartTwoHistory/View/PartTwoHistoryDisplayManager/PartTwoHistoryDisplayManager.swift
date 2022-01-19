@@ -26,7 +26,7 @@ class PartTwoHistoryDisplayManager: NSObject {
 //        tableView.tableHeaderView = headerView
     }
     
-    func update(with result: Result) {
+    func update(with result: Session) {
         answers = result.partTwoAnswers
         tableView.reloadData()
         headerView.update(with: result, scoreLabelTitle: String.Score.partTwoDescription)

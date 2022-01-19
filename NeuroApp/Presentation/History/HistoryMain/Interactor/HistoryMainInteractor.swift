@@ -23,7 +23,7 @@ class HistoryMainInteractor: HistoryMainInteractorInput, Observer {
     }
     
     func update(with data: Any) {
-        if let history = data as? [Result] {
+        if let history = data as? [Session] {
             output.update(with: history)
         }
     }

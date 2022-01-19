@@ -8,7 +8,7 @@
 import Foundation
 
 protocol QuizServiceProtocol: Observable {
-    var history: [Result] { get }
+    var history: [Session] { get }
     var quiz: Quiz { get }
     
     func deleteHistory()
