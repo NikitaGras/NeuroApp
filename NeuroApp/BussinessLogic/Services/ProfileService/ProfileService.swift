@@ -9,6 +9,7 @@ import Foundation
 
 
 class ProfileService: ProfileServiceProtocol {
+    
     static let shared = ProfileService()
     private let key: String = UserDefaults.Key.user
     

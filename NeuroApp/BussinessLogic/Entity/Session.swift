@@ -15,6 +15,38 @@ struct Session {
     
     var sessionModel: SessionModel?
     
+    init(partOneAnswers: [PartOneAnswer],
+         partTwoAnswers: [PartTwoAnswer],
+         partThreeAnswer: PartThreeAnswer,
+         finishTime: Date) {
+        self.partOneAnswers = partOneAnswers
+        self.partTwoAnswers = partTwoAnswers
+        self.partThreeAnswer = partThreeAnswer
+        self.finishTime = finishTime
+    }
+    
+    init?(sessionModel model: SessionModel) {
+        guard let partThreeAnswer = try? PartThreeAnswer.init(from: model),
+              let finishTime = model.finishTime else {
+            return nil
+        }
+        self.partOneAnswers = model.getPartOneAnswers()
+        self.partTwoAnswers = model.getPaerTwoAnswers()
+        self.partThreeAnswer = partThreeAnswer
+        self.finishTime = finishTime
+    }
+    
+    init(quiz: Quiz) throws {
+        guard let partThreeAnswer = quiz.partThreeAnswer else {
+            throw SystemError.default
+        }
+        let finishTime = Date()
+        self.partOneAnswers = quiz.partOneAnswers
+        self.partTwoAnswers = quiz.partTwoAnswers
+        self.partThreeAnswer = partThreeAnswer
+        self.finishTime = finishTime
+    }
+    
     var avarageScore: Int {
         return (partOneScore + partTwoScore + partThreeScore) / 3
     }
@@ -43,6 +75,6 @@ struct Session {
     }
     
     var partThreeScore: Int {
-        return Int(atan(partThreeAnswer.value) * 100.0 / (Double.pi / 2))
+        return Int(atan(partThreeAnswer.ganningFoq) * 100.0 / (Double.pi / 2))
     }
 }

@@ -145,6 +145,9 @@
 		5AC37CCD2797A2D500D93D1F /* PartOneModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC52797A2D500D93D1F /* PartOneModel+CoreDataProperties.swift */; };
 		5AC37CCE2797A2D500D93D1F /* PartTwoModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC62797A2D500D93D1F /* PartTwoModel+CoreDataClass.swift */; };
 		5AC37CCF2797A2D500D93D1F /* PartTwoModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CC72797A2D500D93D1F /* PartTwoModel+CoreDataProperties.swift */; };
+		5AC37CD4279AD07400D93D1F /* PartOneQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CD3279AD07400D93D1F /* PartOneQA.swift */; };
+		5AC37CD6279AD0ED00D93D1F /* PartTwoQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CD5279AD0ED00D93D1F /* PartTwoQA.swift */; };
+		5AC37CD8279AD36400D93D1F /* PartThreeQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CD7279AD36400D93D1F /* PartThreeQA.swift */; };
 		5ADC5DAC2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC5DAB2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift */; };
 		5AE1A50326E61722009FCD4A /* Preview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE1A50226E61722009FCD4A /* Preview.storyboard */; };
 		5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500326DB98DA00A834D2 /* Quiz.swift */; };
@@ -430,6 +433,9 @@
 		5AC37CC52797A2D500D93D1F /* PartOneModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartOneModel+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		5AC37CC62797A2D500D93D1F /* PartTwoModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartTwoModel+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		5AC37CC72797A2D500D93D1F /* PartTwoModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartTwoModel+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5AC37CD3279AD07400D93D1F /* PartOneQA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOneQA.swift; sourceTree = "<group>"; };
+		5AC37CD5279AD0ED00D93D1F /* PartTwoQA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoQA.swift; sourceTree = "<group>"; };
+		5AC37CD7279AD36400D93D1F /* PartThreeQA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartThreeQA.swift; sourceTree = "<group>"; };
 		5ADC5DAB2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewFooterHeaderView+identifier.swift"; sourceTree = "<group>"; };
 		5AE1A50226E61722009FCD4A /* Preview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
 		5AE8500326DB98DA00A834D2 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
@@ -945,6 +951,7 @@
 		5A1E8BB4269840A5001179F7 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				5AC37CD2279AD05E00D93D1F /* QuestionModels */,
 				5AFFFCE826AEC00400E9F3F1 /* Error */,
 				5A166C0D269C30A500E590C7 /* Constants */,
 				5ABF2F02271AB66900B5C3AD /* Observer */,
@@ -1195,6 +1202,16 @@
 				5ABF2F05271AB9CC00B5C3AD /* Observable.swift */,
 			);
 			path = Observer;
+			sourceTree = "<group>";
+		};
+		5AC37CD2279AD05E00D93D1F /* QuestionModels */ = {
+			isa = PBXGroup;
+			children = (
+				5AC37CD3279AD07400D93D1F /* PartOneQA.swift */,
+				5AC37CD5279AD0ED00D93D1F /* PartTwoQA.swift */,
+				5AC37CD7279AD36400D93D1F /* PartThreeQA.swift */,
+			);
+			path = QuestionModels;
 			sourceTree = "<group>";
 		};
 		5AE8500526DB9BAC00A834D2 /* QuizService */ = {
@@ -2010,6 +2027,7 @@
 				5A75DE61278C277A00BDAF54 /* PartThreeHistoryDisplayManager.swift in Sources */,
 				FBAA2CFEA779E79C9486E8C2 /* LoginInteractor.swift in Sources */,
 				5AC37CCE2797A2D500D93D1F /* PartTwoModel+CoreDataClass.swift in Sources */,
+				5AC37CD4279AD07400D93D1F /* PartOneQA.swift in Sources */,
 				5AA6E2912730001B00E64ABA /* OptionViewDelegate.swift in Sources */,
 				B0388DAFB78645FC4999865C /* LoginRouterInput.swift in Sources */,
 				1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */,
@@ -2058,6 +2076,7 @@
 				E82616554F277E1DF872E609 /* EditInformationViewInput.swift in Sources */,
 				5AE8500926DB9C2300A834D2 /* QuizServiceProtocol.swift in Sources */,
 				234F0F3C5BAADEB25BBE8584 /* EditInformationViewOutput.swift in Sources */,
+				5AC37CD6279AD0ED00D93D1F /* PartTwoQA.swift in Sources */,
 				5A56767E2774274F00CA53D5 /* AverageHistoryTableViewCell.swift in Sources */,
 				1340A306828C795A080C0FC7 /* EditInformationViewController.swift in Sources */,
 				D8E75D43246BF0C78E6A0B1A /* EditInformationModuleInput.swift in Sources */,
@@ -2092,6 +2111,7 @@
 				2F809E1A96097F29CCF044DB /* PreviewPartInfoModuleInput.swift in Sources */,
 				96051E01400C77D7B3CCFE49 /* PreviewPartInfoPresenter.swift in Sources */,
 				0CADEB544403BE1B6120ED6C /* PreviewPartInfoInteractorInput.swift in Sources */,
+				5AC37CD8279AD36400D93D1F /* PartThreeQA.swift in Sources */,
 				DA4B114206270A679A55F579 /* PreviewPartInfoInteractorOutput.swift in Sources */,
 				5AA6E28D272FE62E00E64ABA /* OptionView.swift in Sources */,
 				A9E0B1E37CDF82DC10CDBC14 /* PreviewPartInfoInteractor.swift in Sources */,

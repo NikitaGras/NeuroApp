@@ -15,8 +15,8 @@ extension SessionModel {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<SessionModel> {
         return NSFetchRequest<SessionModel>(entityName: "SessionModel")
     }
-    //TODO: naming finishDate
-    @NSManaged public var date: Date?
+    
+    @NSManaged public var finishTime: Date?
     @NSManaged public var partOne: [PartOneModel]?
     @NSManaged public var partTwo: [PartTwoModel]?
     @NSManaged public var partThree: PartThreeModel?

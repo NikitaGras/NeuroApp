@@ -10,9 +10,9 @@
         <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="PartThreeModel" representedClassName="PartThreeModel" syncable="YES">
+        <attribute name="ganningGoq" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="questionText" optional="YES" attributeType="String"/>
         <attribute name="userText" optional="YES" attributeType="String"/>
-        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <entity name="PartTwoModel" representedClassName="PartTwoModel" syncable="YES">
         <attribute name="questionText" optional="YES" attributeType="String"/>
@@ -20,16 +20,16 @@
         <relationship name="option" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OptionModel"/>
     </entity>
     <entity name="SessionModel" representedClassName="SessionModel" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="finishTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="partOne" optional="YES" attributeType="Transformable"/>
         <attribute name="partTwo" optional="YES" attributeType="Transformable"/>
         <relationship name="partThree" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PartThreeModel"/>
     </entity>
     <elements>
-        <element name="OptionModel" positionX="-18" positionY="27" width="128" height="74"/>
-        <element name="PartOneModel" positionX="36" positionY="108" width="128" height="59"/>
-        <element name="PartTwoModel" positionX="9" positionY="81" width="128" height="74"/>
-        <element name="PartThreeModel" positionX="18" positionY="90" width="128" height="74"/>
-        <element name="SessionModel" positionX="27" positionY="99" width="128" height="89"/>
+        <element name="OptionModel" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PartOneModel" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PartThreeModel" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PartTwoModel" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SessionModel" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

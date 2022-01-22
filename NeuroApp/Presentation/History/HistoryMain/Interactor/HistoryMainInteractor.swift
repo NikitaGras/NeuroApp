@@ -16,6 +16,7 @@ class HistoryMainInteractor: HistoryMainInteractorInput, Observer {
     
     func registerObserver() {
         service.register(self)
+        service.didRegister(observer: self)
     }
     
     deinit {

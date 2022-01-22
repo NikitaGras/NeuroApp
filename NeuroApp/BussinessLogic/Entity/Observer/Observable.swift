@@ -13,8 +13,7 @@ protocol Observable {
     mutating func register(_ observer: Observer)
     mutating func remove(_ observer: Observer)
     func isRegistred(_ observer: Observer) -> Bool
-    func notifyObservers()
-    
+    func notifyObservers(with data: Any)
     func didRegister(observer: Observer)
 }
 
@@ -40,5 +39,5 @@ extension Observable {
         }
     }
     
-    func didRegister(observer: Observer) {}
+    func didRegister(observer: Observer) {  }
 }

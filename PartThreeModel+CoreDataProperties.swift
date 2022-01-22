@@ -18,8 +18,7 @@ extension PartThreeModel {
 
     @NSManaged public var questionText: String?
     @NSManaged public var userText: String?
-    //TODO: ganningFoqIndex, naming
-    @NSManaged public var value: Double
+    @NSManaged public var ganningGoq: Double
 
 }
 
