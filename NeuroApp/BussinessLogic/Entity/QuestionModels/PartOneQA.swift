@@ -20,13 +20,11 @@ struct PartOneAnswer {
         self.value = value
     }
     
-    init(from model: PartOneModel) throws {
-        guard let question = model.questionText else {
-            //TODO: - создать ошибку
+    init(model: PartOneModel) throws {
+        guard let questiontext = model.questionText else {
             throw SystemError.default
         }
-        
-        self.questionText = question
-        self.value = Int(model.value)
+        self.questionText = questiontext
+        value = model.value
     }
 }

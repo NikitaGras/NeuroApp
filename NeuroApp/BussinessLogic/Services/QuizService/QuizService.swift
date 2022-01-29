@@ -10,8 +10,10 @@ import CoreData
 
 class QuizService: QuizServiceProtocol {
     static let shared = QuizService()
+    
     var observers = [WeakBox<Observer>]()
     var context: NSManagedObjectContext = {
+        NeuroAppValueTransformer.register()
         let delegate = UIApplication.shared.delegate as! AppDelegate
         return delegate.persistentContainer.viewContext
     }()
@@ -21,6 +23,16 @@ class QuizService: QuizServiceProtocol {
     
     private init() {
         history = fetchHistory()
+    }
+    
+    func fetchHistory() -> [Session] {
+        do {
+            let models = try context.fetch(SessionModel.fetchRequest())
+            return try models.map { try Session(model: $0) }
+        } catch {
+            print(error)
+            return []
+        }
     }
     
     func startNewQuiz() {
@@ -34,12 +46,8 @@ class QuizService: QuizServiceProtocol {
         }
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SessionModel")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        do {
-            try coordinator.execute(deleteRequest, with: context)
-            history = []
-        } catch {
-            throw error
-        }
+        try coordinator.execute(deleteRequest, with: context)
+        history = []
     }
     
     func save(_ partOneAnswer: PartOneAnswer) {
@@ -54,94 +62,27 @@ class QuizService: QuizServiceProtocol {
     
     func save(_ partThreeAnswer: PartThreeAnswer) throws {
         quiz.partThreeAnswer = partThreeAnswer
-        do {
-            let session = try Session(quiz: quiz)
-            try save(session)
-            notifyObservers(with: quiz)
-            notifyObservers(with: history)
-        } catch {
-            throw error
-        }
-    }
-    
-    //MARK: - Core Data
-    func fetchHistory() -> [Session] {
-        do {
-            let models = try context.fetch(SessionModel.fetchRequest())
-            return models.compactMap { model in
-                return Session(sessionModel: model)
-            }
-        } catch {
-            print(error.localizedDescription)
-            return []
-        }
+        
+        let session = try Session(quiz: quiz)
+        try save(session)
+        
+        notifyObservers(with: quiz)
     }
     
     func save(_ session: Session) throws {
         let model = SessionModel(context: context)
-        model.partOne = createPartOneModels(from: session.partOneAnswers)
-        model.partTwo = createPartTwoModels(from: session.partTwoAnswers)
-        model.partThree = createPartThreeModel(from: session.partThreeAnswer)
+        
+        model.partOne = session.partOneAnswers.map { PartOneModel.init(answer: $0)}
+        model.partTwo = session.partTwoAnswers.map { PartTwoModel.init(answer: $0)}
+        model.partThree = PartThreeModel(answer: session.partThreeAnswer)
         model.finishTime = session.finishTime
         
-        do {
-            try context.save()
-            var session = session
-            session.sessionModel = model
-            history.append(session)
-        } catch {
-            throw error
-        }
-    }
-    
-    //MARK: - Support save functions
-    func createPartOneModels(from answers: [PartOneAnswer]) -> [PartOneModel] {
-        var models = [PartOneModel]()
-        answers.forEach { answer in
-            let model = PartOneModel(context: context)
-            model.questionText = answer.questionText
-            model.value = Int32(answer.value)
-            
-            try! context.save()
-            
-            models.append(model)
-        }
-        return models
-    }
-    
-    func createPartTwoModels(from answers: [PartTwoAnswer]) -> [PartTwoModel] {
-        var models = [PartTwoModel]()
-        answers.forEach { answer in
-            let model = PartTwoModel(context: context)
-            model.questionText = answer.questionText
-            model.option = createOptionModel(from: answer.option)
-            model.responseTime = answer.responseTime
-            
-            try! context.save()
-            
-            models.append(model)
-        }
-        return models
-    }
-    
-    func createOptionModel(from option: Option) -> OptionModel {
-        let model = OptionModel(context: context)
-        model.isImage = option is ImageOption
-        model.value = option.value
-        model.isRight = option.isRight
-        try! context.save()
+        try context.save()
         
-        return model
-    }
-    
-    func createPartThreeModel(from answer: PartThreeAnswer) -> PartThreeModel {
-        let model = PartThreeModel(context: context)
-        model.questionText = answer.question
-        model.userText = answer.userText
-        model.ganningGoq = answer.ganningFoq
-        try! context.save()
+        var session = session
+        session.sessionModel = model
+        history.append(session)
         
-        return model
+        notifyObservers(with: history)
     }
-    
 }

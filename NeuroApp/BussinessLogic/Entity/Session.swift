@@ -25,25 +25,26 @@ struct Session {
         self.finishTime = finishTime
     }
     
-    init?(sessionModel model: SessionModel) {
-        guard let partThreeAnswer = try? PartThreeAnswer.init(from: model),
-              let finishTime = model.finishTime else {
-            return nil
-        }
-        self.partOneAnswers = model.getPartOneAnswers()
-        self.partTwoAnswers = model.getPaerTwoAnswers()
-        self.partThreeAnswer = partThreeAnswer
-        self.finishTime = finishTime
-    }
-    
     init(quiz: Quiz) throws {
         guard let partThreeAnswer = quiz.partThreeAnswer else {
             throw SystemError.default
         }
-        let finishTime = Date()
-        self.partOneAnswers = quiz.partOneAnswers
-        self.partTwoAnswers = quiz.partTwoAnswers
-        self.partThreeAnswer = partThreeAnswer
+        self.init(partOneAnswers: quiz.partOneAnswers,
+                  partTwoAnswers: quiz.partTwoAnswers,
+                  partThreeAnswer: partThreeAnswer,
+                  finishTime: Date())
+    }
+    
+    init(model: SessionModel) throws {
+        guard let partOneModels = model.partOne,
+              let partTwoModels = model.partTwo,
+              let partThreeModel = model.partThree,
+              let finishTime = model.finishTime else {
+                  throw SystemError.default
+        }
+        try self.partOneAnswers = partOneModels.map { try PartOneAnswer(model: $0)}
+        try self.partTwoAnswers = partTwoModels.map { try PartTwoAnswer(model: $0)}
+        self.partThreeAnswer = try PartThreeAnswer(from: partThreeModel)
         self.finishTime = finishTime
     }
     

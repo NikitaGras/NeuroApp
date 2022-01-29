@@ -20,15 +20,13 @@ struct PartThreeAnswer {
         self.question = question
     }
     
-    init(from model: SessionModel) throws {
-        guard let question = model.partThree?.questionText,
-              let userText = model.partThree?.userText,
-              let value = model.partThree?.ganningGoq else {
+    init(from model: PartThreeModel) throws {
+        guard let question = model.questionText,
+              let userText = model.userText else {
                   throw SystemError.default
               }
-        
         self.question = question
         self.userText = userText
-        self.ganningFoq = value
+        self.ganningFoq = model.ganningFoq
     }
 }

@@ -9,26 +9,7 @@ import UIKit
 
 struct PartTwoQuestion {
     let text: String
-    let options: Array<Option>
-}
-
-protocol Option {
-    var value: String { get }
-    var isRight: Bool { get }
-}
-
-struct StringOption: Option {
-    var value: String
-    var isRight: Bool
-}
-
-struct ImageOption: Option {
-    var value: String
-    var isRight: Bool
-    
-    func asImage() -> UIImage? {
-        return UIImage(named: value)
-    }
+    let options: [Option]
 }
 
 struct PartTwoAnswer {
@@ -42,13 +23,12 @@ struct PartTwoAnswer {
         self.responseTime = responseTime
     }
     
-    init(from model: PartTwoModel) throws {
+    init(model: PartTwoModel) throws {
         guard let question = model.questionText,
-              let option = try? model.option?.returnOption() else {
+              let optionModel = model.option else {
                   throw SystemError.default
               }
-        self.questionText = question
-        self.option = option
-        self.responseTime = model.responseTime
+        let option: Option = optionModel.isImage ? try ImageOption(model: optionModel) : try StringOption(model: optionModel)
+        self.init(questionText: question, option: option, responseTime: model.responseTime)
     }
 }

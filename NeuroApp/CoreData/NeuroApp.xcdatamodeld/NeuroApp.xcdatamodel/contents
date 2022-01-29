@@ -1,35 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="OptionModel" representedClassName="OptionModel" syncable="YES">
-        <attribute name="isImage" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="isRight" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="value" optional="YES" attributeType="String"/>
-    </entity>
-    <entity name="PartOneModel" representedClassName="PartOneModel" syncable="YES">
-        <attribute name="questionText" optional="YES" attributeType="String"/>
-        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-    </entity>
-    <entity name="PartThreeModel" representedClassName="PartThreeModel" syncable="YES">
-        <attribute name="ganningGoq" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="questionText" optional="YES" attributeType="String"/>
-        <attribute name="userText" optional="YES" attributeType="String"/>
-    </entity>
-    <entity name="PartTwoModel" representedClassName="PartTwoModel" syncable="YES">
-        <attribute name="questionText" optional="YES" attributeType="String"/>
-        <attribute name="responseTime" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="option" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OptionModel"/>
-    </entity>
     <entity name="SessionModel" representedClassName="SessionModel" syncable="YES">
         <attribute name="finishTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="partOne" optional="YES" attributeType="Transformable"/>
-        <attribute name="partTwo" optional="YES" attributeType="Transformable"/>
-        <relationship name="partThree" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PartThreeModel"/>
+        <attribute name="partOne" optional="YES" attributeType="Transformable" valueTransformerName="NeuroAppValueTransformer" customClassName="PartOneModel"/>
+        <attribute name="partThree" optional="YES" attributeType="Transformable" valueTransformerName="NeuroAppValueTransformer" customClassName="PartThreeModel"/>
+        <attribute name="partTwo" optional="YES" attributeType="Transformable" valueTransformerName="NeuroAppValueTransformer" customClassName="PartTwoModel"/>
     </entity>
     <elements>
-        <element name="OptionModel" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="PartOneModel" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="PartThreeModel" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="PartTwoModel" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="SessionModel" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SessionModel" positionX="0" positionY="0" width="128" height="89"/>
     </elements>
 </model>
