@@ -9,5 +9,5 @@
 import ViperMcFlurry
 
 protocol HistoryMainRouterInput {
-    func openHistoryAverage(with result: Result)
+    func openHistoryAverage(with result: Session)
 }

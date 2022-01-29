@@ -12,7 +12,7 @@ class AvarageHistoryPresenter: NSObject, AvarageHistoryModuleInput, AvarageHisto
     var interactor: AvarageHistoryInteractorInput!
     var router: AvarageHistoryRouterInput!
     
-    var result: Result!
+    var result: Session!
 
     func viewIsReady() {
         view.setupInitialState()

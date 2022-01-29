@@ -8,13 +8,13 @@
 import Foundation
 
 protocol QuizServiceProtocol: Observable {
-    var history: [Result] { get }
+    var history: [Session] { get }
     var quiz: Quiz { get }
     
-    func deleteHistory()
+    func deleteHistory() throws
     func startNewQuiz()
     
-    func save(_ partOneAnswer: PartOneAnswer) throws
-    func save(_ partTwoAnswer: PartTwoAnswer) throws
+    func save(_ partOneAnswer: PartOneAnswer)
+    func save(_ partTwoAnswer: PartTwoAnswer)
     func save(_ partThreeAnswer: PartThreeAnswer) throws
 }

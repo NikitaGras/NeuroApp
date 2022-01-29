@@ -8,5 +8,5 @@
 import ViperMcFlurry
 
 protocol PartTwoHistoryModuleInput: RamblerViperModuleInput {
-    var result: Result! { get set }
+    var result: Session! { get set }
 }

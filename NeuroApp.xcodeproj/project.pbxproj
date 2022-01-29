@@ -134,13 +134,23 @@
 		5AAFFFB927468CC300C46DB0 /* UIView+setupNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFFFB827468CC300C46DB0 /* UIView+setupNib.swift */; };
 		5ABF2F04271AB68400B5C3AD /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F03271AB68400B5C3AD /* Observer.swift */; };
 		5ABF2F06271AB9CC00B5C3AD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F05271AB9CC00B5C3AD /* Observable.swift */; };
-		5ABF2F08271D914A00B5C3AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F07271D914A00B5C3AD /* Result.swift */; };
+		5ABF2F08271D914A00B5C3AD /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF2F07271D914A00B5C3AD /* Session.swift */; };
+		5AC37CD4279AD07400D93D1F /* PartOneQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CD3279AD07400D93D1F /* PartOneQA.swift */; };
+		5AC37CD6279AD0ED00D93D1F /* PartTwoQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CD5279AD0ED00D93D1F /* PartTwoQA.swift */; };
+		5AC37CD8279AD36400D93D1F /* PartThreeQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC37CD7279AD36400D93D1F /* PartThreeQA.swift */; };
 		5ADC5DAC2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC5DAB2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift */; };
 		5AE1A50326E61722009FCD4A /* Preview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE1A50226E61722009FCD4A /* Preview.storyboard */; };
+		5AE7CD5B279EB50E002F956A /* NeuroAppValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7CD5A279EB50E002F956A /* NeuroAppValueTransformer.swift */; };
 		5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500326DB98DA00A834D2 /* Quiz.swift */; };
 		5AE8500726DB9C1600A834D2 /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500626DB9C1600A834D2 /* QuizService.swift */; };
 		5AE8500926DB9C2300A834D2 /* QuizServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */; };
 		5AEF1363278DB29C00495100 /* NeuroApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF1361278DB29C00495100 /* NeuroApp.xcdatamodeld */; };
+		5AF2565127A2AA3500815ECD /* SessionModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2564F27A2AA3500815ECD /* SessionModel+CoreDataClass.swift */; };
+		5AF2565427A2B0DF00815ECD /* PartOneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2565327A2B0DF00815ECD /* PartOneModel.swift */; };
+		5AF2565627A2B0F700815ECD /* PartTwoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2565527A2B0F700815ECD /* PartTwoModel.swift */; };
+		5AF2565827A2B10700815ECD /* PartThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2565727A2B10700815ECD /* PartThreeModel.swift */; };
+		5AF2565A27A2B12100815ECD /* OptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2565927A2B12100815ECD /* OptionModel.swift */; };
+		5AF2565C27A410AD00815ECD /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2565B27A410AD00815ECD /* Option.swift */; };
 		5AF5CE51278165F500868619 /* DoubleSidedArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */; };
 		5AF5CE542784A21600868619 /* PartTwoHistoryDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */; };
 		5AF5CE572784A79A00868619 /* PartTwoHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */; };
@@ -409,13 +419,23 @@
 		5AAFFFB827468CC300C46DB0 /* UIView+setupNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setupNib.swift"; sourceTree = "<group>"; };
 		5ABF2F03271AB68400B5C3AD /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5ABF2F05271AB9CC00B5C3AD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		5ABF2F07271D914A00B5C3AD /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		5ABF2F07271D914A00B5C3AD /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		5AC37CD3279AD07400D93D1F /* PartOneQA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOneQA.swift; sourceTree = "<group>"; };
+		5AC37CD5279AD0ED00D93D1F /* PartTwoQA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoQA.swift; sourceTree = "<group>"; };
+		5AC37CD7279AD36400D93D1F /* PartThreeQA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartThreeQA.swift; sourceTree = "<group>"; };
 		5ADC5DAB2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewFooterHeaderView+identifier.swift"; sourceTree = "<group>"; };
 		5AE1A50226E61722009FCD4A /* Preview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
+		5AE7CD5A279EB50E002F956A /* NeuroAppValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuroAppValueTransformer.swift; sourceTree = "<group>"; };
 		5AE8500326DB98DA00A834D2 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		5AE8500626DB9C1600A834D2 /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
 		5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizServiceProtocol.swift; sourceTree = "<group>"; };
 		5AEF1362278DB29C00495100 /* NeuroApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NeuroApp.xcdatamodel; sourceTree = "<group>"; };
+		5AF2564F27A2AA3500815ECD /* SessionModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5AF2565327A2B0DF00815ECD /* PartOneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOneModel.swift; sourceTree = "<group>"; };
+		5AF2565527A2B0F700815ECD /* PartTwoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoModel.swift; sourceTree = "<group>"; };
+		5AF2565727A2B10700815ECD /* PartThreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartThreeModel.swift; sourceTree = "<group>"; };
+		5AF2565927A2B12100815ECD /* OptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionModel.swift; sourceTree = "<group>"; };
+		5AF2565B27A410AD00815ECD /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSidedArrowView.swift; sourceTree = "<group>"; };
 		5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryDisplayManager.swift; sourceTree = "<group>"; };
 		5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -925,14 +945,15 @@
 		5A1E8BB4269840A5001179F7 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				5AC37CD2279AD05E00D93D1F /* QuestionModels */,
 				5AFFFCE826AEC00400E9F3F1 /* Error */,
 				5A166C0D269C30A500E590C7 /* Constants */,
 				5ABF2F02271AB66900B5C3AD /* Observer */,
+				5A127FF927007D7100832AD2 /* QuestionsBank.swift */,
 				5A70C45426D3A3D50046675D /* WeakBox.swift */,
 				5A1E8BB5269840B9001179F7 /* User.swift */,
 				5AE8500326DB98DA00A834D2 /* Quiz.swift */,
-				5A127FF927007D7100832AD2 /* QuestionsBank.swift */,
-				5ABF2F07271D914A00B5C3AD /* Result.swift */,
+				5ABF2F07271D914A00B5C3AD /* Session.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1177,6 +1198,17 @@
 			path = Observer;
 			sourceTree = "<group>";
 		};
+		5AC37CD2279AD05E00D93D1F /* QuestionModels */ = {
+			isa = PBXGroup;
+			children = (
+				5AC37CD3279AD07400D93D1F /* PartOneQA.swift */,
+				5AC37CD5279AD0ED00D93D1F /* PartTwoQA.swift */,
+				5AF2565B27A410AD00815ECD /* Option.swift */,
+				5AC37CD7279AD36400D93D1F /* PartThreeQA.swift */,
+			);
+			path = QuestionModels;
+			sourceTree = "<group>";
+		};
 		5AE8500526DB9BAC00A834D2 /* QuizService */ = {
 			isa = PBXGroup;
 			children = (
@@ -1189,7 +1221,13 @@
 		5AEF1360278DB27900495100 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				5AF2565327A2B0DF00815ECD /* PartOneModel.swift */,
+				5AF2565527A2B0F700815ECD /* PartTwoModel.swift */,
+				5AF2565727A2B10700815ECD /* PartThreeModel.swift */,
+				5AF2565927A2B12100815ECD /* OptionModel.swift */,
 				5AEF1361278DB29C00495100 /* NeuroApp.xcdatamodeld */,
+				5AF2564F27A2AA3500815ECD /* SessionModel+CoreDataClass.swift */,
+				5AE7CD5A279EB50E002F956A /* NeuroAppValueTransformer.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1951,8 +1989,10 @@
 				5A1E8BB6269840B9001179F7 /* User.swift in Sources */,
 				5AE8500426DB98DA00A834D2 /* Quiz.swift in Sources */,
 				5AEF1363278DB29C00495100 /* NeuroApp.xcdatamodeld in Sources */,
+				5AF2565A27A2B12100815ECD /* OptionModel.swift in Sources */,
 				5AA6E2992735654600E64ABA /* GunningFogService.swift in Sources */,
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,
+				5AE7CD5B279EB50E002F956A /* NeuroAppValueTransformer.swift in Sources */,
 				5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */,
 				5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */,
 				5A166C10269C319000E590C7 /* ProfileServiceProtocol.swift in Sources */,
@@ -1977,6 +2017,8 @@
 				5A6F2C58269AD8BA006B065D /* ProfileService.swift in Sources */,
 				5A75DE61278C277A00BDAF54 /* PartThreeHistoryDisplayManager.swift in Sources */,
 				FBAA2CFEA779E79C9486E8C2 /* LoginInteractor.swift in Sources */,
+				5AF2565627A2B0F700815ECD /* PartTwoModel.swift in Sources */,
+				5AC37CD4279AD07400D93D1F /* PartOneQA.swift in Sources */,
 				5AA6E2912730001B00E64ABA /* OptionViewDelegate.swift in Sources */,
 				B0388DAFB78645FC4999865C /* LoginRouterInput.swift in Sources */,
 				1412C774CE55C6E0C031C6FB /* LoginRouter.swift in Sources */,
@@ -1992,6 +2034,7 @@
 				5AFFFCEA26AEC03400E9F3F1 /* SystemError.swift in Sources */,
 				2E12C249EE024C6F04C4550E /* HomeModuleInput.swift in Sources */,
 				8442C56DA9E51614B65C96E2 /* HomePresenter.swift in Sources */,
+				5AF2565427A2B0DF00815ECD /* PartOneModel.swift in Sources */,
 				1D6C762DF0CE88CB3A6B94DE /* HomeInteractorInput.swift in Sources */,
 				5A67E232275F2EC4006FFABF /* UITableView+registerCell.swift in Sources */,
 				8B66E60129903C989F98FEC4 /* HomeInteractorOutput.swift in Sources */,
@@ -2022,6 +2065,7 @@
 				E82616554F277E1DF872E609 /* EditInformationViewInput.swift in Sources */,
 				5AE8500926DB9C2300A834D2 /* QuizServiceProtocol.swift in Sources */,
 				234F0F3C5BAADEB25BBE8584 /* EditInformationViewOutput.swift in Sources */,
+				5AC37CD6279AD0ED00D93D1F /* PartTwoQA.swift in Sources */,
 				5A56767E2774274F00CA53D5 /* AverageHistoryTableViewCell.swift in Sources */,
 				1340A306828C795A080C0FC7 /* EditInformationViewController.swift in Sources */,
 				D8E75D43246BF0C78E6A0B1A /* EditInformationModuleInput.swift in Sources */,
@@ -2035,8 +2079,9 @@
 				287BE47BB9D393609581989C /* EditInformationInitializer.swift in Sources */,
 				055AD0AEA86CC2FE0331F04B /* PreviewBaseInfoViewInput.swift in Sources */,
 				7A97706392CC30BB97940C40 /* PreviewBaseInfoViewOutput.swift in Sources */,
-				5ABF2F08271D914A00B5C3AD /* Result.swift in Sources */,
+				5ABF2F08271D914A00B5C3AD /* Session.swift in Sources */,
 				13EDF50C0DEC9793B217B50C /* PreviewBaseInfoViewController.swift in Sources */,
+				5AF2565C27A410AD00815ECD /* Option.swift in Sources */,
 				B2548BC03A552198447AFD45 /* PreviewBaseInfoModuleInput.swift in Sources */,
 				8738DA5F04B33A3B23D2E540 /* PreviewBaseInfoPresenter.swift in Sources */,
 				5A67E230275F2D3D006FFABF /* HistoryMainDisplayManagerDelegate.swift in Sources */,
@@ -2055,6 +2100,7 @@
 				2F809E1A96097F29CCF044DB /* PreviewPartInfoModuleInput.swift in Sources */,
 				96051E01400C77D7B3CCFE49 /* PreviewPartInfoPresenter.swift in Sources */,
 				0CADEB544403BE1B6120ED6C /* PreviewPartInfoInteractorInput.swift in Sources */,
+				5AC37CD8279AD36400D93D1F /* PartThreeQA.swift in Sources */,
 				DA4B114206270A679A55F579 /* PreviewPartInfoInteractorOutput.swift in Sources */,
 				5AA6E28D272FE62E00E64ABA /* OptionView.swift in Sources */,
 				A9E0B1E37CDF82DC10CDBC14 /* PreviewPartInfoInteractor.swift in Sources */,
@@ -2071,6 +2117,7 @@
 				2584DCD63B862AF6E55D8AD1 /* QuizPartOneViewOutput.swift in Sources */,
 				170AA0A5DDF36109EBBEEC73 /* QuizPartOneViewController.swift in Sources */,
 				DA0B3781A7564A7610428B51 /* QuizPartOneModuleInput.swift in Sources */,
+				5AF2565827A2B10700815ECD /* PartThreeModel.swift in Sources */,
 				B968B3FFC2686DE6E06636AC /* QuizPartOnePresenter.swift in Sources */,
 				5A8805182722CDE100BA12B3 /* UserStatusView.swift in Sources */,
 				202EEC6BA12FB36640986E66 /* QuizPartOneInteractorInput.swift in Sources */,
@@ -2149,6 +2196,7 @@
 				70F3D088C823D6DE74816814 /* AvarageHistoryRouter.swift in Sources */,
 				B82CDC89B8AD7DDC65E27AB7 /* AvarageHistoryConfigurator.swift in Sources */,
 				502D5BE7AC5051F53F69F2A8 /* AvarageHistoryInitializer.swift in Sources */,
+				5AF2565127A2AA3500815ECD /* SessionModel+CoreDataClass.swift in Sources */,
 				38634554FE380A08206CDA03 /* PartOneHistoryViewInput.swift in Sources */,
 				DF99A549704F24B2A1B0CD88 /* PartOneHistoryViewOutput.swift in Sources */,
 				68F80EDFD579E3D067F7283E /* PartOneHistoryViewController.swift in Sources */,

@@ -42,7 +42,7 @@ class ScoreScreenViewController: UIViewController, ScoreScreenViewInput {
         titleTextLabel.text = String.Score.mainText
     }
     
-    func setup(with result: Result) {
+    func setup(with result: Session) {
         averageScoreView.setup(with: result.avarageScore)
         scoreViews.forEach { scoreView in
             if scoreView.tag == 0 {

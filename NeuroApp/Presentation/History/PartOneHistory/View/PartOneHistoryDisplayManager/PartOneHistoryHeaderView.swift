@@ -94,7 +94,7 @@ class PartOneHistoryHeaderView: UIView {
         }
     }
 
-    func setup(with result: Result) {
+    func setup(with result: Session) {
         baseHeaderView.update(with: result, scoreLabelTitle: String.Score.partOneDescription)
     }
     

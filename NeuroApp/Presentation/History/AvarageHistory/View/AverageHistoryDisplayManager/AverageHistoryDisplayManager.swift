@@ -28,7 +28,7 @@ class AverageHistoryDisplayManager: NSObject {
         tableView.rowHeight = 80
     }
     
-    func setup(with result: Result) {
+    func setup(with result: Session) {
         var score = (key: String.History.partOneTitle, value: result.partOneScore)
         scores.append(score)
         score = (key: String.History.partTwoTitle, value: result.partOneScore)

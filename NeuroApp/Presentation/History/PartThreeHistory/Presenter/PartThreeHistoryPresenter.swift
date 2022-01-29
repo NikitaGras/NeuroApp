@@ -12,7 +12,7 @@ class PartThreeHistoryPresenter: NSObject, PartThreeHistoryModuleInput, PartThre
     var interactor: PartThreeHistoryInteractorInput!
     var router: PartThreeHistoryRouterInput!
     
-    var result: Result!
+    var result: Session!
 
     func viewIsReady() {
         view.setupInitialState()

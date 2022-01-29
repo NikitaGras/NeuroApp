@@ -8,5 +8,5 @@
 
 protocol HistoryMainViewOutput {
     func viewIsReady()
-    func show(result: Result)
+    func show(result: Session)
 }

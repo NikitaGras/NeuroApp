@@ -12,7 +12,7 @@ class PartTwoHistoryPresenter: NSObject, PartTwoHistoryModuleInput, PartTwoHisto
     var interactor: PartTwoHistoryInteractorInput!
     var router: PartTwoHistoryRouterInput!
     
-    var result: Result!
+    var result: Session!
 
     func viewIsReady() {
         view.setupInitialState()

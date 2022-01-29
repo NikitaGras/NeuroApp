@@ -7,6 +7,6 @@
 //
 
 protocol PartTwoHistoryViewOutput {
-    var result: Result! { get }
+    var result: Session! { get }
     func viewIsReady()
 }

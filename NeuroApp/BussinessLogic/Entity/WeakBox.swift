@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WeakBox<T> {
+final class WeakBox<T> {
     weak private var baseObject: AnyObject?
     var object: T? {
         return baseObject as? T

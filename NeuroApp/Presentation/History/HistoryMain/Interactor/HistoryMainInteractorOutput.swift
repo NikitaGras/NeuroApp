@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HistoryMainInteractorOutput: AnyObject {
-    func update(with history: [Result])
+    func update(with history: [Session])
 }

@@ -5,66 +5,84 @@
 //  Created by Nikita Gras on 29.08.2021.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
 class QuizService: QuizServiceProtocol {
     static let shared = QuizService()
-    var observers = [WeakBox<Observer>]() {
-        didSet {
-            notifyObservers()
-        }
-    }
-    var history: [Result] = [Result(partOneAnswers: [PartOneAnswer(questionText: "", value: 50)], partTwoAnswers: [PartTwoAnswer(questionText: "", option: StringOption(value: "", isRight: true), responseTime: 2)], partThreeAnswer: PartThreeAnswer(question: "1.", userText: "", value: 50), finishTime: Date())]
-    var quiz: Quiz
+    
+    var observers = [WeakBox<Observer>]()
+    var context: NSManagedObjectContext = {
+        NeuroAppValueTransformer.register()
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        return delegate.persistentContainer.viewContext
+    }()
+    
+    var history = [Session]()
+    var quiz = Quiz()
     
     private init() {
-        self.quiz = QuizService.fetchQuiz()
+        history = fetchHistory()
     }
     
-    static private func fetchQuiz() -> Quiz {
-    //TODO: реализовать после подключения CoreData
-        return Quiz()
-    }
-    
-    func save(_ partOneAnswer: PartOneAnswer) throws {
-        quiz.partOneAnswers.append(partOneAnswer)
-    }
-    
-    func save(_ partTwoAnswer: PartTwoAnswer) throws {
-        quiz.partTwoAnswers.append(partTwoAnswer)
-    }
-    
-    func save(_ partThreeAnswer: PartThreeAnswer) throws {
-        quiz.partThreeAnswer = partThreeAnswer
-        saveQuizResult()
-    }
-    
-    func saveQuizResult() {
-        if let partThreeAnswer = quiz.partThreeAnswer {
-            let finishTime = Date()
-            let result = Result(partOneAnswers: quiz.partOneAnswers,
-                                partTwoAnswers: quiz.partTwoAnswers,
-                                partThreeAnswer: partThreeAnswer,
-                                finishTime: finishTime)
-            history.append(result)
-            notifyObservers()
+    func fetchHistory() -> [Session] {
+        do {
+            let models = try context.fetch(SessionModel.fetchRequest())
+            return try models.map { try Session(model: $0) }
+        } catch {
+            print(error)
+            return []
         }
     }
     
     func startNewQuiz() {
         self.quiz = Quiz()
-        notifyObservers()
+        notifyObservers(with: quiz)
     }
     
-    func deleteHistory() {
+    func deleteHistory() throws {
+        guard let coordinator = context.persistentStoreCoordinator else {
+            throw SystemError.default
+        }
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SessionModel")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        try coordinator.execute(deleteRequest, with: context)
         history = []
     }
     
-    //MARK: - Observer
-    func notifyObservers() {
-        observers.forEach { weakBox in
-            weakBox.object?.update(with: quiz)
-            weakBox.object?.update(with: history)
-        }
+    func save(_ partOneAnswer: PartOneAnswer) {
+        quiz.partOneAnswers.append(partOneAnswer)
+        notifyObservers(with: quiz)
+    }
+    
+    func save(_ partTwoAnswer: PartTwoAnswer) {
+        quiz.partTwoAnswers.append(partTwoAnswer)
+        notifyObservers(with: quiz)
+    }
+    
+    func save(_ partThreeAnswer: PartThreeAnswer) throws {
+        quiz.partThreeAnswer = partThreeAnswer
+        
+        let session = try Session(quiz: quiz)
+        try save(session)
+        
+        notifyObservers(with: quiz)
+    }
+    
+    func save(_ session: Session) throws {
+        let model = SessionModel(context: context)
+        
+        model.partOne = session.partOneAnswers.map { PartOneModel.init(answer: $0)}
+        model.partTwo = session.partTwoAnswers.map { PartTwoModel.init(answer: $0)}
+        model.partThree = PartThreeModel(answer: session.partThreeAnswer)
+        model.finishTime = session.finishTime
+        
+        try context.save()
+        
+        var session = session
+        session.sessionModel = model
+        history.append(session)
+        
+        notifyObservers(with: history)
     }
 }

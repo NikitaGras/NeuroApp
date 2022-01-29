@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ScoreScreenInteractorInput {
-    func getResult()throws -> Result
+    func getResult()throws -> Session
     func changeQuize(to state: Quiz.State)
 }

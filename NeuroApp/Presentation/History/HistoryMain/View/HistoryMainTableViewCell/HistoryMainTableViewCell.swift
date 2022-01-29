@@ -29,7 +29,7 @@ class HistoryMainTableViewCell: UITableViewCell {
         container.layer.borderColor = UIColor.NAGray.cgColor
     }
     
-    func fill(with result: Result) {
+    func fill(with result: Session) {
         let dateString = dateFormatter.string(from: result.finishTime)
         dateLabel.text = dateString
         scoreValueLabel.text = result.avarageScore.description

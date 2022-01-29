@@ -10,7 +10,7 @@ import ViperMcFlurry
 class AvarageHistoryRouter: AvarageHistoryRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
-    func showPartOne(_ result: Result) {
+    func showPartOne(_ result: Session) {
         let promise = transitionHandler.openModule?(usingSegue: "ShowPartOneHistory")
         promise?.thenChain({ moduleInput in
             let input = moduleInput as? PartOneHistoryModuleInput
@@ -19,7 +19,7 @@ class AvarageHistoryRouter: AvarageHistoryRouterInput {
         })
     }
     
-    func showPartTwo(_ result: Result) {
+    func showPartTwo(_ result: Session) {
         let promise = transitionHandler.openModule?(usingSegue: "ShowPartTwoHistory")
         promise?.thenChain({ moduleInput in
             let input = moduleInput as? PartTwoHistoryModuleInput
@@ -28,7 +28,7 @@ class AvarageHistoryRouter: AvarageHistoryRouterInput {
         })
     }
     
-    func showPartThree(_ result: Result) {
+    func showPartThree(_ result: Session) {
         let promise = transitionHandler.openModule?(usingSegue: "ShowPartThreeHistory")
         promise?.thenChain({ moduleInput in
             let input = moduleInput as? PartThreeHistoryModuleInput
@@ -38,7 +38,7 @@ class AvarageHistoryRouter: AvarageHistoryRouterInput {
     }
     
     //TODO: подумать как унифицировать в одну функцию, передавать в качестве параметра тип данных.
-    func openModule(usingSegue segue: String, _ result: Result) {
+    func openModule(usingSegue segue: String, _ result: Session) {
 
     }
 }

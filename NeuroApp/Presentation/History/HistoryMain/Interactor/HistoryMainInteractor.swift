@@ -16,6 +16,7 @@ class HistoryMainInteractor: HistoryMainInteractorInput, Observer {
     
     func registerObserver() {
         service.register(self)
+        service.didRegister(observer: self)
     }
     
     deinit {
@@ -23,7 +24,7 @@ class HistoryMainInteractor: HistoryMainInteractorInput, Observer {
     }
     
     func update(with data: Any) {
-        if let history = data as? [Result] {
+        if let history = data as? [Session] {
             output.update(with: history)
         }
     }

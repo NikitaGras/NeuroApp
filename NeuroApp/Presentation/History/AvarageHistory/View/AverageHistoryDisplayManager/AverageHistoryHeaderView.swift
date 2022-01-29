@@ -67,7 +67,7 @@ class AverageHistoryHeaderView: UIView {
         ])
     }
     
-    func update(with result: Result, scoreLabelTitle title: String) {
+    func update(with result: Session, scoreLabelTitle title: String) {
         let dateString = DateFormatter.fulldate.string(from: result.finishTime)
         dateLabel.text = dateString
         

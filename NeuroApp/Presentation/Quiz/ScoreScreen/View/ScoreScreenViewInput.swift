@@ -8,5 +8,5 @@
 
 protocol ScoreScreenViewInput: AnyObject, ViewInput {
     func setupInitialState()
-    func setup(with result: Result)
+    func setup(with result: Session)
 }

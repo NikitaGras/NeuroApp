@@ -27,7 +27,7 @@ class QuizPartThreeInteractor: QuizPartThreeInteractorInput {
             if let gunningFogIndex = gunningFogIndex {
                 let answer = PartThreeAnswer(question: self.quiz.partThreeQuestion,
                                              userText: userText,
-                                             value: gunningFogIndex)
+                                             ganningFoq: gunningFogIndex)
                 self.save(answer: answer)
             }
             if let error = error {

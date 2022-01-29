@@ -17,11 +17,11 @@ class HistoryMainPresenter: HistoryMainModuleInput, HistoryMainViewOutput, Histo
         interactor.initialized()
     }
     
-    func update(with history: [Result]) {
+    func update(with history: [Session]) {
         history.isEmpty ? view.showEmptyHistory() : view.setup(with: history)
     }
     
-    func show(result: Result) {
+    func show(result: Session) {
         router.openHistoryAverage(with: result)
     }
 }

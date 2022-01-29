@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HistoryMainDisplayManagerDelegate: AnyObject {
-    func displayManager(_ displayManger: HistoryMainDisplayManager, didSelectResult result: Result)
+    func displayManager(_ displayManger: HistoryMainDisplayManager, didSelectResult result: Session)
 }

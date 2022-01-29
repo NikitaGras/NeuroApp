@@ -8,6 +8,6 @@
 
 protocol HistoryMainViewInput: AnyObject {
     func setupInitialState()
-    func setup(with history: [Result])
+    func setup(with history: [Session])
     func showEmptyHistory()
 }

@@ -11,7 +11,7 @@ class PartOneHistoryDisplayManager: NSObject {
     private let tableView: UITableView
     private let headerView = PartOneHistoryHeaderView()
     
-    private var result: Result?
+    private var result: Session?
     
     init(_ tableView: UITableView) {
         self.tableView = tableView
@@ -28,7 +28,7 @@ class PartOneHistoryDisplayManager: NSObject {
 //        tableView.tableHeaderView = headerView
     }
     
-    func update(with result: Result) {
+    func update(with result: Session) {
         self.result = result
         self.headerView.setup(with: result)
         tableView.reloadData()
