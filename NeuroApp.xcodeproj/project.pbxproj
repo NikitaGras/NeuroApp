@@ -151,6 +151,7 @@
 		5AF2565827A2B10700815ECD /* PartThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2565727A2B10700815ECD /* PartThreeModel.swift */; };
 		5AF2565A27A2B12100815ECD /* OptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2565927A2B12100815ECD /* OptionModel.swift */; };
 		5AF2565C27A410AD00815ECD /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2565B27A410AD00815ECD /* Option.swift */; };
+		5AF2566027A9549C00815ECD /* Int+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2565F27A9549C00815ECD /* Int+random.swift */; };
 		5AF5CE51278165F500868619 /* DoubleSidedArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */; };
 		5AF5CE542784A21600868619 /* PartTwoHistoryDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */; };
 		5AF5CE572784A79A00868619 /* PartTwoHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */; };
@@ -436,6 +437,7 @@
 		5AF2565727A2B10700815ECD /* PartThreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartThreeModel.swift; sourceTree = "<group>"; };
 		5AF2565927A2B12100815ECD /* OptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionModel.swift; sourceTree = "<group>"; };
 		5AF2565B27A410AD00815ECD /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		5AF2565F27A9549C00815ECD /* Int+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+random.swift"; sourceTree = "<group>"; };
 		5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSidedArrowView.swift; sourceTree = "<group>"; };
 		5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryDisplayManager.swift; sourceTree = "<group>"; };
 		5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -949,7 +951,6 @@
 				5AFFFCE826AEC00400E9F3F1 /* Error */,
 				5A166C0D269C30A500E590C7 /* Constants */,
 				5ABF2F02271AB66900B5C3AD /* Observer */,
-				5A127FF927007D7100832AD2 /* QuestionsBank.swift */,
 				5A70C45426D3A3D50046675D /* WeakBox.swift */,
 				5A1E8BB5269840B9001179F7 /* User.swift */,
 				5AE8500326DB98DA00A834D2 /* Quiz.swift */,
@@ -1093,6 +1094,7 @@
 				5ADC5DAB2766511A00981A8A /* UITableViewFooterHeaderView+identifier.swift */,
 				5AA6EC472775BEE300A6FA5B /* UITableView+setupTableHeaderViewHeight.swift */,
 				5A2E2A83277DA6DF0032385C /* DateFormatter+fullDate.swift */,
+				5AF2565F27A9549C00815ECD /* Int+random.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1212,6 +1214,7 @@
 		5AE8500526DB9BAC00A834D2 /* QuizService */ = {
 			isa = PBXGroup;
 			children = (
+				5A127FF927007D7100832AD2 /* QuestionsBank.swift */,
 				5AE8500626DB9C1600A834D2 /* QuizService.swift */,
 				5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */,
 			);
@@ -2055,6 +2058,7 @@
 				5AF5CE542784A21600868619 /* PartTwoHistoryDisplayManager.swift in Sources */,
 				0DEDCC47A4971DDDB32CD298 /* ProfileInteractorOutput.swift in Sources */,
 				2D934A296C744ED7E285E9C0 /* ProfileInteractor.swift in Sources */,
+				5AF2566027A9549C00815ECD /* Int+random.swift in Sources */,
 				F9509ED53CBB70AE2ACCEABE /* ProfileRouterInput.swift in Sources */,
 				BEA3CCD1030E3AFEFD03EF36 /* ProfileRouter.swift in Sources */,
 				5A70C45526D3A3D50046675D /* WeakBox.swift in Sources */,
