@@ -12,7 +12,9 @@ class QuestionsBank {
     let partTwoQuestions: [PartTwoQuestion]
     let partThreeQuestion: PartThreeQuestion
     
-    private static let animals = ["rat", "dog", "elethant", "raccoon"]
+    private enum Animal: String, CaseIterable {
+        case rat, dog, elethant, raccoon
+    }
     
     init() {
         partOneQuestions = QuestionsBank.initPartOneQuestions()
@@ -28,11 +30,12 @@ class QuestionsBank {
     }
     
     private static func initPartTwoQuestions() -> [PartTwoQuestion] {
+        let animals = Animal.allCases.map { return $0.rawValue }
         let question = [
             PartTwoQuestion(text: "What is 80-64", options: createOptions(rightAnswer: 16, in: 10...30)),
             PartTwoQuestion(text: "What is 27+71", options: createOptions(rightAnswer: 98, in: 80...120)),
-            PartTwoQuestion(text: "Chose the rat", options: createOptions(rightAnswer: "rat", in: animals)),
-            PartTwoQuestion(text: "Chose the racoon", options: createOptions(rightAnswer: "raccoon", in: animals))]
+            PartTwoQuestion(text: "Chose the rat", options: createOptions(rightAnswer: Animal.rat.rawValue, in: animals)),
+            PartTwoQuestion(text: "Chose the racoon", options: createOptions(rightAnswer: Animal.raccoon.rawValue, in: animals))]
         return question.shuffled()
     }
     
@@ -46,7 +49,8 @@ class QuestionsBank {
     
     private static func createOptions(rightAnswer: Int, in range: ClosedRange<Int>) -> [StringOption] {
         var options = [StringOption(value: rightAnswer.description, isRight: true)]
-        let wrongAnswers = Int.random(in: range, count: 3, excluded: rightAnswer)
+        
+        let wrongAnswers: [Int] = Int.random(in: range, count: 3, excluded: rightAnswer)
         for answer in wrongAnswers {
             let option = StringOption(value: answer.description, isRight: false)
             options.append(option)
@@ -55,10 +59,7 @@ class QuestionsBank {
     }
     
     private static func createOptions(rightAnswer: String, in answers: [String]) -> [ImageOption] {
-        var options: [ImageOption] = []
-        
-        let rightOption = ImageOption.init(value: rightAnswer, isRight: true)
-        options.append(rightOption)
+        var options: [ImageOption] = [ImageOption.init(value: rightAnswer, isRight: true)]
         
         var answers = answers
         answers.removeAll { $0 == rightAnswer }

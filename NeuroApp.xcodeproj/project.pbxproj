@@ -912,6 +912,7 @@
 		5A166C0E269C313700E590C7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5A127FF927007D7100832AD2 /* QuestionsBank.swift */,
 				5AA6E2972735651700E64ABA /* GunningFoqService */,
 				5AE8500526DB9BAC00A834D2 /* QuizService */,
 				5A71B2ED269EB650001A6259 /* ProfileService */,
@@ -1214,7 +1215,6 @@
 		5AE8500526DB9BAC00A834D2 /* QuizService */ = {
 			isa = PBXGroup;
 			children = (
-				5A127FF927007D7100832AD2 /* QuestionsBank.swift */,
 				5AE8500626DB9C1600A834D2 /* QuizService.swift */,
 				5AE8500826DB9C2300A834D2 /* QuizServiceProtocol.swift */,
 			);
