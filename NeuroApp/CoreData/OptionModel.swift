@@ -8,12 +8,15 @@
 import Foundation
 
 public class OptionModel: NSObject, NSSecureCoding {
-    var value: String?
+    var value: String? {
+        return _value as String
+    }
+    private var _value: NSString
     let isRight: Bool
     let isImage: Bool
     
     init(value: String, isRight: Bool, isImage: Bool) {
-        self.value = value
+        self._value = value as NSString
         self.isRight = isRight
         self.isImage = isImage
     }
@@ -32,13 +35,13 @@ public class OptionModel: NSObject, NSSecureCoding {
     }
     
     public required init?(coder: NSCoder) {
-        value = coder.decodeObject(of: NSString.self, forKey: CodingKey.value) as String?
+        _value = coder.decodeObject(of: NSString.self, forKey: CodingKey.value) ?? ""
         isRight = coder.decodeBool(forKey: CodingKey.isImage)
         isImage = coder.decodeBool(forKey: CodingKey.isRight)
     }
     
     public func encode(with coder: NSCoder) {
-        coder.encode(value, forKey: CodingKey.value)
+        coder.encode(_value, forKey: CodingKey.value)
         coder.encode(isRight, forKey: CodingKey.isRight)
         coder.encode(isImage, forKey: CodingKey.isImage)
     }

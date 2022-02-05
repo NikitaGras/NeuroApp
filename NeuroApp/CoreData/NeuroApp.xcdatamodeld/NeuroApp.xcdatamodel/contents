@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="SessionModel" representedClassName="SessionModel" syncable="YES">
         <attribute name="finishTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="partOne" optional="YES" attributeType="Transformable" valueTransformerName="NeuroAppValueTransformer" customClassName="PartOneModel"/>
+        <attribute name="partOne" optional="YES" attributeType="Transformable" valueTransformerName="NeuroAppValueTransformer" customClassName="[PartOneModel]"/>
         <attribute name="partThree" optional="YES" attributeType="Transformable" valueTransformerName="NeuroAppValueTransformer" customClassName="PartThreeModel"/>
-        <attribute name="partTwo" optional="YES" attributeType="Transformable" valueTransformerName="NeuroAppValueTransformer" customClassName="PartTwoModel"/>
+        <attribute name="partTwo" optional="YES" attributeType="Transformable" valueTransformerName="NeuroAppValueTransformer" customClassName="[PartTwoModel]"/>
     </entity>
     <elements>
         <element name="SessionModel" positionX="0" positionY="0" width="128" height="89"/>

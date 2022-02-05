@@ -13,6 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
+        NeuroAppValueTransformer.register()
+
+    
+        
+        let context = persistentContainer.viewContext
+        do {
+            let array = try context.fetch(SessionModel.fetchRequest())
+            print(array)
+        } catch {
+            print("oops")
+        }
         return true
     }
     

@@ -13,7 +13,7 @@ class QuizService: QuizServiceProtocol {
     
     var observers = [WeakBox<Observer>]()
     var context: NSManagedObjectContext = {
-        NeuroAppValueTransformer.register()
+//        NeuroAppValueTransformer.register()
         let delegate = UIApplication.shared.delegate as! AppDelegate
         return delegate.persistentContainer.viewContext
     }()
