@@ -8,14 +8,20 @@
 import Foundation
 
 public class PartThreeModel: NSObject, NSSecureCoding {
-    var questionText: String?
-    var userText: String?
+    var questionText: String? {
+        return _questionText as String
+    }
+    var userText: String? {
+        return _userText as String
+    }
+    private var _questionText: NSString
+    private var _userText: NSString
     let ganningFoq: Double
 
     init(question: String, userText: String, ganningFoq: Double) {
         self.ganningFoq = ganningFoq
-        self.userText = userText
-        self.questionText = question
+        self._userText = userText as NSString
+        self._questionText = question as NSString
     }
     
     convenience init(answer: PartThreeAnswer) {
@@ -32,14 +38,14 @@ public class PartThreeModel: NSObject, NSSecureCoding {
     }
     
     public required init?(coder: NSCoder) {
-        self.questionText = coder.decodeObject(of: NSString.self, forKey: CodingKey.question) as String?
-        self.userText = coder.decodeObject(of: NSString.self, forKey: CodingKey.userText) as String?
+        self._questionText = coder.decodeObject(of: NSString.self, forKey: CodingKey.question) ?? ""
+        self._userText = coder.decodeObject(of: NSString.self, forKey: CodingKey.userText) ?? ""
         self.ganningFoq = coder.decodeDouble(forKey: CodingKey.ganningFoq)
     }
     
     public func encode(with coder: NSCoder) {
-        coder.encode(questionText, forKey: CodingKey.question)
-        coder.encode(userText, forKey: CodingKey.userText)
+        coder.encode(_questionText, forKey: CodingKey.question)
+        coder.encode(_userText, forKey: CodingKey.userText)
         coder.encode(ganningFoq, forKey: CodingKey.ganningFoq)
     }
 }

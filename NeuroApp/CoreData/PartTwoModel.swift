@@ -8,12 +8,15 @@
 import Foundation
 
 public class PartTwoModel: NSObject, NSSecureCoding {
-    var questionText: String?
+    var questionText: String? {
+        return _questionText as String
+    }
+    private var _questionText: NSString
     var option: OptionModel?
     let responseTime: TimeInterval
     
     init(questionText: String, option: OptionModel, responseTime: TimeInterval) {
-        self.questionText = questionText
+        self._questionText = questionText as NSString
         self.option = option
         self.responseTime = responseTime
     }
@@ -33,13 +36,13 @@ public class PartTwoModel: NSObject, NSSecureCoding {
     }
     
     public required init?(coder: NSCoder) {
-        self.questionText = coder.decodeObject(of: NSString.self, forKey: CodingKey.questionText) as String?
+        self._questionText = coder.decodeObject(of: NSString.self, forKey: CodingKey.questionText) ?? ""
         self.option = coder.decodeObject(of: OptionModel.self, forKey: CodingKey.option)
         self.responseTime = coder.decodeDouble(forKey: CodingKey.responseTime)
     }
     
     public func encode(with coder: NSCoder) {
-        coder.encode(questionText, forKey: CodingKey.questionText)
+        coder.encode(_questionText, forKey: CodingKey.questionText)
         coder.encode(option, forKey: CodingKey.option)
         coder.encode(responseTime, forKey: CodingKey.responseTime)
     }
