@@ -32,6 +32,7 @@ class QuestionsBank {
     private static func initPartTwoQuestions() -> [PartTwoQuestion] {
         let animals = Animal.allCases.map { return $0.rawValue }
         let question = [
+            //TODO: формировать вопросы с цифрами
             PartTwoQuestion(text: "What is 80-64", options: createOptions(rightAnswer: 16, in: 10...30)),
             PartTwoQuestion(text: "What is 27+71", options: createOptions(rightAnswer: 98, in: 80...120)),
             PartTwoQuestion(text: "Chose the rat", options: createOptions(rightAnswer: Animal.rat.rawValue, in: animals)),
@@ -55,7 +56,7 @@ class QuestionsBank {
             let option = StringOption(value: answer.description, isRight: false)
             options.append(option)
         }
-        return options
+        return options.shuffled()
     }
     
     private static func createOptions(rightAnswer: String, in answers: [String]) -> [ImageOption] {
@@ -67,6 +68,6 @@ class QuestionsBank {
             let wrongOption = ImageOption(value: answers[index], isRight: false)
             options.append(wrongOption)
         }
-        return options
+        return options.shuffled()
     }
 }
