@@ -13,7 +13,6 @@ class QuizService: QuizServiceProtocol {
     
     var observers = [WeakBox<Observer>]()
     var context: NSManagedObjectContext = {
-        NeuroAppValueTransformer.register()
         let delegate = UIApplication.shared.delegate as! AppDelegate
         return delegate.persistentContainer.viewContext
     }()
@@ -23,6 +22,7 @@ class QuizService: QuizServiceProtocol {
     
     private init() {
         history = fetchHistory()
+        notifyObservers(with: history)
     }
     
     func fetchHistory() -> [Session] {
@@ -84,5 +84,9 @@ class QuizService: QuizServiceProtocol {
         history.append(session)
         
         notifyObservers(with: history)
+    }
+    
+    func didRegister(observer: Observer) {
+        observer.update(with: history)
     }
 }

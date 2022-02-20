@@ -11,7 +11,7 @@ final class NeuroAppValueTransformer: NSSecureUnarchiveFromDataTransformer {
     static let name = NSValueTransformerName(String(describing: NeuroAppValueTransformer.self))
 
     override static var allowedTopLevelClasses: [AnyClass] {
-        return [PartOneModel.self, PartTwoModel.self, PartThreeModel.self]
+        return [PartOneModel.self, PartTwoModel.self, PartThreeModel.self, OptionModel.self, NSArray.self]
     }
 
     public static func register() {

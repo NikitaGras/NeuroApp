@@ -10,5 +10,6 @@ target 'NeuroApp' do
   pod "ViperMcFlurry"
   pod 'Alamofire', '~> 5.4'
   pod 'Charts'
+  pod 'CSV.swift', '~> 2.4.3'
 
 end
