@@ -9,10 +9,12 @@ import Foundation
 
 extension String {
     static let error = "Error"
+    static let session = "Session"
     
     struct Error {
         static let `default` = "Something going wrong. Try again later"
         static let noUser = "Sorry, your data has lost"
+        static let noDataForShare = "You haven't any data for share"
     }
     
     struct ValidationError {
@@ -67,6 +69,7 @@ extension String {
         static let goHome = "GO TO HOME PAGE"
         static let backHome = "Home"
         static let backQuiz = "Questionnaire"
+        static let export = "EXPORT"
     }
     
     struct Score {
@@ -97,5 +100,23 @@ extension String {
     struct Information {
         static let title = "What is Lorem Ipsum?"
         static let text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    }
+    
+    struct Export {
+        static let information = "The export feature allows you to download your questionnaire results in a .csv file. The file incudes detailed information as well as scores for all your questionnaire sessions, which you might want to share with your doctor, family of friends."
+        static let titleArr = ["",
+                               "Question 1",
+                               "Question 2",
+                               "Question 3",
+                               "Question 4",
+                               "Part 1 - Score",
+                               "Part 2 - Average time",
+                               "Part 2 - Count right answer",
+                               "Part 2 - Score",
+                               "Part 3 - Question",
+                               "Part 3 - Answer",
+                               "Part 3 - Ganning foq index",
+                               "Part 3 - Score",
+                               "Average Score",]
     }
 }

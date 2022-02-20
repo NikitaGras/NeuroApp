@@ -75,6 +75,24 @@ struct Session {
         return Int(sum * 100 / Double(partTwoAnswers.count))
     }
     
+    var partTwoAverageTime: TimeInterval {
+        var sum = 0.0
+        partTwoAnswers.forEach { answer in
+            sum += answer.responseTime
+        }
+        return (sum / Double(partOneAnswers.count))
+    }
+    
+    var partTwoCountRightAnswer: Int {
+        var count = 0
+        partTwoAnswers.forEach { answer in
+            if answer.option.isRight {
+                count += 1
+            }
+        }
+        return count
+    }
+    
     var partThreeScore: Int {
         return Int(atan(partThreeAnswer.ganningFoq) * 100.0 / (Double.pi / 2))
     }
