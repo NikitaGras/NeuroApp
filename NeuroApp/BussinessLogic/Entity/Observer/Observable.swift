@@ -22,6 +22,7 @@ extension Observable {
         if !isRegistred(observer) {
             let weakBox = WeakBox(observer)
             observers.append(weakBox)
+            didRegister(observer: observer)
         }
     }
     
@@ -38,6 +39,4 @@ extension Observable {
             observer.object?.update(with: data)
         }
     }
-    
-    func didRegister(observer: Observer) {  }
 }

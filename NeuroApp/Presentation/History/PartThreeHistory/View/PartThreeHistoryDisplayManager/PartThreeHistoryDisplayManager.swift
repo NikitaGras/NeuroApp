@@ -22,7 +22,6 @@ class PartThreeHistoryDisplayManager: NSObject {
     private func setupInitialState() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
-//        tableView.tableHeaderView = headerView
     }
     
     func update(with result: Session) {

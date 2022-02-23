@@ -10,6 +10,8 @@ import Foundation
 extension String {
     static let error = "Error"
     static let session = "Session"
+    static let correct = "Correct"
+    static let incorrect = "Incorrect"
     
     struct Error {
         static let `default` = "Something going wrong. Try again later"

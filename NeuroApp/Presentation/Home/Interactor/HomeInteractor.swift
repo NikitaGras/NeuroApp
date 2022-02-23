@@ -44,8 +44,6 @@ class HomeInteractor: HomeInteractorInput, Observer {
     
     func registerObserver() {
         quizService.register(self)
-        quizService.didRegister(observer: self)
-        
         profileService.register(self)
     }
 }

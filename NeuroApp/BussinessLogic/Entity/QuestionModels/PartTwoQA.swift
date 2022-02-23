@@ -28,6 +28,7 @@ struct PartTwoAnswer {
               let optionModel = model.option else {
                   throw SystemError.default
               }
+        // TODO: optionModel.isImage всегда true
         let option: Option = optionModel.isImage ? try ImageOption(model: optionModel) : try StringOption(model: optionModel)
         self.init(questionText: question, option: option, responseTime: model.responseTime)
     }

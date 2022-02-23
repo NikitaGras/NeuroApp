@@ -76,6 +76,10 @@
 		56615C62A114E681AE72A01B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFFD28B57959F5B32F0FD98 /* HomeRouter.swift */; };
 		568CF19A7F36CF7859D1E3A3 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE496759662A02DDBF1FB9 /* ProfileConfigurator.swift */; };
 		56FBFBA97289F3D5EF1B8307 /* PartTwoHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0770AC593D16CEE5DB179CD /* PartTwoHistoryInteractor.swift */; };
+		5A04FAE927C3937C007CBA87 /* HistoryImageOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04FAE727C3937C007CBA87 /* HistoryImageOptionTableViewCell.swift */; };
+		5A04FAEA27C3937C007CBA87 /* HistoryImageOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A04FAE827C3937C007CBA87 /* HistoryImageOptionTableViewCell.xib */; };
+		5A04FAEF27C4E21B007CBA87 /* HistoryStringOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04FAED27C4E21B007CBA87 /* HistoryStringOptionTableViewCell.swift */; };
+		5A04FAF027C4E21B007CBA87 /* HistoryStringOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A04FAEE27C4E21B007CBA87 /* HistoryStringOptionTableViewCell.xib */; };
 		5A0F84D7277476AF003C127D /* AverageHistoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F84D6277476AF003C127D /* AverageHistoryHeaderView.swift */; };
 		5A126539271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */; };
 		5A127FFA27007D7100832AD2 /* QuestionsBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A127FF927007D7100832AD2 /* QuestionsBank.swift */; };
@@ -173,8 +177,6 @@
 		5AF2566027A9549C00815ECD /* Int+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2565F27A9549C00815ECD /* Int+random.swift */; };
 		5AF5CE51278165F500868619 /* DoubleSidedArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */; };
 		5AF5CE542784A21600868619 /* PartTwoHistoryDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */; };
-		5AF5CE572784A79A00868619 /* PartTwoHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */; };
-		5AF5CE582784A79A00868619 /* PartTwoHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF5CE562784A79A00868619 /* PartTwoHistoryTableViewCell.xib */; };
 		5AFFFCEA26AEC03400E9F3F1 /* SystemError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */; };
 		5B176EBE641D291752067AA8 /* ProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A076939854C22E1C60212 /* ProfileViewOutput.swift */; };
 		5FEA458D538B1C0D63E53B2D /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1BAC5DE7A4F22DE8690A2 /* LoginInteractorOutput.swift */; };
@@ -386,6 +388,10 @@
 		549A076939854C22E1C60212 /* ProfileViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewOutput.swift; sourceTree = "<group>"; };
 		58D2BD7CD5346DD9F51140AE /* PartThreeHistoryRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartThreeHistoryRouterInput.swift; sourceTree = "<group>"; };
 		591353D8AD09E9F0376BA610 /* ScoreScreenInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreScreenInteractorOutput.swift; sourceTree = "<group>"; };
+		5A04FAE727C3937C007CBA87 /* HistoryImageOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryImageOptionTableViewCell.swift; sourceTree = "<group>"; };
+		5A04FAE827C3937C007CBA87 /* HistoryImageOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryImageOptionTableViewCell.xib; sourceTree = "<group>"; };
+		5A04FAED27C4E21B007CBA87 /* HistoryStringOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStringOptionTableViewCell.swift; sourceTree = "<group>"; };
+		5A04FAEE27C4E21B007CBA87 /* HistoryStringOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryStringOptionTableViewCell.xib; sourceTree = "<group>"; };
 		5A0F84D6277476AF003C127D /* AverageHistoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageHistoryHeaderView.swift; sourceTree = "<group>"; };
 		5A126538271EB04B00C689A6 /* UIViewController+hideKeyboardWhenTapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboardWhenTapped.swift"; sourceTree = "<group>"; };
 		5A127FF927007D7100832AD2 /* QuestionsBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsBank.swift; sourceTree = "<group>"; };
@@ -487,8 +493,6 @@
 		5AF2565F27A9549C00815ECD /* Int+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+random.swift"; sourceTree = "<group>"; };
 		5AF5CE50278165F500868619 /* DoubleSidedArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSidedArrowView.swift; sourceTree = "<group>"; };
 		5AF5CE532784A21600868619 /* PartTwoHistoryDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryDisplayManager.swift; sourceTree = "<group>"; };
-		5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoHistoryTableViewCell.swift; sourceTree = "<group>"; };
-		5AF5CE562784A79A00868619 /* PartTwoHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartTwoHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		5AFFFCE926AEC03400E9F3F1 /* SystemError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemError.swift; sourceTree = "<group>"; };
 		5EA65B27DB6F300C403ED9F5 /* QuizPartOneConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizPartOneConfigurator.swift; sourceTree = "<group>"; };
 		5F872E576D287CE17D07E27D /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
@@ -981,6 +985,24 @@
 			path = EditInformation;
 			sourceTree = "<group>";
 		};
+		5A04FAEB27C4E1D2007CBA87 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A04FAE727C3937C007CBA87 /* HistoryImageOptionTableViewCell.swift */,
+				5A04FAE827C3937C007CBA87 /* HistoryImageOptionTableViewCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		5A04FAEC27C4E1E1007CBA87 /* StringCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A04FAED27C4E21B007CBA87 /* HistoryStringOptionTableViewCell.swift */,
+				5A04FAEE27C4E21B007CBA87 /* HistoryStringOptionTableViewCell.xib */,
+			);
+			path = StringCell;
+			sourceTree = "<group>";
+		};
 		5A127FF82700752F00832AD2 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
@@ -1350,8 +1372,8 @@
 		5AF5CE592784A7AA00868619 /* PartTwoHistoryTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				5AF5CE552784A79A00868619 /* PartTwoHistoryTableViewCell.swift */,
-				5AF5CE562784A79A00868619 /* PartTwoHistoryTableViewCell.xib */,
+				5A04FAEC27C4E1E1007CBA87 /* StringCell */,
+				5A04FAEB27C4E1D2007CBA87 /* ImageCell */,
 			);
 			path = PartTwoHistoryTableViewCell;
 			sourceTree = "<group>";
@@ -2120,16 +2142,17 @@
 				5A859D8427C1031B00A25C26 /* Export.storyboard in Resources */,
 				5A543E0827AE7B7000F7B679 /* Information.storyboard in Resources */,
 				5A9251C4275E70FF00D9195F /* PartThreeHistory.storyboard in Resources */,
-				5AF5CE582784A79A00868619 /* PartTwoHistoryTableViewCell.xib in Resources */,
 				5A166C12269C366600E590C7 /* Tabbar.storyboard in Resources */,
 				5AA6EC502775E43800A6FA5B /* PartOneHistoryTableViewCell.xib in Resources */,
 				5A88051A2723CEFF00BA12B3 /* QuizPartTwo.storyboard in Resources */,
+				5A04FAF027C4E21B007CBA87 /* HistoryStringOptionTableViewCell.xib in Resources */,
 				5A67E239275F2FD8006FFABF /* HistoryMainTableViewCell.xib in Resources */,
 				5A1E8BB226983D62001179F7 /* Login.storyboard in Resources */,
 				5A3801BB2695D93200883225 /* LaunchScreen.storyboard in Resources */,
 				5AA6E2962734E96C00E64ABA /* QuizPartThree.storyboard in Resources */,
 				5A3801B82695D93200883225 /* Assets.xcassets in Resources */,
 				5A9251BE275E690600D9195F /* PartOneHistory.storyboard in Resources */,
+				5A04FAEA27C3937C007CBA87 /* HistoryImageOptionTableViewCell.xib in Resources */,
 				5A56767F2774274F00CA53D5 /* AverageHistoryTableViewCell.xib in Resources */,
 				5AE1A50326E61722009FCD4A /* Preview.storyboard in Resources */,
 				5A9251BC275E680E00D9195F /* AverageScoreHistory.storyboard in Resources */,
@@ -2197,6 +2220,7 @@
 				5A3801AF2695D93100883225 /* AppDelegate.swift in Sources */,
 				5AE7CD5B279EB50E002F956A /* NeuroAppValueTransformer.swift in Sources */,
 				5A6F2C51269AAB32006B065D /* ViewInput.swift in Sources */,
+				5A04FAE927C3937C007CBA87 /* HistoryImageOptionTableViewCell.swift in Sources */,
 				5A6F2C53269AB779006B065D /* RoundButton.swift in Sources */,
 				5A543E0F27AE7FF100F7B679 /* InformationTableViewCellState.swift in Sources */,
 				5A166C10269C319000E590C7 /* ProfileServiceProtocol.swift in Sources */,
@@ -2376,6 +2400,7 @@
 				2BC6D36266C2852480A019F1 /* ScoreScreenInteractor.swift in Sources */,
 				53A6B9D5269D50594C1EE4C6 /* ScoreScreenRouterInput.swift in Sources */,
 				B94F4DDBDB9BA1992F36A2A7 /* ScoreScreenRouter.swift in Sources */,
+				5A04FAEF27C4E21B007CBA87 /* HistoryStringOptionTableViewCell.swift in Sources */,
 				36F083BB886B5C49544D57B8 /* ScoreScreenConfigurator.swift in Sources */,
 				2A0924B903B0ECB8656DEC8E /* ScoreScreenInitializer.swift in Sources */,
 				7A8D3305EDBF43EA7E341F25 /* HistoryMainViewInput.swift in Sources */,
@@ -2411,7 +2436,6 @@
 				25E96AAC7E68E7197578AEB6 /* PartOneHistoryModuleInput.swift in Sources */,
 				5A2E2A84277DA6DF0032385C /* DateFormatter+fullDate.swift in Sources */,
 				16824E73F7D6D97C02D1CEBD /* PartOneHistoryPresenter.swift in Sources */,
-				5AF5CE572784A79A00868619 /* PartTwoHistoryTableViewCell.swift in Sources */,
 				DEAEEDEBEA46200FCEE682E1 /* PartOneHistoryInteractorInput.swift in Sources */,
 				40B21884FE726B2776CDC0BF /* PartOneHistoryInteractorOutput.swift in Sources */,
 				6A24F9B56422D2D792D89E56 /* PartOneHistoryInteractor.swift in Sources */,

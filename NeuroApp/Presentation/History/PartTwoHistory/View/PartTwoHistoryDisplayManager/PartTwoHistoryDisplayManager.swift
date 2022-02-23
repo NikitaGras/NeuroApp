@@ -22,8 +22,8 @@ class PartTwoHistoryDisplayManager: NSObject {
     private func setupInitialState() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(cell: PartTwoHistoryTableViewCell.self)
-//        tableView.tableHeaderView = headerView
+        tableView.register(cell: HistoryImageOptionTableViewCell.self)
+        tableView.register(cell: HistoryStringOptionTableViewCell.self)
     }
     
     func update(with result: Session) {
@@ -31,8 +31,6 @@ class PartTwoHistoryDisplayManager: NSObject {
         tableView.reloadData()
         headerView.update(with: result, scoreLabelTitle: String.Score.partTwoDescription)
     }
-    
-    
 }
 
 extension PartTwoHistoryDisplayManager: UITableViewDataSource {
@@ -41,18 +39,28 @@ extension PartTwoHistoryDisplayManager: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PartTwoHistoryTableViewCell.identifier)
-        return cell ?? UITableViewCell()
+        if answers[indexPath.row].option is StringOption {
+            let cell = tableView.dequeueReusableCell(withIdentifier: HistoryStringOptionTableViewCell.identifier) as! HistoryStringOptionTableViewCell
+            return cell
+        }
+        if answers[indexPath.row].option is ImageOption {
+            let cell = tableView.dequeueReusableCell(withIdentifier: HistoryImageOptionTableViewCell.identifier) as! HistoryImageOptionTableViewCell
+            return cell
+        }
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cell = cell as? PartTwoHistoryTableViewCell
-        cell?.fill(with: answers[indexPath.row])
+        if let cell = cell as? HistoryImageOptionTableViewCell {
+            cell.fill(with: answers[indexPath.row])
+        }
+        if let cell = cell as? HistoryStringOptionTableViewCell {
+            cell.fill(with: answers[indexPath.row])
+        }
     }
 }
 
 extension PartTwoHistoryDisplayManager: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return headerView
     }
@@ -60,5 +68,13 @@ extension PartTwoHistoryDisplayManager: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //        return headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         return 230
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }

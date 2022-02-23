@@ -9,6 +9,7 @@ import Foundation
 
 
 class ProfileService: ProfileServiceProtocol {
+    
     static let shared = ProfileService()
     private let key: String = UserDefaults.Key.user
     
@@ -29,6 +30,7 @@ class ProfileService: ProfileServiceProtocol {
         }
         do {
             let user = try JSONDecoder().decode(User.self, from: data)
+            notifyObservers(with: user)
             return user
         } catch {
             print(error)
@@ -46,5 +48,11 @@ class ProfileService: ProfileServiceProtocol {
     func deleteUser() {
         UserDefaults.standard.removeObject(forKey: key)
         user = nil
+    }
+    
+    func didRegister(observer: Observer) {
+        if let user = user {
+            observer.update(with: user)
+        }
     }
 }
