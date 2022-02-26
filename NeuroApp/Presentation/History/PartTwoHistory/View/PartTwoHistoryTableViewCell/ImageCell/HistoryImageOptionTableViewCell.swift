@@ -17,12 +17,22 @@ class HistoryImageOptionTableViewCell: UITableViewCell {
     
     func fill(with answer: PartTwoAnswer) {
         questionLabel.text = answer.questionText
-        yourAnswerLabel.text = String.History.yourAnswer
-        
-        let option = answer.option as! ImageOption
+        yourAnswerLabel.text = String.History.yourAnswer + ":"
+        setup(with: answer.option)
+        responseTimeLabel.text = String.History.responseTime + ": " + answer.responseTime.round(2).description
+    }
+    
+    private func setup(with option: Option) {
+        guard let option = option as? ImageOption else {
+            imageOptionView.image = UIImage(named: "Error")
+            return
+        }
         imageOptionView.image = option.asImage()
+        imageOptionView.layer.borderWidth = 5
+        imageOptionView.layer.borderColor = option.isRight ? UIColor.NAGreen.cgColor : UIColor.NARed.cgColor
         
-        resultLabel.text = answer.option.isRight ? String.correct : String.incorrect
-        responseTimeLabel.text = answer.responseTime.description
+        resultLabel.text = option.isRight ? String.correct : String.incorrect
+        
+        resultImageView.image = option.isRight ? UIImage(named: "CorrectMark") : UIImage(named: "IncorrectMark")
     }
 }

@@ -30,7 +30,6 @@ class QuizService: QuizServiceProtocol {
             let models = try context.fetch(SessionModel.fetchRequest())
             return try models.map { try Session(model: $0) }
         } catch {
-            print(error)
             return []
         }
     }
@@ -72,8 +71,8 @@ class QuizService: QuizServiceProtocol {
     func save(_ session: Session) throws {
         let model = SessionModel(context: context)
         
-        model.partOne = session.partOneAnswers.map { PartOneModel.init(answer: $0)}
-        model.partTwo = session.partTwoAnswers.map { PartTwoModel.init(answer: $0)}
+        model.partOne = session.partOneAnswers.map { PartOneModel(answer: $0)}
+        model.partTwo = session.partTwoAnswers.map { PartTwoModel(answer: $0)}
         model.partThree = PartThreeModel(answer: session.partThreeAnswer)
         model.finishTime = session.finishTime
         

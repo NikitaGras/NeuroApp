@@ -39,15 +39,14 @@ extension PartTwoHistoryDisplayManager: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: UITableViewCell?
         if answers[indexPath.row].option is StringOption {
-            let cell = tableView.dequeueReusableCell(withIdentifier: HistoryStringOptionTableViewCell.identifier) as! HistoryStringOptionTableViewCell
-            return cell
+            cell = tableView.dequeueReusableCell(withIdentifier: HistoryStringOptionTableViewCell.identifier)
         }
         if answers[indexPath.row].option is ImageOption {
-            let cell = tableView.dequeueReusableCell(withIdentifier: HistoryImageOptionTableViewCell.identifier) as! HistoryImageOptionTableViewCell
-            return cell
+            cell = tableView.dequeueReusableCell(withIdentifier: HistoryImageOptionTableViewCell.identifier)
         }
-        return UITableViewCell()
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -66,7 +65,6 @@ extension PartTwoHistoryDisplayManager: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         return 230
     }
     

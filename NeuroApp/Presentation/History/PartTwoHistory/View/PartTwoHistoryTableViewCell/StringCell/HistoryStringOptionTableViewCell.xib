@@ -48,9 +48,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ghf-9j-CHl">
-                                <rect key="frame" x="51.5" y="3" width="15" height="15"/>
+                                <rect key="frame" x="51.5" y="0.5" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ghf-9j-CHl" secondAttribute="height" id="3nu-vM-NqV"/>
+                                    <constraint firstAttribute="width" constant="20" id="f6c-q0-hNE"/>
+                                    <constraint firstAttribute="height" constant="20" id="sJ8-x6-SGu"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQA-xQ-Ki9">
@@ -67,7 +68,6 @@
                             <constraint firstAttribute="bottom" secondItem="RLh-n5-0iY" secondAttribute="bottom" id="JRQ-0Q-doV"/>
                             <constraint firstAttribute="trailing" secondItem="RLh-n5-0iY" secondAttribute="trailing" id="R22-L5-NAY"/>
                             <constraint firstItem="tQA-xQ-Ki9" firstAttribute="leading" secondItem="Ysp-3f-6r5" secondAttribute="leading" id="bZc-KV-FFh"/>
-                            <constraint firstItem="Ghf-9j-CHl" firstAttribute="height" secondItem="tQA-xQ-Ki9" secondAttribute="height" multiplier="0.714286" id="eV9-DK-3xG"/>
                             <constraint firstItem="tQA-xQ-Ki9" firstAttribute="top" secondItem="Ysp-3f-6r5" secondAttribute="top" id="lqF-R2-bKQ"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ghf-9j-CHl" secondAttribute="trailing" id="lsG-hB-FWK"/>
                             <constraint firstItem="Ghf-9j-CHl" firstAttribute="leading" secondItem="tQA-xQ-Ki9" secondAttribute="trailing" constant="10" id="s5Q-2s-I9i"/>
@@ -95,6 +95,7 @@
             <connections>
                 <outlet property="questionLabel" destination="8bJ-IU-02j" id="pQb-8i-3uI"/>
                 <outlet property="responseTimeLabel" destination="RLh-n5-0iY" id="Qb4-Cm-Yz1"/>
+                <outlet property="resultImageView" destination="Ghf-9j-CHl" id="pJe-Xx-XNd"/>
                 <outlet property="resultLabel" destination="tQA-xQ-Ki9" id="seV-CF-22w"/>
                 <outlet property="stringOptionLabel" destination="YMX-TO-sp4" id="jtq-N0-BeU"/>
                 <outlet property="yourAnswerLabel" destination="S3n-OS-8Yg" id="ugg-pf-H9V"/>

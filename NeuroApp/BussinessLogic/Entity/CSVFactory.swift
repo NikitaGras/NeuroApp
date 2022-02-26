@@ -9,9 +9,11 @@ import CSV
 
 class CSVFactory {
     func createCSV(from history: [Session]) throws -> URL {
-        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory,
-                                                            .userDomainMask,
-                                                           true)[0]
+        guard let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory,
+                                                                 .userDomainMask,
+                                                                 true).first else {
+            throw SystemError.default
+        }
         let url = URL(fileURLWithPath: filePath).appendingPathComponent("NeuroApp.csv")
         
         let output = OutputStream(toMemory: ())
@@ -20,17 +22,18 @@ class CSVFactory {
         
         try history.enumerated().forEach { index, session in
             try write(in: csv, with: session, index: index)
-            
         }
         csv.stream.close()
         
-        let buffer = output.property(forKey: .dataWrittenToMemoryStreamKey) as! Data
+        guard let buffer = output.property(forKey: .dataWrittenToMemoryStreamKey) as? Data else {
+            throw SystemError.default
+        }
         try buffer.write(to: url)
         
         return url
     }
     
-    func prepareTitleArr(with session: Session) -> [String] {
+    private func prepareTitles(with session: Session) -> [String] {
         let partOneQuestionsArr = session.partOneAnswers.map { answer in
             return answer.questionText
         }

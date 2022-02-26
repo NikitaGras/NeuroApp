@@ -52,9 +52,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dVH-aE-5Pv">
-                                <rect key="frame" x="47" y="0.0" width="21" height="21"/>
+                                <rect key="frame" x="47" y="0.5" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dVH-aE-5Pv" secondAttribute="height" id="AnY-mF-ZgF"/>
+                                    <constraint firstAttribute="width" constant="20" id="aLu-a0-Vov"/>
+                                    <constraint firstAttribute="height" constant="20" id="etC-gQ-d1s"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -68,7 +69,6 @@
                             <constraint firstItem="cAb-RM-51t" firstAttribute="leading" secondItem="8al-PG-Yze" secondAttribute="leading" id="QCl-jn-xuZ"/>
                             <constraint firstItem="dVH-aE-5Pv" firstAttribute="centerY" secondItem="zL4-Hp-Q3M" secondAttribute="centerY" id="TsS-rM-Eib"/>
                             <constraint firstItem="dVH-aE-5Pv" firstAttribute="leading" secondItem="zL4-Hp-Q3M" secondAttribute="trailing" constant="5" id="ZG1-dX-QYd"/>
-                            <constraint firstItem="dVH-aE-5Pv" firstAttribute="height" secondItem="zL4-Hp-Q3M" secondAttribute="height" id="fQy-yp-QYy"/>
                         </constraints>
                     </view>
                 </subviews>
