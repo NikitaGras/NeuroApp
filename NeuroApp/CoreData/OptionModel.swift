@@ -18,8 +18,8 @@ public class OptionModel: NSObject, NSSecureCoding {
         self.isImage = isImage
     }
     
-    convenience init(option: Option) {
-        self.init(value: option.value, isRight: option.isRight, isImage: option is ImageOption)
+    convenience init(_ option: Option) {
+        self.init(value: option.value, isRight: option.isRight, isImage: (option is ImageOption))
     }
     
     //MARK: - NSSecureCoding
@@ -33,8 +33,8 @@ public class OptionModel: NSObject, NSSecureCoding {
     
     public required init?(coder: NSCoder) {
         value = coder.decodeObject(of: NSString.self, forKey: CodingKey.value) as String?
-        isRight = coder.decodeBool(forKey: CodingKey.isImage)
-        isImage = coder.decodeBool(forKey: CodingKey.isRight)
+        isRight = coder.decodeBool(forKey: CodingKey.isRight)
+        isImage = coder.decodeBool(forKey: CodingKey.isImage)
     }
     
     public func encode(with coder: NSCoder) {

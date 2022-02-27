@@ -19,7 +19,7 @@ public class PartTwoModel: NSObject, NSSecureCoding {
     }
     
     convenience init(answer: PartTwoAnswer) {
-        let option = OptionModel(option: answer.option)
+        let option = OptionModel(answer.option)
         self.init(questionText: answer.questionText, option: option, responseTime: answer.responseTime)
     }
     
